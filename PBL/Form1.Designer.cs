@@ -37,9 +37,9 @@
             this.label1.Location = new System.Drawing.Point(223, 58);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 16);
+            this.label1.Size = new System.Drawing.Size(56, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "KHANSH DDPEJ TRAI";
+            this.label1.Text = "huy Ngu";
             // 
             // Form1
             // 
