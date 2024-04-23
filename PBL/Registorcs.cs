@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace PBL
 {
-    public partial class Form1 : Form
+    public partial class Registorcs : Form
     {
-        public Form1()
+        public Registorcs()
         {
             InitializeComponent();
-        }
-
-        private void roundButton1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new Registorcs().ShowDialog();
-            this.Show();
         }
     }
 }
