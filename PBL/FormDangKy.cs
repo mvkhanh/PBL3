@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL
 {
-    public partial class Registorcs : Form
+    public partial class FormDangKy : Form
     {
-        public Registorcs()
+        public FormDangKy()
         {
             InitializeComponent();
         }
