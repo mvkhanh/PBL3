@@ -17,7 +17,7 @@ namespace PBL
             InitializeComponent();
         }
 
-        private void roundButton1_Click(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
             this.Hide();
             new Registorcs().ShowDialog();
