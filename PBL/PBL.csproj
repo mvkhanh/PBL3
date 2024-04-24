@@ -68,6 +68,12 @@
     <Compile Include="FormThemBaiHoc.Designer.cs">
       <DependentUpon>FormThemBaiHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormQuanLyBaiHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLyBaiHoc.Designer.cs">
+      <DependentUpon>FormQuanLyBaiHoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FormDangKy.cs">
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormThemBaiHoc.resx">
       <DependentUpon>FormThemBaiHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLyBaiHoc.resx">
+      <DependentUpon>FormQuanLyBaiHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
