@@ -23,5 +23,7 @@ namespace PBL
             new Registorcs().ShowDialog();
             this.Show();
         }
+
+        
     }
 }
