@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace PBL
 {
-    public partial class Form1 : Form
+    public partial class FormThemBaiHoc : Form
     {
-        public Form1()
+        public FormThemBaiHoc()
         {
             InitializeComponent();
         }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new Registorcs().ShowDialog();
-            this.Show();
-        }
-
-        
     }
 }

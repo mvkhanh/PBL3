@@ -56,11 +56,17 @@
     <Compile Include="Controller\RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThemBaiHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemBaiHoc.Designer.cs">
+      <DependentUpon>FormThemBaiHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQuanLyBaiHoc.cs">
       <SubType>Form</SubType>
@@ -70,17 +76,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registorcs.cs">
+    <Compile Include="FormDangKy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registorcs.Designer.cs">
-      <DependentUpon>Registorcs.cs</DependentUpon>
+    <Compile Include="FormDangKy.Designer.cs">
+      <DependentUpon>FormDangKy.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Controller\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemBaiHoc.resx">
+      <DependentUpon>FormThemBaiHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuanLyBaiHoc.resx">
       <DependentUpon>FormQuanLyBaiHoc.cs</DependentUpon>
@@ -95,8 +104,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Registorcs.resx">
-      <DependentUpon>Registorcs.cs</DependentUpon>
+    <EmbeddedResource Include="FormDangKy.resx">
+      <DependentUpon>FormDangKy.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
