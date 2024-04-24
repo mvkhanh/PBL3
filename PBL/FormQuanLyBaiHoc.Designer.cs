@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQuanLyBaiHoc));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.roundButton7 = new PBL.Controller.RoundButton();
+            this.roundButton6 = new PBL.Controller.RoundButton();
+            this.roundButton5 = new PBL.Controller.RoundButton();
+            this.roundButton4 = new PBL.Controller.RoundButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.NameUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,10 +47,6 @@
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.rjTextBox1 = new PBL.Controller.RJTextBox();
-            this.roundButton7 = new PBL.Controller.RoundButton();
-            this.roundButton6 = new PBL.Controller.RoundButton();
-            this.roundButton5 = new PBL.Controller.RoundButton();
-            this.roundButton4 = new PBL.Controller.RoundButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -88,9 +87,80 @@
             this.panel1.Size = new System.Drawing.Size(1164, 52);
             this.panel1.TabIndex = 6;
             // 
+            // roundButton7
+            // 
+            this.roundButton7.BackColor = System.Drawing.Color.White;
+            this.roundButton7.BackgroundColor = System.Drawing.Color.White;
+            this.roundButton7.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.roundButton7.BorderRadius = 0;
+            this.roundButton7.BorderSize = 0;
+            this.roundButton7.FlatAppearance.BorderSize = 0;
+            this.roundButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton7.ForeColor = System.Drawing.Color.Black;
+            this.roundButton7.Location = new System.Drawing.Point(925, 7);
+            this.roundButton7.Name = "roundButton7";
+            this.roundButton7.Size = new System.Drawing.Size(150, 40);
+            this.roundButton7.TabIndex = 4;
+            this.roundButton7.Text = "Quản Lý Bài Kiểm Tra";
+            this.roundButton7.TextColor = System.Drawing.Color.Black;
+            this.roundButton7.UseVisualStyleBackColor = false;
+            // 
+            // roundButton6
+            // 
+            this.roundButton6.BackColor = System.Drawing.Color.White;
+            this.roundButton6.BackgroundColor = System.Drawing.Color.White;
+            this.roundButton6.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.roundButton6.BorderRadius = 0;
+            this.roundButton6.BorderSize = 0;
+            this.roundButton6.FlatAppearance.BorderSize = 0;
+            this.roundButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton6.ForeColor = System.Drawing.Color.Black;
+            this.roundButton6.Location = new System.Drawing.Point(769, 7);
+            this.roundButton6.Name = "roundButton6";
+            this.roundButton6.Size = new System.Drawing.Size(150, 40);
+            this.roundButton6.TabIndex = 3;
+            this.roundButton6.Text = "Quản Lý Bài Học";
+            this.roundButton6.TextColor = System.Drawing.Color.Black;
+            this.roundButton6.UseVisualStyleBackColor = false;
+            // 
+            // roundButton5
+            // 
+            this.roundButton5.BackColor = System.Drawing.Color.White;
+            this.roundButton5.BackgroundColor = System.Drawing.Color.White;
+            this.roundButton5.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.roundButton5.BorderRadius = 0;
+            this.roundButton5.BorderSize = 0;
+            this.roundButton5.FlatAppearance.BorderSize = 0;
+            this.roundButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton5.ForeColor = System.Drawing.Color.Black;
+            this.roundButton5.Location = new System.Drawing.Point(613, 7);
+            this.roundButton5.Name = "roundButton5";
+            this.roundButton5.Size = new System.Drawing.Size(150, 40);
+            this.roundButton5.TabIndex = 2;
+            this.roundButton5.Text = "Quản Lý Học Viên";
+            this.roundButton5.TextColor = System.Drawing.Color.Black;
+            this.roundButton5.UseVisualStyleBackColor = false;
+            // 
+            // roundButton4
+            // 
+            this.roundButton4.BackColor = System.Drawing.Color.White;
+            this.roundButton4.BackgroundColor = System.Drawing.Color.White;
+            this.roundButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.roundButton4.BorderRadius = 0;
+            this.roundButton4.BorderSize = 0;
+            this.roundButton4.FlatAppearance.BorderSize = 0;
+            this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton4.ForeColor = System.Drawing.Color.Black;
+            this.roundButton4.Location = new System.Drawing.Point(457, 7);
+            this.roundButton4.Name = "roundButton4";
+            this.roundButton4.Size = new System.Drawing.Size(150, 40);
+            this.roundButton4.TabIndex = 1;
+            this.roundButton4.Text = "Thống Kê";
+            this.roundButton4.TextColor = System.Drawing.Color.Black;
+            this.roundButton4.UseVisualStyleBackColor = false;
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(198, 44);
@@ -209,78 +279,6 @@
             this.rjTextBox1.TabIndex = 9;
             this.rjTextBox1.Texts = "";
             this.rjTextBox1.UnderlinedStyle = false;
-            // 
-            // roundButton7
-            // 
-            this.roundButton7.BackColor = System.Drawing.Color.White;
-            this.roundButton7.BackgroundColor = System.Drawing.Color.White;
-            this.roundButton7.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundButton7.BorderRadius = 0;
-            this.roundButton7.BorderSize = 0;
-            this.roundButton7.FlatAppearance.BorderSize = 0;
-            this.roundButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton7.ForeColor = System.Drawing.Color.Black;
-            this.roundButton7.Location = new System.Drawing.Point(925, 7);
-            this.roundButton7.Name = "roundButton7";
-            this.roundButton7.Size = new System.Drawing.Size(150, 40);
-            this.roundButton7.TabIndex = 4;
-            this.roundButton7.Text = "Quản Lý Bài Kiểm Tra";
-            this.roundButton7.TextColor = System.Drawing.Color.Black;
-            this.roundButton7.UseVisualStyleBackColor = false;
-            // 
-            // roundButton6
-            // 
-            this.roundButton6.BackColor = System.Drawing.Color.White;
-            this.roundButton6.BackgroundColor = System.Drawing.Color.White;
-            this.roundButton6.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundButton6.BorderRadius = 0;
-            this.roundButton6.BorderSize = 0;
-            this.roundButton6.FlatAppearance.BorderSize = 0;
-            this.roundButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton6.ForeColor = System.Drawing.Color.Black;
-            this.roundButton6.Location = new System.Drawing.Point(769, 7);
-            this.roundButton6.Name = "roundButton6";
-            this.roundButton6.Size = new System.Drawing.Size(150, 40);
-            this.roundButton6.TabIndex = 3;
-            this.roundButton6.Text = "Quản Lý Bài Học";
-            this.roundButton6.TextColor = System.Drawing.Color.Black;
-            this.roundButton6.UseVisualStyleBackColor = false;
-            // 
-            // roundButton5
-            // 
-            this.roundButton5.BackColor = System.Drawing.Color.White;
-            this.roundButton5.BackgroundColor = System.Drawing.Color.White;
-            this.roundButton5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundButton5.BorderRadius = 0;
-            this.roundButton5.BorderSize = 0;
-            this.roundButton5.FlatAppearance.BorderSize = 0;
-            this.roundButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton5.ForeColor = System.Drawing.Color.Black;
-            this.roundButton5.Location = new System.Drawing.Point(613, 7);
-            this.roundButton5.Name = "roundButton5";
-            this.roundButton5.Size = new System.Drawing.Size(150, 40);
-            this.roundButton5.TabIndex = 2;
-            this.roundButton5.Text = "Quản Lý Học Viên";
-            this.roundButton5.TextColor = System.Drawing.Color.Black;
-            this.roundButton5.UseVisualStyleBackColor = false;
-            // 
-            // roundButton4
-            // 
-            this.roundButton4.BackColor = System.Drawing.Color.White;
-            this.roundButton4.BackgroundColor = System.Drawing.Color.White;
-            this.roundButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundButton4.BorderRadius = 0;
-            this.roundButton4.BorderSize = 0;
-            this.roundButton4.FlatAppearance.BorderSize = 0;
-            this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton4.ForeColor = System.Drawing.Color.Black;
-            this.roundButton4.Location = new System.Drawing.Point(457, 7);
-            this.roundButton4.Name = "roundButton4";
-            this.roundButton4.Size = new System.Drawing.Size(150, 40);
-            this.roundButton4.TabIndex = 1;
-            this.roundButton4.Text = "Thống Kê";
-            this.roundButton4.TextColor = System.Drawing.Color.Black;
-            this.roundButton4.UseVisualStyleBackColor = false;
             // 
             // FormQuanLyBaiHoc
             // 
