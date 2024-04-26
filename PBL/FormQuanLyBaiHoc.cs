@@ -17,5 +17,14 @@ namespace PBL
             InitializeComponent();
         }
 
+        private void roundButton1_MouseHover(object sender, EventArgs e)
+        {
+            panel2.Visible = !panel2.Visible;
+        }
+
+        private void roundButton1_MouseLeave(object sender, EventArgs e)
+        {
+            panel2.Visible = !panel2.Visible;
+        }
     }
 }
