@@ -16,7 +16,7 @@ namespace PBL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormQuanLyBaiHoc());
+            Application.Run(new HocVien());
         }
     }
 }
