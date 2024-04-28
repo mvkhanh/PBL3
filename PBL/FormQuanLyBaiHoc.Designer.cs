@@ -57,6 +57,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.panelHeader.SuspendLayout();
             this.panelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
@@ -221,7 +226,7 @@
             this.panel2.Controls.Add(this.rjTextBox1);
             this.panel2.Location = new System.Drawing.Point(232, 156);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1599, 93);
+            this.panel2.Size = new System.Drawing.Size(1652, 93);
             this.panel2.TabIndex = 14;
             // 
             // comboBox1
@@ -275,9 +280,9 @@
             this.panelInfo.BackColor = System.Drawing.Color.MintCream;
             this.panelInfo.Controls.Add(this.roundButton1);
             this.panelInfo.Controls.Add(this.roundButton2);
-            this.panelInfo.Location = new System.Drawing.Point(1863, 3);
+            this.panelInfo.Location = new System.Drawing.Point(1890, 3);
             this.panelInfo.Name = "panelInfo";
-            this.panelInfo.Size = new System.Drawing.Size(198, 100);
+            this.panelInfo.Size = new System.Drawing.Size(171, 100);
             this.panelInfo.TabIndex = 0;
             this.panelInfo.Visible = false;
             // 
@@ -339,7 +344,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1597, 723);
+            this.dataGridView1.Size = new System.Drawing.Size(1650, 723);
             this.dataGridView1.TabIndex = 11;
             // 
             // NameUser
@@ -379,7 +384,7 @@
             this.Detail.Name = "Detail";
             this.Detail.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Detail.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Detail.Text = "Delete";
+            this.Detail.Text = "Detail";
             this.Detail.UseColumnTextForButtonValue = true;
             // 
             // Edit
@@ -406,8 +411,8 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.77778F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.37791F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.527132F));
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.panelInfo, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 1);
@@ -428,10 +433,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Arial", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.label2.Location = new System.Drawing.Point(232, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1599, 153);
+            this.label2.Size = new System.Drawing.Size(1652, 153);
             this.label2.TabIndex = 15;
             this.label2.Text = "Tổng hợp bài học";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -439,12 +445,17 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.radioButton5);
+            this.panel1.Controls.Add(this.radioButton4);
+            this.panel1.Controls.Add(this.radioButton3);
+            this.panel1.Controls.Add(this.radioButton2);
+            this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(50, 302);
             this.panel1.Margin = new System.Windows.Forms.Padding(50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(129, 242);
+            this.panel1.Size = new System.Drawing.Size(129, 237);
             this.panel1.TabIndex = 16;
             // 
             // label3
@@ -456,6 +467,61 @@
             this.label3.Size = new System.Drawing.Size(151, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "Sắp xếp theo";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(9, 46);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(156, 29);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Tên bài học";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(9, 81);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(147, 29);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Ngày đăng";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(9, 116);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(146, 29);
+            this.radioButton3.TabIndex = 1;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Giảng viên";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(9, 150);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(140, 29);
+            this.radioButton4.TabIndex = 1;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Danh mục";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(9, 185);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(131, 29);
+            this.radioButton5.TabIndex = 1;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Lượt xem";
+            this.radioButton5.UseVisualStyleBackColor = true;
             // 
             // FormQuanLyBaiHoc
             // 
@@ -515,5 +581,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }
