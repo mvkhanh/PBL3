@@ -16,15 +16,24 @@ namespace PBL
         {
             InitializeComponent();
         }
-
-        private void roundButton1_MouseHover(object sender, EventArgs e)
+        private void FormQuanLyBaiHoc_Load(object sender, EventArgs e)
         {
-            panel2.Visible = !panel2.Visible;
+            this.WindowState = FormWindowState.Maximized;
         }
 
-        private void roundButton1_MouseLeave(object sender, EventArgs e)
+        private void userPicture_Click(object sender, EventArgs e)
         {
-            panel2.Visible = !panel2.Visible;
+            panelInfo.Visible = !panelInfo.Visible;
+        }
+
+        private void panelUser_MouseEnter(object sender, EventArgs e)
+        {
+            panelUser.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void panelUser_MouseLeave(object sender, EventArgs e)
+        {
+            panelUser.BorderStyle = BorderStyle.None;
         }
     }
 }

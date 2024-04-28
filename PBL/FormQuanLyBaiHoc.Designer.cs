@@ -28,10 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panelHeader = new System.Windows.Forms.Panel();
+            this.panelUser = new System.Windows.Forms.Panel();
+            this.lbTriangle = new System.Windows.Forms.Label();
+            this.userPicture = new System.Windows.Forms.PictureBox();
+            this.btQLBKT = new PBL.Controller.RoundButton();
+            this.btQLBH = new PBL.Controller.RoundButton();
+            this.btQLHV = new PBL.Controller.RoundButton();
+            this.btTK = new PBL.Controller.RoundButton();
+            this.logoPicture = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rjTextBox1 = new PBL.Controller.RJTextBox();
+            this.panelInfo = new System.Windows.Forms.FlowLayoutPanel();
+            this.roundButton1 = new PBL.Controller.RoundButton();
+            this.roundButton2 = new PBL.Controller.RoundButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.NameUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,22 +53,176 @@
             this.Detail = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.roundButton8 = new PBL.Controller.RoundButton();
-            this.roundButton3 = new PBL.Controller.RoundButton();
-            this.roundButton2 = new PBL.Controller.RoundButton();
-            this.rjTextBox1 = new PBL.Controller.RJTextBox();
-            this.roundButton1 = new PBL.Controller.RoundButton();
-            this.roundButton7 = new PBL.Controller.RoundButton();
-            this.roundButton6 = new PBL.Controller.RoundButton();
-            this.roundButton5 = new PBL.Controller.RoundButton();
-            this.roundButton4 = new PBL.Controller.RoundButton();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panelHeader.SuspendLayout();
+            this.panelUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPicture)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panelInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panelHeader
+            // 
+            this.panelHeader.BackColor = System.Drawing.Color.White;
+            this.panelHeader.Controls.Add(this.panelUser);
+            this.panelHeader.Controls.Add(this.btQLBKT);
+            this.panelHeader.Controls.Add(this.btQLBH);
+            this.panelHeader.Controls.Add(this.btQLHV);
+            this.panelHeader.Controls.Add(this.btTK);
+            this.panelHeader.Controls.Add(this.logoPicture);
+            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(2064, 81);
+            this.panelHeader.TabIndex = 6;
+            // 
+            // panelUser
+            // 
+            this.panelUser.Controls.Add(this.lbTriangle);
+            this.panelUser.Controls.Add(this.userPicture);
+            this.panelUser.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelUser.Location = new System.Drawing.Point(1934, 0);
+            this.panelUser.Name = "panelUser";
+            this.panelUser.Size = new System.Drawing.Size(130, 81);
+            this.panelUser.TabIndex = 8;
+            this.panelUser.Click += new System.EventHandler(this.userPicture_Click);
+            this.panelUser.MouseEnter += new System.EventHandler(this.panelUser_MouseEnter);
+            this.panelUser.MouseLeave += new System.EventHandler(this.panelUser_MouseLeave);
+            // 
+            // lbTriangle
+            // 
+            this.lbTriangle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTriangle.Location = new System.Drawing.Point(87, -1);
+            this.lbTriangle.Name = "lbTriangle";
+            this.lbTriangle.Size = new System.Drawing.Size(37, 81);
+            this.lbTriangle.TabIndex = 7;
+            this.lbTriangle.Text = "▼";
+            this.lbTriangle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbTriangle.Click += new System.EventHandler(this.userPicture_Click);
+            this.lbTriangle.MouseEnter += new System.EventHandler(this.panelUser_MouseEnter);
+            this.lbTriangle.MouseLeave += new System.EventHandler(this.panelUser_MouseLeave);
+            // 
+            // userPicture
+            // 
+            this.userPicture.BackgroundImage = global::PBL.Properties.Resources.profile_user;
+            this.userPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userPicture.Location = new System.Drawing.Point(3, 0);
+            this.userPicture.Name = "userPicture";
+            this.userPicture.Size = new System.Drawing.Size(80, 80);
+            this.userPicture.TabIndex = 9;
+            this.userPicture.TabStop = false;
+            this.userPicture.Click += new System.EventHandler(this.userPicture_Click);
+            this.userPicture.MouseEnter += new System.EventHandler(this.panelUser_MouseEnter);
+            this.userPicture.MouseLeave += new System.EventHandler(this.panelUser_MouseLeave);
+            // 
+            // btQLBKT
+            // 
+            this.btQLBKT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btQLBKT.BackColor = System.Drawing.Color.White;
+            this.btQLBKT.BackgroundColor = System.Drawing.Color.White;
+            this.btQLBKT.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btQLBKT.BorderRadius = 0;
+            this.btQLBKT.BorderSize = 0;
+            this.btQLBKT.FlatAppearance.BorderSize = 0;
+            this.btQLBKT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btQLBKT.ForeColor = System.Drawing.Color.Black;
+            this.btQLBKT.Location = new System.Drawing.Point(1644, 7);
+            this.btQLBKT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btQLBKT.Name = "btQLBKT";
+            this.btQLBKT.Size = new System.Drawing.Size(271, 60);
+            this.btQLBKT.TabIndex = 4;
+            this.btQLBKT.Text = "Quản Lý Bài Kiểm Tra";
+            this.btQLBKT.TextColor = System.Drawing.Color.Black;
+            this.btQLBKT.UseVisualStyleBackColor = false;
+            // 
+            // btQLBH
+            // 
+            this.btQLBH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btQLBH.BackColor = System.Drawing.Color.White;
+            this.btQLBH.BackgroundColor = System.Drawing.Color.White;
+            this.btQLBH.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btQLBH.BorderRadius = 0;
+            this.btQLBH.BorderSize = 0;
+            this.btQLBH.FlatAppearance.BorderSize = 0;
+            this.btQLBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btQLBH.ForeColor = System.Drawing.Color.Black;
+            this.btQLBH.Location = new System.Drawing.Point(1411, 7);
+            this.btQLBH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btQLBH.Name = "btQLBH";
+            this.btQLBH.Size = new System.Drawing.Size(225, 60);
+            this.btQLBH.TabIndex = 3;
+            this.btQLBH.Text = "Quản Lý Bài Học";
+            this.btQLBH.TextColor = System.Drawing.Color.Black;
+            this.btQLBH.UseVisualStyleBackColor = false;
+            // 
+            // btQLHV
+            // 
+            this.btQLHV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btQLHV.BackColor = System.Drawing.Color.White;
+            this.btQLHV.BackgroundColor = System.Drawing.Color.White;
+            this.btQLHV.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btQLHV.BorderRadius = 0;
+            this.btQLHV.BorderSize = 0;
+            this.btQLHV.FlatAppearance.BorderSize = 0;
+            this.btQLHV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btQLHV.ForeColor = System.Drawing.Color.Black;
+            this.btQLHV.Location = new System.Drawing.Point(1178, 7);
+            this.btQLHV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btQLHV.Name = "btQLHV";
+            this.btQLHV.Size = new System.Drawing.Size(225, 60);
+            this.btQLHV.TabIndex = 2;
+            this.btQLHV.Text = "Quản Lý Học Viên";
+            this.btQLHV.TextColor = System.Drawing.Color.Black;
+            this.btQLHV.UseVisualStyleBackColor = false;
+            // 
+            // btTK
+            // 
+            this.btTK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btTK.BackColor = System.Drawing.Color.White;
+            this.btTK.BackgroundColor = System.Drawing.Color.White;
+            this.btTK.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btTK.BorderRadius = 0;
+            this.btTK.BorderSize = 0;
+            this.btTK.FlatAppearance.BorderSize = 0;
+            this.btTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTK.ForeColor = System.Drawing.Color.Black;
+            this.btTK.Location = new System.Drawing.Point(993, 7);
+            this.btTK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btTK.Name = "btTK";
+            this.btTK.Size = new System.Drawing.Size(177, 60);
+            this.btTK.TabIndex = 1;
+            this.btTK.Text = "Thống Kê";
+            this.btTK.TextColor = System.Drawing.Color.Black;
+            this.btTK.UseVisualStyleBackColor = false;
+            // 
+            // logoPicture
+            // 
+            this.logoPicture.Image = global::PBL.Properties.Resources._2024_04_24_15_24_54_Untitled___Figma;
+            this.logoPicture.Location = new System.Drawing.Point(4, 14);
+            this.logoPicture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.logoPicture.Name = "logoPicture";
+            this.logoPicture.Size = new System.Drawing.Size(395, 53);
+            this.logoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoPicture.TabIndex = 0;
+            this.logoPicture.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.rjTextBox1);
+            this.panel2.Location = new System.Drawing.Point(232, 156);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1599, 93);
+            this.panel2.TabIndex = 14;
             // 
             // comboBox1
             // 
@@ -64,45 +230,95 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Tên",
             "Giảng Viên"});
-            this.comboBox1.Location = new System.Drawing.Point(465, 81);
+            this.comboBox1.Location = new System.Drawing.Point(618, 24);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(180, 33);
             this.comboBox1.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 72);
+            this.label1.Location = new System.Drawing.Point(4, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 34);
+            this.label1.Size = new System.Drawing.Size(194, 53);
             this.label1.TabIndex = 7;
             this.label1.Text = "Tìm kiếm";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel1
+            // rjTextBox1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.roundButton1);
-            this.panel1.Controls.Add(this.roundButton7);
-            this.panel1.Controls.Add(this.roundButton6);
-            this.panel1.Controls.Add(this.roundButton5);
-            this.panel1.Controls.Add(this.roundButton4);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1164, 52);
-            this.panel1.TabIndex = 6;
+            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.rjTextBox1.BorderRadius = 10;
+            this.rjTextBox1.BorderSize = 2;
+            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjTextBox1.Location = new System.Drawing.Point(208, 10);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(6);
+            this.rjTextBox1.Multiline = false;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox1.PlaceholderText = "Nhập tên bài học";
+            this.rjTextBox1.Size = new System.Drawing.Size(375, 53);
+            this.rjTextBox1.TabIndex = 9;
+            this.rjTextBox1.Texts = "";
+            this.rjTextBox1.UnderlinedStyle = false;
             // 
-            // pictureBox1
+            // panelInfo
             // 
-            this.pictureBox1.Image = global::PBL.Properties.Resources._2024_04_24_15_24_54_Untitled___Figma;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(198, 44);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.panelInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelInfo.BackColor = System.Drawing.Color.MintCream;
+            this.panelInfo.Controls.Add(this.roundButton1);
+            this.panelInfo.Controls.Add(this.roundButton2);
+            this.panelInfo.Location = new System.Drawing.Point(1863, 3);
+            this.panelInfo.Name = "panelInfo";
+            this.panelInfo.Size = new System.Drawing.Size(198, 100);
+            this.panelInfo.TabIndex = 0;
+            this.panelInfo.Visible = false;
+            // 
+            // roundButton1
+            // 
+            this.roundButton1.AutoSize = true;
+            this.roundButton1.BackColor = System.Drawing.Color.White;
+            this.roundButton1.BackgroundColor = System.Drawing.Color.White;
+            this.roundButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.roundButton1.BorderRadius = 5;
+            this.roundButton1.BorderSize = 0;
+            this.roundButton1.FlatAppearance.BorderSize = 0;
+            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton1.ForeColor = System.Drawing.Color.Black;
+            this.roundButton1.Location = new System.Drawing.Point(3, 3);
+            this.roundButton1.Name = "roundButton1";
+            this.roundButton1.Size = new System.Drawing.Size(161, 40);
+            this.roundButton1.TabIndex = 0;
+            this.roundButton1.Text = "Trang cá nhân";
+            this.roundButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundButton1.TextColor = System.Drawing.Color.Black;
+            this.roundButton1.UseVisualStyleBackColor = false;
+            // 
+            // roundButton2
+            // 
+            this.roundButton2.BackColor = System.Drawing.Color.White;
+            this.roundButton2.BackgroundColor = System.Drawing.Color.White;
+            this.roundButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.roundButton2.BorderRadius = 5;
+            this.roundButton2.BorderSize = 0;
+            this.roundButton2.FlatAppearance.BorderSize = 0;
+            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton2.ForeColor = System.Drawing.Color.Black;
+            this.roundButton2.Location = new System.Drawing.Point(3, 49);
+            this.roundButton2.Name = "roundButton2";
+            this.roundButton2.Size = new System.Drawing.Size(166, 40);
+            this.roundButton2.TabIndex = 1;
+            this.roundButton2.Text = "Đăng xuất";
+            this.roundButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundButton2.TextColor = System.Drawing.Color.Black;
+            this.roundButton2.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
@@ -117,11 +333,13 @@
             this.Detail,
             this.Edit,
             this.Delete});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 113);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(233, 257);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1140, 438);
+            this.dataGridView1.Size = new System.Drawing.Size(1597, 723);
             this.dataGridView1.TabIndex = 11;
             // 
             // NameUser
@@ -184,234 +402,107 @@
             this.Delete.Text = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.77778F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panelInfo, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 2);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 81);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 153F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 99F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.18206F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.81794F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(2064, 1075);
+            this.tableLayoutPanel1.TabIndex = 13;
+            // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(128, -2);
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(232, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(721, 56);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Tổng Hợp Bài Học";
+            this.label2.Size = new System.Drawing.Size(1599, 153);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Tổng hợp bài học";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel2
+            // panel1
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.roundButton8);
-            this.panel2.Controls.Add(this.roundButton3);
-            this.panel2.Controls.Add(this.roundButton2);
-            this.panel2.Location = new System.Drawing.Point(1045, 57);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(119, 148);
-            this.panel2.TabIndex = 12;
-            this.panel2.Visible = false;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(50, 302);
+            this.panel1.Margin = new System.Windows.Forms.Padding(50);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(129, 242);
+            this.panel1.TabIndex = 16;
             // 
-            // roundButton8
+            // label3
             // 
-            this.roundButton8.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.roundButton8.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.roundButton8.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundButton8.BorderRadius = 20;
-            this.roundButton8.BorderSize = 0;
-            this.roundButton8.FlatAppearance.BorderSize = 0;
-            this.roundButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton8.ForeColor = System.Drawing.Color.White;
-            this.roundButton8.Location = new System.Drawing.Point(7, 105);
-            this.roundButton8.Name = "roundButton8";
-            this.roundButton8.Size = new System.Drawing.Size(109, 40);
-            this.roundButton8.TabIndex = 0;
-            this.roundButton8.Text = "roundButton2";
-            this.roundButton8.TextColor = System.Drawing.Color.White;
-            this.roundButton8.UseVisualStyleBackColor = false;
-            // 
-            // roundButton3
-            // 
-            this.roundButton3.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.roundButton3.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.roundButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundButton3.BorderRadius = 20;
-            this.roundButton3.BorderSize = 0;
-            this.roundButton3.FlatAppearance.BorderSize = 0;
-            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton3.ForeColor = System.Drawing.Color.White;
-            this.roundButton3.Location = new System.Drawing.Point(7, 59);
-            this.roundButton3.Name = "roundButton3";
-            this.roundButton3.Size = new System.Drawing.Size(109, 40);
-            this.roundButton3.TabIndex = 0;
-            this.roundButton3.Text = "roundButton2";
-            this.roundButton3.TextColor = System.Drawing.Color.White;
-            this.roundButton3.UseVisualStyleBackColor = false;
-            // 
-            // roundButton2
-            // 
-            this.roundButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.roundButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.roundButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundButton2.BorderRadius = 20;
-            this.roundButton2.BorderSize = 0;
-            this.roundButton2.FlatAppearance.BorderSize = 0;
-            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton2.ForeColor = System.Drawing.Color.White;
-            this.roundButton2.Location = new System.Drawing.Point(7, 14);
-            this.roundButton2.Name = "roundButton2";
-            this.roundButton2.Size = new System.Drawing.Size(109, 40);
-            this.roundButton2.TabIndex = 0;
-            this.roundButton2.Text = "roundButton2";
-            this.roundButton2.TextColor = System.Drawing.Color.White;
-            this.roundButton2.UseVisualStyleBackColor = false;
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox1.BorderRadius = 10;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(208, 71);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "Nhập tên bài học";
-            this.rjTextBox1.Size = new System.Drawing.Size(250, 35);
-            this.rjTextBox1.TabIndex = 9;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
-            // 
-            // roundButton1
-            // 
-            this.roundButton1.BackColor = System.Drawing.Color.GhostWhite;
-            this.roundButton1.BackgroundColor = System.Drawing.Color.GhostWhite;
-            this.roundButton1.BackgroundImage = global::PBL.Properties.Resources.profile_user;
-            this.roundButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.roundButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundButton1.BorderRadius = 20;
-            this.roundButton1.BorderSize = 0;
-            this.roundButton1.FlatAppearance.BorderSize = 0;
-            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton1.ForeColor = System.Drawing.Color.White;
-            this.roundButton1.Location = new System.Drawing.Point(1074, 4);
-            this.roundButton1.Name = "roundButton1";
-            this.roundButton1.Size = new System.Drawing.Size(60, 47);
-            this.roundButton1.TabIndex = 5;
-            this.roundButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.roundButton1.TextColor = System.Drawing.Color.White;
-            this.roundButton1.UseVisualStyleBackColor = false;
-            this.roundButton1.MouseLeave += new System.EventHandler(this.roundButton1_MouseLeave);
-            this.roundButton1.MouseHover += new System.EventHandler(this.roundButton1_MouseHover);
-            // 
-            // roundButton7
-            // 
-            this.roundButton7.BackColor = System.Drawing.Color.White;
-            this.roundButton7.BackgroundColor = System.Drawing.Color.White;
-            this.roundButton7.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundButton7.BorderRadius = 0;
-            this.roundButton7.BorderSize = 0;
-            this.roundButton7.FlatAppearance.BorderSize = 0;
-            this.roundButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton7.ForeColor = System.Drawing.Color.Black;
-            this.roundButton7.Location = new System.Drawing.Point(870, 7);
-            this.roundButton7.Name = "roundButton7";
-            this.roundButton7.Size = new System.Drawing.Size(150, 40);
-            this.roundButton7.TabIndex = 4;
-            this.roundButton7.Text = "Quản Lý Bài Kiểm Tra";
-            this.roundButton7.TextColor = System.Drawing.Color.Black;
-            this.roundButton7.UseVisualStyleBackColor = false;
-            // 
-            // roundButton6
-            // 
-            this.roundButton6.BackColor = System.Drawing.Color.White;
-            this.roundButton6.BackgroundColor = System.Drawing.Color.White;
-            this.roundButton6.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundButton6.BorderRadius = 0;
-            this.roundButton6.BorderSize = 0;
-            this.roundButton6.FlatAppearance.BorderSize = 0;
-            this.roundButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton6.ForeColor = System.Drawing.Color.Black;
-            this.roundButton6.Location = new System.Drawing.Point(714, 7);
-            this.roundButton6.Name = "roundButton6";
-            this.roundButton6.Size = new System.Drawing.Size(150, 40);
-            this.roundButton6.TabIndex = 3;
-            this.roundButton6.Text = "Quản Lý Bài Học";
-            this.roundButton6.TextColor = System.Drawing.Color.Black;
-            this.roundButton6.UseVisualStyleBackColor = false;
-            // 
-            // roundButton5
-            // 
-            this.roundButton5.BackColor = System.Drawing.Color.White;
-            this.roundButton5.BackgroundColor = System.Drawing.Color.White;
-            this.roundButton5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundButton5.BorderRadius = 0;
-            this.roundButton5.BorderSize = 0;
-            this.roundButton5.FlatAppearance.BorderSize = 0;
-            this.roundButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton5.ForeColor = System.Drawing.Color.Black;
-            this.roundButton5.Location = new System.Drawing.Point(558, 7);
-            this.roundButton5.Name = "roundButton5";
-            this.roundButton5.Size = new System.Drawing.Size(150, 40);
-            this.roundButton5.TabIndex = 2;
-            this.roundButton5.Text = "Quản Lý Học Viên";
-            this.roundButton5.TextColor = System.Drawing.Color.Black;
-            this.roundButton5.UseVisualStyleBackColor = false;
-            // 
-            // roundButton4
-            // 
-            this.roundButton4.BackColor = System.Drawing.Color.White;
-            this.roundButton4.BackgroundColor = System.Drawing.Color.White;
-            this.roundButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundButton4.BorderRadius = 0;
-            this.roundButton4.BorderSize = 0;
-            this.roundButton4.FlatAppearance.BorderSize = 0;
-            this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton4.ForeColor = System.Drawing.Color.Black;
-            this.roundButton4.Location = new System.Drawing.Point(402, 7);
-            this.roundButton4.Name = "roundButton4";
-            this.roundButton4.Size = new System.Drawing.Size(150, 40);
-            this.roundButton4.TabIndex = 1;
-            this.roundButton4.Text = "Thống Kê";
-            this.roundButton4.TextColor = System.Drawing.Color.Black;
-            this.roundButton4.UseVisualStyleBackColor = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(4, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Sắp xếp theo";
             // 
             // FormQuanLyBaiHoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aqua;
-            this.ClientSize = new System.Drawing.Size(1164, 606);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.rjTextBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(2064, 1156);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.panelHeader);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormQuanLyBaiHoc";
             this.Text = "Form3";
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FormQuanLyBaiHoc_Load);
+            this.panelHeader.ResumeLayout(false);
+            this.panelUser.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPicture)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panelInfo.ResumeLayout(false);
+            this.panelInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Panel panelHeader;
+        private System.Windows.Forms.PictureBox logoPicture;
+        private Controller.RoundButton btQLBKT;
+        private Controller.RoundButton btQLBH;
+        private Controller.RoundButton btQLHV;
+        private Controller.RoundButton btTK;
+        private System.Windows.Forms.Panel panelUser;
+        private System.Windows.Forms.Label lbTriangle;
+        private System.Windows.Forms.PictureBox userPicture;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private Controller.RJTextBox rjTextBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private Controller.RJTextBox rjTextBox1;
+        private System.Windows.Forms.FlowLayoutPanel panelInfo;
+        private Controller.RoundButton roundButton1;
+        private Controller.RoundButton roundButton2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label2;
-        private Controller.RoundButton roundButton7;
-        private Controller.RoundButton roundButton6;
-        private Controller.RoundButton roundButton5;
-        private Controller.RoundButton roundButton4;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameUser;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Editor;
@@ -420,10 +511,9 @@
         private System.Windows.Forms.DataGridViewButtonColumn Detail;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private Controller.RoundButton roundButton1;
-        private System.Windows.Forms.Panel panel2;
-        private Controller.RoundButton roundButton8;
-        private Controller.RoundButton roundButton3;
-        private Controller.RoundButton roundButton2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
     }
 }
