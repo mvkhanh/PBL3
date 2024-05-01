@@ -17,6 +17,23 @@ namespace PBL
             InitializeComponent();
         }
 
-        
+        private void HocVien_Load(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+        }
+        private void userPicture_Click(object sender, EventArgs e)
+        {
+            panelInfo.Visible = !panelInfo.Visible;
+        }
+
+        private void panelUser_MouseEnter(object sender, EventArgs e)
+        {
+            panelUser.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void panelUser_MouseLeave(object sender, EventArgs e)
+        {
+            panelUser.BorderStyle = BorderStyle.None;
+        }
     }
 }
