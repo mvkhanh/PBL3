@@ -74,6 +74,12 @@
     <Compile Include="FormQuanLyBaiHoc.Designer.cs">
       <DependentUpon>FormQuanLyBaiHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="GiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiangVien.Designer.cs">
+      <DependentUpon>GiangVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="HocVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuanLyBaiHoc.resx">
       <DependentUpon>FormQuanLyBaiHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiangVien.resx">
+      <DependentUpon>GiangVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HocVien.resx">
       <DependentUpon>HocVien.cs</DependentUpon>

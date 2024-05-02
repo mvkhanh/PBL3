@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL
 {
-    public partial class HocVien : Form
+    public partial class GiangVien : Form
     {
-        public HocVien()
+        public GiangVien()
         {
             InitializeComponent();
         }
@@ -36,7 +36,7 @@ namespace PBL
             panelUser.BorderStyle = BorderStyle.None;
         }
 
-        
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -93,20 +93,14 @@ namespace PBL
 
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void panel8_Paint(object sender, PaintEventArgs e)
         {
@@ -168,10 +162,7 @@ namespace PBL
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void panelHeader_Paint(object sender, PaintEventArgs e)
         {
@@ -262,5 +253,7 @@ namespace PBL
         {
 
         }
+
+        
     }
 }
