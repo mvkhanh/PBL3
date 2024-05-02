@@ -24,6 +24,9 @@ namespace PBL
             this.Show();
         }
 
-        
+        private void FormDangNhap_Load(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+        }
     }
 }
