@@ -1,6 +1,6 @@
 ﻿namespace PBL
 {
-    partial class FormDangNhap
+    partial class ViewDangNhap
     {
         /// <summary>
         /// Required designer variable.

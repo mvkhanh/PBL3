@@ -1,7 +1,7 @@
 ﻿
 namespace PBL
 {
-    partial class Admin
+    partial class ViewIHocVien
     {
         /// <summary>
         /// Required designer variable.
@@ -70,15 +70,13 @@ namespace PBL
             this.roundButton5 = new PBL.Controller.RoundButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panelHeader = new System.Windows.Forms.Panel();
-            this.btQLBKT = new PBL.Controller.RoundButton();
-            this.btQLBH = new PBL.Controller.RoundButton();
-            this.btQLHV = new PBL.Controller.RoundButton();
-            this.btTK = new PBL.Controller.RoundButton();
-            this.panelUser = new System.Windows.Forms.Panel();
-            this.lbTriangle = new System.Windows.Forms.Label();
             this.logoPicture = new System.Windows.Forms.PictureBox();
+            this.btBKT = new PBL.Controller.RoundButton();
+            this.btBH = new PBL.Controller.RoundButton();
+            this.btBHDL = new PBL.Controller.RoundButton();
+            this.panelUser = new System.Windows.Forms.Panel();
             this.userPicture = new System.Windows.Forms.PictureBox();
-            this.roundButton6 = new PBL.Controller.RoundButton();
+            this.lbTriangle = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -95,8 +93,8 @@ namespace PBL
             this.panel1.SuspendLayout();
             this.panelInfo.SuspendLayout();
             this.panelHeader.SuspendLayout();
-            this.panelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicture)).BeginInit();
+            this.panelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -716,12 +714,10 @@ namespace PBL
             // panelHeader
             // 
             this.panelHeader.BackColor = System.Drawing.Color.White;
-            this.panelHeader.Controls.Add(this.roundButton6);
-            this.panelHeader.Controls.Add(this.btQLBKT);
-            this.panelHeader.Controls.Add(this.btQLBH);
-            this.panelHeader.Controls.Add(this.btQLHV);
-            this.panelHeader.Controls.Add(this.btTK);
             this.panelHeader.Controls.Add(this.logoPicture);
+            this.panelHeader.Controls.Add(this.btBKT);
+            this.panelHeader.Controls.Add(this.btBH);
+            this.panelHeader.Controls.Add(this.btBHDL);
             this.panelHeader.Controls.Add(this.panelUser);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
@@ -730,89 +726,78 @@ namespace PBL
             this.panelHeader.Size = new System.Drawing.Size(1924, 81);
             this.panelHeader.TabIndex = 13;
             // 
-            // btQLBKT
+            // logoPicture
             // 
-            this.btQLBKT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btQLBKT.BackColor = System.Drawing.Color.White;
-            this.btQLBKT.BackgroundColor = System.Drawing.Color.White;
-            this.btQLBKT.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btQLBKT.BorderRadius = 0;
-            this.btQLBKT.BorderSize = 0;
-            this.btQLBKT.FlatAppearance.BorderSize = 0;
-            this.btQLBKT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btQLBKT.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btQLBKT.ForeColor = System.Drawing.Color.Black;
-            this.btQLBKT.Location = new System.Drawing.Point(1520, 13);
-            this.btQLBKT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btQLBKT.Name = "btQLBKT";
-            this.btQLBKT.Size = new System.Drawing.Size(271, 60);
-            this.btQLBKT.TabIndex = 24;
-            this.btQLBKT.Text = "Quản Lý Bài Kiểm Tra";
-            this.btQLBKT.TextColor = System.Drawing.Color.Black;
-            this.btQLBKT.UseVisualStyleBackColor = false;
+            this.logoPicture.Image = global::PBL.Properties.Resources._2024_04_24_15_24_54_Untitled___Figma;
+            this.logoPicture.Location = new System.Drawing.Point(4, 14);
+            this.logoPicture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.logoPicture.Name = "logoPicture";
+            this.logoPicture.Size = new System.Drawing.Size(394, 53);
+            this.logoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoPicture.TabIndex = 20;
+            this.logoPicture.TabStop = false;
             // 
-            // btQLBH
+            // btBKT
             // 
-            this.btQLBH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btQLBH.BackColor = System.Drawing.Color.White;
-            this.btQLBH.BackgroundColor = System.Drawing.Color.White;
-            this.btQLBH.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btQLBH.BorderRadius = 0;
-            this.btQLBH.BorderSize = 0;
-            this.btQLBH.FlatAppearance.BorderSize = 0;
-            this.btQLBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btQLBH.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btQLBH.ForeColor = System.Drawing.Color.Black;
-            this.btQLBH.Location = new System.Drawing.Point(1287, 13);
-            this.btQLBH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btQLBH.Name = "btQLBH";
-            this.btQLBH.Size = new System.Drawing.Size(225, 60);
-            this.btQLBH.TabIndex = 23;
-            this.btQLBH.Text = "Quản Lý Bài Học";
-            this.btQLBH.TextColor = System.Drawing.Color.Black;
-            this.btQLBH.UseVisualStyleBackColor = false;
+            this.btBKT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btBKT.AutoSize = true;
+            this.btBKT.BackColor = System.Drawing.Color.White;
+            this.btBKT.BackgroundColor = System.Drawing.Color.White;
+            this.btBKT.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btBKT.BorderRadius = 0;
+            this.btBKT.BorderSize = 0;
+            this.btBKT.FlatAppearance.BorderSize = 0;
+            this.btBKT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBKT.ForeColor = System.Drawing.Color.Black;
+            this.btBKT.Location = new System.Drawing.Point(1585, 5);
+            this.btBKT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btBKT.Name = "btBKT";
+            this.btBKT.Size = new System.Drawing.Size(145, 59);
+            this.btBKT.TabIndex = 19;
+            this.btBKT.Text = "Bài Kiểm Tra";
+            this.btBKT.TextColor = System.Drawing.Color.Black;
+            this.btBKT.UseVisualStyleBackColor = false;
             // 
-            // btQLHV
+            // btBH
             // 
-            this.btQLHV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btQLHV.BackColor = System.Drawing.Color.White;
-            this.btQLHV.BackgroundColor = System.Drawing.Color.White;
-            this.btQLHV.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btQLHV.BorderRadius = 0;
-            this.btQLHV.BorderSize = 0;
-            this.btQLHV.FlatAppearance.BorderSize = 0;
-            this.btQLHV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btQLHV.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btQLHV.ForeColor = System.Drawing.Color.Black;
-            this.btQLHV.Location = new System.Drawing.Point(1054, 13);
-            this.btQLHV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btQLHV.Name = "btQLHV";
-            this.btQLHV.Size = new System.Drawing.Size(225, 60);
-            this.btQLHV.TabIndex = 22;
-            this.btQLHV.Text = "Quản Lý Học Viên";
-            this.btQLHV.TextColor = System.Drawing.Color.Black;
-            this.btQLHV.UseVisualStyleBackColor = false;
+            this.btBH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btBH.BackColor = System.Drawing.Color.White;
+            this.btBH.BackgroundColor = System.Drawing.Color.White;
+            this.btBH.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btBH.BorderRadius = 0;
+            this.btBH.BorderSize = 0;
+            this.btBH.FlatAppearance.BorderSize = 0;
+            this.btBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBH.ForeColor = System.Drawing.Color.Black;
+            this.btBH.Location = new System.Drawing.Point(1388, 5);
+            this.btBH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btBH.Name = "btBH";
+            this.btBH.Size = new System.Drawing.Size(163, 59);
+            this.btBH.TabIndex = 18;
+            this.btBH.Text = "Bài Học";
+            this.btBH.TextColor = System.Drawing.Color.Black;
+            this.btBH.UseVisualStyleBackColor = false;
             // 
-            // btTK
+            // btBHDL
             // 
-            this.btTK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btTK.BackColor = System.Drawing.Color.White;
-            this.btTK.BackgroundColor = System.Drawing.Color.White;
-            this.btTK.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btTK.BorderRadius = 0;
-            this.btTK.BorderSize = 0;
-            this.btTK.FlatAppearance.BorderSize = 0;
-            this.btTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btTK.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTK.ForeColor = System.Drawing.Color.Black;
-            this.btTK.Location = new System.Drawing.Point(636, 14);
-            this.btTK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btTK.Name = "btTK";
-            this.btTK.Size = new System.Drawing.Size(177, 60);
-            this.btTK.TabIndex = 21;
-            this.btTK.Text = "Thống Kê";
-            this.btTK.TextColor = System.Drawing.Color.Black;
-            this.btTK.UseVisualStyleBackColor = false;
+            this.btBHDL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btBHDL.AutoSize = true;
+            this.btBHDL.BackColor = System.Drawing.Color.White;
+            this.btBHDL.BackgroundColor = System.Drawing.Color.White;
+            this.btBHDL.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btBHDL.BorderRadius = 0;
+            this.btBHDL.BorderSize = 0;
+            this.btBHDL.FlatAppearance.BorderSize = 0;
+            this.btBHDL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBHDL.ForeColor = System.Drawing.Color.Black;
+            this.btBHDL.Location = new System.Drawing.Point(1187, 5);
+            this.btBHDL.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btBHDL.Name = "btBHDL";
+            this.btBHDL.Size = new System.Drawing.Size(172, 59);
+            this.btBHDL.TabIndex = 17;
+            this.btBHDL.Text = "Bài Học Đã Lưu";
+            this.btBHDL.TextColor = System.Drawing.Color.Black;
+            this.btBHDL.UseVisualStyleBackColor = false;
             // 
             // panelUser
             // 
@@ -828,30 +813,6 @@ namespace PBL
             this.panelUser.MouseEnter += new System.EventHandler(this.panelUser_MouseEnter);
             this.panelUser.MouseLeave += new System.EventHandler(this.panelUser_MouseLeave);
             // 
-            // lbTriangle
-            // 
-            this.lbTriangle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTriangle.Location = new System.Drawing.Point(78, 0);
-            this.lbTriangle.Name = "lbTriangle";
-            this.lbTriangle.Size = new System.Drawing.Size(38, 81);
-            this.lbTriangle.TabIndex = 13;
-            this.lbTriangle.Text = "▼";
-            this.lbTriangle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbTriangle.Click += new System.EventHandler(this.userPicture_Click);
-            this.lbTriangle.MouseEnter += new System.EventHandler(this.panelUser_MouseEnter);
-            this.lbTriangle.MouseLeave += new System.EventHandler(this.panelUser_MouseLeave);
-            // 
-            // logoPicture
-            // 
-            this.logoPicture.Image = global::PBL.Properties.Resources._2024_04_24_15_24_54_Untitled___Figma;
-            this.logoPicture.Location = new System.Drawing.Point(4, 14);
-            this.logoPicture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.logoPicture.Name = "logoPicture";
-            this.logoPicture.Size = new System.Drawing.Size(394, 53);
-            this.logoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logoPicture.TabIndex = 20;
-            this.logoPicture.TabStop = false;
-            // 
             // userPicture
             // 
             this.userPicture.BackgroundImage = global::PBL.Properties.Resources.profile_user;
@@ -865,28 +826,20 @@ namespace PBL
             this.userPicture.MouseEnter += new System.EventHandler(this.panelUser_MouseEnter);
             this.userPicture.MouseLeave += new System.EventHandler(this.panelUser_MouseLeave);
             // 
-            // roundButton6
+            // lbTriangle
             // 
-            this.roundButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.roundButton6.BackColor = System.Drawing.Color.White;
-            this.roundButton6.BackgroundColor = System.Drawing.Color.White;
-            this.roundButton6.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundButton6.BorderRadius = 0;
-            this.roundButton6.BorderSize = 0;
-            this.roundButton6.FlatAppearance.BorderSize = 0;
-            this.roundButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton6.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton6.ForeColor = System.Drawing.Color.Black;
-            this.roundButton6.Location = new System.Drawing.Point(821, 13);
-            this.roundButton6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.roundButton6.Name = "roundButton6";
-            this.roundButton6.Size = new System.Drawing.Size(225, 60);
-            this.roundButton6.TabIndex = 25;
-            this.roundButton6.Text = "Quản Lý Giảng Viên";
-            this.roundButton6.TextColor = System.Drawing.Color.Black;
-            this.roundButton6.UseVisualStyleBackColor = false;
+            this.lbTriangle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTriangle.Location = new System.Drawing.Point(78, 0);
+            this.lbTriangle.Name = "lbTriangle";
+            this.lbTriangle.Size = new System.Drawing.Size(38, 81);
+            this.lbTriangle.TabIndex = 13;
+            this.lbTriangle.Text = "▼";
+            this.lbTriangle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbTriangle.Click += new System.EventHandler(this.userPicture_Click);
+            this.lbTriangle.MouseEnter += new System.EventHandler(this.panelUser_MouseEnter);
+            this.lbTriangle.MouseLeave += new System.EventHandler(this.panelUser_MouseLeave);
             // 
-            // Admin
+            // HocVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -895,7 +848,7 @@ namespace PBL
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panelHeader);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Admin";
+            this.Name = "HocVien";
             this.Text = "HocVien";
             this.Load += new System.EventHandler(this.HocVien_Load);
             this.panel2.ResumeLayout(false);
@@ -928,8 +881,8 @@ namespace PBL
             this.panelInfo.PerformLayout();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
-            this.panelUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoPicture)).EndInit();
+            this.panelUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).EndInit();
             this.ResumeLayout(false);
 
@@ -973,6 +926,9 @@ namespace PBL
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.PictureBox logoPicture;
+        private Controller.RoundButton btBKT;
+        private Controller.RoundButton btBH;
+        private Controller.RoundButton btBHDL;
         private System.Windows.Forms.Panel panelUser;
         private System.Windows.Forms.PictureBox userPicture;
         private System.Windows.Forms.Label lbTriangle;
@@ -981,10 +937,5 @@ namespace PBL
         private System.Windows.Forms.FlowLayoutPanel panelInfo;
         private Controller.RoundButton roundButton1;
         private Controller.RoundButton roundButton5;
-        private Controller.RoundButton btQLBKT;
-        private Controller.RoundButton btQLBH;
-        private Controller.RoundButton btQLHV;
-        private Controller.RoundButton btTK;
-        private Controller.RoundButton roundButton6;
     }
 }

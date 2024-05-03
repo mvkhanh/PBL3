@@ -1,7 +1,7 @@
 ﻿
 namespace PBL
 {
-    partial class GiangVien
+    partial class ViewGiangVien
     {
         /// <summary>
         /// Required designer variable.

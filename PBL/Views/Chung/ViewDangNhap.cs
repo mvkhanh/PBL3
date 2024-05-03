@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL
 {
-    public partial class FormDangNhap : Form
+    public partial class ViewDangNhap : Form
     {
-        public FormDangNhap()
+        public ViewDangNhap()
         {
             InitializeComponent();
         }
@@ -20,7 +20,7 @@ namespace PBL
         private void label4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new FormDangKy().ShowDialog();
+            new ViewDangKy().ShowDialog();
             this.Show();
         }
 

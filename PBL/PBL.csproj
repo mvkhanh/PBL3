@@ -35,6 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,88 +48,98 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs">
+    <Compile Include="Views\Admin\ViewAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin.Designer.cs">
-      <DependentUpon>Admin.cs</DependentUpon>
+    <Compile Include="Views\Admin\ViewAdmin.Designer.cs">
+      <DependentUpon>ViewAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\RJTextBox.cs">
+    <Compile Include="Resources\RJTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controller\RJTextBox.Designer.cs">
+    <Compile Include="Resources\RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\RoundButton.cs">
+    <Compile Include="Resources\RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="FormDangNhap.cs">
+    <Compile Include="Views\Chung\ViewDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDangNhap.Designer.cs">
-      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    <Compile Include="Views\Chung\ViewDangNhap.Designer.cs">
+      <DependentUpon>ViewDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormThemBaiHoc.cs">
+    <Compile Include="Views\Admin\ViewThemBaiHoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormThemBaiHoc.Designer.cs">
-      <DependentUpon>FormThemBaiHoc.cs</DependentUpon>
+    <Compile Include="Views\Admin\ViewThemBaiHoc.Designer.cs">
+      <DependentUpon>ViewThemBaiHoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormQuanLyBaiHoc.cs">
+    <Compile Include="Views\Admin\ViewDanhSachBaiHoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormQuanLyBaiHoc.Designer.cs">
-      <DependentUpon>FormQuanLyBaiHoc.cs</DependentUpon>
+    <Compile Include="Views\Admin\ViewDanhSachBaiHoc.Designer.cs">
+      <DependentUpon>ViewDanhSachBaiHoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormThemBaiKiemTra.cs">
+    <Compile Include="Views\Admin\ViewThemBaiKiemTra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormThemBaiKiemTra.Designer.cs">
-      <DependentUpon>FormThemBaiKiemTra.cs</DependentUpon>
+    <Compile Include="Views\Admin\ViewThemBaiKiemTra.Designer.cs">
+      <DependentUpon>ViewThemBaiKiemTra.cs</DependentUpon>
     </Compile>
-    <Compile Include="GiangVien.cs">
+    <Compile Include="Views\GiangVien\ViewGiangVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GiangVien.Designer.cs">
-      <DependentUpon>GiangVien.cs</DependentUpon>
+    <Compile Include="Views\GiangVien\ViewGiangVien.Designer.cs">
+      <DependentUpon>ViewGiangVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="HocVien.cs">
+    <Compile Include="Views\HocVien\ViewIHocVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HocVien.Designer.cs">
-      <DependentUpon>HocVien.cs</DependentUpon>
+    <Compile Include="Views\HocVien\ViewIHocVien.Designer.cs">
+      <DependentUpon>ViewIHocVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\BaiHoc.cs" />
+    <Compile Include="Models\BaiKiemTra.cs" />
+    <Compile Include="Models\CauHoi.cs" />
+    <Compile Include="Models\DanhMuc.cs" />
+    <Compile Include="Models\DapAn.cs" />
+    <Compile Include="Models\GiangVien.cs" />
+    <Compile Include="Models\HocVien.cs" />
+    <Compile Include="Models\Nguoi.cs" />
+    <Compile Include="Models\StudyElement.cs" />
+    <Compile Include="Models\TaiKhoan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FormDangKy.cs">
+    <Compile Include="Views\Chung\ViewDangKy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDangKy.Designer.cs">
-      <DependentUpon>FormDangKy.cs</DependentUpon>
+    <Compile Include="Views\Chung\ViewDangKy.Designer.cs">
+      <DependentUpon>ViewDangKy.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Admin.resx">
-      <DependentUpon>Admin.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Admin\ViewAdmin.resx">
+      <DependentUpon>ViewAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\RJTextBox.resx">
+    <EmbeddedResource Include="Resources\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDangNhap.resx">
-      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Chung\ViewDangNhap.resx">
+      <DependentUpon>ViewDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormThemBaiHoc.resx">
-      <DependentUpon>FormThemBaiHoc.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Admin\ViewThemBaiHoc.resx">
+      <DependentUpon>ViewThemBaiHoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormQuanLyBaiHoc.resx">
-      <DependentUpon>FormQuanLyBaiHoc.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Admin\ViewDanhSachBaiHoc.resx">
+      <DependentUpon>ViewDanhSachBaiHoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormThemBaiKiemTra.resx">
-      <DependentUpon>FormThemBaiKiemTra.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Admin\ViewThemBaiKiemTra.resx">
+      <DependentUpon>ViewThemBaiKiemTra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GiangVien.resx">
-      <DependentUpon>GiangVien.cs</DependentUpon>
+    <EmbeddedResource Include="Views\GiangVien\ViewGiangVien.resx">
+      <DependentUpon>ViewGiangVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HocVien.resx">
-      <DependentUpon>HocVien.cs</DependentUpon>
+    <EmbeddedResource Include="Views\HocVien\ViewIHocVien.resx">
+      <DependentUpon>ViewIHocVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -140,8 +151,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="FormDangKy.resx">
-      <DependentUpon>FormDangKy.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Chung\ViewDangKy.resx">
+      <DependentUpon>ViewDangKy.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -161,6 +172,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\profile-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presenters\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

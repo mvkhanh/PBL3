@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL
 {
-    public partial class FormDangKy : Form
+    public partial class ViewDangKy : Form
     {
-        public FormDangKy()
+        public ViewDangKy()
         {
             InitializeComponent();
         }

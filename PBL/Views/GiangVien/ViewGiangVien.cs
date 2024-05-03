@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace PBL
 {
-    public partial class FormQuanLyBaiHoc : Form
+    public partial class ViewGiangVien : Form
     {
-        public FormQuanLyBaiHoc()
+        public ViewGiangVien()
         {
             InitializeComponent();
         }
-        private void FormQuanLyBaiHoc_Load(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-        }
 
+        private void HocVien_Load(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+        }
         private void userPicture_Click(object sender, EventArgs e)
         {
             panelInfo.Visible = !panelInfo.Visible;

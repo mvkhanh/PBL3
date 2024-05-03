@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL
 {
-    public partial class FormThemBaiKiemTra : Form
+    public partial class ViewThemBaiHoc : Form
     {
-        public FormThemBaiKiemTra()
+        public ViewThemBaiHoc()
         {
             InitializeComponent();
         }

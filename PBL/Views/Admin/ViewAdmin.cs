@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL
 {
-    public partial class Admin : Form
+    public partial class ViewAdmin : Form
     {
-        public Admin()
+        public ViewAdmin()
         {
             InitializeComponent();
         }

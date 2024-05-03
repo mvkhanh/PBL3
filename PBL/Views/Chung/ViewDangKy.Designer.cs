@@ -1,6 +1,6 @@
 ﻿namespace PBL
 {
-    partial class FormDangKy
+    partial class ViewDangKy
     {
         /// <summary>
         /// Required designer variable.

@@ -2,7 +2,7 @@
 
 namespace PBL
 {
-    partial class FormThemBaiKiemTra
+    partial class ViewThemBaiKiemTra
     {
         /// <summary>
         /// Required designer variable.

@@ -10,18 +10,16 @@ using System.Windows.Forms;
 
 namespace PBL
 {
-    public partial class FormThemBaiHoc : Form
+    public partial class ViewIHocVien : Form
     {
-        public FormThemBaiHoc()
+        public ViewIHocVien()
         {
             InitializeComponent();
         }
 
-        private void FormThemBaiHoc_Load(object sender, EventArgs e)
+        private void HocVien_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
-            panel3.Location = new Point((Width - panel3.Width) / 2, (Height - panel3.Height) / 2);
-            panelInfo.Location = new Point(Width - panelInfo.Width - 20, panelHeader.Height + 5);
         }
         private void userPicture_Click(object sender, EventArgs e)
         {

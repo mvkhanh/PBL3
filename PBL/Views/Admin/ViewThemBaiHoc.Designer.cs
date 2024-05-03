@@ -2,7 +2,7 @@
 
 namespace PBL
 {
-    partial class FormThemBaiHoc
+    partial class ViewThemBaiHoc
     {
         /// <summary>
         /// Required designer variable.
