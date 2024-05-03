@@ -20,6 +20,8 @@ namespace PBL
         private void FormThemBaiHoc_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
+            panel3.Location = new Point((Width - panel3.Width) / 2, (Height - panel3.Height) / 2);
+            panelInfo.Location = new Point(Width - panelInfo.Width - 20, panelHeader.Height + 5);
         }
         private void userPicture_Click(object sender, EventArgs e)
         {

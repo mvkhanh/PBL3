@@ -16,5 +16,11 @@ namespace PBL
         {
             InitializeComponent();
         }
+
+        private void FormDangKy_Load(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+            panel1.Location = new Point((this.Width - panel1.Width) / 2, (this.Height - panel1.Height) / 2);
+        }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL
 {
-    public partial class HocVien : Form
+    public partial class Admin : Form
     {
-        public HocVien()
+        public Admin()
         {
             InitializeComponent();
         }

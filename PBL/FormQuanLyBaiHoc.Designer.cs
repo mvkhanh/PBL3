@@ -38,6 +38,7 @@
             this.btTK = new PBL.Controller.RoundButton();
             this.logoPicture = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.roundButton3 = new PBL.Controller.RoundButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.rjTextBox1 = new PBL.Controller.RJTextBox();
@@ -62,7 +63,6 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.roundButton3 = new PBL.Controller.RoundButton();
             this.panelHeader.SuspendLayout();
             this.panelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
@@ -140,6 +140,7 @@
             this.btQLBKT.BorderSize = 0;
             this.btQLBKT.FlatAppearance.BorderSize = 0;
             this.btQLBKT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btQLBKT.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btQLBKT.ForeColor = System.Drawing.Color.Black;
             this.btQLBKT.Location = new System.Drawing.Point(1644, 7);
             this.btQLBKT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -160,6 +161,7 @@
             this.btQLBH.BorderSize = 0;
             this.btQLBH.FlatAppearance.BorderSize = 0;
             this.btQLBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btQLBH.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btQLBH.ForeColor = System.Drawing.Color.Black;
             this.btQLBH.Location = new System.Drawing.Point(1411, 7);
             this.btQLBH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -180,6 +182,7 @@
             this.btQLHV.BorderSize = 0;
             this.btQLHV.FlatAppearance.BorderSize = 0;
             this.btQLHV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btQLHV.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btQLHV.ForeColor = System.Drawing.Color.Black;
             this.btQLHV.Location = new System.Drawing.Point(1178, 7);
             this.btQLHV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -200,6 +203,7 @@
             this.btTK.BorderSize = 0;
             this.btTK.FlatAppearance.BorderSize = 0;
             this.btTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTK.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btTK.ForeColor = System.Drawing.Color.Black;
             this.btTK.Location = new System.Drawing.Point(993, 7);
             this.btTK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -232,6 +236,26 @@
             this.panel2.Size = new System.Drawing.Size(1652, 93);
             this.panel2.TabIndex = 14;
             // 
+            // roundButton3
+            // 
+            this.roundButton3.AutoSize = true;
+            this.roundButton3.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.roundButton3.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.roundButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.roundButton3.BorderRadius = 10;
+            this.roundButton3.BorderSize = 0;
+            this.roundButton3.FlatAppearance.BorderSize = 0;
+            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton3.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton3.ForeColor = System.Drawing.Color.White;
+            this.roundButton3.Location = new System.Drawing.Point(851, 10);
+            this.roundButton3.Name = "roundButton3";
+            this.roundButton3.Size = new System.Drawing.Size(169, 53);
+            this.roundButton3.TabIndex = 11;
+            this.roundButton3.Text = "Tìm";
+            this.roundButton3.TextColor = System.Drawing.Color.White;
+            this.roundButton3.UseVisualStyleBackColor = false;
+            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -246,7 +270,7 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(4, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -299,10 +323,11 @@
             this.roundButton1.BorderSize = 0;
             this.roundButton1.FlatAppearance.BorderSize = 0;
             this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton1.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundButton1.ForeColor = System.Drawing.Color.Black;
             this.roundButton1.Location = new System.Drawing.Point(3, 3);
             this.roundButton1.Name = "roundButton1";
-            this.roundButton1.Size = new System.Drawing.Size(161, 40);
+            this.roundButton1.Size = new System.Drawing.Size(165, 40);
             this.roundButton1.TabIndex = 0;
             this.roundButton1.Text = "Trang cá nhân";
             this.roundButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -318,10 +343,11 @@
             this.roundButton2.BorderSize = 0;
             this.roundButton2.FlatAppearance.BorderSize = 0;
             this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton2.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundButton2.ForeColor = System.Drawing.Color.Black;
             this.roundButton2.Location = new System.Drawing.Point(3, 49);
             this.roundButton2.Name = "roundButton2";
-            this.roundButton2.Size = new System.Drawing.Size(166, 40);
+            this.roundButton2.Size = new System.Drawing.Size(161, 40);
             this.roundButton2.TabIndex = 1;
             this.roundButton2.Text = "Đăng xuất";
             this.roundButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -526,31 +552,11 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Sắp xếp theo";
             // 
-            // roundButton3
-            // 
-            this.roundButton3.AutoSize = true;
-            this.roundButton3.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.roundButton3.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.roundButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundButton3.BorderRadius = 10;
-            this.roundButton3.BorderSize = 0;
-            this.roundButton3.FlatAppearance.BorderSize = 0;
-            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton3.ForeColor = System.Drawing.Color.White;
-            this.roundButton3.Location = new System.Drawing.Point(851, 10);
-            this.roundButton3.Name = "roundButton3";
-            this.roundButton3.Size = new System.Drawing.Size(169, 53);
-            this.roundButton3.TabIndex = 11;
-            this.roundButton3.Text = "Tìm";
-            this.roundButton3.TextColor = System.Drawing.Color.White;
-            this.roundButton3.UseVisualStyleBackColor = false;
-            // 
             // FormQuanLyBaiHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Aqua;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(2064, 1156);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panelHeader);
