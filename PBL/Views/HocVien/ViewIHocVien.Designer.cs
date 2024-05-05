@@ -728,7 +728,7 @@ namespace PBL
             // 
             // logoPicture
             // 
-            this.logoPicture.Image = global::PBL.Properties.Resources._2024_04_24_15_24_54_Untitled___Figma;
+            this.logoPicture.Image = global::PBL.Properties.Resources.Logo;
             this.logoPicture.Location = new System.Drawing.Point(4, 14);
             this.logoPicture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.logoPicture.Name = "logoPicture";
@@ -815,7 +815,7 @@ namespace PBL
             // 
             // userPicture
             // 
-            this.userPicture.BackgroundImage = global::PBL.Properties.Resources.profile_user;
+            this.userPicture.BackgroundImage = global::PBL.Properties.Resources.Profile;
             this.userPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.userPicture.Location = new System.Drawing.Point(3, 2);
             this.userPicture.Name = "userPicture";

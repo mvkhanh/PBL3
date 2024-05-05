@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL.Views.Shared;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace PBL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ViewDangNhap());
+            Application.Run(new Login());
         }
     }
 }

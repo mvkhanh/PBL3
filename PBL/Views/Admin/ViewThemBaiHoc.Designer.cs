@@ -45,13 +45,13 @@ namespace PBL
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.rjTextBox3 = new PBL.Controller.RJTextBox();
+            this.rjTextBox3 = new PBL.Controller.RoundTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.rjTextBox2 = new PBL.Controller.RJTextBox();
+            this.rjTextBox2 = new PBL.Controller.RoundTextBox();
             this.roundButton2 = new PBL.Controller.RoundButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.rjTextBox1 = new PBL.Controller.RJTextBox();
+            this.rjTextBox1 = new PBL.Controller.RoundTextBox();
             this.panelInfo = new System.Windows.Forms.FlowLayoutPanel();
             this.roundButton1 = new PBL.Controller.RoundButton();
             this.roundButton4 = new PBL.Controller.RoundButton();
@@ -80,7 +80,7 @@ namespace PBL
             // 
             // userPicture
             // 
-            this.userPicture.BackgroundImage = global::PBL.Properties.Resources.profile_user;
+            this.userPicture.BackgroundImage = global::PBL.Properties.Resources.Profile;
             this.userPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.userPicture.Location = new System.Drawing.Point(0, 1);
             this.userPicture.Name = "userPicture";
@@ -106,7 +106,7 @@ namespace PBL
             // 
             // logoPicture
             // 
-            this.logoPicture.Image = global::PBL.Properties.Resources._2024_04_24_15_24_54_Untitled___Figma;
+            this.logoPicture.Image = global::PBL.Properties.Resources.Logo;
             this.logoPicture.Location = new System.Drawing.Point(4, 14);
             this.logoPicture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.logoPicture.Name = "logoPicture";
@@ -538,13 +538,13 @@ namespace PBL
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
-        private Controller.RJTextBox rjTextBox3;
+        private Controller.RoundTextBox rjTextBox3;
         private System.Windows.Forms.Label label3;
-        private Controller.RJTextBox rjTextBox2;
+        private Controller.RoundTextBox rjTextBox2;
         private Controller.RoundButton roundButton2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private Controller.RJTextBox rjTextBox1;
+        private Controller.RoundTextBox rjTextBox1;
         private System.Windows.Forms.FlowLayoutPanel panelInfo;
         private Controller.RoundButton roundButton1;
         private Controller.RoundButton roundButton4;

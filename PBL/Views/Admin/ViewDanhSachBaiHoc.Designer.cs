@@ -37,7 +37,7 @@
             this.roundButton3 = new PBL.Controller.RoundButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.rjTextBox1 = new PBL.Controller.RJTextBox();
+            this.rjTextBox1 = new PBL.Controller.RoundTextBox();
             this.panelInfo = new System.Windows.Forms.FlowLayoutPanel();
             this.roundButton1 = new PBL.Controller.RoundButton();
             this.roundButton2 = new PBL.Controller.RoundButton();
@@ -121,7 +121,7 @@
             // 
             // userPicture
             // 
-            this.userPicture.BackgroundImage = global::PBL.Properties.Resources.profile_user;
+            this.userPicture.BackgroundImage = global::PBL.Properties.Resources.Profile;
             this.userPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.userPicture.Location = new System.Drawing.Point(0, 0);
             this.userPicture.Name = "userPicture";
@@ -134,7 +134,7 @@
             // 
             // logoPicture
             // 
-            this.logoPicture.Image = global::PBL.Properties.Resources._2024_04_24_15_24_54_Untitled___Figma;
+            this.logoPicture.Image = global::PBL.Properties.Resources.Logo;
             this.logoPicture.Location = new System.Drawing.Point(4, 14);
             this.logoPicture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.logoPicture.Name = "logoPicture";
@@ -614,7 +614,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
-        private Controller.RJTextBox rjTextBox1;
+        private Controller.RoundTextBox rjTextBox1;
         private System.Windows.Forms.FlowLayoutPanel panelInfo;
         private Controller.RoundButton roundButton1;
         private Controller.RoundButton roundButton2;
