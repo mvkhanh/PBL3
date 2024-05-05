@@ -12,14 +12,10 @@ namespace PBL.Models
     {
         [DisplayName("ID")]
         public int Id { get; private set; }
-        [DisplayName("Ho")]
-        [Required(ErrorMessage = "Nhap ho.")]
-        [StringLength(50, ErrorMessage = "Ho phai co do dai toi da 50 ki tu.")]
-        public string FirstName { get; set; }
         [DisplayName("Ten")]
         [Required(ErrorMessage = "Nhap ten.")]
         [StringLength(50, ErrorMessage = "Ten phai co do dai toi da 50 ki tu.")]
-        public string LastName { get; set; }
+        public string Name { get; set; }
         //Check ngay sinh: Lon hon ngay hien tai?
         [DisplayName("Ngay sinh")]
         public DateTime Birth {  get; set; }
@@ -34,6 +30,5 @@ namespace PBL.Models
 
         [DisplayName("Ngay dang ky")]
         public DateTime RegistDay { get; private set; }
-        public int IdAccount {  get; set; }
     }
 }

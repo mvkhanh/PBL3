@@ -23,5 +23,7 @@ namespace PBL.Models
         [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).*$",
         ErrorMessage = "Mat khau phai chua chu hoa, chu thuong, chu so va ki tu dac biet.")]
         public string Pass { get; set; }
+        [DisplayName("Chuc vu")]
+        public string Role { get; set;}
     }
 }

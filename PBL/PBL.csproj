@@ -103,6 +103,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\ITeacherRepository.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -126,17 +127,12 @@
     <Compile Include="Resources\Components\RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Views\ITeacherView.cs" />
     <Compile Include="Views\Shared\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Shared\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Shared\ViewDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Shared\ViewDangNhap.Designer.cs">
-      <DependentUpon>ViewDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\ViewThemBaiHoc.cs">
       <SubType>Form</SubType>
@@ -173,7 +169,7 @@
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Answer.cs" />
-    <Compile Include="Models\Teacher.cs" />
+    <Compile Include="Models\TeacherModel.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\StudyElement.cs" />
@@ -186,6 +182,12 @@
     <Compile Include="Views\Shared\ViewDangKy.Designer.cs">
       <DependentUpon>ViewDangKy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\TeacherView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TeacherView.Designer.cs">
+      <DependentUpon>TeacherView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Views\Admin\ViewAdmin.resx">
       <DependentUpon>ViewAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,9 +196,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Shared\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Shared\ViewDangNhap.resx">
-      <DependentUpon>ViewDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\ViewThemBaiHoc.resx">
       <DependentUpon>ViewThemBaiHoc.cs</DependentUpon>
@@ -220,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Shared\ViewDangKy.resx">
       <DependentUpon>ViewDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TeacherView.resx">
+      <DependentUpon>TeacherView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
