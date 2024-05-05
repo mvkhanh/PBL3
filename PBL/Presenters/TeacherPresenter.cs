@@ -46,9 +46,7 @@ namespace PBL.Presenters
 
         private void SaveTeacher(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(this.view.searchValue)) teacherList = repository.GetAll();
-            else teacherList = repository.GetByValue(this.view.searchValue);
-            teachersBindingSource.DataSource = teacherList;
+            throw new NotImplementedException();
         }
 
         private void CancelAction(object sender, EventArgs e)
@@ -72,7 +70,9 @@ namespace PBL.Presenters
 
         private void SearchTeacher(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(this.view.SearchValue)) teacherList = repository.GetAll();
+            else teacherList = repository.GetByValue(this.view.SearchValue);
+            teachersBindingSource.DataSource = teacherList;
         }
     }
 }

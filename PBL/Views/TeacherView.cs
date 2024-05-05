@@ -42,7 +42,7 @@ namespace PBL.Views
         public DateTime RegistDay { get => regist.Value; set => regist.Value = value; }
         public int Lessons { get => Convert.ToInt32(txtLessons.Text); set => txtLessons.Text = value.ToString(); }
         public int Tests { get => Convert.ToInt32(txtTests.Text); set => txtTests.Text = value.ToString(); }
-        public string searchValue { get => txtSearch.Text; set => txtSearch.Text = value; }
+        public string SearchValue { get => txtSearch.Text; set => txtSearch.Text = value; }
         public bool IsEdit { get => _IsEdit; set => _IsEdit = value; }
         public bool IsSuccessful { get => _IsSuccessfull; set => _IsSuccessfull = value; }
         public string Message { get => _Message; set => _Message = value; }

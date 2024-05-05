@@ -10,7 +10,7 @@ namespace PBL.Models
     {
         void Add(TeacherModel teacherModel);
         void Edit(TeacherModel teacherModel);
-        void Deleete(int id);
+        void Delete(int id);
         IEnumerable<TeacherModel> GetAll();
         IEnumerable<TeacherModel> GetByValue(string search);
     }

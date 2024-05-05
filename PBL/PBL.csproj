@@ -189,6 +189,8 @@
     <Compile Include="Views\TeacherView.Designer.cs">
       <DependentUpon>TeacherView.cs</DependentUpon>
     </Compile>
+    <Compile Include="_Repositories\BaseRepository.cs" />
+    <Compile Include="_Repositories\TeacherRepository.cs" />
     <EmbeddedResource Include="Views\Admin\ViewAdmin.resx">
       <DependentUpon>ViewAdmin.cs</DependentUpon>
     </EmbeddedResource>

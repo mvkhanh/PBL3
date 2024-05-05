@@ -4,6 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBL.Models;
+using PBL.Presenters;
+using PBL.Views;
+using PBL._Repositories;
+using System.Configuration;
 
 namespace PBL
 {
@@ -17,6 +22,11 @@ namespace PBL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //string mySqlConnectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
+            //ITeacherView view = new TeacherView();
+            //ITeacherRepository repository = new TeacherRepository(mySqlConnectionString);
+            //new TeacherPresenter(view, repository);
+            //Application.Run((Form)view);
             Application.Run(new Login());
         }
     }

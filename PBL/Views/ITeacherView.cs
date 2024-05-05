@@ -19,7 +19,7 @@ namespace PBL.Views
         int Lessons {  get; set; }
         int Tests {  get; set; }
 
-        string searchValue {  get; set; }
+        string SearchValue {  get; set; }
         bool IsEdit {  get; set; }
         bool IsSuccessful { get; set; }
         string Message {  get; set; }
@@ -34,6 +34,6 @@ namespace PBL.Views
 
         //Methods
         void SetTeacherListBindingSource(BindingSource teacherList);
-        void Show();
+        void Show();//Optionally
     }
 }

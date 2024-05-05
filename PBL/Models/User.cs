@@ -11,7 +11,7 @@ namespace PBL.Models
     public abstract class User
     {
         [DisplayName("ID")]
-        public int Id { get; private set; }
+        public int Id { get; set; }
         [DisplayName("Ten")]
         [Required(ErrorMessage = "Nhap ten.")]
         [StringLength(50, ErrorMessage = "Ten phai co do dai toi da 50 ki tu.")]
@@ -29,6 +29,6 @@ namespace PBL.Models
         public string Phone { get; set; }
 
         [DisplayName("Ngay dang ky")]
-        public DateTime RegistDay { get; private set; }
+        public DateTime RegistDay { get; set; }
     }
 }
