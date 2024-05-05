@@ -9,49 +9,66 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PBL.Views.Shared
 {
-    public partial class Login : Form
+    public partial class Register : Form
     {
-        
-        public Login()
+
+        public Register()
         {
             InitializeComponent();
         }
 
         #region Show/Hide Password
-        private void btOpenEye_Click(object sender, EventArgs e)
+        private void btCloseEye_Click1(object sender, EventArgs e)
         {
-            if (txtPass.PasswordChar)
+            if (!txtPass1.PasswordChar)
             {
-                btCloseEye.BringToFront();
-                txtPass.PasswordChar = false;
+                btOpenEye1.BringToFront();
+                txtPass1.PasswordChar = true;
+            }
+        }
+        private void btOpenEye_Click1(object sender, EventArgs e)
+        {
+            if (txtPass1.PasswordChar)
+            {
+                btCloseEye1.BringToFront();
+                txtPass1.PasswordChar = false;
+            }
+        }
+        private void btOpenEye_Click2(object sender, EventArgs e)
+        {
+            if (txtPass2.PasswordChar)
+            {
+                btCloseEye2.BringToFront();
+                txtPass2.PasswordChar = false;
             }
         }
 
-        private void btCloseEye_Click(object sender, EventArgs e)
+        private void btCloseEye_Click2(object sender, EventArgs e)
         {
-            if (!txtPass.PasswordChar)
+            if (!txtPass2.PasswordChar)
             {
-                btOpenEye.BringToFront();
-                txtPass.PasswordChar = true;
+                btOpenEye2.BringToFront();
+                txtPass2.PasswordChar = true;
             }
         }
 
         private void txtPass__TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtPass.Texts)) btCloseEye.Visible = btOpenEye.Visible = false;
-            else btCloseEye.Visible = btOpenEye.Visible = true;
+            if (string.IsNullOrEmpty(txtPass1.Texts)) btCloseEye1.Visible = btOpenEye1.Visible = false;
+            else btCloseEye1.Visible = btOpenEye1.Visible = true;
+            if (string.IsNullOrEmpty(txtPass2.Texts)) btCloseEye2.Visible = btOpenEye2.Visible = false;
+            else btCloseEye2.Visible = btOpenEye2.Visible = true;
         }
         #endregion
 
         #region Close Button
         private void button1_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
         #endregion
 
@@ -119,7 +136,7 @@ namespace PBL.Views.Shared
                     ReleaseCapture();
                     SendMessage(Handle, WM_NCLBUTTONDOWN, HT_RIGHT, 0);
                 }
-                else if(sender == panelTitle)
+                else if (sender == panelTitle)
                 {
                     ReleaseCapture();
                     SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
@@ -145,15 +162,19 @@ namespace PBL.Views.Shared
         }
         #endregion
 
-        private void lbCreate_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            this.Hide(); 
-            Register registerForm = new Register();
-            registerForm.ShowDialog();
-            try
-            {
-                this.Show();
-            } catch (Exception ex) { }
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btReturn_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
