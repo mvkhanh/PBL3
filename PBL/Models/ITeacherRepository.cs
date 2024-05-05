@@ -12,6 +12,6 @@ namespace PBL.Models
         void Edit(TeacherModel teacherModel);
         void Deleete(int id);
         IEnumerable<TeacherModel> GetAll();
-        IEnumerable<TeacherModel> GetByValue();
+        IEnumerable<TeacherModel> GetByValue(string search);
     }
 }
