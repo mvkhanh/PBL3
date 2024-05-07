@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelLogin = new RoundPanel();
+            this.btReturn = new PBL.Controller.RoundButton();
             this.btOpenEye2 = new System.Windows.Forms.Button();
             this.btOpenEye1 = new System.Windows.Forms.Button();
             this.btCloseEye2 = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbUserName = new System.Windows.Forms.Label();
             this.lbPass = new System.Windows.Forms.Label();
-            this.btReturn = new PBL.Controller.RoundButton();
             this.panelTitle.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panelLogin.SuspendLayout();
@@ -96,7 +96,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 20);
+            this.label1.Size = new System.Drawing.Size(54, 15);
             this.label1.TabIndex = 5;
             this.label1.Text = "Register";
             // 
@@ -141,6 +141,25 @@
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(379, 472);
             this.panelLogin.TabIndex = 0;
+            // 
+            // btReturn
+            // 
+            this.btReturn.BackColor = System.Drawing.Color.White;
+            this.btReturn.BackgroundColor = System.Drawing.Color.White;
+            this.btReturn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btReturn.BorderRadius = 5;
+            this.btReturn.BorderSize = 0;
+            this.btReturn.FlatAppearance.BorderSize = 0;
+            this.btReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btReturn.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.btReturn.Location = new System.Drawing.Point(76, 435);
+            this.btReturn.Name = "btReturn";
+            this.btReturn.Size = new System.Drawing.Size(221, 34);
+            this.btReturn.TabIndex = 8;
+            this.btReturn.Text = "Return";
+            this.btReturn.TextColor = System.Drawing.Color.DarkOrchid;
+            this.btReturn.UseVisualStyleBackColor = false;
+            this.btReturn.Click += new System.EventHandler(this.btReturn_Click);
             // 
             // btOpenEye2
             // 
@@ -219,7 +238,7 @@
             this.txtPass2.PasswordChar = true;
             this.txtPass2.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPass2.PlaceholderText = "Enter password";
-            this.txtPass2.Size = new System.Drawing.Size(251, 40);
+            this.txtPass2.Size = new System.Drawing.Size(251, 35);
             this.txtPass2.TabIndex = 3;
             this.txtPass2.Texts = "";
             this.txtPass2.UnderlinedStyle = false;
@@ -242,7 +261,7 @@
             this.txtPass1.PasswordChar = true;
             this.txtPass1.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPass1.PlaceholderText = "Enter password";
-            this.txtPass1.Size = new System.Drawing.Size(251, 40);
+            this.txtPass1.Size = new System.Drawing.Size(251, 35);
             this.txtPass1.TabIndex = 2;
             this.txtPass1.Texts = "";
             this.txtPass1.UnderlinedStyle = false;
@@ -255,7 +274,7 @@
             this.lbLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(61)))), ((int)(((byte)(159)))));
             this.lbLogin.Location = new System.Drawing.Point(145, 22);
             this.lbLogin.Name = "lbLogin";
-            this.lbLogin.Size = new System.Drawing.Size(129, 40);
+            this.lbLogin.Size = new System.Drawing.Size(101, 31);
             this.lbLogin.TabIndex = 5;
             this.lbLogin.Text = "Register";
             // 
@@ -276,7 +295,7 @@
             this.txtEmail.PasswordChar = false;
             this.txtEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtEmail.PlaceholderText = "Enter user email";
-            this.txtEmail.Size = new System.Drawing.Size(251, 40);
+            this.txtEmail.Size = new System.Drawing.Size(251, 35);
             this.txtEmail.TabIndex = 1;
             this.txtEmail.Texts = "";
             this.txtEmail.UnderlinedStyle = false;
@@ -298,7 +317,7 @@
             this.txtUserName.PasswordChar = false;
             this.txtUserName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtUserName.PlaceholderText = "Enter user name";
-            this.txtUserName.Size = new System.Drawing.Size(251, 40);
+            this.txtUserName.Size = new System.Drawing.Size(251, 35);
             this.txtUserName.TabIndex = 0;
             this.txtUserName.Texts = "";
             this.txtUserName.UnderlinedStyle = false;
@@ -375,7 +394,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label3.Location = new System.Drawing.Point(79, 155);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 25);
+            this.label3.Size = new System.Drawing.Size(52, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "E-mail";
             // 
@@ -386,7 +405,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label2.Location = new System.Drawing.Point(69, 324);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 25);
+            this.label2.Size = new System.Drawing.Size(129, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Confirm password";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -398,7 +417,7 @@
             this.lbUserName.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lbUserName.Location = new System.Drawing.Point(77, 78);
             this.lbUserName.Name = "lbUserName";
-            this.lbUserName.Size = new System.Drawing.Size(105, 25);
+            this.lbUserName.Size = new System.Drawing.Size(82, 20);
             this.lbUserName.TabIndex = 5;
             this.lbUserName.Text = "User Name";
             // 
@@ -409,33 +428,13 @@
             this.lbPass.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lbPass.Location = new System.Drawing.Point(77, 241);
             this.lbPass.Name = "lbPass";
-            this.lbPass.Size = new System.Drawing.Size(91, 25);
+            this.lbPass.Size = new System.Drawing.Size(70, 20);
             this.lbPass.TabIndex = 5;
             this.lbPass.Text = "Password";
             // 
-            // btReturn
-            // 
-            this.btReturn.BackColor = System.Drawing.Color.White;
-            this.btReturn.BackgroundColor = System.Drawing.Color.White;
-            this.btReturn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btReturn.BorderRadius = 5;
-            this.btReturn.BorderSize = 0;
-            this.btReturn.FlatAppearance.BorderSize = 0;
-            this.btReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btReturn.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.btReturn.Location = new System.Drawing.Point(76, 435);
-            this.btReturn.Name = "btReturn";
-            this.btReturn.Size = new System.Drawing.Size(221, 34);
-            this.btReturn.TabIndex = 8;
-            this.btReturn.Text = "Return";
-            this.btReturn.TextColor = System.Drawing.Color.DarkOrchid;
-            this.btReturn.UseVisualStyleBackColor = false;
-            this.btReturn.Click += new System.EventHandler(this.btReturn_Click);
-            // 
             // Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(901, 564);
             this.Controls.Add(this.panelMain);

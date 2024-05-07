@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using PBL.Models;
 
@@ -16,17 +17,56 @@ namespace PBL._Repositories
         }
         public void Add(TeacherModel teacherModel)
         {
-            throw new NotImplementedException();
+            using (var connection = new MySqlConnection(connectionString))
+            using (var command = new MySqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "insert into teacher (name, birth, email, phone, registday, lessons, tests)" +
+                    " values(@name, @birth, @email, @phone, @regist, @lessons, @tests)";
+                command.Parameters.Add("@name", MySqlDbType.VarChar).Value = teacherModel.Name;
+                command.Parameters.Add("@birth", MySqlDbType.Date).Value = teacherModel.Birth;
+                command.Parameters.Add("@email", MySqlDbType.VarChar).Value = teacherModel.Email;
+                command.Parameters.Add("@phone", MySqlDbType.VarChar).Value = teacherModel.Phone;
+                command.Parameters.Add("@regist", MySqlDbType.Date).Value = teacherModel.RegistDay;
+                command.Parameters.Add("@lessons", MySqlDbType.Int32).Value = teacherModel.Lessons;
+                command.Parameters.Add("@tests", MySqlDbType.Int32).Value = teacherModel.Tests;
+                command.ExecuteNonQuery();
+            }
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            using (var connection = new MySqlConnection(connectionString))
+            using (var command = new MySqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "delete from teacher where id = @id";
+                command.Parameters.AddWithValue("@id", id);
+                command.ExecuteNonQuery();
+            }
         }
 
         public void Edit(TeacherModel teacherModel)
         {
-            throw new NotImplementedException();
+            using (var connection = new MySqlConnection(connectionString))
+            using (var command = new MySqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = @"update teacher set name = @name, birth = @birth, email = @email, phone = @phone, registday = @regist
+                                        , lessons = @lessons, tests = @tests where id = @id";
+                command.Parameters.Add("@id", MySqlDbType.Int32).Value = teacherModel.Id;
+                command.Parameters.Add("@name", MySqlDbType.VarChar).Value = teacherModel.Name;
+                command.Parameters.Add("@birth", MySqlDbType.Date).Value = teacherModel.Birth;
+                command.Parameters.Add("@email", MySqlDbType.VarChar).Value = teacherModel.Email;
+                command.Parameters.Add("@phone", MySqlDbType.VarChar).Value = teacherModel.Phone;
+                command.Parameters.Add("@regist", MySqlDbType.Date).Value = teacherModel.RegistDay;
+                command.Parameters.Add("@lessons", MySqlDbType.Int32).Value = teacherModel.Lessons;
+                command.Parameters.Add("@tests", MySqlDbType.Int32).Value = teacherModel.Tests;
+                command.ExecuteNonQuery();
+            }
         }
 
         public IEnumerable<TeacherModel> GetAll()
@@ -37,7 +77,7 @@ namespace PBL._Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "Select * from giangvien order by id desc";
+                command.CommandText = "Select * from teacher order by id desc";
                 using(var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
@@ -63,9 +103,9 @@ namespace PBL._Repositories
 
             var teacherList = new List<TeacherModel>();
             int teacherId = int.TryParse(search, out _) ? Convert.ToInt32(search) : 0;
-            string teacherName = search, query;
-            if(teacherId > 0) query = "Select * from giangvien where id = @id order by id desc";
-            else query = "Select * from giangvien where ten like '%' + @name + '%' order by id desc";
+            string teacherName = "%" + search + "%", query;
+            if(teacherId > 0) query = @"Select * from teacher where id = @id order by id desc";
+            else query = @"Select * from teacher where name like @name order by id desc";
             using (var connection = new MySqlConnection(connectionString))
             using (var command = new MySqlCommand())
             {

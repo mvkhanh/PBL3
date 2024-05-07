@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btClose = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btDelete = new System.Windows.Forms.Button();
@@ -52,12 +53,12 @@
             this.lbName = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.lbId = new System.Windows.Forms.Label();
-            this.regist = new System.Windows.Forms.DateTimePicker();
-            this.lbRegist = new System.Windows.Forms.Label();
-            this.txtLessons = new System.Windows.Forms.TextBox();
             this.lbLessons = new System.Windows.Forms.Label();
+            this.lbRegist = new System.Windows.Forms.Label();
             this.txtTests = new System.Windows.Forms.TextBox();
             this.lbTests = new System.Windows.Forms.Label();
+            this.txtLessons = new System.Windows.Forms.TextBox();
+            this.regist = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -77,12 +78,23 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btClose);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 59);
+            this.panel1.Size = new System.Drawing.Size(715, 59);
             this.panel1.TabIndex = 1;
+            // 
+            // btClose
+            // 
+            this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btClose.Location = new System.Drawing.Point(677, 20);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(26, 23);
+            this.btClose.TabIndex = 1;
+            this.btClose.Text = "X";
+            this.btClose.UseVisualStyleBackColor = true;
             // 
             // tabControl1
             // 
@@ -92,7 +104,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 59);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 391);
+            this.tabControl1.Size = new System.Drawing.Size(715, 401);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -107,14 +119,15 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 365);
+            this.tabPage1.Size = new System.Drawing.Size(707, 375);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Teacher List";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btDelete
             // 
-            this.btDelete.Location = new System.Drawing.Point(697, 154);
+            this.btDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btDelete.Location = new System.Drawing.Point(624, 154);
             this.btDelete.Name = "btDelete";
             this.btDelete.Size = new System.Drawing.Size(75, 23);
             this.btDelete.TabIndex = 4;
@@ -123,7 +136,8 @@
             // 
             // btEdit
             // 
-            this.btEdit.Location = new System.Drawing.Point(697, 114);
+            this.btEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btEdit.Location = new System.Drawing.Point(624, 114);
             this.btEdit.Name = "btEdit";
             this.btEdit.Size = new System.Drawing.Size(75, 23);
             this.btEdit.TabIndex = 4;
@@ -132,7 +146,8 @@
             // 
             // btAddNew
             // 
-            this.btAddNew.Location = new System.Drawing.Point(697, 76);
+            this.btAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btAddNew.Location = new System.Drawing.Point(624, 76);
             this.btAddNew.Name = "btAddNew";
             this.btAddNew.Size = new System.Drawing.Size(75, 23);
             this.btAddNew.TabIndex = 4;
@@ -141,7 +156,8 @@
             // 
             // btSearch
             // 
-            this.btSearch.Location = new System.Drawing.Point(406, 21);
+            this.btSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btSearch.Location = new System.Drawing.Point(519, 25);
             this.btSearch.Name = "btSearch";
             this.btSearch.Size = new System.Drawing.Size(75, 23);
             this.btSearch.TabIndex = 3;
@@ -150,26 +166,33 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(14, 23);
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.Location = new System.Drawing.Point(24, 25);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(356, 22);
+            this.txtSearch.Size = new System.Drawing.Size(473, 22);
             this.txtSearch.TabIndex = 2;
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 7);
+            this.label2.Location = new System.Drawing.Point(21, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Searcg teacher:";
+            this.label2.Text = "Search teacher:";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(24, 76);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(647, 262);
+            this.dataGridView1.Size = new System.Drawing.Size(570, 262);
             this.dataGridView1.TabIndex = 0;
             // 
             // tabPage2
@@ -195,14 +218,15 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 365);
+            this.tabPage2.Size = new System.Drawing.Size(707, 375);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Teacher detail";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // btCancel
             // 
-            this.btCancel.Location = new System.Drawing.Point(266, 225);
+            this.btCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btCancel.Location = new System.Drawing.Point(148, 285);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(75, 23);
             this.btCancel.TabIndex = 11;
@@ -211,7 +235,8 @@
             // 
             // btSave
             // 
-            this.btSave.Location = new System.Drawing.Point(83, 225);
+            this.btSave.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btSave.Location = new System.Drawing.Point(23, 285);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(75, 23);
             this.btSave.TabIndex = 10;
@@ -220,15 +245,18 @@
             // 
             // birth
             // 
-            this.birth.Location = new System.Drawing.Point(250, 170);
+            this.birth.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.birth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.birth.Location = new System.Drawing.Point(23, 227);
             this.birth.Name = "birth";
             this.birth.Size = new System.Drawing.Size(200, 22);
             this.birth.TabIndex = 9;
             // 
             // lbBirth
             // 
+            this.lbBirth.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbBirth.AutoSize = true;
-            this.lbBirth.Location = new System.Drawing.Point(247, 153);
+            this.lbBirth.Location = new System.Drawing.Point(20, 210);
             this.lbBirth.Name = "lbBirth";
             this.lbBirth.Size = new System.Drawing.Size(94, 13);
             this.lbBirth.TabIndex = 8;
@@ -236,15 +264,17 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(83, 169);
+            this.txtPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPhone.Location = new System.Drawing.Point(23, 171);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(125, 22);
             this.txtPhone.TabIndex = 7;
             // 
             // lbPhone
             // 
+            this.lbPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbPhone.AutoSize = true;
-            this.lbPhone.Location = new System.Drawing.Point(80, 153);
+            this.lbPhone.Location = new System.Drawing.Point(20, 155);
             this.lbPhone.Name = "lbPhone";
             this.lbPhone.Size = new System.Drawing.Size(85, 13);
             this.lbPhone.TabIndex = 6;
@@ -252,15 +282,17 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(250, 106);
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtEmail.Location = new System.Drawing.Point(174, 44);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(125, 22);
             this.txtEmail.TabIndex = 5;
             // 
             // lbEmail
             // 
+            this.lbEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Location = new System.Drawing.Point(247, 90);
+            this.lbEmail.Location = new System.Drawing.Point(171, 28);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(79, 13);
             this.lbEmail.TabIndex = 4;
@@ -268,15 +300,17 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(83, 106);
+            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtName.Location = new System.Drawing.Point(23, 108);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(125, 22);
             this.txtName.TabIndex = 3;
             // 
             // lbName
             // 
+            this.lbName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbName.AutoSize = true;
-            this.lbName.Location = new System.Drawing.Point(80, 90);
+            this.lbName.Location = new System.Drawing.Point(20, 92);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(81, 13);
             this.lbName.TabIndex = 2;
@@ -284,73 +318,88 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(83, 42);
+            this.txtId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtId.Location = new System.Drawing.Point(23, 44);
             this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(125, 22);
             this.txtId.TabIndex = 1;
+            this.txtId.Text = "0";
             // 
             // lbId
             // 
+            this.lbId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbId.AutoSize = true;
-            this.lbId.Location = new System.Drawing.Point(80, 26);
+            this.lbId.Location = new System.Drawing.Point(20, 28);
             this.lbId.Name = "lbId";
             this.lbId.Size = new System.Drawing.Size(63, 13);
             this.lbId.TabIndex = 0;
             this.lbId.Text = "Teacher ID:";
             // 
-            // regist
-            // 
-            this.regist.Location = new System.Drawing.Point(470, 170);
-            this.regist.Name = "regist";
-            this.regist.Size = new System.Drawing.Size(200, 22);
-            this.regist.TabIndex = 13;
-            // 
-            // lbRegist
-            // 
-            this.lbRegist.AutoSize = true;
-            this.lbRegist.Location = new System.Drawing.Point(467, 153);
-            this.lbRegist.Name = "lbRegist";
-            this.lbRegist.Size = new System.Drawing.Size(64, 13);
-            this.lbRegist.TabIndex = 12;
-            this.lbRegist.Text = "Regist Day:";
-            // 
-            // txtLessons
-            // 
-            this.txtLessons.Location = new System.Drawing.Point(426, 106);
-            this.txtLessons.Name = "txtLessons";
-            this.txtLessons.Size = new System.Drawing.Size(125, 22);
-            this.txtLessons.TabIndex = 15;
-            // 
             // lbLessons
             // 
+            this.lbLessons.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbLessons.AutoSize = true;
-            this.lbLessons.Location = new System.Drawing.Point(423, 90);
+            this.lbLessons.Location = new System.Drawing.Point(171, 92);
             this.lbLessons.Name = "lbLessons";
             this.lbLessons.Size = new System.Drawing.Size(106, 13);
             this.lbLessons.TabIndex = 14;
             this.lbLessons.Text = "Number of lessons:";
             // 
+            // lbRegist
+            // 
+            this.lbRegist.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbRegist.AutoSize = true;
+            this.lbRegist.Location = new System.Drawing.Point(171, 155);
+            this.lbRegist.Name = "lbRegist";
+            this.lbRegist.Size = new System.Drawing.Size(64, 13);
+            this.lbRegist.TabIndex = 12;
+            this.lbRegist.Text = "Regist Day:";
+            // 
             // txtTests
             // 
-            this.txtTests.Location = new System.Drawing.Point(573, 106);
+            this.txtTests.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTests.Location = new System.Drawing.Point(331, 108);
             this.txtTests.Name = "txtTests";
+            this.txtTests.ReadOnly = true;
             this.txtTests.Size = new System.Drawing.Size(125, 22);
             this.txtTests.TabIndex = 17;
+            this.txtTests.Text = "0";
             // 
             // lbTests
             // 
+            this.lbTests.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbTests.AutoSize = true;
-            this.lbTests.Location = new System.Drawing.Point(570, 90);
+            this.lbTests.Location = new System.Drawing.Point(328, 92);
             this.lbTests.Name = "lbTests";
             this.lbTests.Size = new System.Drawing.Size(92, 13);
             this.lbTests.TabIndex = 16;
             this.lbTests.Text = "Number of tests:";
             // 
+            // txtLessons
+            // 
+            this.txtLessons.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtLessons.Location = new System.Drawing.Point(174, 108);
+            this.txtLessons.Name = "txtLessons";
+            this.txtLessons.ReadOnly = true;
+            this.txtLessons.Size = new System.Drawing.Size(125, 22);
+            this.txtLessons.TabIndex = 15;
+            this.txtLessons.Text = "0";
+            // 
+            // regist
+            // 
+            this.regist.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.regist.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.regist.Location = new System.Drawing.Point(174, 172);
+            this.regist.Name = "regist";
+            this.regist.Size = new System.Drawing.Size(158, 22);
+            this.regist.TabIndex = 13;
+            // 
             // TeacherView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(715, 460);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -394,6 +443,7 @@
         private System.Windows.Forms.Button btSave;
         private System.Windows.Forms.DateTimePicker birth;
         private System.Windows.Forms.Label lbBirth;
+        private System.Windows.Forms.Button btClose;
         private System.Windows.Forms.TextBox txtTests;
         private System.Windows.Forms.Label lbTests;
         private System.Windows.Forms.TextBox txtLessons;

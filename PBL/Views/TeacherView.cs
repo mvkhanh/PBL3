@@ -22,26 +22,75 @@ namespace PBL.Views
             InitializeComponent();
             AssociateAndRaiseViewEvents();
             tabControl1.TabPages.Remove(tabPage2);
+            btClose.Click += delegate { Close(); };
         }
 
         private void AssociateAndRaiseViewEvents()
         {
+            //Search
             btSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
             txtSearch.KeyDown += (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter) SearchEvent?.Invoke(this, EventArgs.Empty);
             };
+            //Add new
+            btAddNew.Click += delegate { 
+                AddNewEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tabPage1);
+                tabControl1.TabPages.Add(tabPage2);
+                tabPage2.Text = "Add new teacher";
+            };
+            //Edit
+            btEdit.Click += delegate {
+                try
+                {
+                    EditEvent?.Invoke(this, EventArgs.Empty);
+                    tabControl1.TabPages.Remove(tabPage1);
+                    tabControl1.TabPages.Add(tabPage2);
+                    tabPage2.Text = "Edit teacher";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            };
+            //Delete
+            btDelete.Click += delegate { 
+                var res = MessageBox.Show("Are you sure you want to delete the selected teacher?", "Warning",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if(res == DialogResult.Yes) { 
+                    DeleteEvent?.Invoke(this, EventArgs.Empty);
+                    MessageBox.Show(Message);
+                }
+
+            };
+            //Save changes
+            btSave.Click += delegate { 
+                SaveEvent?.Invoke(this, EventArgs.Empty);
+                if (IsSuccessful)
+                {
+                    tabControl1.TabPages.Remove(tabPage2);
+                    tabControl1.TabPages.Add(tabPage1);
+                }
+                MessageBox.Show(Message);
+            };
+            //Cancel
+            btCancel.Click += delegate {
+                CancelEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tabPage2);
+                tabControl1.TabPages.Add(tabPage1);
+            };
         }
-
+        
         //Properties
-        public int Id => Convert.ToInt32(txtId.Text);
-
-        public DateTime Bith { get => birth.Value; set => birth.Value = value; }
-        public string Email { get => txtEmail.Text; set => txtEmail.Text = value; }
-        public string Phone { get => txtPhone.Text; set => txtPhone.Text = value; }
-        public DateTime RegistDay { get => regist.Value; set => regist.Value = value; }
-        public int Lessons { get => Convert.ToInt32(txtLessons.Text); set => txtLessons.Text = value.ToString(); }
-        public int Tests { get => Convert.ToInt32(txtTests.Text); set => txtTests.Text = value.ToString(); }
+        public int TeacherId { get => Convert.ToInt32(txtId.Text); set => txtId.Text = value.ToString(); }
+        public string TeacherName { get => txtName.Text; set => txtName.Text = value; }
+        public DateTime TeacherBith { get => birth.Value; set => birth.Value = value; }
+        public string TeacherEmail { get => txtEmail.Text; set => txtEmail.Text = value; }
+        public string TeacherPhone { get => txtPhone.Text; set => txtPhone.Text = value; }
+        public DateTime TeacherRegistDay { get => regist.Value; set => regist.Value = value; }
+        public int TeacherLessons { get => Convert.ToInt32(txtLessons.Text); set => txtLessons.Text = value.ToString(); }
+        public int TeacherTests { get => Convert.ToInt32(txtTests.Text); set => txtTests.Text = value.ToString(); }
         public string SearchValue { get => txtSearch.Text; set => txtSearch.Text = value; }
         public bool IsEdit { get => _IsEdit; set => _IsEdit = value; }
         public bool IsSuccessful { get => _IsSuccessfull; set => _IsSuccessfull = value; }
@@ -59,6 +108,25 @@ namespace PBL.Views
         public void SetTeacherListBindingSource(BindingSource teacherList)
         {
             dataGridView1.DataSource = teacherList;
+        }
+
+        //Singleton pattern 
+        private static TeacherView instance;
+        public static TeacherView GetInstance(Form parentContainer)
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new TeacherView();
+                instance.MdiParent = parentContainer;
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                if (instance.WindowState == FormWindowState.Minimized) instance.WindowState = FormWindowState.Normal;
+                instance.BringToFront();
+            }
+            return instance;
         }
     }
 }

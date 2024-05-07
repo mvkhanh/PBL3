@@ -34,6 +34,7 @@ namespace PBL.Presenters
             this.view.SetTeacherListBindingSource(teachersBindingSource);
             //Load teacher list view
             LoadAllTeacherList();
+            //Show view
             this.view.Show();
         }
 
@@ -46,26 +47,90 @@ namespace PBL.Presenters
 
         private void SaveTeacher(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var model = new TeacherModel();
+            model.Id = view.TeacherId;
+            model.Name = view.TeacherName;
+            model.Email = view.TeacherEmail;
+            model.Birth = view.TeacherBith;
+            model.Phone = view.TeacherPhone;
+            model.RegistDay = view.TeacherRegistDay;
+            model.Lessons = view.TeacherLessons;
+            model.Tests = view.TeacherTests;
+            try
+            {
+                new Common.ModelDataValidation().Validate(model);
+                if (view.IsEdit) //Edit model
+                {
+                    repository.Edit(model);
+                    view.Message = "Teacher edited successfully";
+                }
+                else //Add model
+                {
+                    repository.Add(model);
+                    view.Message = "Teacher added successfully";
+                }
+                view.IsSuccessful = true;
+                LoadAllTeacherList();
+                CleanViewFields();
+            }
+            catch (Exception ex)
+            {
+                view.IsSuccessful = false;
+                view.Message = ex.Message;
+            }
+        }
+
+        private void CleanViewFields()
+        {
+            view.TeacherId = 0;
+            view.TeacherName = "";
+            view.TeacherEmail = "";
+            view.TeacherBith = DateTime.Today;
+            view.TeacherPhone = "";
+            view.TeacherRegistDay = DateTime.Today;
+            view.TeacherLessons = 0;
+            view.TeacherTests = 0;
         }
 
         private void CancelAction(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            CleanViewFields();
         }
         private void DeleteSelectedTeacher(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var teacher = (TeacherModel)teachersBindingSource.Current;
+                repository.Delete(teacher.Id);
+                view.IsSuccessful = true;
+                view.Message = "Teacher deleted successfully";
+                LoadAllTeacherList();
+            }
+            catch (Exception)
+            {
+                view.IsSuccessful = false;
+                view.Message = "An error occured, could not delete teacher";
+            }
         }
 
         private void LoadSelectedTeacherToEdit(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (teachersBindingSource.Current == null) throw new Exception("An error occured, could not edit teacher");
+            var teacher = (TeacherModel)teachersBindingSource.Current;
+            view.TeacherId = teacher.Id;
+            view.TeacherName = teacher.Name;
+            view.TeacherEmail = teacher.Email;
+            view.TeacherBith = teacher.Birth;
+            view.TeacherPhone = teacher.Phone;
+            view.TeacherRegistDay = teacher.RegistDay;
+            view.TeacherLessons = teacher.Lessons;
+            view.TeacherTests = teacher.Tests;
+            view.IsEdit = true;
         }
 
         private void AddNewTeacher(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            view.IsEdit = false;
         }
 
         private void SearchTeacher(object sender, EventArgs e)

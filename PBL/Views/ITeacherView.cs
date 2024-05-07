@@ -10,14 +10,14 @@ namespace PBL.Views
     public interface ITeacherView
     {
         //Properties
-        int Id { get; }
-        string Name { get; set; }
-        DateTime Bith {  get; set; }
-        string Email {  get; set; }
-        string Phone { get; set; }
-        DateTime RegistDay { get; set; }
-        int Lessons {  get; set; }
-        int Tests {  get; set; }
+        int TeacherId { get; set; }
+        string TeacherName { get; set; }
+        DateTime TeacherBith {  get; set; }
+        string TeacherEmail {  get; set; }
+        string TeacherPhone { get; set; }
+        DateTime TeacherRegistDay { get; set; }
+        int TeacherLessons {  get; set; }
+        int TeacherTests {  get; set; }
 
         string SearchValue {  get; set; }
         bool IsEdit {  get; set; }

@@ -22,12 +22,13 @@ namespace PBL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
             //string mySqlConnectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
-            //ITeacherView view = new TeacherView();
-            //ITeacherRepository repository = new TeacherRepository(mySqlConnectionString);
-            //new TeacherPresenter(view, repository);
+            //IMainView view = new MainView();
+            //new MainPresenter(view, mySqlConnectionString);
+
             //Application.Run((Form)view);
-            Application.Run(new Login());
+            Application.Run(new MainView2());
         }
     }
 }
