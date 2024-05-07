@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.panelTitle = new System.Windows.Forms.Panel();
-            this.btClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelLogin = new RoundPanel();
@@ -53,6 +52,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbUserName = new System.Windows.Forms.Label();
             this.lbPass = new System.Windows.Forms.Label();
+            this.btClose = new System.Windows.Forms.Button();
             this.panelTitle.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panelLogin.SuspendLayout();
@@ -74,20 +74,6 @@
             this.panelTitle.TabIndex = 10;
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.resizePanel_MouseDown);
             this.panelTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseMove);
-            // 
-            // btClose
-            // 
-            this.btClose.BackgroundImage = global::PBL.Properties.Resources.Close;
-            this.btClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btClose.FlatAppearance.BorderSize = 0;
-            this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btClose.Location = new System.Drawing.Point(872, 0);
-            this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(29, 29);
-            this.btClose.TabIndex = 4;
-            this.btClose.UseVisualStyleBackColor = true;
-            this.btClose.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -115,7 +101,6 @@
             // 
             // panelLogin
             // 
-            this.panelLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelLogin.BackColor = System.Drawing.Color.White;
             this.panelLogin.Controls.Add(this.btReturn);
             this.panelLogin.Controls.Add(this.btOpenEye2);
@@ -432,9 +417,24 @@
             this.lbPass.TabIndex = 5;
             this.lbPass.Text = "Password";
             // 
+            // btClose
+            // 
+            this.btClose.BackgroundImage = global::PBL.Properties.Resources.Close;
+            this.btClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btClose.FlatAppearance.BorderSize = 0;
+            this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btClose.Location = new System.Drawing.Point(872, 0);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(29, 29);
+            this.btClose.TabIndex = 4;
+            this.btClose.UseVisualStyleBackColor = true;
+            this.btClose.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Register
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(901, 564);
             this.Controls.Add(this.panelMain);
