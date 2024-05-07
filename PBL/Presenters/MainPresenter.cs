@@ -23,7 +23,7 @@ namespace PBL.Presenters
 
         private void ShowTeachersView(object sender, EventArgs e)
         {
-            ITeacherView view = TeacherView.GetInstance((MainView)mainView);
+            ITeacherView view = TeacherView.GetInstance();
             ITeacherRepository repository = new TeacherRepository(mySqlConnectionString);
             new TeacherPresenter(view, repository);
         }

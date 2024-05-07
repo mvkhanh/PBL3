@@ -112,12 +112,11 @@ namespace PBL.Views
 
         //Singleton pattern 
         private static TeacherView instance;
-        public static TeacherView GetInstance(Form parentContainer)
+        public static TeacherView GetInstance()
         {
             if (instance == null || instance.IsDisposed)
             {
                 instance = new TeacherView();
-                instance.MdiParent = parentContainer;
                 instance.FormBorderStyle = FormBorderStyle.None;
                 instance.Dock = DockStyle.Fill;
             }

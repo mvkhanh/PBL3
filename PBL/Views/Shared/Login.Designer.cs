@@ -88,7 +88,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 20);
+            this.label1.Size = new System.Drawing.Size(78, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Login";
             // 
@@ -115,7 +115,7 @@
             this.lbTitle.ForeColor = System.Drawing.Color.White;
             this.lbTitle.Location = new System.Drawing.Point(209, 48);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(603, 67);
+            this.lbTitle.Size = new System.Drawing.Size(966, 106);
             this.lbTitle.TabIndex = 8;
             this.lbTitle.Text = "Welcome to TOEIC Master";
             // 
@@ -188,7 +188,7 @@
             this.txtPass.PasswordChar = true;
             this.txtPass.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPass.PlaceholderText = "Enter password";
-            this.txtPass.Size = new System.Drawing.Size(251, 40);
+            this.txtPass.Size = new System.Drawing.Size(251, 56);
             this.txtPass.TabIndex = 3;
             this.txtPass.Texts = "";
             this.txtPass.UnderlinedStyle = false;
@@ -201,7 +201,7 @@
             this.lbLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(61)))), ((int)(((byte)(159)))));
             this.lbLogin.Location = new System.Drawing.Point(159, 19);
             this.lbLogin.Name = "lbLogin";
-            this.lbLogin.Size = new System.Drawing.Size(94, 40);
+            this.lbLogin.Size = new System.Drawing.Size(148, 62);
             this.lbLogin.TabIndex = 5;
             this.lbLogin.Text = "Login";
             // 
@@ -222,7 +222,7 @@
             this.txtUserName.PasswordChar = false;
             this.txtUserName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtUserName.PlaceholderText = "Enter user name";
-            this.txtUserName.Size = new System.Drawing.Size(251, 40);
+            this.txtUserName.Size = new System.Drawing.Size(251, 56);
             this.txtUserName.TabIndex = 3;
             this.txtUserName.Texts = "";
             this.txtUserName.UnderlinedStyle = false;
@@ -265,7 +265,7 @@
             this.lbForgot.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(61)))), ((int)(((byte)(159)))));
             this.lbForgot.Location = new System.Drawing.Point(219, 199);
             this.lbForgot.Name = "lbForgot";
-            this.lbForgot.Size = new System.Drawing.Size(135, 23);
+            this.lbForgot.Size = new System.Drawing.Size(214, 37);
             this.lbForgot.TabIndex = 2;
             this.lbForgot.TabStop = true;
             this.lbForgot.Text = "Forgot Password";
@@ -288,7 +288,7 @@
             this.lbCreate.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(61)))), ((int)(((byte)(159)))));
             this.lbCreate.Location = new System.Drawing.Point(129, 284);
             this.lbCreate.Name = "lbCreate";
-            this.lbCreate.Size = new System.Drawing.Size(167, 23);
+            this.lbCreate.Size = new System.Drawing.Size(258, 37);
             this.lbCreate.TabIndex = 2;
             this.lbCreate.TabStop = true;
             this.lbCreate.Text = "Create New Account";
@@ -301,7 +301,7 @@
             this.lbUserName.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lbUserName.Location = new System.Drawing.Point(77, 78);
             this.lbUserName.Name = "lbUserName";
-            this.lbUserName.Size = new System.Drawing.Size(105, 25);
+            this.lbUserName.Size = new System.Drawing.Size(165, 41);
             this.lbUserName.TabIndex = 2;
             this.lbUserName.Text = "User Name";
             // 
@@ -312,7 +312,7 @@
             this.lbPass.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lbPass.Location = new System.Drawing.Point(77, 141);
             this.lbPass.Name = "lbPass";
-            this.lbPass.Size = new System.Drawing.Size(91, 25);
+            this.lbPass.Size = new System.Drawing.Size(143, 41);
             this.lbPass.TabIndex = 2;
             this.lbPass.Text = "Password";
             // 
@@ -323,6 +323,7 @@
             this.ClientSize = new System.Drawing.Size(901, 564);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelTitle);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
