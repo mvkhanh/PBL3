@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PBL.Models
 {
-    public class TeacherModel : User
+    public class TeacherModel : UserModel
     {
         [DisplayName("So luong bai hoc da dang")]
         public int Lessons { get; set; }

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using PBL.Models;
 using PBL.Views;
 using PBL._Repositories;
+using System.Windows.Forms;
+using PBL.Views.Student;
+using PBL.Views.Admin.Students;
 
 namespace PBL.Presenters
 {
@@ -19,6 +22,14 @@ namespace PBL.Presenters
             this.mainView = mainView;
             this.mySqlConnectionString = mySqlConnectionString;
             this.mainView.ShowTeacherView += ShowTeachersView;
+            this.mainView.ShowStudentView += ShowStudentsView;
+        }
+
+        private void ShowStudentsView(object sender, EventArgs e)
+        {
+            IStudentView view = StudentView.GetInstance();
+            IStudentRepository repository = new StudentRepository(mySqlConnectionString);
+            new StudentPresenter(view, repository);
         }
 
         private void ShowTeachersView(object sender, EventArgs e)

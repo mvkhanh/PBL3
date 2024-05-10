@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PBL.Models
 {
-    public class Student : User
+    public class StudentModel : UserModel
     {
     }
 }

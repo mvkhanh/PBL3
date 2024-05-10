@@ -23,12 +23,11 @@ namespace PBL
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //string mySqlConnectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
-            //IMainView view = new MainView();
-            //new MainPresenter(view, mySqlConnectionString);
+            string mySqlConnectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
+            IMainView view = new MainView();
+            new MainPresenter(view, mySqlConnectionString);
 
-            //Application.Run((Form)view);
-            Application.Run(new MainView());
+            Application.Run((Form)view);
         }
     }
 }

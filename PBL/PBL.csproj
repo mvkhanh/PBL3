@@ -110,9 +110,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\ITeacherRepository.cs" />
+    <Compile Include="Models\Student\IStudentRepository.cs" />
+    <Compile Include="Models\Teacher\ITeacherRepository.cs" />
     <Compile Include="Presenters\Common\ModelDataValidation.cs" />
     <Compile Include="Presenters\MainPresenter.cs" />
+    <Compile Include="Presenters\StudentPresenter.cs" />
     <Compile Include="Presenters\TeacherPresenter.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -121,12 +123,6 @@
     </Compile>
     <Compile Include="Resources\Components\RoundPanel.cs">
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Views\Admin\ViewAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Admin\ViewAdmin.Designer.cs">
-      <DependentUpon>ViewAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Resources\Components\RoundTextBox.cs">
       <SubType>UserControl</SubType>
@@ -137,12 +133,18 @@
     <Compile Include="Resources\Components\RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Views\IMainView.cs" />
-    <Compile Include="Views\ITeacherView.cs" />
-    <Compile Include="Views\MainView.cs">
+    <Compile Include="Views\Admin\Main\IMainView.cs" />
+    <Compile Include="Views\Admin\Students\StudentView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MainView.Designer.cs">
+    <Compile Include="Views\Admin\Students\StudentView.Designer.cs">
+      <DependentUpon>StudentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Teachers\ITeacherView.cs" />
+    <Compile Include="Views\Admin\Main\MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Main\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Shared\ChangePassword.cs">
@@ -157,44 +159,21 @@
     <Compile Include="Views\Shared\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Admin\ViewThemBaiHoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Admin\ViewThemBaiHoc.Designer.cs">
-      <DependentUpon>ViewThemBaiHoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Admin\ViewDanhSachBaiHoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Admin\ViewDanhSachBaiHoc.Designer.cs">
-      <DependentUpon>ViewDanhSachBaiHoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Admin\ViewThemBaiKiemTra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Admin\ViewThemBaiKiemTra.Designer.cs">
-      <DependentUpon>ViewThemBaiKiemTra.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Views\Admin\Students\IStudentView.cs" />
     <Compile Include="Views\Teacher\ViewGiangVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Teacher\ViewGiangVien.Designer.cs">
       <DependentUpon>ViewGiangVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Student\ViewIHocVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Student\ViewIHocVien.Designer.cs">
-      <DependentUpon>ViewIHocVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\Lesson.cs" />
     <Compile Include="Models\Test.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Answer.cs" />
-    <Compile Include="Models\TeacherModel.cs" />
-    <Compile Include="Models\Student.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Teacher\TeacherModel.cs" />
+    <Compile Include="Models\Student\StudentModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\StudyElement.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Program.cs" />
@@ -205,22 +184,23 @@
     <Compile Include="Views\Shared\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\TeacherView.cs">
+    <Compile Include="Views\Admin\Teachers\TeacherView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\TeacherView.Designer.cs">
+    <Compile Include="Views\Admin\Teachers\TeacherView.Designer.cs">
       <DependentUpon>TeacherView.cs</DependentUpon>
     </Compile>
     <Compile Include="_Repositories\BaseRepository.cs" />
+    <Compile Include="_Repositories\StudentRepository.cs" />
     <Compile Include="_Repositories\TeacherRepository.cs" />
-    <EmbeddedResource Include="Views\Admin\ViewAdmin.resx">
-      <DependentUpon>ViewAdmin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Components\RoundTextBox.resx">
       <DependentUpon>RoundTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\MainView.resx">
+    <EmbeddedResource Include="Views\Admin\Main\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\Students\StudentView.resx">
+      <DependentUpon>StudentView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Shared\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
@@ -228,20 +208,8 @@
     <EmbeddedResource Include="Views\Shared\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Admin\ViewThemBaiHoc.resx">
-      <DependentUpon>ViewThemBaiHoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Admin\ViewDanhSachBaiHoc.resx">
-      <DependentUpon>ViewDanhSachBaiHoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Admin\ViewThemBaiKiemTra.resx">
-      <DependentUpon>ViewThemBaiKiemTra.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\Teacher\ViewGiangVien.resx">
       <DependentUpon>ViewGiangVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Student\ViewIHocVien.resx">
-      <DependentUpon>ViewIHocVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -251,7 +219,7 @@
     <EmbeddedResource Include="Views\Shared\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\TeacherView.resx">
+    <EmbeddedResource Include="Views\Admin\Teachers\TeacherView.resx">
       <DependentUpon>TeacherView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -268,7 +236,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Student\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Profile.png" />
     <None Include="Resources\Logo.png" />

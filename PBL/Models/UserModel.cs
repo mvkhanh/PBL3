@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PBL.Models
 {
-    public abstract class User
+    public abstract class UserModel
     {
         [DisplayName("ID")]
         public int Id { get; set; }

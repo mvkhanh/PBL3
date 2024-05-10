@@ -255,6 +255,7 @@
             // 
             // regist
             // 
+            this.regist.Enabled = false;
             this.regist.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.regist.Location = new System.Drawing.Point(225, 168);
             this.regist.Name = "regist";

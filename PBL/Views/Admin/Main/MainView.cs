@@ -1,4 +1,5 @@
 ﻿using FontAwesome.Sharp;
+using PBL.Views.Admin.Students;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -112,12 +113,15 @@ namespace PBL.Views
         private void btnTeachers_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new TeacherView());
+            ShowTeacherView(sender, EventArgs.Empty);
+            OpenChildForm(TeacherView.GetInstance());
         }
 
         private void btnStudents_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
+            ShowStudentView(sender, EventArgs.Empty);
+            OpenChildForm(StudentView.GetInstance());
         }
 
         private void btnLessons_Click(object sender, EventArgs e)
@@ -137,6 +141,7 @@ namespace PBL.Views
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            currentChildForm.Close();
             Reset();
         }
 

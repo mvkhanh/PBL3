@@ -55,16 +55,12 @@ namespace PBL._Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = @"update teacher set name = @name, birth = @birth, email = @email, phone = @phone, registday = @regist
-                                        , lessons = @lessons, tests = @tests where id = @id";
+                command.CommandText = @"update teacher set name = @name, birth = @birth, email = @email, phone = @phone where id = @id";
                 command.Parameters.Add("@id", MySqlDbType.Int32).Value = teacherModel.Id;
                 command.Parameters.Add("@name", MySqlDbType.VarChar).Value = teacherModel.Name;
                 command.Parameters.Add("@birth", MySqlDbType.Date).Value = teacherModel.Birth;
                 command.Parameters.Add("@email", MySqlDbType.VarChar).Value = teacherModel.Email;
                 command.Parameters.Add("@phone", MySqlDbType.VarChar).Value = teacherModel.Phone;
-                command.Parameters.Add("@regist", MySqlDbType.Date).Value = teacherModel.RegistDay;
-                command.Parameters.Add("@lessons", MySqlDbType.Int32).Value = teacherModel.Lessons;
-                command.Parameters.Add("@tests", MySqlDbType.Int32).Value = teacherModel.Tests;
                 command.ExecuteNonQuery();
             }
         }
