@@ -22,26 +22,25 @@ namespace PBL.Views
             InitializeComponent();
             AssociateAndRaiseViewEvents();
             tabControl1.TabPages.Remove(tabPage2);
-            btClose.Click += delegate { Close(); };
         }
 
         private void AssociateAndRaiseViewEvents()
         {
             //Search
-            btSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+            btnSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
             txtSearch.KeyDown += (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter) SearchEvent?.Invoke(this, EventArgs.Empty);
             };
             //Add new
-            btAddNew.Click += delegate { 
+            btnAddNew.Click += delegate { 
                 AddNewEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(tabPage1);
                 tabControl1.TabPages.Add(tabPage2);
                 tabPage2.Text = "Add new teacher";
             };
             //Edit
-            btEdit.Click += delegate {
+            btnEdit.Click += delegate {
                 try
                 {
                     EditEvent?.Invoke(this, EventArgs.Empty);
@@ -55,7 +54,7 @@ namespace PBL.Views
                 }
             };
             //Delete
-            btDelete.Click += delegate { 
+            btnDelete.Click += delegate { 
                 var res = MessageBox.Show("Are you sure you want to delete the selected teacher?", "Warning",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if(res == DialogResult.Yes) { 
@@ -65,7 +64,7 @@ namespace PBL.Views
 
             };
             //Save changes
-            btSave.Click += delegate { 
+            btnSave.Click += delegate { 
                 SaveEvent?.Invoke(this, EventArgs.Empty);
                 if (IsSuccessful)
                 {
@@ -75,7 +74,7 @@ namespace PBL.Views
                 MessageBox.Show(Message);
             };
             //Cancel
-            btCancel.Click += delegate {
+            btnCancel.Click += delegate {
                 CancelEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(tabPage2);
                 tabControl1.TabPages.Add(tabPage1);

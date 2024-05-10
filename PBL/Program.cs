@@ -27,7 +27,7 @@ namespace PBL
             IMainView view = new MainView();
             new MainPresenter(view, mySqlConnectionString);
 
-            Application.Run(new TeacherView333());
+            Application.Run((Form)view);
         }
     }
 }

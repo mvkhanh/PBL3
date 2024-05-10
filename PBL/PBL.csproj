@@ -147,10 +147,6 @@
     <Compile Include="Views\Admin\Main\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Admin\TeacherView333.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Admin\TeacherView333.Designer.cs" />
     <Compile Include="Views\Shared\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,7 +202,6 @@
     <EmbeddedResource Include="Views\Admin\Students\StudentView.resx">
       <DependentUpon>StudentView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Admin\TeacherView333.resx" />
     <EmbeddedResource Include="Views\Shared\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
