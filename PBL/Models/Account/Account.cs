@@ -19,7 +19,7 @@ namespace PBL.Models
 
         [DisplayName("Mat Khau")]
         [Required(ErrorMessage = "Nhap mat khau.")]
-        [StringLength(50, MinimumLength = 8, ErrorMessage = "Mat khau phai co do dai tu 6-50 ki tu.")]
+        [StringLength(50, MinimumLength = 8, ErrorMessage = "Mat khau phai co do dai tu 8-50 ki tu.")]
         [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).*$",
         ErrorMessage = "Mat khau phai chua chu hoa, chu thuong, chu so va ki tu dac biet.")]
         public string Pass { get; set; }
