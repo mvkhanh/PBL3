@@ -160,12 +160,6 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\Students\IStudentView.cs" />
-    <Compile Include="Views\Teacher\ViewGiangVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Teacher\ViewGiangVien.Designer.cs">
-      <DependentUpon>ViewGiangVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\Lesson.cs" />
     <Compile Include="Models\Test.cs" />
     <Compile Include="Models\Question.cs" />
@@ -208,9 +202,6 @@
     <EmbeddedResource Include="Views\Shared\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Teacher\ViewGiangVien.resx">
-      <DependentUpon>ViewGiangVien.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -238,6 +229,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Student\" />
+    <Folder Include="Views\Teacher\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Profile.png" />
