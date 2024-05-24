@@ -12,8 +12,8 @@ namespace PBL
         {
             Database.SetInitializer<PBLContext>(new CreateDB());
         }
+        public virtual DbSet<StudentModel> Students { get; set; }
         public virtual DbSet<TeacherModel> Teachers { get; set; }
-        public virtual DbSet<AccountModel> Accounts { get; set; }
         
     }
 

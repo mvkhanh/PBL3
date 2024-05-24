@@ -90,6 +90,9 @@ namespace PBL.Views
         public DateTime TeacherRegistDay { get => regist.Value; set => regist.Value = value; }
         public int TeacherLessons { get => Convert.ToInt32(txtLessons.Text); set => txtLessons.Text = value.ToString(); }
         public int TeacherTests { get => Convert.ToInt32(txtTests.Text); set => txtTests.Text = value.ToString(); }
+        public string TeacherAccount { get => txtAccount.Text; set => txtAccount.Text = value; }
+        public string TeacherPassword { get => txtPassword.Text; set => txtPassword.Text = value; }
+
         public string SearchValue { get => txtSearch.Text; set => txtSearch.Text = value; }
         public bool IsEdit { get => _IsEdit; set => _IsEdit = value; }
         public bool IsSuccessful { get => _IsSuccessfull; set => _IsSuccessfull = value; }
@@ -118,26 +121,6 @@ namespace PBL.Views
                 instance = new TeacherView();
             }
             return instance;
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

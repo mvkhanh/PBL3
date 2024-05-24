@@ -16,6 +16,8 @@ namespace PBL.Views.Student
         string StudentEmail {  get; set; }
         string StudentPhone {  get; set; }
         DateTime StudentRegistDay {  get; set; }
+        string StudentAccount {  get; set; }
+        string StudentPassword {  get; set; }
 
         string SearchValue {  get; set; }
         bool IsEdit {  get; set; }

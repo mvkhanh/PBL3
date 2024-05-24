@@ -1,126 +1,62 @@
-﻿using PBL.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
+using System.Windows.Forms;
+using PBL.Models;
 
 namespace PBL._Repositories
 {
     public class StudentRepository : BaseRepository, IStudentRepository
     {
-        //Methods
-        public void Add(StudentModel studentModel)
+        public void Add(StudentModel StudentModel)
         {
-            using(var connection = new SqlConnection(connectionString))
-            using(var command = new SqlCommand())
+            using (var ctx = new PBLContext())
             {
-                connection.Open();
-                command.Connection = connection;
-                command.CommandText = "insert into student (name, birth, email, phone, registday) " +
-                    "values(@name, @birth, @email, @phone, @registday)";
-                command.Parameters.AddWithValue("@name", studentModel.Name);
-                command.Parameters.AddWithValue("@birth", studentModel.Birth);
-                command.Parameters.AddWithValue("@email", studentModel.Email);
-                command.Parameters.AddWithValue("@phone", studentModel.Phone);
-                command.Parameters.AddWithValue("@registday", studentModel.RegistDay);
-                command.ExecuteNonQuery();
+                ctx.Students.Add(new StudentModel
+                {
+                    Name = StudentModel.Name,
+                    Email = StudentModel.Email,
+                    Birth = StudentModel.Birth,
+                    Phone = StudentModel.Phone,
+                    RegistDay = StudentModel.RegistDay
+                });
+                ctx.SaveChanges();
             }
         }
 
         public void Delete(int id)
         {
-            using (var connection = new SqlConnection(connectionString))
-            using (var command = new SqlCommand())
-            {
-                connection.Open();
-                command.Connection = connection;
-                command.CommandText = "delete from student where id = @id";
-                command.Parameters.AddWithValue("@id", id);
-                command.ExecuteNonQuery();
-            }
+            var ctx = new PBLContext();
+            var Student = ctx.Students.Find(id);
+            ctx.Students.Remove(Student);
+            ctx.SaveChanges();
         }
 
-        public void Edit(StudentModel studentModel)
+        public void Edit(StudentModel StudentModel)
         {
-            using (var connection = new SqlConnection(connectionString))
-            using (var command = new SqlCommand())
-            {
-                connection.Open();
-                command.Connection = connection;
-                command.CommandText = "update student set name = @name, birth = @birth, phone = @phone, email = @email where id = @id";
-                command.Parameters.AddWithValue("@id", studentModel.Id);
-                command.Parameters.AddWithValue("@name", studentModel.Name);
-                command.Parameters.AddWithValue("@birth", studentModel.Birth);
-                command.Parameters.AddWithValue("@email", studentModel.Email);
-                command.Parameters.AddWithValue("@phone", studentModel.Phone);
-                command.ExecuteNonQuery();
-            }
+            var ctx = new PBLContext();
+            var Student = ctx.Students.Find(StudentModel.Id);
+            Student.Phone = StudentModel.Phone;
+            Student.Name = StudentModel.Name;
+            Student.Birth = StudentModel.Birth;
+            Student.Email = StudentModel.Email;
+            ctx.SaveChanges();
         }
 
         public IEnumerable<StudentModel> GetAll()
         {
-            var studentList = new List<StudentModel>();
-            using (var connection = new SqlConnection(connectionString))
-            using (var command = new SqlCommand())
-            {
-                connection.Open();
-                command.Connection = connection;
-                command.CommandText = "select * from student order by id desc";
-                using(var reader = command.ExecuteReader())
-                {
-                    while(reader.Read())
-                    {
-                        var studentModel = new StudentModel
-                        {
-                            Id = (int)reader[0],
-                            Name = reader[1].ToString(),
-                            Birth = Convert.ToDateTime(reader[2]),
-                            Email = reader[3].ToString(),
-                            Phone = reader[4].ToString(),
-                            RegistDay = Convert.ToDateTime(reader[5])
-                        };
-                        studentList.Add(studentModel);
-                    }
-                }
-                return studentList;
-            }
+            return new PBLContext().Students.ToList();
         }
 
-        public IEnumerable<StudentModel> GetByValue(string value)
+        public IEnumerable<StudentModel> GetByValue(string search)
         {
-            var studentList = new List<StudentModel>();
-            int studentId = int.TryParse(value, out _) ? int.Parse(value) : 0;
-            string query, studentName = "%" + value + "%";
-            if (studentId != 0) query = @"select * from student where id = @id order by id desc";
-            else query = @"select * from student where name like @name order by id desc";
-            using (var connection = new SqlConnection(connectionString))
-            using (var command = new SqlCommand())
-            {
-                connection.Open();
-                command.Connection = connection;
-                command.CommandText = query;
-                command.Parameters.AddWithValue("@id", studentId);
-                command.Parameters.AddWithValue("@name", studentName);
-                using (var reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        var studentModel = new StudentModel
-                        {
-                            Id = (int)reader[0],
-                            Name = reader[1].ToString(),
-                            Birth = Convert.ToDateTime(reader[2]),
-                            Email = reader[3].ToString(),
-                            Phone = reader[4].ToString(),
-                            RegistDay = Convert.ToDateTime(reader[5])
-                        };
-                        studentList.Add(studentModel);
-                    }
-                }
-                return studentList;
-            }
+            int StudentId = int.TryParse(search, out _) ? Convert.ToInt32(search) : 0;
+            if (StudentId > 0) return new PBLContext().Students.Where(p => p.Id == StudentId).ToList();
+            else return new PBLContext().Students.Where(p => p.Name.Contains(search)).ToList();
         }
     }
 }

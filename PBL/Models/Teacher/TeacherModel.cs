@@ -13,6 +13,7 @@ namespace PBL.Models
     {
         [DisplayName("ID")]
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public override int Id { get; set; }
 
         [DisplayName("Ten")]
@@ -42,9 +43,16 @@ namespace PBL.Models
         [DisplayName("So luong bai kiem tra da dang")]
         public int Tests {  get; set; }
 
-        public override int Id_TaiKhoan { get => base.Id_TaiKhoan; set => base.Id_TaiKhoan = value; }
+        [DisplayName("Tai Khoan")]
+        [Required(ErrorMessage = "Nhap tai khoan.")]
+        [StringLength(50, MinimumLength = 6, ErrorMessage = "Tai khoan phai co do dai tu 6-50 ki tu.")]
+        public override string Account { get; set; }
 
-        [ForeignKey("Id_TaiKhoan")]
-        public virtual AccountModel AccountModel { get; set; }
+        [DisplayName("Mat Khau")]
+        [Required(ErrorMessage = "Nhap mat khau.")]
+        [StringLength(50, MinimumLength = 8, ErrorMessage = "Mat khau phai co do dai tu 8-50 ki tu.")]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).*$",
+        ErrorMessage = "Mat khau phai chua chu hoa, chu thuong, chu so va ki tu dac biet.")]
+        public override string Password { get; set; }
     }
 }

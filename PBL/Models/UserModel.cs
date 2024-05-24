@@ -16,6 +16,7 @@ namespace PBL.Models
         public virtual string Email {  get; set; }
         public virtual string Phone { get; set; }
         public virtual DateTime RegistDay { get; set; }
-        public virtual int Id_TaiKhoan { get; set; }
+        public virtual string Account {  get; set; }
+        public virtual string Password { get; set; }
     }
 }
