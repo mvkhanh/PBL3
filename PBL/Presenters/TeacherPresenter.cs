@@ -42,7 +42,7 @@ namespace PBL.Presenters
         private void LoadAllTeacherList()
         {
             teacherList = repository.GetAll();
-            teachersBindingSource.DataSource = teacherList;//Set data source
+            teachersBindingSource.DataSource = teacherList.Select(p => new {p.Id, p.Name, p.Birth, p.Email, p.Phone, p.RegistDay, p.Account, p.Password}).ToList();//Set data source
         }
 
         private void SaveTeacher(object sender, EventArgs e)

@@ -113,11 +113,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CBBItem.cs" />
     <Compile Include="CreateDB.cs" />
-    <Compile Include="LessonView.cs">
+    <Compile Include="Presenters\LessonPresenter.cs" />
+    <Compile Include="Views\Admin\Lessons\LessonView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LessonView.Designer.cs">
+    <Compile Include="Views\Admin\Lessons\LessonView.Designer.cs">
       <DependentUpon>LessonView.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Lesson\ILessonRepository.cs" />
@@ -202,10 +204,10 @@
     <Compile Include="Views\Admin\Teachers\TeacherView.Designer.cs">
       <DependentUpon>TeacherView.cs</DependentUpon>
     </Compile>
-    <Compile Include="_Repositories\BaseRepository.cs" />
+    <Compile Include="_Repositories\LessonRepository.cs" />
     <Compile Include="_Repositories\StudentRepository.cs" />
     <Compile Include="_Repositories\TeacherRepository.cs" />
-    <EmbeddedResource Include="LessonView.resx">
+    <EmbeddedResource Include="Views\Admin\Lessons\LessonView.resx">
       <DependentUpon>LessonView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Components\RoundTextBox.resx">

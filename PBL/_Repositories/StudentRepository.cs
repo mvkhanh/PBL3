@@ -10,21 +10,21 @@ using PBL.Models;
 
 namespace PBL._Repositories
 {
-    public class StudentRepository : BaseRepository, IStudentRepository
+    public class StudentRepository : IStudentRepository
     {
-        public void Add(StudentModel StudentModel)
+        public void Add(StudentModel studentModel)
         {
             using (var ctx = new PBLContext())
             {
                 ctx.Students.Add(new StudentModel
                 {
-                    Name = StudentModel.Name,
-                    Email = StudentModel.Email,
-                    Birth = StudentModel.Birth,
-                    Phone = StudentModel.Phone,
-                    RegistDay = StudentModel.RegistDay,
-                    Account = StudentModel.Account,
-                    Password = StudentModel.Password
+                    Name = studentModel.Name,
+                    Email = studentModel.Email,
+                    Birth = studentModel.Birth,
+                    Phone = studentModel.Phone,
+                    RegistDay = studentModel.RegistDay,
+                    Account = studentModel.Account,
+                    Password = studentModel.Password
                 });
                 ctx.SaveChanges();
             }
@@ -33,21 +33,21 @@ namespace PBL._Repositories
         public void Delete(int id)
         {
             var ctx = new PBLContext();
-            var Student = ctx.Students.Find(id);
-            ctx.Students.Remove(Student);
+            var student = ctx.Students.Find(id);
+            ctx.Students.Remove(student);
             ctx.SaveChanges();
         }
 
-        public void Edit(StudentModel StudentModel)
+        public void Edit(StudentModel studentModel)
         {
             var ctx = new PBLContext();
-            var Student = ctx.Students.Find(StudentModel.Id);
-            Student.Phone = StudentModel.Phone;
-            Student.Name = StudentModel.Name;
-            Student.Birth = StudentModel.Birth;
-            Student.Email = StudentModel.Email;
-            Student.Account = StudentModel.Account;
-            Student.Password = StudentModel.Password;
+            var student = ctx.Students.Find(studentModel.Id);
+            student.Phone = studentModel.Phone;
+            student.Name = studentModel.Name;
+            student.Birth = studentModel.Birth;
+            student.Email = studentModel.Email;
+            student.Account = studentModel.Account;
+            student.Password = studentModel.Password;
             ctx.SaveChanges();
         }
 

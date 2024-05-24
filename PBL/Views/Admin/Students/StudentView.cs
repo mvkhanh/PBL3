@@ -24,7 +24,6 @@ namespace PBL.Views.Admin.Students
             InitializeComponent();
             AssociateAndRaiseViewEvents();
             tabControl1.TabPages.Remove(tabPageStudentDetail);
-            
         }
         
         private void AssociateAndRaiseViewEvents()

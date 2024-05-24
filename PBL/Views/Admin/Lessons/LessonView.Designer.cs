@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPageLessonList = new System.Windows.Forms.TabPage();
             this.btnEdit = new FontAwesome.Sharp.IconButton();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.btnDelete = new FontAwesome.Sharp.IconButton();
@@ -39,31 +39,31 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lbSearch = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPageLessonDetail = new System.Windows.Forms.TabPage();
+            this.iconButtonAddPdf = new FontAwesome.Sharp.IconButton();
             this.regist = new System.Windows.Forms.DateTimePicker();
             this.lbRegist = new System.Windows.Forms.Label();
             this.lbBirth = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtView = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.lbId = new System.Windows.Forms.Label();
-            this.iconButtonAddPdf = new FontAwesome.Sharp.IconButton();
             this.btnCancel = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPageLessonList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.tabPageLessonDetail.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPageLessonList);
+            this.tabControl1.Controls.Add(this.tabPageLessonDetail);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -72,22 +72,22 @@
             this.tabControl1.Size = new System.Drawing.Size(906, 467);
             this.tabControl1.TabIndex = 2;
             // 
-            // tabPage1
+            // tabPageLessonList
             // 
-            this.tabPage1.Controls.Add(this.btnEdit);
-            this.tabPage1.Controls.Add(this.btnSearch);
-            this.tabPage1.Controls.Add(this.btnDelete);
-            this.tabPage1.Controls.Add(this.btnAddNew);
-            this.tabPage1.Controls.Add(this.txtSearch);
-            this.tabPage1.Controls.Add(this.lbSearch);
-            this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(898, 438);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Lesson List";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPageLessonList.Controls.Add(this.btnEdit);
+            this.tabPageLessonList.Controls.Add(this.btnSearch);
+            this.tabPageLessonList.Controls.Add(this.btnDelete);
+            this.tabPageLessonList.Controls.Add(this.btnAddNew);
+            this.tabPageLessonList.Controls.Add(this.txtSearch);
+            this.tabPageLessonList.Controls.Add(this.lbSearch);
+            this.tabPageLessonList.Controls.Add(this.dataGridView1);
+            this.tabPageLessonList.Location = new System.Drawing.Point(4, 25);
+            this.tabPageLessonList.Name = "tabPageLessonList";
+            this.tabPageLessonList.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageLessonList.Size = new System.Drawing.Size(898, 438);
+            this.tabPageLessonList.TabIndex = 0;
+            this.tabPageLessonList.Text = "Lesson List";
+            this.tabPageLessonList.UseVisualStyleBackColor = true;
             // 
             // btnEdit
             // 
@@ -192,7 +192,7 @@
             this.lbSearch.ForeColor = System.Drawing.Color.Black;
             this.lbSearch.Location = new System.Drawing.Point(21, 3);
             this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(115, 16);
+            this.lbSearch.Size = new System.Drawing.Size(114, 16);
             this.lbSearch.TabIndex = 1;
             this.lbSearch.Text = "Search Lesson:";
             // 
@@ -235,30 +235,50 @@
             this.dataGridView1.Size = new System.Drawing.Size(727, 373);
             this.dataGridView1.TabIndex = 0;
             // 
-            // tabPage2
+            // tabPageLessonDetail
             // 
-            this.tabPage2.Controls.Add(this.iconButtonAddPdf);
-            this.tabPage2.Controls.Add(this.regist);
-            this.tabPage2.Controls.Add(this.lbRegist);
-            this.tabPage2.Controls.Add(this.lbBirth);
-            this.tabPage2.Controls.Add(this.textBox2);
-            this.tabPage2.Controls.Add(this.txtName);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.lbName);
-            this.tabPage2.Controls.Add(this.textBox1);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.txtId);
-            this.tabPage2.Controls.Add(this.lbId);
-            this.tabPage2.Controls.Add(this.btnCancel);
-            this.tabPage2.Controls.Add(this.btnSave);
-            this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(898, 438);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Lesson detail";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPageLessonDetail.Controls.Add(this.iconButtonAddPdf);
+            this.tabPageLessonDetail.Controls.Add(this.regist);
+            this.tabPageLessonDetail.Controls.Add(this.lbRegist);
+            this.tabPageLessonDetail.Controls.Add(this.lbBirth);
+            this.tabPageLessonDetail.Controls.Add(this.textBox2);
+            this.tabPageLessonDetail.Controls.Add(this.txtName);
+            this.tabPageLessonDetail.Controls.Add(this.label3);
+            this.tabPageLessonDetail.Controls.Add(this.lbName);
+            this.tabPageLessonDetail.Controls.Add(this.txtView);
+            this.tabPageLessonDetail.Controls.Add(this.label1);
+            this.tabPageLessonDetail.Controls.Add(this.txtId);
+            this.tabPageLessonDetail.Controls.Add(this.lbId);
+            this.tabPageLessonDetail.Controls.Add(this.btnCancel);
+            this.tabPageLessonDetail.Controls.Add(this.btnSave);
+            this.tabPageLessonDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageLessonDetail.Location = new System.Drawing.Point(4, 25);
+            this.tabPageLessonDetail.Name = "tabPageLessonDetail";
+            this.tabPageLessonDetail.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageLessonDetail.Size = new System.Drawing.Size(898, 438);
+            this.tabPageLessonDetail.TabIndex = 1;
+            this.tabPageLessonDetail.Text = "Lesson detail";
+            this.tabPageLessonDetail.UseVisualStyleBackColor = true;
+            // 
+            // iconButtonAddPdf
+            // 
+            this.iconButtonAddPdf.AutoSize = true;
+            this.iconButtonAddPdf.BackColor = System.Drawing.Color.Silver;
+            this.iconButtonAddPdf.FlatAppearance.BorderSize = 0;
+            this.iconButtonAddPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonAddPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonAddPdf.ForeColor = System.Drawing.Color.White;
+            this.iconButtonAddPdf.IconChar = FontAwesome.Sharp.IconChar.Add;
+            this.iconButtonAddPdf.IconColor = System.Drawing.Color.White;
+            this.iconButtonAddPdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonAddPdf.IconSize = 32;
+            this.iconButtonAddPdf.Location = new System.Drawing.Point(116, 234);
+            this.iconButtonAddPdf.Name = "iconButtonAddPdf";
+            this.iconButtonAddPdf.Size = new System.Drawing.Size(158, 38);
+            this.iconButtonAddPdf.TabIndex = 19;
+            this.iconButtonAddPdf.Text = "Add File PDF";
+            this.iconButtonAddPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonAddPdf.UseVisualStyleBackColor = false;
             // 
             // regist
             // 
@@ -289,6 +309,14 @@
             this.lbBirth.TabIndex = 8;
             this.lbBirth.Text = "Lesson Content:";
             // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(351, 157);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(406, 24);
+            this.textBox2.TabIndex = 3;
+            // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -296,6 +324,16 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(406, 24);
             this.txtName.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(348, 141);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(163, 18);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Lesson Teacher Name:";
             // 
             // lbName
             // 
@@ -307,15 +345,15 @@
             this.lbName.TabIndex = 2;
             this.lbName.Text = "Lesson Name:";
             // 
-            // textBox1
+            // txtView
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(353, 234);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(158, 24);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "0";
+            this.txtView.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtView.Location = new System.Drawing.Point(353, 234);
+            this.txtView.Name = "txtView";
+            this.txtView.ReadOnly = true;
+            this.txtView.Size = new System.Drawing.Size(158, 24);
+            this.txtView.TabIndex = 1;
+            this.txtView.Text = "0";
             // 
             // label1
             // 
@@ -346,26 +384,6 @@
             this.lbId.Size = new System.Drawing.Size(79, 18);
             this.lbId.TabIndex = 0;
             this.lbId.Text = "Lesson ID:";
-            // 
-            // iconButtonAddPdf
-            // 
-            this.iconButtonAddPdf.AutoSize = true;
-            this.iconButtonAddPdf.BackColor = System.Drawing.Color.Silver;
-            this.iconButtonAddPdf.FlatAppearance.BorderSize = 0;
-            this.iconButtonAddPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonAddPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButtonAddPdf.ForeColor = System.Drawing.Color.White;
-            this.iconButtonAddPdf.IconChar = FontAwesome.Sharp.IconChar.Add;
-            this.iconButtonAddPdf.IconColor = System.Drawing.Color.White;
-            this.iconButtonAddPdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonAddPdf.IconSize = 32;
-            this.iconButtonAddPdf.Location = new System.Drawing.Point(116, 234);
-            this.iconButtonAddPdf.Name = "iconButtonAddPdf";
-            this.iconButtonAddPdf.Size = new System.Drawing.Size(158, 38);
-            this.iconButtonAddPdf.TabIndex = 19;
-            this.iconButtonAddPdf.Text = "Add File PDF";
-            this.iconButtonAddPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonAddPdf.UseVisualStyleBackColor = false;
             // 
             // btnCancel
             // 
@@ -407,24 +425,6 @@
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(348, 141);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 18);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Lesson Teacher Name:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(351, 157);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(406, 24);
-            this.textBox2.TabIndex = 3;
-            // 
             // LessonView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -435,20 +435,20 @@
             this.Name = "LessonView";
             this.Text = "Teachers";
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabPageLessonList.ResumeLayout(false);
+            this.tabPageLessonList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tabPageLessonDetail.ResumeLayout(false);
+            this.tabPageLessonDetail.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPageLessonList;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPageLessonDetail;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lbSearch;
         private System.Windows.Forms.TextBox txtName;
@@ -465,7 +465,7 @@
         private FontAwesome.Sharp.IconButton btnCancel;
         private FontAwesome.Sharp.IconButton iconButtonAddPdf;
         private System.Windows.Forms.DateTimePicker regist;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;

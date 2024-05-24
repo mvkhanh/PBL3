@@ -15,6 +15,7 @@ namespace PBL.Views.Admin.Lessons
         DateTime LessonPublishDay { get; set; }
         byte[] LessonContent { get; set; }
         int LessonViews { get; set; }
+        int LessonId_Teacher {  get; set; }
 
         string SearchValue { get; set; }
         bool IsEdit { get; set; }

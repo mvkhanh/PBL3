@@ -10,7 +10,7 @@ using PBL.Models;
 
 namespace PBL._Repositories
 {
-    public class TeacherRepository : BaseRepository, ITeacherRepository
+    public class TeacherRepository : ITeacherRepository
     {
         public void Add(TeacherModel teacherModel)
         {
