@@ -15,12 +15,9 @@ namespace PBL.Presenters
     public class MainPresenter
     {
         private IMainView mainView;
-        private readonly string mySqlConnectionString;
-
-        public MainPresenter(IMainView mainView, string mySqlConnectionString)
+        public MainPresenter(IMainView mainView)
         {
             this.mainView = mainView;
-            this.mySqlConnectionString = mySqlConnectionString;
             this.mainView.ShowTeacherView += ShowTeachersView;
             this.mainView.ShowStudentView += ShowStudentsView;
         }
@@ -28,14 +25,14 @@ namespace PBL.Presenters
         private void ShowStudentsView(object sender, EventArgs e)
         {
             IStudentView view = StudentView.GetInstance();
-            IStudentRepository repository = new StudentRepository(mySqlConnectionString);
+            IStudentRepository repository = new StudentRepository();
             new StudentPresenter(view, repository);
         }
 
         private void ShowTeachersView(object sender, EventArgs e)
         {
             ITeacherView view = TeacherView.GetInstance();
-            ITeacherRepository repository = new TeacherRepository(mySqlConnectionString);
+            ITeacherRepository repository = new TeacherRepository();
             new TeacherPresenter(view, repository);
         }
     }

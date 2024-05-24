@@ -10,11 +10,6 @@ namespace PBL._Repositories
 {
     public class StudentRepository : BaseRepository, IStudentRepository
     {
-        //Constructor
-        public StudentRepository(string connectionString)
-        {
-            this.connectionString = connectionString;
-        }
         //Methods
         public void Add(StudentModel studentModel)
         {

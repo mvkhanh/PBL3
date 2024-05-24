@@ -24,7 +24,7 @@ namespace PBL
             Application.SetCompatibleTextRenderingDefault(false);
 
             IMainView view = new MainView();
-            new MainPresenter(view, ConfigurationManager.ConnectionStrings["TM"].ConnectionString);
+            new MainPresenter(view);
 
             Application.Run((Form)view);
         }
