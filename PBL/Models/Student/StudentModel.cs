@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace PBL.Models
 {
+    [Table("Student")]
     public class StudentModel : UserModel
     {
         [DisplayName("ID")]

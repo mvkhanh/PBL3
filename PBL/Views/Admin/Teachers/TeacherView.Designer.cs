@@ -39,17 +39,10 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lbSearch = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnCancel = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtTests = new System.Windows.Forms.TextBox();
-            this.lbTests = new System.Windows.Forms.Label();
-            this.txtLessons = new System.Windows.Forms.TextBox();
-            this.lbLessons = new System.Windows.Forms.Label();
             this.regist = new System.Windows.Forms.DateTimePicker();
             this.lbRegist = new System.Windows.Forms.Label();
             this.birth = new System.Windows.Forms.DateTimePicker();
@@ -218,7 +211,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -230,10 +222,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 32;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -255,39 +243,11 @@
             this.dataGridView1.Size = new System.Drawing.Size(727, 373);
             this.dataGridView1.TabIndex = 0;
             // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.FillWeight = 150F;
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.FillWeight = 150F;
-            this.Column2.HeaderText = "Name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.FillWeight = 150F;
-            this.Column3.HeaderText = "Phone";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.btnCancel);
             this.tabPage2.Controls.Add(this.btnSave);
             this.tabPage2.Controls.Add(this.panel1);
-            this.tabPage2.Controls.Add(this.txtTests);
-            this.tabPage2.Controls.Add(this.lbTests);
-            this.tabPage2.Controls.Add(this.txtLessons);
-            this.tabPage2.Controls.Add(this.lbLessons);
             this.tabPage2.Controls.Add(this.regist);
             this.tabPage2.Controls.Add(this.lbRegist);
             this.tabPage2.Controls.Add(this.birth);
@@ -360,46 +320,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(230, 250);
             this.panel1.TabIndex = 18;
-            // 
-            // txtTests
-            // 
-            this.txtTests.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTests.Location = new System.Drawing.Point(464, 231);
-            this.txtTests.Name = "txtTests";
-            this.txtTests.ReadOnly = true;
-            this.txtTests.Size = new System.Drawing.Size(125, 24);
-            this.txtTests.TabIndex = 17;
-            this.txtTests.Text = "0";
-            // 
-            // lbTests
-            // 
-            this.lbTests.AutoSize = true;
-            this.lbTests.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTests.Location = new System.Drawing.Point(461, 215);
-            this.lbTests.Name = "lbTests";
-            this.lbTests.Size = new System.Drawing.Size(118, 18);
-            this.lbTests.TabIndex = 16;
-            this.lbTests.Text = "Number of tests:";
-            // 
-            // txtLessons
-            // 
-            this.txtLessons.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLessons.Location = new System.Drawing.Point(307, 231);
-            this.txtLessons.Name = "txtLessons";
-            this.txtLessons.ReadOnly = true;
-            this.txtLessons.Size = new System.Drawing.Size(125, 24);
-            this.txtLessons.TabIndex = 15;
-            this.txtLessons.Text = "0";
-            // 
-            // lbLessons
-            // 
-            this.lbLessons.AutoSize = true;
-            this.lbLessons.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLessons.Location = new System.Drawing.Point(304, 215);
-            this.lbLessons.Name = "lbLessons";
-            this.lbLessons.Size = new System.Drawing.Size(138, 18);
-            this.lbLessons.TabIndex = 14;
-            this.lbLessons.Text = "Number of lessons:";
             // 
             // regist
             // 
@@ -585,15 +505,8 @@
         private System.Windows.Forms.Label lbId;
         private System.Windows.Forms.DateTimePicker birth;
         private System.Windows.Forms.Label lbBirth;
-        private System.Windows.Forms.TextBox txtTests;
-        private System.Windows.Forms.Label lbTests;
-        private System.Windows.Forms.TextBox txtLessons;
-        private System.Windows.Forms.Label lbLessons;
         private System.Windows.Forms.DateTimePicker regist;
         private System.Windows.Forms.Label lbRegist;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private FontAwesome.Sharp.IconButton btnAddNew;
         private FontAwesome.Sharp.IconButton btnEdit;
         private FontAwesome.Sharp.IconButton btnDelete;

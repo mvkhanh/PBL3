@@ -16,8 +16,6 @@ namespace PBL.Views
         string TeacherEmail { get; set; }
         string TeacherPhone { get; set; }
         DateTime TeacherRegistDay { get; set; }
-        int TeacherLessons { get; set; }
-        int TeacherTests { get; set; }
         string TeacherAccount { get; set; }
         string TeacherPassword {  get; set; }
 

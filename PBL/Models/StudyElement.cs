@@ -5,21 +5,14 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PBL.Models
 {
-    public class StudyElement
+    public abstract class StudyElement
     {
-        [DisplayName("ID")]
-        public int Id { get; private set; }
-
-        [DisplayName("Ten")]
-        [Required(ErrorMessage = "Nhap ten.")]
-        [StringLength(50, ErrorMessage = "Ten phai co do dai toi da 50 ki tu.")]
-        public string Name { get; set; }
-
-        [DisplayName("Ngay dang")]
-        public DateTime PublishDay { get; set; }
-        public int IdGiangVien { get; set; }
+        public abstract int Id { get; set; }
+        public abstract string Name { get; set; }
+        public abstract DateTime PublishDay { get; set; }
     }
 }

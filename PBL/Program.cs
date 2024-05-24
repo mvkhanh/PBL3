@@ -26,7 +26,7 @@ namespace PBL
             IMainView view = new MainView();
             new MainPresenter(view);
 
-            Application.Run(new Login());
+            Application.Run((Form)view);
         }
     }
 }

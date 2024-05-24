@@ -21,8 +21,6 @@ namespace PBL._Repositories
                     Email = teacherModel.Email,
                     Birth = teacherModel.Birth,
                     Phone = teacherModel.Phone,
-                    Lessons = teacherModel.Lessons,
-                    Tests = teacherModel.Tests,
                     RegistDay = teacherModel.RegistDay,
                     Account = teacherModel.Account,
                     Password = teacherModel.Password

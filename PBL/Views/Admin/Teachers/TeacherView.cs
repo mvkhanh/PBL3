@@ -88,8 +88,6 @@ namespace PBL.Views
         public string TeacherEmail { get => txtEmail.Text; set => txtEmail.Text = value; }
         public string TeacherPhone { get => txtPhone.Text; set => txtPhone.Text = value; }
         public DateTime TeacherRegistDay { get => regist.Value; set => regist.Value = value; }
-        public int TeacherLessons { get => Convert.ToInt32(txtLessons.Text); set => txtLessons.Text = value.ToString(); }
-        public int TeacherTests { get => Convert.ToInt32(txtTests.Text); set => txtTests.Text = value.ToString(); }
         public string TeacherAccount { get => txtAccount.Text; set => txtAccount.Text = value; }
         public string TeacherPassword { get => txtPassword.Text; set => txtPassword.Text = value; }
 

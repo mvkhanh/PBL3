@@ -14,6 +14,7 @@ namespace PBL
         }
         public virtual DbSet<StudentModel> Students { get; set; }
         public virtual DbSet<TeacherModel> Teachers { get; set; }
+        public virtual DbSet<LessonModel> Lessons { get; set; }
         
     }
 

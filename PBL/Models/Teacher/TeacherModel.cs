@@ -9,8 +9,10 @@ using System.Threading.Tasks;
 
 namespace PBL.Models
 {
+    [Table("Teacher")]
     public class TeacherModel : UserModel
     {
+        //Properties
         [DisplayName("ID")]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -37,12 +39,6 @@ namespace PBL.Models
         [DisplayName("Ngay dang ky")]
         public override DateTime RegistDay { get; set; }
 
-        [DisplayName("So luong bai hoc da dang")]
-        public int Lessons { get; set; }
-
-        [DisplayName("So luong bai kiem tra da dang")]
-        public int Tests {  get; set; }
-
         [DisplayName("Tai Khoan")]
         [Required(ErrorMessage = "Nhap tai khoan.")]
         [StringLength(50, MinimumLength = 6, ErrorMessage = "Tai khoan phai co do dai tu 6-50 ki tu.")]
@@ -54,5 +50,13 @@ namespace PBL.Models
         [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).*$",
         ErrorMessage = "Mat khau phai chua chu hoa, chu thuong, chu so va ki tu dac biet.")]
         public override string Password { get; set; }
+
+        public virtual ICollection<LessonModel> Lessons {  get; set; }
+
+        //Constructor
+        public TeacherModel()
+        {
+            Lessons = new HashSet<LessonModel>();
+        }
     }
 }
