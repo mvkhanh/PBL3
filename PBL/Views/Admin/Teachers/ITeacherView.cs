@@ -12,12 +12,14 @@ namespace PBL.Views
         //Properties
         int TeacherId { get; set; }
         string TeacherName { get; set; }
-        DateTime TeacherBith {  get; set; }
-        string TeacherEmail {  get; set; }
+        DateTime TeacherBith { get; set; }
+        string TeacherEmail { get; set; }
         string TeacherPhone { get; set; }
         DateTime TeacherRegistDay { get; set; }
-        int TeacherLessons {  get; set; }
-        int TeacherTests {  get; set; }
+        int TeacherLessons { get; set; }
+        int TeacherTests { get; set; }
+        string TeacherAccount { get; set; }
+        string TeacherPassword {  get; set; }
 
         string SearchValue {  get; set; }
         bool IsEdit {  get; set; }

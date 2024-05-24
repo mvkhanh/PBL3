@@ -14,9 +14,19 @@ namespace PBL._Repositories
     {
         public void Add(TeacherModel teacherModel)
         {
-            var ctx = new PBLContext();
-            ctx.Teachers.Add(teacherModel);
-            ctx.SaveChanges();
+            using (var ctx = new PBLContext())
+            {
+                ctx.Teachers.Add(new TeacherModel {
+                    Name = teacherModel.Name,
+                    Email = teacherModel.Email,
+                    Birth = teacherModel.Birth,
+                    Phone = teacherModel.Phone,
+                    Lessons = teacherModel.Lessons,
+                    Tests = teacherModel.Tests,
+                    RegistDay = teacherModel.RegistDay
+                });
+                ctx.SaveChanges();
+            }
         }
 
         public void Delete(int id)
@@ -29,18 +39,21 @@ namespace PBL._Repositories
 
         public void Edit(TeacherModel teacherModel)
         {
-            var ctx = new PBLContext();
-            var teacher = ctx.Teachers.Find(teacherModel.Id);
-            teacher.Phone = teacherModel.Phone;
-            teacher.Name = teacherModel.Name;
-            teacher.Birth = teacherModel.Birth;
-            teacher.Email = teacherModel.Email;
-            ctx.SaveChanges();
+            using (var ctx = new PBLContext())
+            {
+                var teacher = ctx.Teachers.Find(teacherModel.Id);
+                teacher.Phone = teacherModel.Phone;
+                teacher.Name = teacherModel.Name;
+                teacher.Birth = teacherModel.Birth;
+                teacher.Email = teacherModel.Email;
+                ctx.SaveChanges();
+            }
         }
 
         public IEnumerable<TeacherModel> GetAll()
         {
-            return new PBLContext().Teachers.ToList();
+            //return new PBLContext().Teachers.ToList();
+            return new PBLContext().Teachers.Select(p => p);
         }
 
         public IEnumerable<TeacherModel> GetByValue(string search)
