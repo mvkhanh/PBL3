@@ -16,5 +16,16 @@ namespace PBL
         {
             InitializeComponent();
         }
+
+
+
+        private void btnAddPdf_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                tbFileName.Text = ofd.SafeFileName;
+            }
+        }
     }
 }

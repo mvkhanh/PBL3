@@ -40,7 +40,8 @@
             this.lbSearch = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.iconButtonAddPdf = new FontAwesome.Sharp.IconButton();
+            this.btnAddPdf = new FontAwesome.Sharp.IconButton();
+            this.tbFileName = new System.Windows.Forms.TextBox();
             this.regist = new System.Windows.Forms.DateTimePicker();
             this.lbRegist = new System.Windows.Forms.Label();
             this.lbBirth = new System.Windows.Forms.Label();
@@ -238,7 +239,8 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.iconButtonAddPdf);
+            this.tabPage2.Controls.Add(this.btnAddPdf);
+            this.tabPage2.Controls.Add(this.tbFileName);
             this.tabPage2.Controls.Add(this.regist);
             this.tabPage2.Controls.Add(this.lbRegist);
             this.tabPage2.Controls.Add(this.lbBirth);
@@ -261,25 +263,34 @@
             this.tabPage2.Text = "Lesson detail";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // iconButtonAddPdf
+            // btnAddPdf
             // 
-            this.iconButtonAddPdf.AutoSize = true;
-            this.iconButtonAddPdf.BackColor = System.Drawing.Color.Silver;
-            this.iconButtonAddPdf.FlatAppearance.BorderSize = 0;
-            this.iconButtonAddPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonAddPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButtonAddPdf.ForeColor = System.Drawing.Color.White;
-            this.iconButtonAddPdf.IconChar = FontAwesome.Sharp.IconChar.Add;
-            this.iconButtonAddPdf.IconColor = System.Drawing.Color.White;
-            this.iconButtonAddPdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonAddPdf.IconSize = 32;
-            this.iconButtonAddPdf.Location = new System.Drawing.Point(116, 234);
-            this.iconButtonAddPdf.Name = "iconButtonAddPdf";
-            this.iconButtonAddPdf.Size = new System.Drawing.Size(158, 38);
-            this.iconButtonAddPdf.TabIndex = 19;
-            this.iconButtonAddPdf.Text = "Add File PDF";
-            this.iconButtonAddPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonAddPdf.UseVisualStyleBackColor = false;
+            this.btnAddPdf.AutoSize = true;
+            this.btnAddPdf.BackColor = System.Drawing.Color.Orange;
+            this.btnAddPdf.FlatAppearance.BorderSize = 0;
+            this.btnAddPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPdf.ForeColor = System.Drawing.Color.White;
+            this.btnAddPdf.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnAddPdf.IconColor = System.Drawing.Color.White;
+            this.btnAddPdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddPdf.IconSize = 32;
+            this.btnAddPdf.Location = new System.Drawing.Point(115, 266);
+            this.btnAddPdf.Name = "btnAddPdf";
+            this.btnAddPdf.Size = new System.Drawing.Size(159, 38);
+            this.btnAddPdf.TabIndex = 16;
+            this.btnAddPdf.Text = "Add File PDF";
+            this.btnAddPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddPdf.UseVisualStyleBackColor = false;
+            this.btnAddPdf.Click += new System.EventHandler(this.btnAddPdf_Click);
+            // 
+            // tbFileName
+            // 
+            this.tbFileName.Location = new System.Drawing.Point(115, 234);
+            this.tbFileName.Name = "tbFileName";
+            this.tbFileName.ReadOnly = true;
+            this.tbFileName.Size = new System.Drawing.Size(159, 26);
+            this.tbFileName.TabIndex = 15;
             // 
             // regist
             // 
@@ -349,7 +360,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(353, 234);
+            this.textBox1.Location = new System.Drawing.Point(350, 234);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(158, 29);
@@ -360,7 +371,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(350, 218);
+            this.label1.Location = new System.Drawing.Point(347, 218);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(164, 24);
             this.label1.TabIndex = 0;
@@ -464,11 +475,12 @@
         private FontAwesome.Sharp.IconButton btnSearch;
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnCancel;
-        private FontAwesome.Sharp.IconButton iconButtonAddPdf;
         private System.Windows.Forms.DateTimePicker regist;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tbFileName;
+        private FontAwesome.Sharp.IconButton btnAddPdf;
     }
 }
