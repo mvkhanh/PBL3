@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnEdit = new FontAwesome.Sharp.IconButton();
@@ -39,10 +39,9 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lbSearch = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lbBirth = new System.Windows.Forms.Label();
+            this.iconButtonAddPdf = new FontAwesome.Sharp.IconButton();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.btnCancel = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
@@ -55,8 +54,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.lbId = new System.Windows.Forms.Label();
-            this.lbBirth = new System.Windows.Forms.Label();
-            this.iconButtonAddPdf = new FontAwesome.Sharp.IconButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -209,30 +206,25 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 32;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(191)))), ((int)(((byte)(197)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(191)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.LightGray;
             this.dataGridView1.Location = new System.Drawing.Point(24, 65);
@@ -245,30 +237,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(727, 373);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.FillWeight = 150F;
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.FillWeight = 150F;
-            this.Column2.HeaderText = "Name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.FillWeight = 150F;
-            this.Column3.HeaderText = "Phone";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
             // 
             // tabPage2
             // 
@@ -294,6 +262,42 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Test detail";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // lbBirth
+            // 
+            this.lbBirth.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbBirth.AutoSize = true;
+            this.lbBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBirth.Location = new System.Drawing.Point(123, 258);
+            this.lbBirth.Name = "lbBirth";
+            this.lbBirth.Size = new System.Drawing.Size(109, 18);
+            this.lbBirth.TabIndex = 21;
+            this.lbBirth.Text = "Add Questions:";
+            // 
+            // iconButtonAddPdf
+            // 
+            this.iconButtonAddPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButtonAddPdf.AutoSize = true;
+            this.iconButtonAddPdf.BackColor = System.Drawing.Color.Silver;
+            this.iconButtonAddPdf.FlatAppearance.BorderSize = 0;
+            this.iconButtonAddPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonAddPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonAddPdf.ForeColor = System.Drawing.Color.White;
+            this.iconButtonAddPdf.IconChar = FontAwesome.Sharp.IconChar.Add;
+            this.iconButtonAddPdf.IconColor = System.Drawing.Color.White;
+            this.iconButtonAddPdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonAddPdf.IconSize = 32;
+            this.iconButtonAddPdf.Location = new System.Drawing.Point(128, 279);
+            this.iconButtonAddPdf.Name = "iconButtonAddPdf";
+            this.iconButtonAddPdf.Size = new System.Drawing.Size(143, 38);
+            this.iconButtonAddPdf.TabIndex = 22;
+            this.iconButtonAddPdf.Text = "Add A Question";
+            this.iconButtonAddPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonAddPdf.UseVisualStyleBackColor = false;
             // 
             // richTextBox1
             // 
@@ -463,42 +467,6 @@
             this.lbId.TabIndex = 0;
             this.lbId.Text = "Lesson ID:";
             // 
-            // lbBirth
-            // 
-            this.lbBirth.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbBirth.AutoSize = true;
-            this.lbBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBirth.Location = new System.Drawing.Point(123, 258);
-            this.lbBirth.Name = "lbBirth";
-            this.lbBirth.Size = new System.Drawing.Size(109, 18);
-            this.lbBirth.TabIndex = 21;
-            this.lbBirth.Text = "Add Questions:";
-            // 
-            // iconButtonAddPdf
-            // 
-            this.iconButtonAddPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButtonAddPdf.AutoSize = true;
-            this.iconButtonAddPdf.BackColor = System.Drawing.Color.Silver;
-            this.iconButtonAddPdf.FlatAppearance.BorderSize = 0;
-            this.iconButtonAddPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonAddPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButtonAddPdf.ForeColor = System.Drawing.Color.White;
-            this.iconButtonAddPdf.IconChar = FontAwesome.Sharp.IconChar.Add;
-            this.iconButtonAddPdf.IconColor = System.Drawing.Color.White;
-            this.iconButtonAddPdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonAddPdf.IconSize = 32;
-            this.iconButtonAddPdf.Location = new System.Drawing.Point(128, 279);
-            this.iconButtonAddPdf.Name = "iconButtonAddPdf";
-            this.iconButtonAddPdf.Size = new System.Drawing.Size(143, 38);
-            this.iconButtonAddPdf.TabIndex = 22;
-            this.iconButtonAddPdf.Text = "Add A Question";
-            this.iconButtonAddPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonAddPdf.UseVisualStyleBackColor = false;
-            // 
             // TestView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -530,9 +498,6 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label lbId;
         private System.Windows.Forms.Label lbRegist;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private FontAwesome.Sharp.IconButton btnAddNew;
         private FontAwesome.Sharp.IconButton btnEdit;
         private FontAwesome.Sharp.IconButton btnDelete;

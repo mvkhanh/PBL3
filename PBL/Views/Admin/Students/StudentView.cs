@@ -11,7 +11,8 @@ using System.Windows.Forms;
 
 namespace PBL.Views.Admin.Students
 {
-    public partial class StudentView : Form,IStudentView
+    public partial class StudentView : Form
+        //,IStudentView
     {
         //Fields
         private bool _IsEdit;
@@ -89,6 +90,7 @@ namespace PBL.Views.Admin.Students
         //Properties
         public int StudentId
             { get => Convert.ToInt32(txtId.Text); set => txtId.Text = value.ToString(); }
+
         public string StudentName 
             { get => txtName.Text; set => txtName.Text = value; }
         public DateTime StudentBirth 
