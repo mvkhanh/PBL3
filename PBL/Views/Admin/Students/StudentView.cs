@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace PBL.Views.Admin.Students
 {
-    public partial class StudentView : Form,IStudentView
+    public partial class StudentView : Form, IStudentView
     {
         //Fields
         private bool _IsEdit;
@@ -73,7 +73,7 @@ namespace PBL.Views.Admin.Students
                 SaveEvent?.Invoke(this, EventArgs.Empty);
                 if (IsSuccessful)
                 {
-                   tabControl1.TabPages.Remove(tabPageStudentDetail);
+                    tabControl1.TabPages.Remove(tabPageStudentDetail);
                     tabControl1.TabPages.Add(tabPageStudentList);
                 }
                 MessageBox.Show(Message);
@@ -99,6 +99,9 @@ namespace PBL.Views.Admin.Students
             { get => txtPhone.Text; set => txtPhone.Text = value; }
         public DateTime StudentRegistDay 
             { get => regist.Value; set => regist.Value = value; }
+        public string StudentAccount { get => txtAccount.Text; set => txtAccount.Text = value; }
+        public string StudentPassword { get => txtPassword.Text; set => txtPassword.Text = value; }
+
         public string SearchValue 
             { get => txtSearch.Text; set => txtSearch.Text = value; }
         public bool IsEdit 
@@ -107,6 +110,7 @@ namespace PBL.Views.Admin.Students
             { get => _IsSuccessful; set => _IsSuccessful = value; }
         public string Message 
             { get => _Message; set => _Message = value; }
+        
 
         //Events
         public event EventHandler SearchEvent;

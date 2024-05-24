@@ -56,6 +56,9 @@ namespace PBL.Presenters
             model.RegistDay = view.TeacherRegistDay;
             model.Lessons = view.TeacherLessons;
             model.Tests = view.TeacherTests;
+            model.Account = view.TeacherAccount;
+            model.Password = view.TeacherPassword;
+
             try
             {
                 new Common.ModelDataValidation().Validate(model);
@@ -90,6 +93,8 @@ namespace PBL.Presenters
             view.TeacherRegistDay = DateTime.Today;
             view.TeacherLessons = 0;
             view.TeacherTests = 0;
+            view.TeacherAccount = "";
+            view.TeacherPassword = "";
         }
 
         private void CancelAction(object sender, EventArgs e)
@@ -125,6 +130,8 @@ namespace PBL.Presenters
             view.TeacherRegistDay = teacher.RegistDay;
             view.TeacherLessons = teacher.Lessons;
             view.TeacherTests = teacher.Tests;
+            view.TeacherAccount = teacher.Account;
+            view.TeacherPassword = teacher.Password;
             view.IsEdit = true;
         }
 

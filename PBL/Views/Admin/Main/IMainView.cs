@@ -10,7 +10,6 @@ namespace PBL.Views
     {
         event EventHandler ShowTeacherView;
         event EventHandler ShowStudentView;
-        event EventHandler ShowAccountView;
         event EventHandler ShowLessonView;
         event EventHandler ShowTestView;
         event EventHandler ShowDashBoardView;
