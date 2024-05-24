@@ -1,10 +1,10 @@
-﻿using MySql.Data.MySqlClient;
-using PBL.Models;
+﻿using PBL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace PBL._Repositories
 {
@@ -18,8 +18,8 @@ namespace PBL._Repositories
         //Methods
         public void Add(StudentModel studentModel)
         {
-            using(var connection = new MySqlConnection(connectionString))
-            using(var command = new MySqlCommand())
+            using(var connection = new SqlConnection(connectionString))
+            using(var command = new SqlCommand())
             {
                 connection.Open();
                 command.Connection = connection;
@@ -36,8 +36,8 @@ namespace PBL._Repositories
 
         public void Delete(int id)
         {
-            using (var connection = new MySqlConnection(connectionString))
-            using (var command = new MySqlCommand())
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
             {
                 connection.Open();
                 command.Connection = connection;
@@ -49,8 +49,8 @@ namespace PBL._Repositories
 
         public void Edit(StudentModel studentModel)
         {
-            using (var connection = new MySqlConnection(connectionString))
-            using (var command = new MySqlCommand())
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
             {
                 connection.Open();
                 command.Connection = connection;
@@ -67,8 +67,8 @@ namespace PBL._Repositories
         public IEnumerable<StudentModel> GetAll()
         {
             var studentList = new List<StudentModel>();
-            using (var connection = new MySqlConnection(connectionString))
-            using (var command = new MySqlCommand())
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
             {
                 connection.Open();
                 command.Connection = connection;
@@ -100,8 +100,8 @@ namespace PBL._Repositories
             string query, studentName = "%" + value + "%";
             if (studentId != 0) query = @"select * from student where id = @id order by id desc";
             else query = @"select * from student where name like @name order by id desc";
-            using (var connection = new MySqlConnection(connectionString))
-            using (var command = new MySqlCommand())
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
             {
                 connection.Open();
                 command.Connection = connection;
