@@ -21,6 +21,7 @@ namespace PBL.Views
         private Form currentChildForm;
 
         //Constructor
+
         public MainView()
         {
             InitializeComponent();
@@ -159,6 +160,122 @@ namespace PBL.Views
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        // Define the constant values for the interop functions
+        private const int WM_NCLBUTTONDOWN = 0x00A1;
+        private const int HT_CAPTION = 0x0002;
+        private const int HT_LEFT = 0x0A;
+        private const int HT_RIGHT = 0x0B;
+        private const int HT_TOP = 0x0C;
+        private const int HT_TOPLEFT = 0x0D;
+        private const int HT_TOPRIGHT = 0x0E;
+        private const int HT_BOTTOM = 0x0F;
+        private const int HT_BOTTOMLEFT = 0x10;
+        private const int HT_BOTTOMRIGHT = 0x11;
+        // Handle the mouse down event on the form to enable dragging and resizing
+        private void resizePanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                if (e.X <= 5 && e.Y <= 5) // Top-left corner
+                {
+                    ReleaseCapture();
+                    SendMessage(Handle, WM_NCLBUTTONDOWN, HT_TOPLEFT, 0);
+                }
+                else if (e.X >= panelTitle.Width - 5 && e.Y <= 5) // Top-right corner
+                {
+                    ReleaseCapture();
+                    SendMessage(Handle, WM_NCLBUTTONDOWN, HT_TOPRIGHT, 0);
+                }
+                else if (e.X <= 5 && e.Y >= panelDesktop.Height - 5) // Bottom-left corner
+                {
+                    ReleaseCapture();
+                    SendMessage(Handle, WM_NCLBUTTONDOWN, HT_BOTTOMLEFT, 0);
+                }
+                else if (e.X >= panelDesktop.Width - 5 && e.Y >= panelDesktop.Height - 5) // Bottom-right corner
+                {
+                    ReleaseCapture();
+                    SendMessage(Handle, WM_NCLBUTTONDOWN, HT_BOTTOMRIGHT, 0);
+                }
+                else if (e.Y <= 5) // Top edge
+                {
+                    ReleaseCapture();
+                    SendMessage(Handle, WM_NCLBUTTONDOWN, HT_TOP, 0);
+                }
+                else if (e.Y >= panelDesktop.Height - 5) // Bottom edge
+                {
+                    ReleaseCapture();
+                    SendMessage(Handle, WM_NCLBUTTONDOWN, HT_BOTTOM, 0);
+                }
+                else if (e.X <= 5) // Left edge
+                {
+                    ReleaseCapture();
+                    SendMessage(Handle, WM_NCLBUTTONDOWN, HT_LEFT, 0);
+                }
+                else if (e.X >= panelDesktop.Width - 5) // Right edge
+                {
+                    ReleaseCapture();
+                    SendMessage(Handle, WM_NCLBUTTONDOWN, HT_RIGHT, 0);
+                }
+                else if (sender == panelTitle)
+                {
+                    ReleaseCapture();
+                    SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+                }
+            }
+        }
+        // Handle the mouse move event on the resize panel to change the mouse pointer
+        private void panelTitle_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.X <= 5 && e.Y <= 5) Cursor = Cursors.SizeNWSE;
+            else if (e.X >= panelTitle.Width - 5 && e.Y <= 5) Cursor = Cursors.SizeNESW;
+            else if (e.X <= 5 || e.X >= panelTitle.Width - 5) Cursor = Cursors.SizeWE;
+            else if (e.Y <= 5) Cursor = Cursors.SizeNS;
+            else Cursor = Cursors.Default;
+        }
+        private void panelMenu_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.X <= 5 && e.Y >= panelMain.Height - 5) Cursor = Cursors.SizeNESW;
+            else if(e.X <= 5) Cursor = Cursors.SizeWE;
+            else if (e.Y >= panelMain.Height - 5) Cursor = Cursors.SizeNS;
+            else Cursor = Cursors.Default;
+        }
+
+        private void panelTop_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.X >= panelShadow.Width - 5) Cursor = Cursors.SizeWE;
+            else Cursor = Cursors.Default;
+        }
+
+        private void panelDesktop_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.X >= panelDesktop.Width - 5 && e.Y >= panelDesktop.Height - 5) Cursor = Cursors.SizeNWSE;
+            else if (e.Y >= panelDesktop.Height - 5) Cursor = Cursors.SizeNS;
+            else if (e.X >= panelDesktop.Width - 5) Cursor = Cursors.SizeWE;
+            else Cursor = Cursors.Default;
+        }
         #endregion
+
+        private void btnRestoreDown_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        private void btnMinisize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
