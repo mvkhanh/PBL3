@@ -120,6 +120,7 @@
     <Compile Include="LessonView.Designer.cs">
       <DependentUpon>LessonView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Lesson\ILessonRepository.cs" />
     <Compile Include="Models\Student\IStudentRepository.cs" />
     <Compile Include="Models\Teacher\ITeacherRepository.cs" />
     <Compile Include="Presenters\Common\ModelDataValidation.cs" />
@@ -150,6 +151,7 @@
     <Compile Include="TestView.Designer.cs">
       <DependentUpon>TestView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Admin\Lessons\ILessonView.cs" />
     <Compile Include="Views\Admin\Main\IMainView.cs" />
     <Compile Include="Views\Admin\Students\StudentView.cs">
       <SubType>Form</SubType>
@@ -177,7 +179,7 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\Students\IStudentView.cs" />
-    <Compile Include="Models\Lesson.cs" />
+    <Compile Include="Models\Lesson\LessonModel.cs" />
     <Compile Include="Models\Test.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\Category.cs" />

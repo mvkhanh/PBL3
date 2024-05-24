@@ -54,8 +54,6 @@ namespace PBL.Presenters
             model.Birth = view.TeacherBith;
             model.Phone = view.TeacherPhone;
             model.RegistDay = view.TeacherRegistDay;
-            model.Lessons = view.TeacherLessons;
-            model.Tests = view.TeacherTests;
             model.Account = view.TeacherAccount;
             model.Password = view.TeacherPassword;
 
@@ -91,8 +89,6 @@ namespace PBL.Presenters
             view.TeacherBith = DateTime.Today;
             view.TeacherPhone = "";
             view.TeacherRegistDay = DateTime.Today;
-            view.TeacherLessons = 0;
-            view.TeacherTests = 0;
             view.TeacherAccount = "";
             view.TeacherPassword = "";
         }
@@ -128,8 +124,6 @@ namespace PBL.Presenters
             view.TeacherBith = teacher.Birth;
             view.TeacherPhone = teacher.Phone;
             view.TeacherRegistDay = teacher.RegistDay;
-            view.TeacherLessons = teacher.Lessons;
-            view.TeacherTests = teacher.Tests;
             view.TeacherAccount = teacher.Account;
             view.TeacherPassword = teacher.Password;
             view.IsEdit = true;

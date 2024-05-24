@@ -9,9 +9,12 @@ using System.Threading.Tasks;
 
 namespace PBL.Models
 {
-    public class Test : StudyElement
+    [Table("Lesson")]
+    public class LessonModel : StudyElement
     {
         [DisplayName("ID")]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public override int Id { get; set; }
 
         [DisplayName("Ten")]
@@ -26,11 +29,10 @@ namespace PBL.Models
         [ForeignKey("Id_Teacher")]
         public virtual TeacherModel Teacher { get; set; }
 
-        [DisplayName("Gioi thieu")]
-        [Required(ErrorMessage = "Nhap noi dung gioi thieu.")]
-        public string Description {  get; set; }
+        [Required(ErrorMessage = "Them noi dung.")]
+        public byte[] Content { get; set; }
 
-        [DisplayName("So luong tham gia")]
-        public int Count {  get; set; }
+        [DisplayName("Luot xem")]
+        public int Views { get; set; }
     }
 }

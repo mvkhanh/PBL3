@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panelTitle = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelMain = new System.Windows.Forms.Panel();
-            this.lbTitle = new System.Windows.Forms.Label();
             this.btnMinisize = new System.Windows.Forms.Button();
             this.btnRestoreDown = new System.Windows.Forms.Button();
             this.btClose = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelMain = new System.Windows.Forms.Panel();
+            this.lbTitle = new System.Windows.Forms.Label();
             this.panelLogin = new RoundPanel();
             this.btOpenEye = new System.Windows.Forms.Button();
             this.btCloseEye = new System.Windows.Forms.Button();
@@ -70,44 +70,6 @@
             this.panelTitle.TabIndex = 10;
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.resizePanel_MouseDown);
             this.panelTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseMove);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Login";
-            // 
-            // panelMain
-            // 
-            this.panelMain.BackgroundImage = global::PBL.Properties.Resources.background;
-            this.panelMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelMain.Controls.Add(this.lbTitle);
-            this.panelMain.Controls.Add(this.panelLogin);
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 29);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(901, 535);
-            this.panelMain.TabIndex = 6;
-            this.panelMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.resizePanel_MouseDown);
-            this.panelMain.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelMain_MouseMove);
-            // 
-            // lbTitle
-            // 
-            this.lbTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbTitle.AutoSize = true;
-            this.lbTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lbTitle.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.ForeColor = System.Drawing.Color.White;
-            this.lbTitle.Location = new System.Drawing.Point(209, 48);
-            this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(603, 67);
-            this.lbTitle.TabIndex = 8;
-            this.lbTitle.Text = "Welcome to TOEIC Master";
             // 
             // btnMinisize
             // 
@@ -150,6 +112,44 @@
             this.btClose.TabIndex = 1;
             this.btClose.UseVisualStyleBackColor = true;
             this.btClose.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Login";
+            // 
+            // panelMain
+            // 
+            this.panelMain.BackgroundImage = global::PBL.Properties.Resources.background;
+            this.panelMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelMain.Controls.Add(this.lbTitle);
+            this.panelMain.Controls.Add(this.panelLogin);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(0, 29);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(901, 535);
+            this.panelMain.TabIndex = 6;
+            this.panelMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.resizePanel_MouseDown);
+            this.panelMain.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelMain_MouseMove);
+            // 
+            // lbTitle
+            // 
+            this.lbTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbTitle.AutoSize = true;
+            this.lbTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lbTitle.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitle.ForeColor = System.Drawing.Color.White;
+            this.lbTitle.Location = new System.Drawing.Point(209, 48);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Size = new System.Drawing.Size(482, 54);
+            this.lbTitle.TabIndex = 8;
+            this.lbTitle.Text = "Welcome to TOEIC Master";
             // 
             // panelLogin
             // 
@@ -220,7 +220,7 @@
             this.txtPass.PasswordChar = true;
             this.txtPass.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPass.PlaceholderText = "Enter password";
-            this.txtPass.Size = new System.Drawing.Size(251, 40);
+            this.txtPass.Size = new System.Drawing.Size(251, 35);
             this.txtPass.TabIndex = 3;
             this.txtPass.Texts = "";
             this.txtPass.UnderlinedStyle = false;
@@ -233,7 +233,7 @@
             this.lbLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(61)))), ((int)(((byte)(159)))));
             this.lbLogin.Location = new System.Drawing.Point(159, 19);
             this.lbLogin.Name = "lbLogin";
-            this.lbLogin.Size = new System.Drawing.Size(94, 40);
+            this.lbLogin.Size = new System.Drawing.Size(75, 31);
             this.lbLogin.TabIndex = 5;
             this.lbLogin.Text = "Login";
             // 
@@ -254,7 +254,7 @@
             this.txtUserName.PasswordChar = false;
             this.txtUserName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtUserName.PlaceholderText = "Enter user name";
-            this.txtUserName.Size = new System.Drawing.Size(251, 40);
+            this.txtUserName.Size = new System.Drawing.Size(251, 35);
             this.txtUserName.TabIndex = 3;
             this.txtUserName.Texts = "";
             this.txtUserName.UnderlinedStyle = false;
@@ -297,7 +297,7 @@
             this.lbForgot.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(61)))), ((int)(((byte)(159)))));
             this.lbForgot.Location = new System.Drawing.Point(219, 199);
             this.lbForgot.Name = "lbForgot";
-            this.lbForgot.Size = new System.Drawing.Size(135, 23);
+            this.lbForgot.Size = new System.Drawing.Size(112, 19);
             this.lbForgot.TabIndex = 2;
             this.lbForgot.TabStop = true;
             this.lbForgot.Text = "Forgot Password";
@@ -320,7 +320,7 @@
             this.lbCreate.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(61)))), ((int)(((byte)(159)))));
             this.lbCreate.Location = new System.Drawing.Point(129, 284);
             this.lbCreate.Name = "lbCreate";
-            this.lbCreate.Size = new System.Drawing.Size(167, 23);
+            this.lbCreate.Size = new System.Drawing.Size(134, 19);
             this.lbCreate.TabIndex = 2;
             this.lbCreate.TabStop = true;
             this.lbCreate.Text = "Create New Account";
@@ -333,7 +333,7 @@
             this.lbUserName.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lbUserName.Location = new System.Drawing.Point(77, 78);
             this.lbUserName.Name = "lbUserName";
-            this.lbUserName.Size = new System.Drawing.Size(105, 25);
+            this.lbUserName.Size = new System.Drawing.Size(82, 20);
             this.lbUserName.TabIndex = 2;
             this.lbUserName.Text = "User Name";
             // 
@@ -344,7 +344,7 @@
             this.lbPass.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lbPass.Location = new System.Drawing.Point(77, 141);
             this.lbPass.Name = "lbPass";
-            this.lbPass.Size = new System.Drawing.Size(91, 25);
+            this.lbPass.Size = new System.Drawing.Size(70, 20);
             this.lbPass.TabIndex = 2;
             this.lbPass.Text = "Password";
             // 
