@@ -22,7 +22,9 @@ namespace PBL._Repositories
                     Email = StudentModel.Email,
                     Birth = StudentModel.Birth,
                     Phone = StudentModel.Phone,
-                    RegistDay = StudentModel.RegistDay
+                    RegistDay = StudentModel.RegistDay,
+                    Account = StudentModel.Account,
+                    Password = StudentModel.Password
                 });
                 ctx.SaveChanges();
             }
@@ -44,6 +46,8 @@ namespace PBL._Repositories
             Student.Name = StudentModel.Name;
             Student.Birth = StudentModel.Birth;
             Student.Email = StudentModel.Email;
+            Student.Account = StudentModel.Account;
+            Student.Password = StudentModel.Password;
             ctx.SaveChanges();
         }
 

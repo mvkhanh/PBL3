@@ -23,7 +23,9 @@ namespace PBL._Repositories
                     Phone = teacherModel.Phone,
                     Lessons = teacherModel.Lessons,
                     Tests = teacherModel.Tests,
-                    RegistDay = teacherModel.RegistDay
+                    RegistDay = teacherModel.RegistDay,
+                    Account = teacherModel.Account,
+                    Password = teacherModel.Password
                 });
                 ctx.SaveChanges();
             }
@@ -46,14 +48,15 @@ namespace PBL._Repositories
                 teacher.Name = teacherModel.Name;
                 teacher.Birth = teacherModel.Birth;
                 teacher.Email = teacherModel.Email;
+                teacher.Account = teacherModel.Account;
+                teacher.Password = teacherModel.Password;
                 ctx.SaveChanges();
             }
         }
 
         public IEnumerable<TeacherModel> GetAll()
         {
-            //return new PBLContext().Teachers.ToList();
-            return new PBLContext().Teachers.Select(p => p);
+            return new PBLContext().Teachers.ToList();
         }
 
         public IEnumerable<TeacherModel> GetByValue(string search)

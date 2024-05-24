@@ -59,6 +59,8 @@ namespace PBL.Presenters
             model.Phone = view.StudentPhone;
             model.RegistDay = view.StudentRegistDay;
             model.Birth = view.StudentBirth;
+            model.Account = view.StudentAccount;
+            model.Password = view.StudentPassword;
             try
             {
                 new Common.ModelDataValidation().Validate(model);
@@ -86,8 +88,8 @@ namespace PBL.Presenters
         private void CleanViewFields()
         {
             view.StudentId = 0;
-            view.StudentName = view.StudentPhone = view.StudentEmail = "";
-            view.StudentBirth = view.StudentRegistDay = DateTime.Today;
+            view.StudentName = view.StudentPhone = view.StudentEmail = view.StudentAccount = view.StudentPassword = "";
+            view.StudentBirth = view.StudentRegistDay = DateTime.Today;           
         }
 
         private void DeleteSelectedStudent(object sender, EventArgs e)
@@ -117,6 +119,8 @@ namespace PBL.Presenters
             view.StudentPhone = student.Phone;
             view.StudentBirth = student.Birth;
             view.StudentRegistDay = student.RegistDay;
+            view.StudentAccount = student.Account;
+            view.StudentPassword = student.Password;
             view.IsEdit = true;
         }
 

@@ -35,7 +35,6 @@
             this.btnLessons = new FontAwesome.Sharp.IconButton();
             this.btnStudents = new FontAwesome.Sharp.IconButton();
             this.btnTeachers = new FontAwesome.Sharp.IconButton();
-            this.btnAccounts = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
@@ -58,7 +57,6 @@
             this.panelMenu.Controls.Add(this.btnLessons);
             this.panelMenu.Controls.Add(this.btnStudents);
             this.panelMenu.Controls.Add(this.btnTeachers);
-            this.panelMenu.Controls.Add(this.btnAccounts);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -79,7 +77,7 @@
             this.btnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDashboard.IconSize = 32;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 440);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 380);
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(6);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
@@ -103,7 +101,7 @@
             this.btnTests.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTests.IconSize = 32;
             this.btnTests.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTests.Location = new System.Drawing.Point(0, 380);
+            this.btnTests.Location = new System.Drawing.Point(0, 320);
             this.btnTests.Margin = new System.Windows.Forms.Padding(6);
             this.btnTests.Name = "btnTests";
             this.btnTests.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
@@ -127,7 +125,7 @@
             this.btnLessons.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLessons.IconSize = 32;
             this.btnLessons.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLessons.Location = new System.Drawing.Point(0, 320);
+            this.btnLessons.Location = new System.Drawing.Point(0, 260);
             this.btnLessons.Margin = new System.Windows.Forms.Padding(6);
             this.btnLessons.Name = "btnLessons";
             this.btnLessons.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
@@ -151,7 +149,7 @@
             this.btnStudents.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnStudents.IconSize = 32;
             this.btnStudents.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStudents.Location = new System.Drawing.Point(0, 260);
+            this.btnStudents.Location = new System.Drawing.Point(0, 200);
             this.btnStudents.Margin = new System.Windows.Forms.Padding(6);
             this.btnStudents.Name = "btnStudents";
             this.btnStudents.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
@@ -175,7 +173,7 @@
             this.btnTeachers.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTeachers.IconSize = 32;
             this.btnTeachers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTeachers.Location = new System.Drawing.Point(0, 200);
+            this.btnTeachers.Location = new System.Drawing.Point(0, 140);
             this.btnTeachers.Margin = new System.Windows.Forms.Padding(6);
             this.btnTeachers.Name = "btnTeachers";
             this.btnTeachers.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
@@ -186,30 +184,6 @@
             this.btnTeachers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTeachers.UseVisualStyleBackColor = true;
             this.btnTeachers.Click += new System.EventHandler(this.btnTeachers_Click);
-            // 
-            // btnAccounts
-            // 
-            this.btnAccounts.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAccounts.FlatAppearance.BorderSize = 0;
-            this.btnAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccounts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccounts.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAccounts.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.btnAccounts.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnAccounts.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAccounts.IconSize = 32;
-            this.btnAccounts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccounts.Location = new System.Drawing.Point(0, 140);
-            this.btnAccounts.Margin = new System.Windows.Forms.Padding(6);
-            this.btnAccounts.Name = "btnAccounts";
-            this.btnAccounts.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnAccounts.Size = new System.Drawing.Size(220, 60);
-            this.btnAccounts.TabIndex = 1;
-            this.btnAccounts.Text = "Accounts";
-            this.btnAccounts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccounts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAccounts.UseVisualStyleBackColor = true;
-            this.btnAccounts.Click += new System.EventHandler(this.btnAccounts_Click);
             // 
             // panelLogo
             // 
@@ -288,7 +262,7 @@
             this.panelDesktop.Size = new System.Drawing.Size(906, 467);
             this.panelDesktop.TabIndex = 3;
             // 
-            // MainView2
+            // MainView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1126, 551);
@@ -297,7 +271,7 @@
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "MainView2";
+            this.Name = "MainView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainView2";
             this.panelMenu.ResumeLayout(false);
@@ -314,7 +288,6 @@
 
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelLogo;
-        private FontAwesome.Sharp.IconButton btnAccounts;
         private FontAwesome.Sharp.IconButton btnDashboard;
         private FontAwesome.Sharp.IconButton btnTests;
         private FontAwesome.Sharp.IconButton btnLessons;

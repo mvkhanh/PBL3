@@ -273,6 +273,8 @@
     <None Include="Resources\User%282%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\copy %281%29.png" />
+    <Content Include="Resources\editing.png" />
     <Content Include="Resources\email.png" />
     <Content Include="Resources\envelope.png" />
     <Content Include="Resources\Password%282%29.png" />

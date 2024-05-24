@@ -30,10 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panelTitle = new System.Windows.Forms.Panel();
-            this.btClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
             this.lbTitle = new System.Windows.Forms.Label();
+            this.btnMinisize = new System.Windows.Forms.Button();
+            this.btnRestoreDown = new System.Windows.Forms.Button();
+            this.btClose = new System.Windows.Forms.Button();
             this.panelLogin = new RoundPanel();
             this.btOpenEye = new System.Windows.Forms.Button();
             this.btCloseEye = new System.Windows.Forms.Button();
@@ -57,6 +59,8 @@
             // panelTitle
             // 
             this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(43)))), ((int)(((byte)(106)))));
+            this.panelTitle.Controls.Add(this.btnMinisize);
+            this.panelTitle.Controls.Add(this.btnRestoreDown);
             this.panelTitle.Controls.Add(this.btClose);
             this.panelTitle.Controls.Add(this.label1);
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
@@ -67,20 +71,6 @@
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.resizePanel_MouseDown);
             this.panelTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseMove);
             // 
-            // btClose
-            // 
-            this.btClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btClose.BackgroundImage")));
-            this.btClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btClose.FlatAppearance.BorderSize = 0;
-            this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btClose.Location = new System.Drawing.Point(872, 0);
-            this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(29, 29);
-            this.btClose.TabIndex = 1;
-            this.btClose.UseVisualStyleBackColor = true;
-            this.btClose.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -88,7 +78,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 32);
+            this.label1.Size = new System.Drawing.Size(48, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Login";
             // 
@@ -115,9 +105,51 @@
             this.lbTitle.ForeColor = System.Drawing.Color.White;
             this.lbTitle.Location = new System.Drawing.Point(209, 48);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(966, 106);
+            this.lbTitle.Size = new System.Drawing.Size(603, 67);
             this.lbTitle.TabIndex = 8;
             this.lbTitle.Text = "Welcome to TOEIC Master";
+            // 
+            // btnMinisize
+            // 
+            this.btnMinisize.BackgroundImage = global::PBL.Properties.Resources.editing1;
+            this.btnMinisize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMinisize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinisize.FlatAppearance.BorderSize = 0;
+            this.btnMinisize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinisize.Location = new System.Drawing.Point(823, 0);
+            this.btnMinisize.Name = "btnMinisize";
+            this.btnMinisize.Size = new System.Drawing.Size(20, 29);
+            this.btnMinisize.TabIndex = 3;
+            this.btnMinisize.UseVisualStyleBackColor = true;
+            this.btnMinisize.Click += new System.EventHandler(this.btnMinisize_Click);
+            // 
+            // btnRestoreDown
+            // 
+            this.btnRestoreDown.BackgroundImage = global::PBL.Properties.Resources.copy__1_;
+            this.btnRestoreDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnRestoreDown.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnRestoreDown.FlatAppearance.BorderSize = 0;
+            this.btnRestoreDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestoreDown.Location = new System.Drawing.Point(843, 0);
+            this.btnRestoreDown.Name = "btnRestoreDown";
+            this.btnRestoreDown.Size = new System.Drawing.Size(29, 29);
+            this.btnRestoreDown.TabIndex = 2;
+            this.btnRestoreDown.UseVisualStyleBackColor = true;
+            this.btnRestoreDown.Click += new System.EventHandler(this.btnRestoreDown_Click);
+            // 
+            // btClose
+            // 
+            this.btClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btClose.BackgroundImage")));
+            this.btClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btClose.FlatAppearance.BorderSize = 0;
+            this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btClose.Location = new System.Drawing.Point(872, 0);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(29, 29);
+            this.btClose.TabIndex = 1;
+            this.btClose.UseVisualStyleBackColor = true;
+            this.btClose.Click += new System.EventHandler(this.button1_Click);
             // 
             // panelLogin
             // 
@@ -188,7 +220,7 @@
             this.txtPass.PasswordChar = true;
             this.txtPass.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPass.PlaceholderText = "Enter password";
-            this.txtPass.Size = new System.Drawing.Size(251, 56);
+            this.txtPass.Size = new System.Drawing.Size(251, 40);
             this.txtPass.TabIndex = 3;
             this.txtPass.Texts = "";
             this.txtPass.UnderlinedStyle = false;
@@ -201,7 +233,7 @@
             this.lbLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(61)))), ((int)(((byte)(159)))));
             this.lbLogin.Location = new System.Drawing.Point(159, 19);
             this.lbLogin.Name = "lbLogin";
-            this.lbLogin.Size = new System.Drawing.Size(148, 62);
+            this.lbLogin.Size = new System.Drawing.Size(94, 40);
             this.lbLogin.TabIndex = 5;
             this.lbLogin.Text = "Login";
             // 
@@ -222,7 +254,7 @@
             this.txtUserName.PasswordChar = false;
             this.txtUserName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtUserName.PlaceholderText = "Enter user name";
-            this.txtUserName.Size = new System.Drawing.Size(251, 56);
+            this.txtUserName.Size = new System.Drawing.Size(251, 40);
             this.txtUserName.TabIndex = 3;
             this.txtUserName.Texts = "";
             this.txtUserName.UnderlinedStyle = false;
@@ -265,7 +297,7 @@
             this.lbForgot.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(61)))), ((int)(((byte)(159)))));
             this.lbForgot.Location = new System.Drawing.Point(219, 199);
             this.lbForgot.Name = "lbForgot";
-            this.lbForgot.Size = new System.Drawing.Size(214, 37);
+            this.lbForgot.Size = new System.Drawing.Size(135, 23);
             this.lbForgot.TabIndex = 2;
             this.lbForgot.TabStop = true;
             this.lbForgot.Text = "Forgot Password";
@@ -288,7 +320,7 @@
             this.lbCreate.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(61)))), ((int)(((byte)(159)))));
             this.lbCreate.Location = new System.Drawing.Point(129, 284);
             this.lbCreate.Name = "lbCreate";
-            this.lbCreate.Size = new System.Drawing.Size(258, 37);
+            this.lbCreate.Size = new System.Drawing.Size(167, 23);
             this.lbCreate.TabIndex = 2;
             this.lbCreate.TabStop = true;
             this.lbCreate.Text = "Create New Account";
@@ -301,7 +333,7 @@
             this.lbUserName.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lbUserName.Location = new System.Drawing.Point(77, 78);
             this.lbUserName.Name = "lbUserName";
-            this.lbUserName.Size = new System.Drawing.Size(165, 41);
+            this.lbUserName.Size = new System.Drawing.Size(105, 25);
             this.lbUserName.TabIndex = 2;
             this.lbUserName.Text = "User Name";
             // 
@@ -312,7 +344,7 @@
             this.lbPass.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lbPass.Location = new System.Drawing.Point(77, 141);
             this.lbPass.Name = "lbPass";
-            this.lbPass.Size = new System.Drawing.Size(143, 41);
+            this.lbPass.Size = new System.Drawing.Size(91, 25);
             this.lbPass.TabIndex = 2;
             this.lbPass.Text = "Password";
             // 
@@ -362,5 +394,7 @@
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btClose;
+        private System.Windows.Forms.Button btnMinisize;
+        private System.Windows.Forms.Button btnRestoreDown;
     }
 }

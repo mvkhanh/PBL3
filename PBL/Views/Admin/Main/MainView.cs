@@ -36,7 +36,6 @@ namespace PBL.Views
         //Events
         public event EventHandler ShowTeacherView;
         public event EventHandler ShowStudentView;
-        public event EventHandler ShowAccountView;
         public event EventHandler ShowLessonView;
         public event EventHandler ShowTestView;
         public event EventHandler ShowDashBoardView;
@@ -104,10 +103,6 @@ namespace PBL.Views
             childForm.BringToFront();
             childForm.Show();
             lbTitleChildForm.Text = childForm.Text;
-        }
-        private void btnAccounts_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
         }
 
         private void btnTeachers_Click(object sender, EventArgs e)
