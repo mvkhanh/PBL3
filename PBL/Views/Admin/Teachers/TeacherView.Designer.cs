@@ -197,7 +197,7 @@
             this.lbSearch.ForeColor = System.Drawing.Color.Black;
             this.lbSearch.Location = new System.Drawing.Point(21, 3);
             this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(122, 16);
+            this.lbSearch.Size = new System.Drawing.Size(123, 16);
             this.lbSearch.TabIndex = 1;
             this.lbSearch.Text = "Search Teacher:";
             // 
