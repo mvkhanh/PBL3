@@ -40,20 +40,20 @@
             this.lbSearch = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.iconButtonAddPdf = new FontAwesome.Sharp.IconButton();
             this.regist = new System.Windows.Forms.DateTimePicker();
             this.lbRegist = new System.Windows.Forms.Label();
             this.lbBirth = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.lbId = new System.Windows.Forms.Label();
-            this.iconButtonAddPdf = new FontAwesome.Sharp.IconButton();
             this.btnCancel = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -81,10 +81,10 @@
             this.tabPage1.Controls.Add(this.txtSearch);
             this.tabPage1.Controls.Add(this.lbSearch);
             this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(898, 438);
+            this.tabPage1.Size = new System.Drawing.Size(898, 434);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Lesson List";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -165,9 +165,9 @@
             this.btnAddNew.IconColor = System.Drawing.Color.White;
             this.btnAddNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddNew.IconSize = 32;
-            this.btnAddNew.Location = new System.Drawing.Point(778, 65);
+            this.btnAddNew.Location = new System.Drawing.Point(766, 65);
             this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(103, 46);
+            this.btnAddNew.Size = new System.Drawing.Size(115, 46);
             this.btnAddNew.TabIndex = 5;
             this.btnAddNew.Text = "Add new";
             this.btnAddNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -180,7 +180,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(24, 23);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(609, 33);
+            this.txtSearch.Size = new System.Drawing.Size(609, 39);
             this.txtSearch.TabIndex = 2;
             // 
             // lbSearch
@@ -192,7 +192,7 @@
             this.lbSearch.ForeColor = System.Drawing.Color.Black;
             this.lbSearch.Location = new System.Drawing.Point(21, 3);
             this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(115, 16);
+            this.lbSearch.Size = new System.Drawing.Size(141, 20);
             this.lbSearch.TabIndex = 1;
             this.lbSearch.Text = "Search Lesson:";
             // 
@@ -202,6 +202,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -252,100 +253,13 @@
             this.tabPage2.Controls.Add(this.btnCancel);
             this.tabPage2.Controls.Add(this.btnSave);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(898, 438);
+            this.tabPage2.Size = new System.Drawing.Size(898, 434);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Lesson detail";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // regist
-            // 
-            this.regist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.regist.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.regist.Location = new System.Drawing.Point(116, 157);
-            this.regist.Name = "regist";
-            this.regist.Size = new System.Drawing.Size(158, 24);
-            this.regist.TabIndex = 13;
-            // 
-            // lbRegist
-            // 
-            this.lbRegist.AutoSize = true;
-            this.lbRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRegist.Location = new System.Drawing.Point(113, 136);
-            this.lbRegist.Name = "lbRegist";
-            this.lbRegist.Size = new System.Drawing.Size(84, 18);
-            this.lbRegist.TabIndex = 12;
-            this.lbRegist.Text = "Regist Day:";
-            // 
-            // lbBirth
-            // 
-            this.lbBirth.AutoSize = true;
-            this.lbBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBirth.Location = new System.Drawing.Point(113, 218);
-            this.lbBirth.Name = "lbBirth";
-            this.lbBirth.Size = new System.Drawing.Size(117, 18);
-            this.lbBirth.TabIndex = 8;
-            this.lbBirth.Text = "Lesson Content:";
-            // 
-            // txtName
-            // 
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(351, 79);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(406, 24);
-            this.txtName.TabIndex = 3;
-            // 
-            // lbName
-            // 
-            this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(348, 63);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(105, 18);
-            this.lbName.TabIndex = 2;
-            this.lbName.Text = "Lesson Name:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(353, 234);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(158, 24);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "0";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(350, 218);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Number Of Views:";
-            // 
-            // txtId
-            // 
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(116, 79);
-            this.txtId.Name = "txtId";
-            this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(158, 24);
-            this.txtId.TabIndex = 1;
-            this.txtId.Text = "0";
-            // 
-            // lbId
-            // 
-            this.lbId.AutoSize = true;
-            this.lbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbId.Location = new System.Drawing.Point(113, 63);
-            this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(79, 18);
-            this.lbId.TabIndex = 0;
-            this.lbId.Text = "Lesson ID:";
             // 
             // iconButtonAddPdf
             // 
@@ -366,6 +280,111 @@
             this.iconButtonAddPdf.Text = "Add File PDF";
             this.iconButtonAddPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonAddPdf.UseVisualStyleBackColor = false;
+            // 
+            // regist
+            // 
+            this.regist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regist.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.regist.Location = new System.Drawing.Point(116, 157);
+            this.regist.Name = "regist";
+            this.regist.Size = new System.Drawing.Size(158, 29);
+            this.regist.TabIndex = 13;
+            // 
+            // lbRegist
+            // 
+            this.lbRegist.AutoSize = true;
+            this.lbRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRegist.Location = new System.Drawing.Point(113, 136);
+            this.lbRegist.Name = "lbRegist";
+            this.lbRegist.Size = new System.Drawing.Size(104, 24);
+            this.lbRegist.TabIndex = 12;
+            this.lbRegist.Text = "Regist Day:";
+            // 
+            // lbBirth
+            // 
+            this.lbBirth.AutoSize = true;
+            this.lbBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBirth.Location = new System.Drawing.Point(113, 218);
+            this.lbBirth.Name = "lbBirth";
+            this.lbBirth.Size = new System.Drawing.Size(146, 24);
+            this.lbBirth.TabIndex = 8;
+            this.lbBirth.Text = "Lesson Content:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(351, 157);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(406, 29);
+            this.textBox2.TabIndex = 3;
+            // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(351, 79);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(406, 29);
+            this.txtName.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(348, 141);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(208, 24);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Lesson Teacher Name:";
+            // 
+            // lbName
+            // 
+            this.lbName.AutoSize = true;
+            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Location = new System.Drawing.Point(348, 63);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(132, 24);
+            this.lbName.TabIndex = 2;
+            this.lbName.Text = "Lesson Name:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(353, 234);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(158, 29);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(350, 218);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Number Of Views:";
+            // 
+            // txtId
+            // 
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(116, 79);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(158, 29);
+            this.txtId.TabIndex = 1;
+            this.txtId.Text = "0";
+            // 
+            // lbId
+            // 
+            this.lbId.AutoSize = true;
+            this.lbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbId.Location = new System.Drawing.Point(113, 63);
+            this.lbId.Name = "lbId";
+            this.lbId.Size = new System.Drawing.Size(98, 24);
+            this.lbId.TabIndex = 0;
+            this.lbId.Text = "Lesson ID:";
             // 
             // btnCancel
             // 
@@ -406,24 +425,6 @@
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(348, 141);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 18);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Lesson Teacher Name:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(351, 157);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(406, 24);
-            this.textBox2.TabIndex = 3;
             // 
             // LessonView
             // 

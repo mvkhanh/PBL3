@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageStudentList = new System.Windows.Forms.TabPage();
             this.btnEdit = new FontAwesome.Sharp.IconButton();
@@ -86,10 +86,10 @@
             this.tabPageStudentList.Controls.Add(this.txtSearch);
             this.tabPageStudentList.Controls.Add(this.lbSearch);
             this.tabPageStudentList.Controls.Add(this.dataGridView1);
-            this.tabPageStudentList.Location = new System.Drawing.Point(4, 25);
+            this.tabPageStudentList.Location = new System.Drawing.Point(4, 29);
             this.tabPageStudentList.Name = "tabPageStudentList";
             this.tabPageStudentList.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStudentList.Size = new System.Drawing.Size(898, 438);
+            this.tabPageStudentList.Size = new System.Drawing.Size(898, 434);
             this.tabPageStudentList.TabIndex = 0;
             this.tabPageStudentList.Text = "Student List";
             this.tabPageStudentList.UseVisualStyleBackColor = true;
@@ -170,9 +170,9 @@
             this.btnAddNew.IconColor = System.Drawing.Color.White;
             this.btnAddNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddNew.IconSize = 32;
-            this.btnAddNew.Location = new System.Drawing.Point(778, 65);
+            this.btnAddNew.Location = new System.Drawing.Point(766, 65);
             this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(103, 46);
+            this.btnAddNew.Size = new System.Drawing.Size(115, 46);
             this.btnAddNew.TabIndex = 5;
             this.btnAddNew.Text = "Add new";
             this.btnAddNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -185,7 +185,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(24, 23);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(609, 33);
+            this.txtSearch.Size = new System.Drawing.Size(609, 39);
             this.txtSearch.TabIndex = 2;
             // 
             // lbSearch
@@ -197,7 +197,7 @@
             this.lbSearch.ForeColor = System.Drawing.Color.Black;
             this.lbSearch.Location = new System.Drawing.Point(21, 3);
             this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(116, 16);
+            this.lbSearch.Size = new System.Drawing.Size(144, 20);
             this.lbSearch.TabIndex = 1;
             this.lbSearch.Text = "Search Student:";
             // 
@@ -210,26 +210,27 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 32;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(191)))), ((int)(((byte)(197)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(191)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.LightGray;
             this.dataGridView1.Location = new System.Drawing.Point(24, 65);
@@ -240,7 +241,7 @@
             this.dataGridView1.RowTemplate.DividerHeight = 1;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(727, 373);
+            this.dataGridView1.Size = new System.Drawing.Size(727, 369);
             this.dataGridView1.TabIndex = 0;
             // 
             // tabPageStudentDetail
@@ -265,10 +266,10 @@
             this.tabPageStudentDetail.Controls.Add(this.txtId);
             this.tabPageStudentDetail.Controls.Add(this.lbId);
             this.tabPageStudentDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageStudentDetail.Location = new System.Drawing.Point(4, 25);
+            this.tabPageStudentDetail.Location = new System.Drawing.Point(4, 29);
             this.tabPageStudentDetail.Name = "tabPageStudentDetail";
             this.tabPageStudentDetail.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStudentDetail.Size = new System.Drawing.Size(898, 438);
+            this.tabPageStudentDetail.Size = new System.Drawing.Size(898, 434);
             this.tabPageStudentDetail.TabIndex = 1;
             this.tabPageStudentDetail.Text = "Student detail";
             this.tabPageStudentDetail.UseVisualStyleBackColor = true;
@@ -327,7 +328,7 @@
             this.regist.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.regist.Location = new System.Drawing.Point(543, 301);
             this.regist.Name = "regist";
-            this.regist.Size = new System.Drawing.Size(203, 24);
+            this.regist.Size = new System.Drawing.Size(203, 29);
             this.regist.TabIndex = 13;
             // 
             // lbRegist
@@ -336,7 +337,7 @@
             this.lbRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRegist.Location = new System.Drawing.Point(540, 280);
             this.lbRegist.Name = "lbRegist";
-            this.lbRegist.Size = new System.Drawing.Size(84, 18);
+            this.lbRegist.Size = new System.Drawing.Size(104, 24);
             this.lbRegist.TabIndex = 12;
             this.lbRegist.Text = "Regist Day:";
             // 
@@ -346,7 +347,7 @@
             this.birth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.birth.Location = new System.Drawing.Point(307, 300);
             this.birth.Name = "birth";
-            this.birth.Size = new System.Drawing.Size(200, 24);
+            this.birth.Size = new System.Drawing.Size(200, 29);
             this.birth.TabIndex = 9;
             // 
             // lbBirth
@@ -355,7 +356,7 @@
             this.lbBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBirth.Location = new System.Drawing.Point(304, 280);
             this.lbBirth.Name = "lbBirth";
-            this.lbBirth.Size = new System.Drawing.Size(119, 18);
+            this.lbBirth.Size = new System.Drawing.Size(151, 24);
             this.lbBirth.TabIndex = 8;
             this.lbBirth.Text = "Student Birthday:";
             // 
@@ -364,7 +365,7 @@
             this.txtAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAccount.Location = new System.Drawing.Point(307, 222);
             this.txtAccount.Name = "txtAccount";
-            this.txtAccount.Size = new System.Drawing.Size(200, 24);
+            this.txtAccount.Size = new System.Drawing.Size(200, 29);
             this.txtAccount.TabIndex = 7;
             // 
             // label2
@@ -373,7 +374,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(304, 206);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 18);
+            this.label2.Size = new System.Drawing.Size(154, 24);
             this.label2.TabIndex = 6;
             this.label2.Text = "Student Account:";
             // 
@@ -382,7 +383,7 @@
             this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(307, 141);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(125, 24);
+            this.txtPhone.Size = new System.Drawing.Size(125, 29);
             this.txtPhone.TabIndex = 7;
             // 
             // txtPassword
@@ -390,7 +391,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(543, 222);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(203, 24);
+            this.txtPassword.Size = new System.Drawing.Size(203, 29);
             this.txtPassword.TabIndex = 5;
             // 
             // lbPhone
@@ -399,7 +400,7 @@
             this.lbPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPhone.Location = new System.Drawing.Point(304, 125);
             this.lbPhone.Name = "lbPhone";
-            this.lbPhone.Size = new System.Drawing.Size(109, 18);
+            this.lbPhone.Size = new System.Drawing.Size(140, 24);
             this.lbPhone.TabIndex = 6;
             this.lbPhone.Text = "Student Phone:";
             // 
@@ -409,7 +410,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(540, 206);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 18);
+            this.label1.Size = new System.Drawing.Size(166, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "Student Password:";
             // 
@@ -418,7 +419,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(464, 141);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(282, 24);
+            this.txtEmail.Size = new System.Drawing.Size(282, 29);
             this.txtEmail.TabIndex = 5;
             // 
             // lbEmail
@@ -427,7 +428,7 @@
             this.lbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEmail.Location = new System.Drawing.Point(461, 125);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(103, 18);
+            this.lbEmail.Size = new System.Drawing.Size(131, 24);
             this.lbEmail.TabIndex = 4;
             this.lbEmail.Text = "Student Email:";
             // 
@@ -436,7 +437,7 @@
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(464, 65);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(282, 24);
+            this.txtName.Size = new System.Drawing.Size(282, 29);
             this.txtName.TabIndex = 3;
             // 
             // lbName
@@ -445,7 +446,7 @@
             this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.Location = new System.Drawing.Point(461, 49);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(106, 18);
+            this.lbName.Size = new System.Drawing.Size(135, 24);
             this.lbName.TabIndex = 2;
             this.lbName.Text = "Student Name:";
             // 
@@ -455,7 +456,7 @@
             this.txtId.Location = new System.Drawing.Point(307, 65);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(125, 24);
+            this.txtId.Size = new System.Drawing.Size(125, 29);
             this.txtId.TabIndex = 1;
             this.txtId.Text = "0";
             // 
@@ -465,7 +466,7 @@
             this.lbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbId.Location = new System.Drawing.Point(304, 49);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(80, 18);
+            this.lbId.Size = new System.Drawing.Size(101, 24);
             this.lbId.TabIndex = 0;
             this.lbId.Text = "Student ID:";
             // 
