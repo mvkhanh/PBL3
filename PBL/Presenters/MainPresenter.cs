@@ -24,9 +24,9 @@ namespace PBL.Presenters
 
         private void ShowStudentsView(object sender, EventArgs e)
         {
-            IStudentView view = StudentView.GetInstance();
+            //IStudentView view = StudentView.GetInstance();
             IStudentRepository repository = new StudentRepository();
-            new StudentPresenter(view, repository);
+            //new StudentPresenter(view, repository);
         }
 
         private void ShowTeachersView(object sender, EventArgs e)
