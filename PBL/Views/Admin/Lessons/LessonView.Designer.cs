@@ -39,8 +39,9 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lbSearch = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabPageLessonDetail = new System.Windows.Forms.TabPage();
-            this.iconButtonAddPdf = new FontAwesome.Sharp.IconButton();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnAddPdf = new FontAwesome.Sharp.IconButton();
+            this.tbFileName = new System.Windows.Forms.TextBox();
             this.regist = new System.Windows.Forms.DateTimePicker();
             this.lbRegist = new System.Windows.Forms.Label();
             this.lbBirth = new System.Windows.Forms.Label();
@@ -74,20 +75,20 @@
             // 
             // tabPageLessonList
             // 
-            this.tabPageLessonList.Controls.Add(this.btnEdit);
-            this.tabPageLessonList.Controls.Add(this.btnSearch);
-            this.tabPageLessonList.Controls.Add(this.btnDelete);
-            this.tabPageLessonList.Controls.Add(this.btnAddNew);
-            this.tabPageLessonList.Controls.Add(this.txtSearch);
-            this.tabPageLessonList.Controls.Add(this.lbSearch);
-            this.tabPageLessonList.Controls.Add(this.dataGridView1);
-            this.tabPageLessonList.Location = new System.Drawing.Point(4, 25);
-            this.tabPageLessonList.Name = "tabPageLessonList";
-            this.tabPageLessonList.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageLessonList.Size = new System.Drawing.Size(898, 438);
-            this.tabPageLessonList.TabIndex = 0;
-            this.tabPageLessonList.Text = "Lesson List";
-            this.tabPageLessonList.UseVisualStyleBackColor = true;
+            this.tabPage1.Controls.Add(this.btnEdit);
+            this.tabPage1.Controls.Add(this.btnSearch);
+            this.tabPage1.Controls.Add(this.btnDelete);
+            this.tabPage1.Controls.Add(this.btnAddNew);
+            this.tabPage1.Controls.Add(this.txtSearch);
+            this.tabPage1.Controls.Add(this.lbSearch);
+            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(898, 434);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Lesson List";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnEdit
             // 
@@ -165,9 +166,9 @@
             this.btnAddNew.IconColor = System.Drawing.Color.White;
             this.btnAddNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddNew.IconSize = 32;
-            this.btnAddNew.Location = new System.Drawing.Point(778, 65);
+            this.btnAddNew.Location = new System.Drawing.Point(766, 65);
             this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(103, 46);
+            this.btnAddNew.Size = new System.Drawing.Size(115, 46);
             this.btnAddNew.TabIndex = 5;
             this.btnAddNew.Text = "Add new";
             this.btnAddNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -180,7 +181,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(24, 23);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(609, 33);
+            this.txtSearch.Size = new System.Drawing.Size(609, 39);
             this.txtSearch.TabIndex = 2;
             // 
             // lbSearch
@@ -192,7 +193,7 @@
             this.lbSearch.ForeColor = System.Drawing.Color.Black;
             this.lbSearch.Location = new System.Drawing.Point(21, 3);
             this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(114, 16);
+            this.lbSearch.Size = new System.Drawing.Size(141, 20);
             this.lbSearch.TabIndex = 1;
             this.lbSearch.Text = "Search Lesson:";
             // 
@@ -202,6 +203,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -237,48 +239,58 @@
             // 
             // tabPageLessonDetail
             // 
-            this.tabPageLessonDetail.Controls.Add(this.iconButtonAddPdf);
-            this.tabPageLessonDetail.Controls.Add(this.regist);
-            this.tabPageLessonDetail.Controls.Add(this.lbRegist);
-            this.tabPageLessonDetail.Controls.Add(this.lbBirth);
-            this.tabPageLessonDetail.Controls.Add(this.textBox2);
-            this.tabPageLessonDetail.Controls.Add(this.txtName);
-            this.tabPageLessonDetail.Controls.Add(this.label3);
-            this.tabPageLessonDetail.Controls.Add(this.lbName);
-            this.tabPageLessonDetail.Controls.Add(this.txtView);
-            this.tabPageLessonDetail.Controls.Add(this.label1);
-            this.tabPageLessonDetail.Controls.Add(this.txtId);
-            this.tabPageLessonDetail.Controls.Add(this.lbId);
-            this.tabPageLessonDetail.Controls.Add(this.btnCancel);
-            this.tabPageLessonDetail.Controls.Add(this.btnSave);
-            this.tabPageLessonDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageLessonDetail.Location = new System.Drawing.Point(4, 25);
-            this.tabPageLessonDetail.Name = "tabPageLessonDetail";
-            this.tabPageLessonDetail.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageLessonDetail.Size = new System.Drawing.Size(898, 438);
-            this.tabPageLessonDetail.TabIndex = 1;
-            this.tabPageLessonDetail.Text = "Lesson detail";
-            this.tabPageLessonDetail.UseVisualStyleBackColor = true;
+            this.tabPage2.Controls.Add(this.btnAddPdf);
+            this.tabPage2.Controls.Add(this.tbFileName);
+            this.tabPage2.Controls.Add(this.regist);
+            this.tabPage2.Controls.Add(this.lbRegist);
+            this.tabPage2.Controls.Add(this.lbBirth);
+            this.tabPage2.Controls.Add(this.textBox2);
+            this.tabPage2.Controls.Add(this.txtName);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.lbName);
+            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.txtId);
+            this.tabPage2.Controls.Add(this.lbId);
+            this.tabPage2.Controls.Add(this.btnCancel);
+            this.tabPage2.Controls.Add(this.btnSave);
+            this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(898, 434);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Lesson detail";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // iconButtonAddPdf
+            // btnAddPdf
             // 
-            this.iconButtonAddPdf.AutoSize = true;
-            this.iconButtonAddPdf.BackColor = System.Drawing.Color.Silver;
-            this.iconButtonAddPdf.FlatAppearance.BorderSize = 0;
-            this.iconButtonAddPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonAddPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButtonAddPdf.ForeColor = System.Drawing.Color.White;
-            this.iconButtonAddPdf.IconChar = FontAwesome.Sharp.IconChar.Add;
-            this.iconButtonAddPdf.IconColor = System.Drawing.Color.White;
-            this.iconButtonAddPdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonAddPdf.IconSize = 32;
-            this.iconButtonAddPdf.Location = new System.Drawing.Point(116, 234);
-            this.iconButtonAddPdf.Name = "iconButtonAddPdf";
-            this.iconButtonAddPdf.Size = new System.Drawing.Size(158, 38);
-            this.iconButtonAddPdf.TabIndex = 19;
-            this.iconButtonAddPdf.Text = "Add File PDF";
-            this.iconButtonAddPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonAddPdf.UseVisualStyleBackColor = false;
+            this.btnAddPdf.AutoSize = true;
+            this.btnAddPdf.BackColor = System.Drawing.Color.Orange;
+            this.btnAddPdf.FlatAppearance.BorderSize = 0;
+            this.btnAddPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPdf.ForeColor = System.Drawing.Color.White;
+            this.btnAddPdf.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnAddPdf.IconColor = System.Drawing.Color.White;
+            this.btnAddPdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddPdf.IconSize = 32;
+            this.btnAddPdf.Location = new System.Drawing.Point(115, 266);
+            this.btnAddPdf.Name = "btnAddPdf";
+            this.btnAddPdf.Size = new System.Drawing.Size(159, 38);
+            this.btnAddPdf.TabIndex = 16;
+            this.btnAddPdf.Text = "Add File PDF";
+            this.btnAddPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddPdf.UseVisualStyleBackColor = false;
+            this.btnAddPdf.Click += new System.EventHandler(this.btnAddPdf_Click);
+            // 
+            // tbFileName
+            // 
+            this.tbFileName.Location = new System.Drawing.Point(115, 234);
+            this.tbFileName.Name = "tbFileName";
+            this.tbFileName.ReadOnly = true;
+            this.tbFileName.Size = new System.Drawing.Size(159, 26);
+            this.tbFileName.TabIndex = 15;
             // 
             // regist
             // 
@@ -286,7 +298,7 @@
             this.regist.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.regist.Location = new System.Drawing.Point(116, 157);
             this.regist.Name = "regist";
-            this.regist.Size = new System.Drawing.Size(158, 24);
+            this.regist.Size = new System.Drawing.Size(158, 29);
             this.regist.TabIndex = 13;
             // 
             // lbRegist
@@ -295,7 +307,7 @@
             this.lbRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRegist.Location = new System.Drawing.Point(113, 136);
             this.lbRegist.Name = "lbRegist";
-            this.lbRegist.Size = new System.Drawing.Size(84, 18);
+            this.lbRegist.Size = new System.Drawing.Size(104, 24);
             this.lbRegist.TabIndex = 12;
             this.lbRegist.Text = "Regist Day:";
             // 
@@ -305,7 +317,7 @@
             this.lbBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBirth.Location = new System.Drawing.Point(113, 218);
             this.lbBirth.Name = "lbBirth";
-            this.lbBirth.Size = new System.Drawing.Size(117, 18);
+            this.lbBirth.Size = new System.Drawing.Size(146, 24);
             this.lbBirth.TabIndex = 8;
             this.lbBirth.Text = "Lesson Content:";
             // 
@@ -314,7 +326,7 @@
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(351, 157);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(406, 24);
+            this.textBox2.Size = new System.Drawing.Size(406, 29);
             this.textBox2.TabIndex = 3;
             // 
             // txtName
@@ -322,7 +334,7 @@
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(351, 79);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(406, 24);
+            this.txtName.Size = new System.Drawing.Size(406, 29);
             this.txtName.TabIndex = 3;
             // 
             // label3
@@ -331,7 +343,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(348, 141);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 18);
+            this.label3.Size = new System.Drawing.Size(208, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "Lesson Teacher Name:";
             // 
@@ -341,27 +353,27 @@
             this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.Location = new System.Drawing.Point(348, 63);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(105, 18);
+            this.lbName.Size = new System.Drawing.Size(132, 24);
             this.lbName.TabIndex = 2;
             this.lbName.Text = "Lesson Name:";
             // 
             // txtView
             // 
-            this.txtView.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtView.Location = new System.Drawing.Point(353, 234);
-            this.txtView.Name = "txtView";
-            this.txtView.ReadOnly = true;
-            this.txtView.Size = new System.Drawing.Size(158, 24);
-            this.txtView.TabIndex = 1;
-            this.txtView.Text = "0";
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(350, 234);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(158, 29);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "0";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(350, 218);
+            this.label1.Location = new System.Drawing.Point(347, 218);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 18);
+            this.label1.Size = new System.Drawing.Size(164, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Number Of Views:";
             // 
@@ -371,7 +383,7 @@
             this.txtId.Location = new System.Drawing.Point(116, 79);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(158, 24);
+            this.txtId.Size = new System.Drawing.Size(158, 29);
             this.txtId.TabIndex = 1;
             this.txtId.Text = "0";
             // 
@@ -381,7 +393,7 @@
             this.lbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbId.Location = new System.Drawing.Point(113, 63);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(79, 18);
+            this.lbId.Size = new System.Drawing.Size(98, 24);
             this.lbId.TabIndex = 0;
             this.lbId.Text = "Lesson ID:";
             // 
@@ -463,11 +475,12 @@
         private FontAwesome.Sharp.IconButton btnSearch;
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnCancel;
-        private FontAwesome.Sharp.IconButton iconButtonAddPdf;
         private System.Windows.Forms.DateTimePicker regist;
         private System.Windows.Forms.TextBox txtView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tbFileName;
+        private FontAwesome.Sharp.IconButton btnAddPdf;
     }
 }
