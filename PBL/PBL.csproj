@@ -116,6 +116,9 @@
     <Compile Include="CBBItem.cs" />
     <Compile Include="CreateDB.cs" />
     <Compile Include="Presenters\LessonPresenter.cs" />
+    <Compile Include="Resources\Components\RJDatePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Views\Admin\Lessons\LessonView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,6 +280,8 @@
     <None Include="Resources\User%282%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\calendarDark.png" />
+    <None Include="Resources\calendarWhite.png" />
     <Content Include="Resources\copy %281%29.png" />
     <Content Include="Resources\editing.png" />
     <Content Include="Resources\email.png" />
