@@ -62,14 +62,14 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(-228, 0);
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(906, 467);
+            this.tabControl1.Size = new System.Drawing.Size(969, 477);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -81,10 +81,10 @@
             this.tabPage1.Controls.Add(this.txtSearch);
             this.tabPage1.Controls.Add(this.lbSearch);
             this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(898, 434);
+            this.tabPage1.Size = new System.Drawing.Size(961, 448);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Test List";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -102,9 +102,9 @@
             this.btnEdit.IconColor = System.Drawing.Color.White;
             this.btnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEdit.IconSize = 32;
-            this.btnEdit.Location = new System.Drawing.Point(778, 126);
+            this.btnEdit.Location = new System.Drawing.Point(829, 126);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(103, 46);
+            this.btnEdit.Size = new System.Drawing.Size(115, 46);
             this.btnEdit.TabIndex = 5;
             this.btnEdit.Text = "  Edit";
             this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -123,7 +123,7 @@
             this.btnSearch.IconColor = System.Drawing.Color.White;
             this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSearch.IconSize = 28;
-            this.btnSearch.Location = new System.Drawing.Point(648, 22);
+            this.btnSearch.Location = new System.Drawing.Point(711, 22);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(103, 34);
             this.btnSearch.TabIndex = 5;
@@ -144,9 +144,9 @@
             this.btnDelete.IconColor = System.Drawing.Color.White;
             this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDelete.IconSize = 32;
-            this.btnDelete.Location = new System.Drawing.Point(778, 187);
+            this.btnDelete.Location = new System.Drawing.Point(829, 187);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(103, 46);
+            this.btnDelete.Size = new System.Drawing.Size(115, 46);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -165,7 +165,7 @@
             this.btnAddNew.IconColor = System.Drawing.Color.White;
             this.btnAddNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddNew.IconSize = 32;
-            this.btnAddNew.Location = new System.Drawing.Point(766, 65);
+            this.btnAddNew.Location = new System.Drawing.Point(829, 65);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(115, 46);
             this.btnAddNew.TabIndex = 5;
@@ -180,7 +180,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(24, 23);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(609, 39);
+            this.txtSearch.Size = new System.Drawing.Size(672, 33);
             this.txtSearch.TabIndex = 2;
             // 
             // lbSearch
@@ -192,7 +192,7 @@
             this.lbSearch.ForeColor = System.Drawing.Color.Black;
             this.lbSearch.Location = new System.Drawing.Point(21, 3);
             this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(117, 20);
+            this.lbSearch.Size = new System.Drawing.Size(96, 16);
             this.lbSearch.TabIndex = 1;
             this.lbSearch.Text = "Search Test:";
             // 
@@ -235,7 +235,7 @@
             this.dataGridView1.RowTemplate.DividerHeight = 1;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(727, 369);
+            this.dataGridView1.Size = new System.Drawing.Size(790, 383);
             this.dataGridView1.TabIndex = 0;
             // 
             // tabPage2
@@ -255,10 +255,10 @@
             this.tabPage2.Controls.Add(this.txtId);
             this.tabPage2.Controls.Add(this.lbId);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(898, 434);
+            this.tabPage2.Size = new System.Drawing.Size(961, 448);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Test detail";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -272,7 +272,7 @@
             this.lbBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBirth.Location = new System.Drawing.Point(123, 258);
             this.lbBirth.Name = "lbBirth";
-            this.lbBirth.Size = new System.Drawing.Size(140, 24);
+            this.lbBirth.Size = new System.Drawing.Size(109, 18);
             this.lbBirth.TabIndex = 21;
             this.lbBirth.Text = "Add Questions:";
             // 
@@ -293,7 +293,7 @@
             this.iconButtonAddPdf.IconSize = 32;
             this.iconButtonAddPdf.Location = new System.Drawing.Point(126, 279);
             this.iconButtonAddPdf.Name = "iconButtonAddPdf";
-            this.iconButtonAddPdf.Size = new System.Drawing.Size(160, 38);
+            this.iconButtonAddPdf.Size = new System.Drawing.Size(223, 52);
             this.iconButtonAddPdf.TabIndex = 22;
             this.iconButtonAddPdf.Text = "Add A Question";
             this.iconButtonAddPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -324,7 +324,7 @@
             this.btnCancel.IconSize = 32;
             this.btnCancel.Location = new System.Drawing.Point(501, 352);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(103, 46);
+            this.btnCancel.Size = new System.Drawing.Size(166, 60);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -347,7 +347,7 @@
             this.btnSave.IconSize = 32;
             this.btnSave.Location = new System.Drawing.Point(349, 352);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(103, 46);
+            this.btnSave.Size = new System.Drawing.Size(166, 60);
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -362,7 +362,7 @@
             this.regist.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.regist.Location = new System.Drawing.Point(128, 121);
             this.regist.Name = "regist";
-            this.regist.Size = new System.Drawing.Size(158, 29);
+            this.regist.Size = new System.Drawing.Size(221, 24);
             this.regist.TabIndex = 13;
             // 
             // lbRegist
@@ -374,7 +374,7 @@
             this.lbRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRegist.Location = new System.Drawing.Point(125, 100);
             this.lbRegist.Name = "lbRegist";
-            this.lbRegist.Size = new System.Drawing.Size(104, 24);
+            this.lbRegist.Size = new System.Drawing.Size(84, 18);
             this.lbRegist.TabIndex = 12;
             this.lbRegist.Text = "Regist Day:";
             // 
@@ -386,7 +386,7 @@
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(360, 43);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(405, 29);
+            this.txtName.Size = new System.Drawing.Size(468, 24);
             this.txtName.TabIndex = 3;
             // 
             // label2
@@ -398,7 +398,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(357, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 24);
+            this.label2.Size = new System.Drawing.Size(122, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Test Introduction:";
             // 
@@ -411,7 +411,7 @@
             this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.Location = new System.Drawing.Point(357, 27);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(132, 24);
+            this.lbName.Size = new System.Drawing.Size(105, 18);
             this.lbName.TabIndex = 2;
             this.lbName.Text = "Lesson Name:";
             // 
@@ -424,7 +424,7 @@
             this.textBox1.Location = new System.Drawing.Point(128, 204);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(158, 24);
+            this.textBox1.Size = new System.Drawing.Size(221, 24);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "0";
             // 
@@ -437,7 +437,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(125, 188);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 24);
+            this.label1.Size = new System.Drawing.Size(162, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Number Of Participants";
             // 
@@ -450,7 +450,7 @@
             this.txtId.Location = new System.Drawing.Point(128, 43);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(158, 24);
+            this.txtId.Size = new System.Drawing.Size(221, 24);
             this.txtId.TabIndex = 1;
             this.txtId.Text = "0";
             // 
@@ -463,14 +463,14 @@
             this.lbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbId.Location = new System.Drawing.Point(125, 27);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(98, 24);
+            this.lbId.Size = new System.Drawing.Size(79, 18);
             this.lbId.TabIndex = 0;
             this.lbId.Text = "Lesson ID:";
             // 
             // TestView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(724, 373);
+            this.ClientSize = new System.Drawing.Size(969, 477);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
