@@ -132,5 +132,7 @@ namespace PBL.Views.Admin.Students
             if(instance == null || instance.IsDisposed) instance = new StudentView();
             return instance;
         }
+
+        
     }
 }

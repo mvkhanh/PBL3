@@ -87,11 +87,11 @@ namespace PBL
         }
 
         //Properties
-        public int LessonId { get => Convert.ToInt32(txtId.Text); set => txtId.Text = value.ToString(); }
-        public string LessonName { get => txtName.Text; set => txtName.Text = value; }
-        public DateTime LessonPublishDay { get => Convert.ToDateTime(regist.Value); set => regist.Value = value; }
-        public string LessonContentPath { get => txtPdf.Text; set => txtPdf.Text = value; }
-        public int LessonViews { get => Convert.ToInt32(txtView.Text); set => txtView.Text = value.ToString(); }
+        public int LessonId { get => Convert.ToInt32(txtId1.Text); set => txtId1.Text = value.ToString(); }
+        public string LessonName { get => txtName1.Text; set => txtName1.Text = value; }
+        public DateTime LessonPublishDay { get => Convert.ToDateTime(regist1.Value); set => regist1.Value = value; }
+        public string LessonContentPath { get => txtPdf1.Text; set => txtPdf1.Text = value; }
+        public int LessonViews { get => Convert.ToInt32(txtView1.Text); set => txtView1.Text = value.ToString(); }
         public int LessonId_Teacher {
             get => ((CBBItem)cbbTeacherName.SelectedItem).Value;
             set

@@ -36,15 +36,14 @@
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.btnAddNew = new FontAwesome.Sharp.IconButton();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.lbSearch = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnCancel = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.regist = new System.Windows.Forms.DateTimePicker();
             this.lbRegist = new System.Windows.Forms.Label();
-            this.birth = new System.Windows.Forms.DateTimePicker();
             this.lbBirth = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbPhone = new System.Windows.Forms.Label();
@@ -52,7 +51,8 @@
             this.lbEmail = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.lbId = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.regist = new PBL.Resources.Components.RJDatePicker();
+            this.birth = new PBL.Resources.Components.RJDatePicker();
             this.txtId = new PBL.Controller.RoundTextBox();
             this.txtPhone = new PBL.Controller.RoundTextBox();
             this.txtAccount = new PBL.Controller.RoundTextBox();
@@ -182,6 +182,16 @@
             this.btnAddNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddNew.UseVisualStyleBackColor = false;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(24, 23);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(609, 33);
+            this.txtSearch.TabIndex = 2;
+            // 
             // lbSearch
             // 
             this.lbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -240,6 +250,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.regist);
+            this.tabPage2.Controls.Add(this.birth);
             this.tabPage2.Controls.Add(this.txtId);
             this.tabPage2.Controls.Add(this.txtPhone);
             this.tabPage2.Controls.Add(this.txtAccount);
@@ -251,9 +263,7 @@
             this.tabPage2.Controls.Add(this.btnCancel);
             this.tabPage2.Controls.Add(this.btnSave);
             this.tabPage2.Controls.Add(this.panel1);
-            this.tabPage2.Controls.Add(this.regist);
             this.tabPage2.Controls.Add(this.lbRegist);
-            this.tabPage2.Controls.Add(this.birth);
             this.tabPage2.Controls.Add(this.lbBirth);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.lbPhone);
@@ -294,7 +304,7 @@
             // btnSave
             // 
             this.btnSave.AutoSize = true;
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
+            this.btnSave.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -319,15 +329,6 @@
             this.panel1.Size = new System.Drawing.Size(230, 250);
             this.panel1.TabIndex = 18;
             // 
-            // regist
-            // 
-            this.regist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.regist.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.regist.Location = new System.Drawing.Point(543, 303);
-            this.regist.Name = "regist";
-            this.regist.Size = new System.Drawing.Size(203, 24);
-            this.regist.TabIndex = 13;
-            // 
             // lbRegist
             // 
             this.lbRegist.AutoSize = true;
@@ -338,15 +339,6 @@
             this.lbRegist.Size = new System.Drawing.Size(84, 18);
             this.lbRegist.TabIndex = 12;
             this.lbRegist.Text = "Regist Day:";
-            // 
-            // birth
-            // 
-            this.birth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.birth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.birth.Location = new System.Drawing.Point(307, 302);
-            this.birth.Name = "birth";
-            this.birth.Size = new System.Drawing.Size(200, 24);
-            this.birth.TabIndex = 9;
             // 
             // lbBirth
             // 
@@ -425,15 +417,31 @@
             this.lbId.TabIndex = 0;
             this.lbId.Text = "Teacher ID:";
             // 
-            // txtSearch
+            // regist
             // 
-            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(24, 23);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(609, 33);
-            this.txtSearch.TabIndex = 2;
+            this.regist.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.regist.BorderSize = 0;
+            this.regist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.regist.Location = new System.Drawing.Point(543, 299);
+            this.regist.MinimumSize = new System.Drawing.Size(0, 35);
+            this.regist.Name = "regist";
+            this.regist.Size = new System.Drawing.Size(203, 35);
+            this.regist.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.regist.TabIndex = 21;
+            this.regist.TextColor = System.Drawing.Color.White;
+            // 
+            // birth
+            // 
+            this.birth.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.birth.BorderSize = 0;
+            this.birth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.birth.Location = new System.Drawing.Point(307, 299);
+            this.birth.MinimumSize = new System.Drawing.Size(0, 35);
+            this.birth.Name = "birth";
+            this.birth.Size = new System.Drawing.Size(200, 35);
+            this.birth.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.birth.TabIndex = 21;
+            this.birth.TextColor = System.Drawing.Color.White;
             // 
             // txtId
             // 
@@ -641,9 +649,7 @@
         private System.Windows.Forms.Label lbEmail;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label lbId;
-        private System.Windows.Forms.DateTimePicker birth;
         private System.Windows.Forms.Label lbBirth;
-        private System.Windows.Forms.DateTimePicker regist;
         private System.Windows.Forms.Label lbRegist;
         private FontAwesome.Sharp.IconButton btnAddNew;
         private FontAwesome.Sharp.IconButton btnEdit;
@@ -663,5 +669,7 @@
         private Controller.RoundTextBox roundTextBox2;
         private Controller.RoundTextBox txtPassword;
         private System.Windows.Forms.TextBox txtSearch;
+        private Resources.Components.RJDatePicker birth;
+        private Resources.Components.RJDatePicker regist;
     }
 }
