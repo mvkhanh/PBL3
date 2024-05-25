@@ -1,4 +1,5 @@
-﻿using PBL.Models;
+﻿using PBL._Repositories;
+using PBL.Models;
 using PBL.Models.Lesson;
 using PBL.Views.Admin.Lessons;
 using System;
@@ -35,15 +36,28 @@ namespace PBL.Presenters
             this.view.SetLessonListBindingSource(lessonsBindingSource);
             //Load Lesson list view
             LoadAllLessonList();
+            
             //Show view
             this.view.Show();
+            //Load Teachers to CBB
+            LoadTeachersCBB();
+        }
+
+        private void LoadTeachersCBB()
+        {
+            this.view.Teachers = new List<CBBItem>();
+            var teacherList = new TeacherRepository().GetAll();
+            foreach (var teacher in teacherList)
+            {
+                this.view.Teachers.Add(new CBBItem { Value = teacher.Id, Text = teacher.Name });
+            }
         }
 
         //Methods
         private void LoadAllLessonList()
         {
             lessonList = this.repository.GetAll();
-            lessonsBindingSource.DataSource = lessonList;
+            lessonsBindingSource.DataSource = lessonList.Select(p => new { p.Id, p.Name, p.PublishDay, TeacherName = p.Teacher.Name, p.Views }).ToList();
         }
 
         private void CancelAction(object sender, EventArgs e)
@@ -57,7 +71,8 @@ namespace PBL.Presenters
             model.Id = view.LessonId;
             model.Name = view.LessonName;
             model.PublishDay = view.LessonPublishDay;
-            model.Content = view.LessonContent;
+            //Chuyen tu string duong dan tren view thanh mang byte[]/ Neu string rong thi khong thay doi
+            //model.Content = view.LessonContent;
             model.Views = view.LessonViews;
             model.Id_Teacher = view.LessonId_Teacher;
             try
@@ -87,15 +102,17 @@ namespace PBL.Presenters
         private void CleanViewFields()
         {
             view.LessonId = 0;
-            view.LessonName = view.LessonPhone = view.LessonEmail = view.LessonAccount = view.LessonPassword = "";
-            view.LessonBirth = view.LessonRegistDay = DateTime.Today;
+            view.LessonName = "";
+            view.LessonViews = 0;
+            view.LessonContentPath = "";
+            view.LessonPublishDay = DateTime.Today;
         }
 
         private void DeleteSelectedLesson(object sender, EventArgs e)
         {
             try
             {
-                var model = (LessonModel)LessonsBindingSource.Current;
+                var model = (LessonModel)lessonsBindingSource.Current;
                 repository.Delete(model.Id);
                 view.IsSuccessful = true;
                 view.Message = "Lesson deleted successfully";
@@ -110,16 +127,13 @@ namespace PBL.Presenters
 
         private void LoadSelectedLessonToEdit(object sender, EventArgs e)
         {
-            if (LessonsBindingSource.Current == null) throw new Exception("An error occured, could not edit Lesson");
-            var Lesson = (LessonModel)LessonsBindingSource.Current;
-            view.LessonId = Lesson.Id;
-            view.LessonName = Lesson.Name;
-            view.LessonEmail = Lesson.Email;
-            view.LessonPhone = Lesson.Phone;
-            view.LessonBirth = Lesson.Birth;
-            view.LessonRegistDay = Lesson.RegistDay;
-            view.LessonAccount = Lesson.Account;
-            view.LessonPassword = Lesson.Password;
+            if (lessonsBindingSource.Current == null) throw new Exception("An error occured, could not edit Lesson");
+            var lesson = (LessonModel)lessonsBindingSource.Current;
+            view.LessonId = lesson.Id;
+            view.LessonName = lesson.Name;
+            view.LessonViews = lesson.Views;
+            view.LessonPublishDay = lesson.PublishDay;
+            view.LessonId_Teacher = lesson.Id_Teacher;
             view.IsEdit = true;
         }
 
@@ -132,12 +146,11 @@ namespace PBL.Presenters
         {
             if (string.IsNullOrWhiteSpace(this.view.SearchValue))
             {
-                LessonList = repository.GetAll();
+                lessonList = repository.GetAll();
             }
-            else LessonList = repository.GetByValue(this.view.SearchValue);
-            LessonsBindingSource.DataSource = LessonList;
+            else lessonList = repository.GetByValue(this.view.SearchValue);
+            lessonsBindingSource.DataSource = lessonList;
         }
 
     }
-}
 }

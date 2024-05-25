@@ -51,7 +51,7 @@ namespace PBL.Models
         ErrorMessage = "Mat khau phai chua chu hoa, chu thuong, chu so va ki tu dac biet.")]
         public override string Password { get; set; }
 
-        public virtual ICollection<LessonModel> Lessons {  get; set; }
+        public virtual ICollection<LessonModel> Lessons {  get; }
 
         //Constructor
         public TeacherModel()

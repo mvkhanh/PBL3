@@ -122,7 +122,9 @@ namespace PBL.Views
 
         private void btnLessons_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color4);
+            ActivateButton(sender, RGBColors.color1);
+            ShowLessonView(sender, EventArgs.Empty);
+            OpenChildForm(LessonView.GetInstance());
         }
 
         private void btnTests_Click(object sender, EventArgs e)
@@ -155,11 +157,6 @@ namespace PBL.Views
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
 
         // Define the constant values for the interop functions
         private const int WM_NCLBUTTONDOWN = 0x00A1;
@@ -256,6 +253,8 @@ namespace PBL.Views
         }
         #endregion
 
+
+        #region Modify window
         private void btnRestoreDown_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Maximized)
@@ -277,5 +276,6 @@ namespace PBL.Views
         {
             this.Close();
         }
+        #endregion
     }
 }

@@ -23,6 +23,8 @@ namespace PBL
             InitializeComponent();
             AssociateAndRaiseViewEvents();
             tabControl1.TabPages.Remove(tabPageLessonDetail);
+            //Initialize cbb teachers
+            cbbTeacherName.Items.AddRange(Teachers.ToArray());
         }
 
         private void AssociateAndRaiseViewEvents()
@@ -88,13 +90,23 @@ namespace PBL
         public int LessonId { get => Convert.ToInt32(txtId.Text); set => txtId.Text = value.ToString(); }
         public string LessonName { get => txtName.Text; set => txtName.Text = value; }
         public DateTime LessonPublishDay { get => Convert.ToDateTime(regist.Value); set => regist.Value = value; }
-        public byte[] LessonContent { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string LessonContentPath { get => txtPdf.Text; set => txtPdf.Text = value; }
         public int LessonViews { get => Convert.ToInt32(txtView.Text); set => txtView.Text = value.ToString(); }
-        public int LessonId_Teacher { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int LessonId_Teacher {
+            get => ((CBBItem)cbbTeacherName.SelectedItem).Value;
+            set
+            {
+                foreach (var item in cbbTeacherName.Items) if(((CBBItem)item).Value == value)
+                    {
+                        cbbTeacherName.SelectedItem = item;
+                    }
+            }
+        }
         public string SearchValue { get => txtSearch.Text; set => txtSearch.Text = value; }
         public bool IsEdit { get => _IsEdit; set => _IsEdit = value; }
         public bool IsSuccessful { get => _IsSuccessful; set => _IsSuccessful = value; }
         public string Message { get => _Message; set => _Message = value; }
+        public List<CBBItem> Teachers { get; set; }
 
         //Events
         public event EventHandler SearchEvent;

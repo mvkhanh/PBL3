@@ -29,7 +29,6 @@ namespace PBL.Models
         [ForeignKey("Id_Teacher")]
         public virtual TeacherModel Teacher { get; set; }
 
-        [Required(ErrorMessage = "Them noi dung.")]
         public byte[] Content { get; set; }
 
         [DisplayName("Luot xem")]

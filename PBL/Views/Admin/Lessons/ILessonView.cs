@@ -13,9 +13,10 @@ namespace PBL.Views.Admin.Lessons
         int LessonId { get; set; }
         string LessonName { get; set; }
         DateTime LessonPublishDay { get; set; }
-        byte[] LessonContent { get; set; }
+        string LessonContentPath { get; set; }
         int LessonViews { get; set; }
         int LessonId_Teacher {  get; set; }
+        List<CBBItem> Teachers { get; set; }
 
         string SearchValue { get; set; }
         bool IsEdit { get; set; }

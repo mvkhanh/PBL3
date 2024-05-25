@@ -86,10 +86,10 @@
             this.tabPage1.Controls.Add(this.txtSearch);
             this.tabPage1.Controls.Add(this.lbSearch);
             this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(898, 434);
+            this.tabPage1.Size = new System.Drawing.Size(898, 438);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Teacher List";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -107,9 +107,9 @@
             this.btnEdit.IconColor = System.Drawing.Color.White;
             this.btnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEdit.IconSize = 32;
-            this.btnEdit.Location = new System.Drawing.Point(778, 126);
+            this.btnEdit.Location = new System.Drawing.Point(766, 126);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(103, 46);
+            this.btnEdit.Size = new System.Drawing.Size(115, 46);
             this.btnEdit.TabIndex = 5;
             this.btnEdit.Text = "  Edit";
             this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -149,9 +149,9 @@
             this.btnDelete.IconColor = System.Drawing.Color.White;
             this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDelete.IconSize = 32;
-            this.btnDelete.Location = new System.Drawing.Point(778, 187);
+            this.btnDelete.Location = new System.Drawing.Point(766, 187);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(103, 46);
+            this.btnDelete.Size = new System.Drawing.Size(115, 46);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -185,7 +185,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(24, 23);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(609, 39);
+            this.txtSearch.Size = new System.Drawing.Size(609, 33);
             this.txtSearch.TabIndex = 2;
             // 
             // lbSearch
@@ -197,7 +197,7 @@
             this.lbSearch.ForeColor = System.Drawing.Color.Black;
             this.lbSearch.Location = new System.Drawing.Point(21, 3);
             this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(148, 20);
+            this.lbSearch.Size = new System.Drawing.Size(122, 16);
             this.lbSearch.TabIndex = 1;
             this.lbSearch.Text = "Search Teacher:";
             // 
@@ -241,7 +241,7 @@
             this.dataGridView1.RowTemplate.DividerHeight = 1;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(727, 369);
+            this.dataGridView1.Size = new System.Drawing.Size(727, 373);
             this.dataGridView1.TabIndex = 0;
             // 
             // tabPage2
@@ -266,10 +266,10 @@
             this.tabPage2.Controls.Add(this.txtId);
             this.tabPage2.Controls.Add(this.lbId);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(898, 434);
+            this.tabPage2.Size = new System.Drawing.Size(898, 438);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Teacher detail";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -328,7 +328,7 @@
             this.regist.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.regist.Location = new System.Drawing.Point(588, 301);
             this.regist.Name = "regist";
-            this.regist.Size = new System.Drawing.Size(158, 29);
+            this.regist.Size = new System.Drawing.Size(158, 24);
             this.regist.TabIndex = 13;
             // 
             // lbRegist
@@ -337,7 +337,7 @@
             this.lbRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRegist.Location = new System.Drawing.Point(585, 280);
             this.lbRegist.Name = "lbRegist";
-            this.lbRegist.Size = new System.Drawing.Size(104, 24);
+            this.lbRegist.Size = new System.Drawing.Size(84, 18);
             this.lbRegist.TabIndex = 12;
             this.lbRegist.Text = "Regist Day:";
             // 
@@ -347,7 +347,7 @@
             this.birth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.birth.Location = new System.Drawing.Point(307, 300);
             this.birth.Name = "birth";
-            this.birth.Size = new System.Drawing.Size(200, 29);
+            this.birth.Size = new System.Drawing.Size(200, 24);
             this.birth.TabIndex = 9;
             // 
             // lbBirth
@@ -356,7 +356,7 @@
             this.lbBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBirth.Location = new System.Drawing.Point(304, 280);
             this.lbBirth.Name = "lbBirth";
-            this.lbBirth.Size = new System.Drawing.Size(158, 24);
+            this.lbBirth.Size = new System.Drawing.Size(123, 18);
             this.lbBirth.TabIndex = 8;
             this.lbBirth.Text = "Teacher Birthday:";
             // 
@@ -365,7 +365,7 @@
             this.txtAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAccount.Location = new System.Drawing.Point(307, 167);
             this.txtAccount.Name = "txtAccount";
-            this.txtAccount.Size = new System.Drawing.Size(200, 29);
+            this.txtAccount.Size = new System.Drawing.Size(200, 24);
             this.txtAccount.TabIndex = 7;
             // 
             // label2
@@ -374,7 +374,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(304, 151);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 24);
+            this.label2.Size = new System.Drawing.Size(124, 18);
             this.label2.TabIndex = 6;
             this.label2.Text = "Teacher Account:";
             // 
@@ -383,7 +383,7 @@
             this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(307, 99);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(125, 29);
+            this.txtPhone.Size = new System.Drawing.Size(125, 24);
             this.txtPhone.TabIndex = 7;
             // 
             // txtPassword
@@ -391,7 +391,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(543, 167);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(203, 29);
+            this.txtPassword.Size = new System.Drawing.Size(203, 24);
             this.txtPassword.TabIndex = 5;
             // 
             // lbPhone
@@ -400,7 +400,7 @@
             this.lbPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPhone.Location = new System.Drawing.Point(304, 83);
             this.lbPhone.Name = "lbPhone";
-            this.lbPhone.Size = new System.Drawing.Size(147, 24);
+            this.lbPhone.Size = new System.Drawing.Size(113, 18);
             this.lbPhone.TabIndex = 6;
             this.lbPhone.Text = "Teacher Phone:";
             // 
@@ -410,7 +410,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(540, 151);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 24);
+            this.label1.Size = new System.Drawing.Size(137, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "Teacher Password:";
             // 
@@ -419,7 +419,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(464, 99);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(282, 29);
+            this.txtEmail.Size = new System.Drawing.Size(282, 24);
             this.txtEmail.TabIndex = 5;
             // 
             // lbEmail
@@ -428,7 +428,7 @@
             this.lbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEmail.Location = new System.Drawing.Point(461, 83);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(138, 24);
+            this.lbEmail.Size = new System.Drawing.Size(107, 18);
             this.lbEmail.TabIndex = 4;
             this.lbEmail.Text = "Teacher Email:";
             // 
@@ -437,7 +437,7 @@
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(464, 40);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(282, 29);
+            this.txtName.Size = new System.Drawing.Size(282, 24);
             this.txtName.TabIndex = 3;
             // 
             // lbName
@@ -446,7 +446,7 @@
             this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.Location = new System.Drawing.Point(461, 24);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(142, 24);
+            this.lbName.Size = new System.Drawing.Size(110, 18);
             this.lbName.TabIndex = 2;
             this.lbName.Text = "Teacher Name:";
             // 
@@ -456,7 +456,7 @@
             this.txtId.Location = new System.Drawing.Point(307, 40);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(125, 29);
+            this.txtId.Size = new System.Drawing.Size(125, 24);
             this.txtId.TabIndex = 1;
             this.txtId.Text = "0";
             // 
@@ -466,7 +466,7 @@
             this.lbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbId.Location = new System.Drawing.Point(304, 24);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(108, 24);
+            this.lbId.Size = new System.Drawing.Size(84, 18);
             this.lbId.TabIndex = 0;
             this.lbId.Text = "Teacher ID:";
             // 

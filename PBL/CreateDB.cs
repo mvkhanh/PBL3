@@ -24,6 +24,10 @@ namespace PBL
                 new StudentModel {Id = 1, Name = "Nguyen Thanh Tai", Birth = Convert.ToDateTime("1/1/2004"), Email = "an602777@gmail.com", RegistDay = DateTime.Now, Phone = "0987654321", Account = "nguyenthanhtai", Password = "Nthanhtai123*"}
             });
             //Lesson
+            context.Lessons.AddRange(new LessonModel[]
+            {
+                new LessonModel {Id = 1, Name = "Ngu phap TOEIC", Id_Teacher = 1, PublishDay = DateTime.Now, Views = 1000, Content = null}
+            });
         }
     }
 }
