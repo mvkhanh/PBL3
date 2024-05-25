@@ -282,7 +282,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.iconButtonAddPdf.AutoSize = true;
-            this.iconButtonAddPdf.BackColor = System.Drawing.Color.Silver;
+            this.iconButtonAddPdf.BackColor = System.Drawing.Color.Orange;
             this.iconButtonAddPdf.FlatAppearance.BorderSize = 0;
             this.iconButtonAddPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButtonAddPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -291,9 +291,9 @@
             this.iconButtonAddPdf.IconColor = System.Drawing.Color.White;
             this.iconButtonAddPdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonAddPdf.IconSize = 32;
-            this.iconButtonAddPdf.Location = new System.Drawing.Point(128, 279);
+            this.iconButtonAddPdf.Location = new System.Drawing.Point(126, 279);
             this.iconButtonAddPdf.Name = "iconButtonAddPdf";
-            this.iconButtonAddPdf.Size = new System.Drawing.Size(143, 38);
+            this.iconButtonAddPdf.Size = new System.Drawing.Size(160, 38);
             this.iconButtonAddPdf.TabIndex = 22;
             this.iconButtonAddPdf.Text = "Add A Question";
             this.iconButtonAddPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -424,7 +424,7 @@
             this.textBox1.Location = new System.Drawing.Point(128, 204);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(125, 24);
+            this.textBox1.Size = new System.Drawing.Size(158, 24);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "0";
             // 
@@ -450,7 +450,7 @@
             this.txtId.Location = new System.Drawing.Point(128, 43);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(125, 24);
+            this.txtId.Size = new System.Drawing.Size(158, 24);
             this.txtId.TabIndex = 1;
             this.txtId.Text = "0";
             // 
