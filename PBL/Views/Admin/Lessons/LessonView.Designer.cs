@@ -1,4 +1,6 @@
-﻿namespace PBL
+﻿using System.Drawing;
+
+namespace PBL
 {
     partial class LessonView
     {
@@ -48,6 +50,7 @@
             this.lbName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbId = new System.Windows.Forms.Label();
+            this.btnAddPdf = new FontAwesome.Sharp.IconButton();
             this.btnCancel = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.txtId = new PBL.Controller.RoundTextBox();
@@ -82,13 +85,13 @@
             this.tabPageLessonList.Controls.Add(this.txtSearch);
             this.tabPageLessonList.Controls.Add(this.lbSearch);
             this.tabPageLessonList.Controls.Add(this.dataGridView1);
-            this.tabPageLessonList.Location = new System.Drawing.Point(4, 25);
+            this.tabPageLessonList.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.tabPageLessonList.Location = new System.Drawing.Point(4, 29);
             this.tabPageLessonList.Name = "tabPageLessonList";
             this.tabPageLessonList.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageLessonList.Size = new System.Drawing.Size(898, 438);
+            this.tabPageLessonList.Size = new System.Drawing.Size(898, 434);
             this.tabPageLessonList.TabIndex = 0;
             this.tabPageLessonList.Text = "Lesson List";
-            this.tabPageLessonList.UseVisualStyleBackColor = true;
             // 
             // btnEdit
             // 
@@ -181,7 +184,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(24, 23);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(609, 33);
+            this.txtSearch.Size = new System.Drawing.Size(609, 39);
             this.txtSearch.TabIndex = 2;
             // 
             // lbSearch
@@ -237,7 +240,7 @@
             this.dataGridView1.RowTemplate.DividerHeight = 1;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(727, 373);
+            this.dataGridView1.Size = new System.Drawing.Size(727, 369);
             this.dataGridView1.TabIndex = 0;
             // 
             // tabPageLessonDetail
@@ -255,13 +258,15 @@
             this.tabPageLessonDetail.Controls.Add(this.lbName);
             this.tabPageLessonDetail.Controls.Add(this.label1);
             this.tabPageLessonDetail.Controls.Add(this.lbId);
+            this.tabPageLessonDetail.Controls.Add(this.btnAddPdf);
             this.tabPageLessonDetail.Controls.Add(this.btnCancel);
             this.tabPageLessonDetail.Controls.Add(this.btnSave);
             this.tabPageLessonDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageLessonDetail.Location = new System.Drawing.Point(4, 25);
+            this.tabPageLessonDetail.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabPageLessonDetail.Location = new System.Drawing.Point(4, 29);
             this.tabPageLessonDetail.Name = "tabPageLessonDetail";
             this.tabPageLessonDetail.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageLessonDetail.Size = new System.Drawing.Size(898, 438);
+            this.tabPageLessonDetail.Size = new System.Drawing.Size(898, 434);
             this.tabPageLessonDetail.TabIndex = 1;
             this.tabPageLessonDetail.Text = "Lesson detail";
             this.tabPageLessonDetail.UseVisualStyleBackColor = true;
@@ -271,7 +276,7 @@
             this.cbbTeacherName.FormattingEnabled = true;
             this.cbbTeacherName.Location = new System.Drawing.Point(351, 140);
             this.cbbTeacherName.Name = "cbbTeacherName";
-            this.cbbTeacherName.Size = new System.Drawing.Size(407, 24);
+            this.cbbTeacherName.Size = new System.Drawing.Size(407, 28);
             this.cbbTeacherName.TabIndex = 17;
             // 
             // btnAddPdf
@@ -301,7 +306,7 @@
             this.lbRegist.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbRegist.Location = new System.Drawing.Point(114, 246);
             this.lbRegist.Name = "lbRegist";
-            this.lbRegist.Size = new System.Drawing.Size(90, 18);
+            this.lbRegist.Size = new System.Drawing.Size(114, 24);
             this.lbRegist.TabIndex = 12;
             this.lbRegist.Text = "Publish Day:";
             // 
@@ -312,7 +317,7 @@
             this.lbBirth.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbBirth.Location = new System.Drawing.Point(115, 124);
             this.lbBirth.Name = "lbBirth";
-            this.lbBirth.Size = new System.Drawing.Size(117, 18);
+            this.lbBirth.Size = new System.Drawing.Size(146, 24);
             this.lbBirth.TabIndex = 8;
             this.lbBirth.Text = "Lesson Content:";
             // 
@@ -323,7 +328,7 @@
             this.label3.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.label3.Location = new System.Drawing.Point(349, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 18);
+            this.label3.Size = new System.Drawing.Size(208, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "Lesson Teacher Name:";
             // 
@@ -334,7 +339,7 @@
             this.lbName.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbName.Location = new System.Drawing.Point(348, 44);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(105, 18);
+            this.lbName.Size = new System.Drawing.Size(132, 24);
             this.lbName.TabIndex = 2;
             this.lbName.Text = "Lesson Name:";
             // 
@@ -345,7 +350,7 @@
             this.label1.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.label1.Location = new System.Drawing.Point(348, 251);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 18);
+            this.label1.Size = new System.Drawing.Size(164, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Number Of Views:";
             // 
@@ -356,9 +361,29 @@
             this.lbId.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbId.Location = new System.Drawing.Point(113, 44);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(79, 18);
+            this.lbId.Size = new System.Drawing.Size(98, 24);
             this.lbId.TabIndex = 0;
             this.lbId.Text = "Lesson ID:";
+            // 
+            // btnAddPdf
+            // 
+            this.btnAddPdf.AutoSize = true;
+            this.btnAddPdf.BackColor = System.Drawing.Color.Orange;
+            this.btnAddPdf.FlatAppearance.BorderSize = 0;
+            this.btnAddPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPdf.ForeColor = System.Drawing.Color.White;
+            this.btnAddPdf.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnAddPdf.IconColor = System.Drawing.Color.White;
+            this.btnAddPdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddPdf.IconSize = 32;
+            this.btnAddPdf.Location = new System.Drawing.Point(115, 266);
+            this.btnAddPdf.Name = "btnAddPdf";
+            this.btnAddPdf.Size = new System.Drawing.Size(159, 38);
+            this.btnAddPdf.TabIndex = 16;
+            this.btnAddPdf.Text = "Add File PDF";
+            this.btnAddPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddPdf.UseVisualStyleBackColor = false;
             // 
             // btnCancel
             // 

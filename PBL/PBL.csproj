@@ -116,6 +116,9 @@
     <Compile Include="CBBItem.cs" />
     <Compile Include="CreateDB.cs" />
     <Compile Include="Presenters\LessonPresenter.cs" />
+    <Compile Include="Resources\Components\RJComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Resources\Components\RJDatePicker.cs">
       <SubType>Component</SubType>
     </Compile>

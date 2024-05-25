@@ -86,10 +86,11 @@
             this.tabPageStudentList.Controls.Add(this.txtSearch);
             this.tabPageStudentList.Controls.Add(this.lbSearch);
             this.tabPageStudentList.Controls.Add(this.dataGridView1);
-            this.tabPageStudentList.Location = new System.Drawing.Point(4, 25);
+            this.tabPageStudentList.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.tabPageStudentList.Location = new System.Drawing.Point(4, 29);
             this.tabPageStudentList.Name = "tabPageStudentList";
             this.tabPageStudentList.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStudentList.Size = new System.Drawing.Size(898, 438);
+            this.tabPageStudentList.Size = new System.Drawing.Size(898, 434);
             this.tabPageStudentList.TabIndex = 0;
             this.tabPageStudentList.Text = "Student List";
             this.tabPageStudentList.UseVisualStyleBackColor = true;
@@ -185,7 +186,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(24, 23);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(609, 33);
+            this.txtSearch.Size = new System.Drawing.Size(609, 39);
             this.txtSearch.TabIndex = 2;
             // 
             // lbSearch
@@ -226,7 +227,7 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(191)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -241,7 +242,7 @@
             this.dataGridView1.RowTemplate.DividerHeight = 1;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(727, 373);
+            this.dataGridView1.Size = new System.Drawing.Size(727, 369);
             this.dataGridView1.TabIndex = 0;
             // 
             // tabPageStudentDetail
@@ -266,10 +267,10 @@
             this.tabPageStudentDetail.Controls.Add(this.lbName);
             this.tabPageStudentDetail.Controls.Add(this.lbId);
             this.tabPageStudentDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageStudentDetail.Location = new System.Drawing.Point(4, 25);
+            this.tabPageStudentDetail.Location = new System.Drawing.Point(4, 29);
             this.tabPageStudentDetail.Name = "tabPageStudentDetail";
             this.tabPageStudentDetail.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStudentDetail.Size = new System.Drawing.Size(898, 438);
+            this.tabPageStudentDetail.Size = new System.Drawing.Size(898, 434);
             this.tabPageStudentDetail.TabIndex = 1;
             this.tabPageStudentDetail.Text = "Student detail";
             this.tabPageStudentDetail.UseVisualStyleBackColor = true;
@@ -417,7 +418,7 @@
             this.lbRegist.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbRegist.Location = new System.Drawing.Point(540, 280);
             this.lbRegist.Name = "lbRegist";
-            this.lbRegist.Size = new System.Drawing.Size(84, 18);
+            this.lbRegist.Size = new System.Drawing.Size(104, 24);
             this.lbRegist.TabIndex = 12;
             this.lbRegist.Text = "Regist Day:";
             // 
@@ -428,7 +429,7 @@
             this.lbBirth.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbBirth.Location = new System.Drawing.Point(304, 280);
             this.lbBirth.Name = "lbBirth";
-            this.lbBirth.Size = new System.Drawing.Size(119, 18);
+            this.lbBirth.Size = new System.Drawing.Size(151, 24);
             this.lbBirth.TabIndex = 8;
             this.lbBirth.Text = "Student Birthday:";
             // 
@@ -439,7 +440,7 @@
             this.label2.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.label2.Location = new System.Drawing.Point(304, 206);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 18);
+            this.label2.Size = new System.Drawing.Size(154, 24);
             this.label2.TabIndex = 6;
             this.label2.Text = "Student Account:";
             // 
@@ -450,7 +451,7 @@
             this.lbPhone.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbPhone.Location = new System.Drawing.Point(304, 125);
             this.lbPhone.Name = "lbPhone";
-            this.lbPhone.Size = new System.Drawing.Size(109, 18);
+            this.lbPhone.Size = new System.Drawing.Size(140, 24);
             this.lbPhone.TabIndex = 6;
             this.lbPhone.Text = "Student Phone:";
             // 
@@ -461,7 +462,7 @@
             this.label1.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.label1.Location = new System.Drawing.Point(540, 206);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 18);
+            this.label1.Size = new System.Drawing.Size(166, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "Student Password:";
             // 
@@ -472,7 +473,7 @@
             this.lbEmail.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbEmail.Location = new System.Drawing.Point(461, 125);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(103, 18);
+            this.lbEmail.Size = new System.Drawing.Size(131, 24);
             this.lbEmail.TabIndex = 4;
             this.lbEmail.Text = "Student Email:";
             // 
@@ -483,7 +484,7 @@
             this.lbName.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbName.Location = new System.Drawing.Point(461, 49);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(106, 18);
+            this.lbName.Size = new System.Drawing.Size(135, 24);
             this.lbName.TabIndex = 2;
             this.lbName.Text = "Student Name:";
             // 
@@ -494,7 +495,7 @@
             this.lbId.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbId.Location = new System.Drawing.Point(304, 49);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(80, 18);
+            this.lbId.Size = new System.Drawing.Size(101, 24);
             this.lbId.TabIndex = 0;
             this.lbId.Text = "Student ID:";
             // 
