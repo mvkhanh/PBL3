@@ -47,7 +47,7 @@ namespace PBL._Repositories
 
         public IEnumerable<LessonModel> GetAll()
         {
-            return new PBLContext().Lessons;
+            return new PBLContext().Lessons.ToList();
         }
 
         public IEnumerable<LessonModel> GetByValue(string search)

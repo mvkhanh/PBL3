@@ -58,5 +58,9 @@ namespace PBL.Models
         {
             Lessons = new HashSet<LessonModel>();
         }
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

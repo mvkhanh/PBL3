@@ -31,10 +31,13 @@ namespace PBL._Repositories
 
         public void Delete(int id)
         {
-            var ctx = new PBLContext();
-            var teacher = ctx.Teachers.Find(id);
-            ctx.Teachers.Remove(teacher);
-            ctx.SaveChanges();
+            using (var ctx = new PBLContext())
+            {
+                var teacher = ctx.Teachers.Find(id);
+                ctx.Lessons.RemoveRange(teacher.Lessons);
+                ctx.Teachers.Remove(teacher);
+                ctx.SaveChanges();
+            }
         }
 
         public void Edit(TeacherModel teacherModel)

@@ -23,8 +23,8 @@ namespace PBL
             InitializeComponent();
             AssociateAndRaiseViewEvents();
             tabControl1.TabPages.Remove(tabPageLessonDetail);
-            //Initialize cbb teachers
-            cbbTeacherName.Items.AddRange(Teachers.ToArray());
+            Teachers = new List<CBBItem>();
+            cbbTeacherName.DataSource = Teachers;
         }
 
         private void AssociateAndRaiseViewEvents()
@@ -129,6 +129,22 @@ namespace PBL
         {
             if (instance == null || instance.IsDisposed) instance = new LessonView();
             return instance;
+        }
+
+        private void dataGridView1_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
+        {
+            if (e.Column.Name == "Content" || e.Column.Name == "Id_Teacher") e.Column.Visible = false;
+            else if (e.Column.Name == "Teacher") e.Column.HeaderText = "Nguoi dang";
+        }
+
+        private void btnAddPdf_Click(object sender, EventArgs e)
+        {
+            var ofd = new OpenFileDialog();
+            if(ofd.ShowDialog() == DialogResult.OK)
+            {
+                txtPdf.Text = ofd.FileName;
+            }
+            
         }
     }
 }

@@ -120,5 +120,10 @@ namespace PBL.Views
             }
             return instance;
         }
+
+        private void dataGridView1_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
+        {
+            if(e.Column.Name == "Lessons") e.Column.Visible = false;
+        }
     }
 }

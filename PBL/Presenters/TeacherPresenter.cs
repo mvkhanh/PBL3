@@ -42,7 +42,7 @@ namespace PBL.Presenters
         private void LoadAllTeacherList()
         {
             teacherList = repository.GetAll();
-            teachersBindingSource.DataSource = teacherList.Select(p => new {p.Id, p.Name, p.Birth, p.Email, p.Phone, p.RegistDay, p.Account, p.Password}).ToList();//Set data source
+            teachersBindingSource.DataSource = teacherList;//Set data source
         }
 
         private void SaveTeacher(object sender, EventArgs e)
@@ -112,7 +112,7 @@ namespace PBL.Presenters
                 view.IsSuccessful = false;
                 view.Message = "An error occured, could not delete teacher";
             }
-        }
+}
 
         private void LoadSelectedTeacherToEdit(object sender, EventArgs e)
         {

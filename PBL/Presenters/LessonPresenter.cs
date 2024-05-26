@@ -36,16 +36,15 @@ namespace PBL.Presenters
             this.view.SetLessonListBindingSource(lessonsBindingSource);
             //Load Lesson list view
             LoadAllLessonList();
-            
-            //Show view
-            this.view.Show();
             //Load Teachers to CBB
             LoadTeachersCBB();
+            //Show view
+            this.view.Show();
+
         }
 
         private void LoadTeachersCBB()
         {
-            this.view.Teachers = new List<CBBItem>();
             var teacherList = new TeacherRepository().GetAll();
             foreach (var teacher in teacherList)
             {
@@ -57,7 +56,7 @@ namespace PBL.Presenters
         private void LoadAllLessonList()
         {
             lessonList = this.repository.GetAll();
-            lessonsBindingSource.DataSource = lessonList.Select(p => new { p.Id, p.Name, p.PublishDay, TeacherName = p.Teacher.Name, p.Views }).ToList();
+            lessonsBindingSource.DataSource = lessonList;
         }
 
         private void CancelAction(object sender, EventArgs e)
@@ -71,8 +70,8 @@ namespace PBL.Presenters
             model.Id = view.LessonId;
             model.Name = view.LessonName;
             model.PublishDay = view.LessonPublishDay;
-            //Chuyen tu string duong dan tren view thanh mang byte[]/ Neu string rong thi khong thay doi
-            //model.Content = view.LessonContent;
+            if(!string.IsNullOrEmpty(view.LessonContentPath))
+                model.Content = ConvertPathToContent(view.LessonContentPath);
             model.Views = view.LessonViews;
             model.Id_Teacher = view.LessonId_Teacher;
             try
@@ -99,6 +98,11 @@ namespace PBL.Presenters
             }
         }
 
+        private byte[] ConvertPathToContent(string lessonContentPath)
+        {
+            throw new NotImplementedException();
+        }
+
         private void CleanViewFields()
         {
             view.LessonId = 0;
@@ -112,18 +116,18 @@ namespace PBL.Presenters
         {
             try
             {
-                var model = (LessonModel)lessonsBindingSource.Current;
-                repository.Delete(model.Id);
+                var lesson = (LessonModel)lessonsBindingSource.Current;
+                repository.Delete(lesson.Id);
                 view.IsSuccessful = true;
                 view.Message = "Lesson deleted successfully";
                 LoadAllLessonList();
-            }
+        }
             catch (Exception)
             {
                 view.IsSuccessful = false;
                 view.Message = "An error occured, could not delete Lesson";
             }
-        }
+}
 
         private void LoadSelectedLessonToEdit(object sender, EventArgs e)
         {
