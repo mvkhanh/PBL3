@@ -3,7 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Odbc;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,7 @@ namespace PBL
             InitializeComponent();
             AssociateAndRaiseViewEvents();
             tabControl1.TabPages.Remove(tabPageLessonDetail);
+            tabControl1.TabPages.Remove(tabPageLessonContent);
             Teachers = new List<CBBItem>();
             cbbTeacherName.DataSource = Teachers;
         }
@@ -70,13 +73,17 @@ namespace PBL
             };
             btnSave.Click += delegate
             {
-                SaveEvent?.Invoke(this, EventArgs.Empty);
-                if (IsSuccessful)
+                if (!IsEdit && string.IsNullOrEmpty(txtPdf.Texts)) MessageBox.Show("Chua chon file noi dung.");
+                else
                 {
-                    tabControl1.TabPages.Remove(tabPageLessonDetail);
-                    tabControl1.TabPages.Add(tabPageLessonList);
+                    SaveEvent?.Invoke(this, EventArgs.Empty);
+                    if (IsSuccessful)
+                    {
+                        tabControl1.TabPages.Remove(tabPageLessonDetail);
+                        tabControl1.TabPages.Add(tabPageLessonList);
+                    }
+                    MessageBox.Show(Message);
                 }
-                MessageBox.Show(Message);
             };
             btnCancel.Click += delegate
             {
@@ -89,6 +96,7 @@ namespace PBL
                 ViewEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(tabPageLessonList);
                 tabControl1.TabPages.Add(tabPageLessonContent);
+                DisplayContent();
             };
         }
 
@@ -102,7 +110,7 @@ namespace PBL
         public string LessonContentPath 
             { get => txtPdf.Texts; set => txtPdf.Texts = value; }
         public byte[] LessonContent 
-            { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+            { get; set; }
         public int LessonViews 
             { get => Convert.ToInt32(txtView.Texts); set => txtView.Texts = value.ToString(); }
         public int LessonId_Teacher
@@ -142,9 +150,32 @@ namespace PBL
             else if (e.Column.Name == "Teacher") e.Column.HeaderText = "Nguoi dang";
         }
 
+        private void DisplayContent()
+        {
+            try
+            {
+                string fileName = "tmp.pdf";
+                File.WriteAllBytes(fileName, LessonContent);
+                pdfViewer1.LoadFromFile(fileName);
+                File.Delete(fileName);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An error occured when display content");
+                btnBack.PerformClick();
+            }
+        }
+       
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Remove(tabPageLessonContent);
+            tabControl1.TabPages.Add(tabPageLessonList);
+        }
+
         private void btnAddPdf_Click(object sender, EventArgs e)
         {
             var ofd = new OpenFileDialog();
+            ofd.Filter = "PDF Files (*.pdf)|*.pdf";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 txtPdf.Texts = ofd.FileName;

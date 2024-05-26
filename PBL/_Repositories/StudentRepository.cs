@@ -32,23 +32,27 @@ namespace PBL._Repositories
 
         public void Delete(int id)
         {
-            var ctx = new PBLContext();
-            var student = ctx.Students.Find(id);
-            ctx.Students.Remove(student);
-            ctx.SaveChanges();
+            using (var ctx = new PBLContext())
+            {
+                var student = ctx.Students.Find(id);
+                ctx.Students.Remove(student);
+                ctx.SaveChanges();
+            }
         }
 
         public void Edit(StudentModel studentModel)
         {
-            var ctx = new PBLContext();
-            var student = ctx.Students.Find(studentModel.Id);
-            student.Phone = studentModel.Phone;
-            student.Name = studentModel.Name;
-            student.Birth = studentModel.Birth;
-            student.Email = studentModel.Email;
-            student.Account = studentModel.Account;
-            student.Password = studentModel.Password;
-            ctx.SaveChanges();
+            using (var ctx = new PBLContext())
+            {
+                var student = ctx.Students.Find(studentModel.Id);
+                student.Phone = studentModel.Phone;
+                student.Name = studentModel.Name;
+                student.Birth = studentModel.Birth;
+                student.Email = studentModel.Email;
+                student.Account = studentModel.Account;
+                student.Password = studentModel.Password;
+                ctx.SaveChanges();
+            }
         }
 
         public IEnumerable<StudentModel> GetAll()

@@ -108,7 +108,7 @@
             this.btnEdit.IconChar = FontAwesome.Sharp.IconChar.Pen;
             this.btnEdit.IconColor = System.Drawing.Color.White;
             this.btnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEdit.IconSize = 32;
+            this.btnEdit.IconSize = 24;
             this.btnEdit.Location = new System.Drawing.Point(766, 126);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(115, 46);
@@ -129,7 +129,7 @@
             this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.btnSearch.IconColor = System.Drawing.Color.White;
             this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSearch.IconSize = 28;
+            this.btnSearch.IconSize = 24;
             this.btnSearch.Location = new System.Drawing.Point(648, 22);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(103, 34);
@@ -150,7 +150,7 @@
             this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.btnDelete.IconColor = System.Drawing.Color.White;
             this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDelete.IconSize = 32;
+            this.btnDelete.IconSize = 24;
             this.btnDelete.Location = new System.Drawing.Point(766, 187);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(115, 46);
@@ -171,7 +171,7 @@
             this.btnAddNew.IconChar = FontAwesome.Sharp.IconChar.Add;
             this.btnAddNew.IconColor = System.Drawing.Color.White;
             this.btnAddNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddNew.IconSize = 32;
+            this.btnAddNew.IconSize = 24;
             this.btnAddNew.Location = new System.Drawing.Point(766, 65);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(115, 46);
@@ -280,6 +280,7 @@
             // 
             // regist
             // 
+            this.regist.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.regist.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.regist.BorderSize = 0;
             this.regist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
@@ -293,6 +294,7 @@
             // 
             // birth
             // 
+            this.birth.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.birth.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.birth.BorderSize = 0;
             this.birth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
@@ -306,6 +308,7 @@
             // 
             // txtId
             // 
+            this.txtId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtId.BackColor = System.Drawing.SystemColors.Window;
             this.txtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtId.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -329,6 +332,7 @@
             // 
             // txtPhone
             // 
+            this.txtPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPhone.BackColor = System.Drawing.SystemColors.Window;
             this.txtPhone.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtPhone.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -351,6 +355,7 @@
             // 
             // txtAccount
             // 
+            this.txtAccount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAccount.BackColor = System.Drawing.SystemColors.Window;
             this.txtAccount.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtAccount.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -373,6 +378,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPassword.BackColor = System.Drawing.SystemColors.Window;
             this.txtPassword.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtPassword.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -395,6 +401,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEmail.BackColor = System.Drawing.SystemColors.Window;
             this.txtEmail.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtEmail.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -417,6 +424,7 @@
             // 
             // txtName
             // 
+            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtName.BackColor = System.Drawing.SystemColors.Window;
             this.txtName.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtName.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -439,6 +447,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancel.AutoSize = true;
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.btnCancel.FlatAppearance.BorderSize = 0;
@@ -459,6 +468,7 @@
             // 
             // btnSave
             // 
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSave.AutoSize = true;
             this.btnSave.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btnSave.FlatAppearance.BorderSize = 0;
@@ -479,6 +489,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.Thistle;
             this.panel1.Location = new System.Drawing.Point(29, 65);
             this.panel1.Name = "panel1";
@@ -487,6 +498,7 @@
             // 
             // lbRegist
             // 
+            this.lbRegist.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbRegist.AutoSize = true;
             this.lbRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRegist.ForeColor = System.Drawing.Color.MediumSlateBlue;
@@ -498,6 +510,7 @@
             // 
             // lbBirth
             // 
+            this.lbBirth.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbBirth.AutoSize = true;
             this.lbBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBirth.ForeColor = System.Drawing.Color.MediumSlateBlue;
@@ -509,6 +522,7 @@
             // 
             // lbAccount
             // 
+            this.lbAccount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbAccount.AutoSize = true;
             this.lbAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAccount.ForeColor = System.Drawing.Color.MediumSlateBlue;
@@ -520,6 +534,7 @@
             // 
             // lbPhone
             // 
+            this.lbPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbPhone.AutoSize = true;
             this.lbPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPhone.ForeColor = System.Drawing.Color.MediumSlateBlue;
@@ -531,6 +546,7 @@
             // 
             // lbPassword
             // 
+            this.lbPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbPassword.AutoSize = true;
             this.lbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPassword.ForeColor = System.Drawing.Color.MediumSlateBlue;
@@ -542,6 +558,7 @@
             // 
             // lbEmail
             // 
+            this.lbEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbEmail.AutoSize = true;
             this.lbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEmail.ForeColor = System.Drawing.Color.MediumSlateBlue;
@@ -553,6 +570,7 @@
             // 
             // lbName
             // 
+            this.lbName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.MediumSlateBlue;
@@ -564,6 +582,7 @@
             // 
             // lbId
             // 
+            this.lbId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbId.AutoSize = true;
             this.lbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbId.ForeColor = System.Drawing.Color.MediumSlateBlue;

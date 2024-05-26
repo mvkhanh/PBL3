@@ -124,12 +124,6 @@
   <ItemGroup>
     <Compile Include="CBBItem.cs" />
     <Compile Include="CreateDB.cs" />
-    <Compile Include="LessonContentView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LessonContentView.Designer.cs">
-      <DependentUpon>LessonContentView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Presenters\LessonPresenter.cs" />
     <Compile Include="Resources\Components\RJComboBox.cs">
       <SubType>UserControl</SubType>
@@ -228,9 +222,6 @@
     <Compile Include="_Repositories\LessonRepository.cs" />
     <Compile Include="_Repositories\StudentRepository.cs" />
     <Compile Include="_Repositories\TeacherRepository.cs" />
-    <EmbeddedResource Include="LessonContentView.resx">
-      <DependentUpon>LessonContentView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\Lessons\LessonView.resx">
       <DependentUpon>LessonView.cs</DependentUpon>
     </EmbeddedResource>

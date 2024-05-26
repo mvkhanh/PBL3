@@ -28,21 +28,25 @@ namespace PBL._Repositories
 
         public void Delete(int id)
         {
-            var ctx = new PBLContext();
-            var lesson = ctx.Lessons.Find(id);
-            ctx.Lessons.Remove(lesson);
-            ctx.SaveChanges();
+            using (var ctx = new PBLContext())
+            {
+                var lesson = ctx.Lessons.Find(id);
+                ctx.Lessons.Remove(lesson);
+                ctx.SaveChanges();
+            }
         }
 
         public void Edit(LessonModel lessonModel)
         {
-            var ctx = new PBLContext();
-            var lesson = ctx.Lessons.Find(lessonModel.Id);
-            lesson.Name = lessonModel.Name;
-            lesson.PublishDay = lessonModel.PublishDay;
-            lesson.Content = lessonModel.Content;
-            lesson.Id_Teacher = lessonModel.Id_Teacher;
-            ctx.SaveChanges();
+            using (var ctx = new PBLContext())
+            {
+                var lesson = ctx.Lessons.Find(lessonModel.Id);
+                lesson.Name = lessonModel.Name;
+                lesson.PublishDay = lessonModel.PublishDay;
+                if(lessonModel.Content != null) lesson.Content = lessonModel.Content;
+                lesson.Id_Teacher = lessonModel.Id_Teacher;
+                ctx.SaveChanges();
+            }
         }
 
         public IEnumerable<LessonModel> GetAll()

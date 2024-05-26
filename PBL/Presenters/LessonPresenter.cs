@@ -4,6 +4,7 @@ using PBL.Models.Lesson;
 using PBL.Views.Admin.Lessons;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -91,8 +92,7 @@ namespace PBL.Presenters
             model.Id = view.LessonId;
             model.Name = view.LessonName;
             model.PublishDay = view.LessonPublishDay;
-            if (!string.IsNullOrEmpty(view.LessonContentPath))
-                model.Content = ConvertPathToContent(view.LessonContentPath);
+            if (!string.IsNullOrEmpty(view.LessonContentPath)) model.Content = ConvertPathToContent(view.LessonContentPath);
             model.Views = view.LessonViews;
             model.Id_Teacher = view.LessonId_Teacher;
             try
@@ -169,5 +169,75 @@ namespace PBL.Presenters
             view.LessonContentPath = "";
             view.LessonPublishDay = DateTime.Today;
         }
+        //public void chay1()
+        //{
+        //    using (SqlConnection conn = new SqlConnection("Data Source=WINDOWS-10\\NTTKING;Initial Catalog=Test;Integrated Security=True;Encrypt=False"))
+        //    {
+        //        conn.Open();
+
+        //        // Retrieve all columns from the table1 table
+        //        string sql = "SELECT KTXX FROM table1 where KC = 2";
+        //        using (SqlCommand command = new SqlCommand(sql, conn))
+        //        {
+        //            using (SqlDataReader reader = command.ExecuteReader())
+        //            {
+        //                // Iterate through the results
+        //                while (reader.Read())
+        //                {
+        //                    // Get the column index for the PDF data column
+        //                    int pdfColumnIndex = reader.GetOrdinal("KTXX");
+
+        //                    // Retrieve the PDF data and write it to a file
+        //                    byte[] pdfData = (byte[])reader[pdfColumnIndex];
+
+        //                    try
+        //                    {
+        //                        // Tạo thư mục "D:\createPDF" nếu chưa tồn tại
+        //                        string folderPath = @"D:\createPDF";
+        //                        if (!Directory.Exists(folderPath))
+        //                        {
+        //                            Directory.CreateDirectory(folderPath);
+        //                        }
+
+        //                        // Lưu file PDF vào thư mục "D:\createPDF"
+        //                        string filePath = Path.Combine(folderPath, "KLXX1.pdf");
+        //                        File.WriteAllBytes(filePath, pdfData);
+        //                        Console.WriteLine($"PDF saved to: {filePath}");
+        //                        Console.WriteLine("PDF saved successfully.");
+        //                        pdfViewer1.LoadFromFile(filePath);
+        //                        xoaFile();
+        //                    }
+        //                    catch (Exception ex)
+        //                    {
+        //                        Console.WriteLine($"Error saving PDF file: {ex.Message}");
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
+        //public void xoaFile()
+        //{
+        //    string filePath = Path.Combine(@"D:\createPDF", "KLXX.pdf");
+
+        //    try
+        //    {
+        //        // Kiểm tra xem file có tồn tại không
+        //        if (File.Exists(filePath))
+        //        {
+        //            // Xóa file
+        //            File.Delete(filePath);
+        //            Console.WriteLine("File đã được xóa thành công.");
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine("File không tồn tại.");
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine($"Lỗi khi xóa file: {ex.Message}");
+        //    }
+        //}
     }
 }
