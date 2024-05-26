@@ -17,11 +17,9 @@ namespace PBL.Resources.Components
             InitializeComponent();
         }
 
-        private void iconButton4_Click(object sender, EventArgs e)
+        private void iconButton2_Click(object sender, EventArgs e)
         {
             this.Dispose(true);
         }
-
-        
     }
 }
