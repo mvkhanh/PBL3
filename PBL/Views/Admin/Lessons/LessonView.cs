@@ -28,6 +28,7 @@ namespace PBL
             tabControl1.TabPages.Remove(tabPageLessonContent);
             Teachers = new List<CBBItem>();
             cbbTeacherName.DataSource = Teachers;
+            
         }
 
         private void AssociateAndRaiseViewEvents()

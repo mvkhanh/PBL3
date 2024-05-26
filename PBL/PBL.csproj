@@ -125,11 +125,29 @@
     <Compile Include="CBBItem.cs" />
     <Compile Include="CreateDB.cs" />
     <Compile Include="Presenters\LessonPresenter.cs" />
+    <Compile Include="QuestionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionView.Designer.cs">
+      <DependentUpon>QuestionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Components\AddQuestion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\Components\AddQuestion.Designer.cs">
+      <DependentUpon>AddQuestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Components\RJComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Resources\Components\RJDatePicker.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TestThemCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestThemCauHoi.Designer.cs">
+      <DependentUpon>TestThemCauHoi.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\Lessons\LessonView.cs">
       <SubType>Form</SubType>
