@@ -63,6 +63,15 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="Spire.Pdf, Version=8.10.2.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDFViewer.7.10.3\lib\net46\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.PdfViewer.Asp, Version=7.10.3.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDFViewer.7.10.3\lib\net46\Spire.PdfViewer.Asp.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.PdfViewer.Forms, Version=7.10.3.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDFViewer.7.10.3\lib\net46\Spire.PdfViewer.Forms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -116,11 +125,29 @@
     <Compile Include="CBBItem.cs" />
     <Compile Include="CreateDB.cs" />
     <Compile Include="Presenters\LessonPresenter.cs" />
+    <Compile Include="QuestionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionView.Designer.cs">
+      <DependentUpon>QuestionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Components\AddQuestion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\Components\AddQuestion.Designer.cs">
+      <DependentUpon>AddQuestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Components\RJComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Resources\Components\RJDatePicker.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TestThemCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestThemCauHoi.Designer.cs">
+      <DependentUpon>TestThemCauHoi.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\Lessons\LessonView.cs">
       <SubType>Form</SubType>
@@ -213,6 +240,15 @@
     <Compile Include="_Repositories\LessonRepository.cs" />
     <Compile Include="_Repositories\StudentRepository.cs" />
     <Compile Include="_Repositories\TeacherRepository.cs" />
+    <EmbeddedResource Include="QuestionView.resx">
+      <DependentUpon>QuestionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Components\AddQuestion.resx">
+      <DependentUpon>AddQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestThemCauHoi.resx">
+      <DependentUpon>TestThemCauHoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\Lessons\LessonView.resx">
       <DependentUpon>LessonView.cs</DependentUpon>
     </EmbeddedResource>

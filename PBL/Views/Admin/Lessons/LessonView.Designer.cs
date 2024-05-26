@@ -30,8 +30,8 @@ namespace PBL
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageLessonList = new System.Windows.Forms.TabPage();
             this.btnEdit = new FontAwesome.Sharp.IconButton();
@@ -88,7 +88,7 @@ namespace PBL
             this.tabPageLessonList.Location = new System.Drawing.Point(4, 25);
             this.tabPageLessonList.Name = "tabPageLessonList";
             this.tabPageLessonList.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageLessonList.Size = new System.Drawing.Size(898, 438);
+            this.tabPageLessonList.Size = new System.Drawing.Size(861, 438);
             this.tabPageLessonList.TabIndex = 0;
             this.tabPageLessonList.Text = "Lesson List";
             // 
@@ -105,7 +105,7 @@ namespace PBL
             this.btnEdit.IconColor = System.Drawing.Color.White;
             this.btnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEdit.IconSize = 32;
-            this.btnEdit.Location = new System.Drawing.Point(766, 126);
+            this.btnEdit.Location = new System.Drawing.Point(729, 126);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(115, 46);
             this.btnEdit.TabIndex = 5;
@@ -126,7 +126,7 @@ namespace PBL
             this.btnSearch.IconColor = System.Drawing.Color.White;
             this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSearch.IconSize = 28;
-            this.btnSearch.Location = new System.Drawing.Point(648, 22);
+            this.btnSearch.Location = new System.Drawing.Point(611, 22);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(103, 34);
             this.btnSearch.TabIndex = 5;
@@ -147,7 +147,7 @@ namespace PBL
             this.btnDelete.IconColor = System.Drawing.Color.White;
             this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDelete.IconSize = 32;
-            this.btnDelete.Location = new System.Drawing.Point(766, 187);
+            this.btnDelete.Location = new System.Drawing.Point(729, 187);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(115, 46);
             this.btnDelete.TabIndex = 5;
@@ -168,7 +168,7 @@ namespace PBL
             this.btnAddNew.IconColor = System.Drawing.Color.White;
             this.btnAddNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddNew.IconSize = 32;
-            this.btnAddNew.Location = new System.Drawing.Point(766, 65);
+            this.btnAddNew.Location = new System.Drawing.Point(729, 65);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(115, 46);
             this.btnAddNew.TabIndex = 5;
@@ -183,7 +183,7 @@ namespace PBL
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(24, 23);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(609, 33);
+            this.txtSearch.Size = new System.Drawing.Size(572, 33);
             this.txtSearch.TabIndex = 2;
             // 
             // lbSearch
@@ -212,23 +212,23 @@ namespace PBL
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 32;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.LightGray;
             this.dataGridView1.Location = new System.Drawing.Point(24, 65);
@@ -239,7 +239,7 @@ namespace PBL
             this.dataGridView1.RowTemplate.DividerHeight = 1;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(727, 373);
+            this.dataGridView1.Size = new System.Drawing.Size(690, 373);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.ColumnAdded += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dataGridView1_ColumnAdded);
             // 
@@ -319,7 +319,7 @@ namespace PBL
             this.txtName.PasswordChar = false;
             this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtName.PlaceholderText = "";
-            this.txtName.Size = new System.Drawing.Size(406, 31);
+            this.txtName.Size = new System.Drawing.Size(406, 37);
             this.txtName.TabIndex = 19;
             this.txtName.Texts = "";
             this.txtName.UnderlinedStyle = false;
@@ -342,7 +342,7 @@ namespace PBL
             this.txtView.PasswordChar = false;
             this.txtView.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtView.PlaceholderText = "";
-            this.txtView.Size = new System.Drawing.Size(159, 31);
+            this.txtView.Size = new System.Drawing.Size(159, 37);
             this.txtView.TabIndex = 18;
             this.txtView.Texts = "0";
             this.txtView.UnderlinedStyle = false;
@@ -365,7 +365,7 @@ namespace PBL
             this.txtPdf.PasswordChar = false;
             this.txtPdf.PlaceholderColor = System.Drawing.Color.White;
             this.txtPdf.PlaceholderText = "";
-            this.txtPdf.Size = new System.Drawing.Size(200, 31);
+            this.txtPdf.Size = new System.Drawing.Size(200, 37);
             this.txtPdf.TabIndex = 18;
             this.txtPdf.Texts = "0";
             this.txtPdf.UnderlinedStyle = false;
@@ -388,7 +388,7 @@ namespace PBL
             this.txtId.PasswordChar = false;
             this.txtId.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtId.PlaceholderText = "";
-            this.txtId.Size = new System.Drawing.Size(199, 31);
+            this.txtId.Size = new System.Drawing.Size(199, 37);
             this.txtId.TabIndex = 18;
             this.txtId.Texts = "0";
             this.txtId.UnderlinedStyle = false;
