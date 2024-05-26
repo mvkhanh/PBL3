@@ -1,6 +1,6 @@
 ﻿namespace PBL
 {
-    partial class FormPDF
+    partial class LessonContentView
     {
         /// <summary>
         /// Required designer variable.

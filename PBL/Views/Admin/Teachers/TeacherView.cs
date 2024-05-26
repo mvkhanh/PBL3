@@ -82,19 +82,31 @@ namespace PBL.Views
         }
         
         //Properties
-        public int TeacherId { get => Convert.ToInt32(txtId.Texts); set => txtId.Texts = value.ToString(); }
-        public string TeacherName { get => txtName.Texts; set => txtName.Texts = value; }
-        public DateTime TeacherBith { get => birth.Value; set => birth.Value = value; }
-        public string TeacherEmail { get => txtEmail.Texts; set => txtEmail.Texts = value; }
-        public string TeacherPhone { get => txtPhone.Texts; set => txtPhone.Texts = value; }
-        public DateTime TeacherRegistDay { get => regist.Value; set => regist.Value = value; }
-        public string TeacherAccount { get => txtAccount.Texts; set => txtAccount.Texts = value; }
-        public string TeacherPassword { get => txtPassword.Texts; set => txtPassword.Texts = value; }
+        public int TeacherId 
+            { get => Convert.ToInt32(txtId.Texts); set => txtId.Texts = value.ToString(); }
+        public string TeacherName 
+            { get => txtName.Texts; set => txtName.Texts = value; }
+        public DateTime TeacherBith 
+            { get => birth.Value; set => birth.Value = value; }
+        public string TeacherEmail
+            { get => txtEmail.Texts; set => txtEmail.Texts = value; }
+        public string TeacherPhone 
+            { get => txtPhone.Texts; set => txtPhone.Texts = value; }
+        public DateTime TeacherRegistDay 
+            { get => regist.Value; set => regist.Value = value; }
+        public string TeacherAccount 
+            { get => txtAccount.Texts; set => txtAccount.Texts = value; }
+        public string TeacherPassword 
+            { get => txtPassword.Texts; set => txtPassword.Texts = value; }
 
-        public string SearchValue { get => txtSearch.Text; set => txtSearch.Text = value; }
-        public bool IsEdit { get => _IsEdit; set => _IsEdit = value; }
-        public bool IsSuccessful { get => _IsSuccessfull; set => _IsSuccessfull = value; }
-        public string Message { get => _Message; set => _Message = value; }
+        public string SearchValue
+            { get => txtSearch.Text; set => txtSearch.Text = value; }
+        public bool IsEdit
+            { get => _IsEdit; set => _IsEdit = value; }
+        public bool IsSuccessful 
+            { get => _IsSuccessfull; set => _IsSuccessfull = value; }
+        public string Message 
+            { get => _Message; set => _Message = value; }
 
         //Events
         public event EventHandler SearchEvent;
@@ -103,6 +115,11 @@ namespace PBL.Views
         public event EventHandler DeleteEvent;
         public event EventHandler SaveEvent;
         public event EventHandler CancelEvent;
+
+        private void dataGridView1_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
+        {
+            if (e.Column.Name == "Lessons") e.Column.Visible = false;
+        }
 
         //Methods
         public void SetTeacherListBindingSource(BindingSource teacherList)
@@ -119,11 +136,6 @@ namespace PBL.Views
                 instance = new TeacherView();
             }
             return instance;
-        }
-
-        private void dataGridView1_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
-        {
-            if(e.Column.Name == "Lessons") e.Column.Visible = false;
         }
     }
 }

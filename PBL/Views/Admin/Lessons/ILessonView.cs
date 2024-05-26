@@ -14,6 +14,7 @@ namespace PBL.Views.Admin.Lessons
         string LessonName { get; set; }
         DateTime LessonPublishDay { get; set; }
         string LessonContentPath { get; set; }
+        byte[] LessonContent { get; set; }
         int LessonViews { get; set; }
         int LessonId_Teacher {  get; set; }
         List<CBBItem> Teachers { get; set; }
@@ -30,6 +31,7 @@ namespace PBL.Views.Admin.Lessons
         event EventHandler EditEvent;
         event EventHandler SaveEvent;
         event EventHandler CancelEvent;
+        event EventHandler ViewEvent;
 
         //Methods
         void SetLessonListBindingSource(BindingSource lessonList);

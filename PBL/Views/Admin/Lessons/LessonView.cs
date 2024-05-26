@@ -84,15 +84,29 @@ namespace PBL
                 tabControl1.TabPages.Remove(tabPageLessonDetail);
                 tabControl1.TabPages.Add(tabPageLessonList);
             };
+            btnView.Click += delegate
+            {
+                ViewEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tabPageLessonList);
+                tabControl1.TabPages.Add(tabPageLessonContent);
+            };
         }
 
         //Properties
-        public int LessonId { get => Convert.ToInt32(txtId.Texts); set => txtId.Texts = value.ToString(); }
-        public string LessonName { get => txtName.Texts; set => txtName.Texts = value; }
-        public DateTime LessonPublishDay { get => Convert.ToDateTime(regist.Value); set => regist.Value = value; }
-        public string LessonContentPath { get => txtPdf.Texts; set => txtPdf.Texts = value; }
-        public int LessonViews { get => Convert.ToInt32(txtView.Texts); set => txtView.Texts = value.ToString(); }
-        public int LessonId_Teacher {
+        public int LessonId
+            { get => Convert.ToInt32(txtId.Texts); set => txtId.Texts = value.ToString(); }
+        public string LessonName 
+            { get => txtName.Texts; set => txtName.Texts = value; }
+        public DateTime LessonPublishDay 
+            { get => Convert.ToDateTime(regist.Value); set => regist.Value = value; }
+        public string LessonContentPath 
+            { get => txtPdf.Texts; set => txtPdf.Texts = value; }
+        public byte[] LessonContent 
+            { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int LessonViews 
+            { get => Convert.ToInt32(txtView.Texts); set => txtView.Texts = value.ToString(); }
+        public int LessonId_Teacher
+        {
             get => ((CBBItem)cbbTeacherName.SelectedItem).Value;
             set
             {
@@ -102,11 +116,16 @@ namespace PBL
                     }
             }
         }
-        public string SearchValue { get => txtSearch.Text; set => txtSearch.Text = value; }
-        public bool IsEdit { get => _IsEdit; set => _IsEdit = value; }
-        public bool IsSuccessful { get => _IsSuccessful; set => _IsSuccessful = value; }
-        public string Message { get => _Message; set => _Message = value; }
-        public List<CBBItem> Teachers { get; set; }
+        public string SearchValue 
+            { get => txtSearch.Text; set => txtSearch.Text = value; }
+        public bool IsEdit
+            { get => _IsEdit; set => _IsEdit = value; }
+        public bool IsSuccessful 
+            { get => _IsSuccessful; set => _IsSuccessful = value; }
+        public string Message 
+            { get => _Message; set => _Message = value; }
+        public List<CBBItem> Teachers
+            { get; set; }
 
         //Events
         public event EventHandler SearchEvent;
@@ -115,8 +134,23 @@ namespace PBL
         public event EventHandler EditEvent;
         public event EventHandler SaveEvent;
         public event EventHandler CancelEvent;
+        public event EventHandler ViewEvent;
 
+        private void dataGridView1_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
+        {
+            if (e.Column.Name == "Content" || e.Column.Name == "Id_Teacher") e.Column.Visible = false;
+            else if (e.Column.Name == "Teacher") e.Column.HeaderText = "Nguoi dang";
+        }
 
+        private void btnAddPdf_Click(object sender, EventArgs e)
+        {
+            var ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                txtPdf.Texts = ofd.FileName;
+            }
+
+        }
         //Methods
         public void SetLessonListBindingSource(BindingSource lessonList)
         {
@@ -129,22 +163,6 @@ namespace PBL
         {
             if (instance == null || instance.IsDisposed) instance = new LessonView();
             return instance;
-        }
-
-        private void dataGridView1_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
-        {
-            if (e.Column.Name == "Content" || e.Column.Name == "Id_Teacher") e.Column.Visible = false;
-            else if (e.Column.Name == "Teacher") e.Column.HeaderText = "Nguoi dang";
-        }
-
-        private void btnAddPdf_Click(object sender, EventArgs e)
-        {
-            var ofd = new OpenFileDialog();
-            if(ofd.ShowDialog() == DialogResult.OK)
-            {
-                txtPdf.Texts = ofd.FileName;
-            }
-            
         }
     }
 }

@@ -63,14 +63,14 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="Spire.Pdf, Version=8.10.2.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
-      <HintPath>..\packages\Spire.PDFViewer.7.10.3\lib\net46\Spire.Pdf.dll</HintPath>
+    <Reference Include="Spire.Pdf, Version=10.4.2.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDF.10.4.2\lib\net48\Spire.Pdf.dll</HintPath>
     </Reference>
-    <Reference Include="Spire.PdfViewer.Asp, Version=7.10.3.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
-      <HintPath>..\packages\Spire.PDFViewer.7.10.3\lib\net46\Spire.PdfViewer.Asp.dll</HintPath>
+    <Reference Include="Spire.PdfViewer.Asp, Version=7.12.14.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDFViewer.7.12.14\lib\net48\Spire.PdfViewer.Asp.dll</HintPath>
     </Reference>
-    <Reference Include="Spire.PdfViewer.Forms, Version=7.10.3.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
-      <HintPath>..\packages\Spire.PDFViewer.7.10.3\lib\net46\Spire.PdfViewer.Forms.dll</HintPath>
+    <Reference Include="Spire.PdfViewer.Forms, Version=7.12.14.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDFViewer.7.12.14\lib\net48\Spire.PdfViewer.Forms.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -124,11 +124,11 @@
   <ItemGroup>
     <Compile Include="CBBItem.cs" />
     <Compile Include="CreateDB.cs" />
-    <Compile Include="FormPDF.cs">
+    <Compile Include="LessonContentView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPDF.Designer.cs">
-      <DependentUpon>FormPDF.cs</DependentUpon>
+    <Compile Include="LessonContentView.Designer.cs">
+      <DependentUpon>LessonContentView.cs</DependentUpon>
     </Compile>
     <Compile Include="Presenters\LessonPresenter.cs" />
     <Compile Include="Resources\Components\RJComboBox.cs">
@@ -228,8 +228,8 @@
     <Compile Include="_Repositories\LessonRepository.cs" />
     <Compile Include="_Repositories\StudentRepository.cs" />
     <Compile Include="_Repositories\TeacherRepository.cs" />
-    <EmbeddedResource Include="FormPDF.resx">
-      <DependentUpon>FormPDF.cs</DependentUpon>
+    <EmbeddedResource Include="LessonContentView.resx">
+      <DependentUpon>LessonContentView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\Lessons\LessonView.resx">
       <DependentUpon>LessonView.cs</DependentUpon>

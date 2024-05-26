@@ -44,10 +44,32 @@ namespace PBL.Presenters
             studentList = this.repository.GetAll();
             studentsBindingSource.DataSource = studentList;
         }
-
-        private void CancelAction(object sender, EventArgs e)
+        private void SearchStudent(object sender, EventArgs e)
         {
-            CleanViewFields();
+            if (string.IsNullOrWhiteSpace(this.view.SearchValue))
+            {
+                studentList = repository.GetAll();
+            }
+            else studentList = repository.GetByValue(this.view.SearchValue);
+            studentsBindingSource.DataSource = studentList;
+        }
+        private void AddNewStudent(object sender, EventArgs e)
+        {
+            this.view.IsEdit = false;
+        }
+        private void LoadSelectedStudentToEdit(object sender, EventArgs e)
+        {
+            if (studentsBindingSource.Current == null) throw new Exception("An error occured, could not edit student");
+            var student = (StudentModel)studentsBindingSource.Current;
+            view.StudentId = student.Id;
+            view.StudentName = student.Name;
+            view.StudentEmail = student.Email;
+            view.StudentPhone = student.Phone;
+            view.StudentBirth = student.Birth;
+            view.StudentRegistDay = student.RegistDay;
+            view.StudentAccount = student.Account;
+            view.StudentPassword = student.Password;
+            view.IsEdit = true;
         }
 
         private void SaveStudent(object sender, EventArgs e)
@@ -78,20 +100,17 @@ namespace PBL.Presenters
                 LoadAllStudentList();
                 CleanViewFields();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 view.IsSuccessful = false;
                 view.Message = ex.Message;
             }
         }
 
-        private void CleanViewFields()
+        private void CancelAction(object sender, EventArgs e)
         {
-            view.StudentId = 0;
-            view.StudentName = view.StudentPhone = view.StudentEmail = view.StudentAccount = view.StudentPassword = "";
-            view.StudentBirth = view.StudentRegistDay = DateTime.Today;           
+            CleanViewFields();
         }
-
         private void DeleteSelectedStudent(object sender, EventArgs e)
         {
             try
@@ -102,42 +121,18 @@ namespace PBL.Presenters
                 view.Message = "Student deleted successfully";
                 LoadAllStudentList();
             }
-            catch(Exception)
+            catch (Exception)
             {
-                view.IsSuccessful=false;
+                view.IsSuccessful = false;
                 view.Message = "An error occured, could not delete student";
             }
         }
 
-        private void LoadSelectedStudentToEdit(object sender, EventArgs e)
+        private void CleanViewFields()
         {
-            if (studentsBindingSource.Current == null) throw new Exception("An error occured, could not edit student");
-            var student = (StudentModel)studentsBindingSource.Current;
-            view.StudentId = student.Id;
-            view.StudentName = student.Name;
-            view.StudentEmail = student.Email;
-            view.StudentPhone = student.Phone;
-            view.StudentBirth = student.Birth;
-            view.StudentRegistDay = student.RegistDay;
-            view.StudentAccount = student.Account;
-            view.StudentPassword = student.Password;
-            view.IsEdit = true;
+            view.StudentId = 0;
+            view.StudentName = view.StudentPhone = view.StudentEmail = view.StudentAccount = view.StudentPassword = "";
+            view.StudentBirth = view.StudentRegistDay = DateTime.Today;           
         }
-
-        private void AddNewStudent(object sender, EventArgs e)
-        {
-            this.view.IsEdit = false;
-        }
-
-        private void SearchStudent(object sender, EventArgs e)
-        {
-            if(string.IsNullOrWhiteSpace(this.view.SearchValue))
-            {
-                studentList = repository.GetAll();
-            }
-            else studentList = repository.GetByValue(this.view.SearchValue);
-            studentsBindingSource.DataSource = studentList;
-        }
-
     }
 }

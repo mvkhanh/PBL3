@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL
 {
-    public partial class FormPDF : Form
+    public partial class LessonContentView : Form
     {
-        public FormPDF()
+        public LessonContentView()
         {
             InitializeComponent();
         }
