@@ -30,8 +30,8 @@ namespace PBL
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageLessonList = new System.Windows.Forms.TabPage();
             this.btnEdit = new FontAwesome.Sharp.IconButton();
@@ -42,7 +42,7 @@ namespace PBL
             this.lbSearch = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPageLessonDetail = new System.Windows.Forms.TabPage();
-            this.cbbTeacherName = new PBL.Resources.Components.RJComboBox();
+            this.cbbTeacherName = new System.Windows.Forms.ComboBox();
             this.regist = new PBL.Resources.Components.RJDatePicker();
             this.txtName = new PBL.Controller.RoundTextBox();
             this.txtView = new PBL.Controller.RoundTextBox();
@@ -88,7 +88,7 @@ namespace PBL
             this.tabPageLessonList.Location = new System.Drawing.Point(4, 25);
             this.tabPageLessonList.Name = "tabPageLessonList";
             this.tabPageLessonList.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageLessonList.Size = new System.Drawing.Size(898, 438);
+            this.tabPageLessonList.Size = new System.Drawing.Size(861, 438);
             this.tabPageLessonList.TabIndex = 0;
             this.tabPageLessonList.Text = "Lesson List";
             // 
@@ -105,7 +105,7 @@ namespace PBL
             this.btnEdit.IconColor = System.Drawing.Color.White;
             this.btnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEdit.IconSize = 32;
-            this.btnEdit.Location = new System.Drawing.Point(766, 126);
+            this.btnEdit.Location = new System.Drawing.Point(729, 126);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(115, 46);
             this.btnEdit.TabIndex = 5;
@@ -126,7 +126,7 @@ namespace PBL
             this.btnSearch.IconColor = System.Drawing.Color.White;
             this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSearch.IconSize = 28;
-            this.btnSearch.Location = new System.Drawing.Point(648, 22);
+            this.btnSearch.Location = new System.Drawing.Point(611, 22);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(103, 34);
             this.btnSearch.TabIndex = 5;
@@ -147,7 +147,7 @@ namespace PBL
             this.btnDelete.IconColor = System.Drawing.Color.White;
             this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDelete.IconSize = 32;
-            this.btnDelete.Location = new System.Drawing.Point(766, 187);
+            this.btnDelete.Location = new System.Drawing.Point(729, 187);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(115, 46);
             this.btnDelete.TabIndex = 5;
@@ -168,7 +168,7 @@ namespace PBL
             this.btnAddNew.IconColor = System.Drawing.Color.White;
             this.btnAddNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddNew.IconSize = 32;
-            this.btnAddNew.Location = new System.Drawing.Point(766, 65);
+            this.btnAddNew.Location = new System.Drawing.Point(729, 65);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(115, 46);
             this.btnAddNew.TabIndex = 5;
@@ -183,7 +183,7 @@ namespace PBL
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(24, 23);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(609, 33);
+            this.txtSearch.Size = new System.Drawing.Size(572, 33);
             this.txtSearch.TabIndex = 2;
             // 
             // lbSearch
@@ -195,7 +195,7 @@ namespace PBL
             this.lbSearch.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbSearch.Location = new System.Drawing.Point(21, 3);
             this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(115, 16);
+            this.lbSearch.Size = new System.Drawing.Size(114, 16);
             this.lbSearch.TabIndex = 1;
             this.lbSearch.Text = "Search Lesson:";
             // 
@@ -212,23 +212,23 @@ namespace PBL
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 32;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.LightGray;
             this.dataGridView1.Location = new System.Drawing.Point(24, 65);
@@ -239,7 +239,7 @@ namespace PBL
             this.dataGridView1.RowTemplate.DividerHeight = 1;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(727, 373);
+            this.dataGridView1.Size = new System.Drawing.Size(690, 373);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.ColumnAdded += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dataGridView1_ColumnAdded);
             // 
@@ -267,39 +267,28 @@ namespace PBL
             this.tabPageLessonDetail.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageLessonDetail.Size = new System.Drawing.Size(861, 438);
             this.tabPageLessonDetail.TabIndex = 1;
-            this.tabPageLessonDetail.Text = "Lesson detail";
+            this.tabPageLessonDetail.Text = "Lesson Detail";
             this.tabPageLessonDetail.UseVisualStyleBackColor = true;
             // 
             // cbbTeacherName
             // 
-            this.cbbTeacherName.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cbbTeacherName.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbbTeacherName.BorderSize = 1;
-            this.cbbTeacherName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cbbTeacherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cbbTeacherName.ForeColor = System.Drawing.Color.DimGray;
-            this.cbbTeacherName.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbbTeacherName.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbbTeacherName.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbbTeacherName.Location = new System.Drawing.Point(351, 141);
-            this.cbbTeacherName.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbbTeacherName.FormattingEnabled = true;
+            this.cbbTeacherName.Location = new System.Drawing.Point(352, 150);
             this.cbbTeacherName.Name = "cbbTeacherName";
-            this.cbbTeacherName.Padding = new System.Windows.Forms.Padding(1);
-            this.cbbTeacherName.Size = new System.Drawing.Size(406, 30);
-            this.cbbTeacherName.TabIndex = 21;
-            this.cbbTeacherName.Texts = "";
+            this.cbbTeacherName.Size = new System.Drawing.Size(405, 24);
+            this.cbbTeacherName.TabIndex = 3;
             // 
             // regist
             // 
             this.regist.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.regist.BorderSize = 0;
             this.regist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.regist.Location = new System.Drawing.Point(115, 263);
+            this.regist.Location = new System.Drawing.Point(114, 142);
             this.regist.MinimumSize = new System.Drawing.Size(0, 35);
             this.regist.Name = "regist";
             this.regist.Size = new System.Drawing.Size(200, 35);
             this.regist.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.regist.TabIndex = 20;
+            this.regist.TabIndex = 2;
             this.regist.TextColor = System.Drawing.Color.White;
             // 
             // txtName
@@ -319,8 +308,8 @@ namespace PBL
             this.txtName.PasswordChar = false;
             this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtName.PlaceholderText = "";
-            this.txtName.Size = new System.Drawing.Size(406, 31);
-            this.txtName.TabIndex = 19;
+            this.txtName.Size = new System.Drawing.Size(406, 37);
+            this.txtName.TabIndex = 1;
             this.txtName.Texts = "";
             this.txtName.UnderlinedStyle = false;
             // 
@@ -334,7 +323,7 @@ namespace PBL
             this.txtView.Enabled = false;
             this.txtView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtView.Location = new System.Drawing.Point(352, 267);
+            this.txtView.Location = new System.Drawing.Point(116, 236);
             this.txtView.Margin = new System.Windows.Forms.Padding(4);
             this.txtView.Multiline = false;
             this.txtView.Name = "txtView";
@@ -342,8 +331,8 @@ namespace PBL
             this.txtView.PasswordChar = false;
             this.txtView.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtView.PlaceholderText = "";
-            this.txtView.Size = new System.Drawing.Size(159, 31);
-            this.txtView.TabIndex = 18;
+            this.txtView.Size = new System.Drawing.Size(198, 37);
+            this.txtView.TabIndex = 4;
             this.txtView.Texts = "0";
             this.txtView.UnderlinedStyle = false;
             // 
@@ -357,7 +346,7 @@ namespace PBL
             this.txtPdf.Enabled = false;
             this.txtPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPdf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPdf.Location = new System.Drawing.Point(117, 140);
+            this.txtPdf.Location = new System.Drawing.Point(350, 231);
             this.txtPdf.Margin = new System.Windows.Forms.Padding(4);
             this.txtPdf.Multiline = false;
             this.txtPdf.Name = "txtPdf";
@@ -365,9 +354,9 @@ namespace PBL
             this.txtPdf.PasswordChar = false;
             this.txtPdf.PlaceholderColor = System.Drawing.Color.White;
             this.txtPdf.PlaceholderText = "";
-            this.txtPdf.Size = new System.Drawing.Size(200, 31);
-            this.txtPdf.TabIndex = 18;
-            this.txtPdf.Texts = "0";
+            this.txtPdf.Size = new System.Drawing.Size(407, 37);
+            this.txtPdf.TabIndex = 5;
+            this.txtPdf.Texts = "";
             this.txtPdf.UnderlinedStyle = false;
             // 
             // txtId
@@ -388,8 +377,8 @@ namespace PBL
             this.txtId.PasswordChar = false;
             this.txtId.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtId.PlaceholderText = "";
-            this.txtId.Size = new System.Drawing.Size(199, 31);
-            this.txtId.TabIndex = 18;
+            this.txtId.Size = new System.Drawing.Size(199, 37);
+            this.txtId.TabIndex = 0;
             this.txtId.Texts = "0";
             this.txtId.UnderlinedStyle = false;
             // 
@@ -405,10 +394,10 @@ namespace PBL
             this.btnAddPdf.IconColor = System.Drawing.Color.White;
             this.btnAddPdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddPdf.IconSize = 32;
-            this.btnAddPdf.Location = new System.Drawing.Point(117, 172);
+            this.btnAddPdf.Location = new System.Drawing.Point(350, 275);
             this.btnAddPdf.Name = "btnAddPdf";
-            this.btnAddPdf.Size = new System.Drawing.Size(200, 38);
-            this.btnAddPdf.TabIndex = 16;
+            this.btnAddPdf.Size = new System.Drawing.Size(137, 38);
+            this.btnAddPdf.TabIndex = 6;
             this.btnAddPdf.Text = "Add File PDF";
             this.btnAddPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddPdf.UseVisualStyleBackColor = false;
@@ -419,7 +408,7 @@ namespace PBL
             this.lbRegist.AutoSize = true;
             this.lbRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRegist.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.lbRegist.Location = new System.Drawing.Point(114, 246);
+            this.lbRegist.Location = new System.Drawing.Point(113, 125);
             this.lbRegist.Name = "lbRegist";
             this.lbRegist.Size = new System.Drawing.Size(90, 18);
             this.lbRegist.TabIndex = 12;
@@ -430,7 +419,7 @@ namespace PBL
             this.lbBirth.AutoSize = true;
             this.lbBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBirth.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.lbBirth.Location = new System.Drawing.Point(115, 124);
+            this.lbBirth.Location = new System.Drawing.Point(348, 215);
             this.lbBirth.Name = "lbBirth";
             this.lbBirth.Size = new System.Drawing.Size(117, 18);
             this.lbBirth.TabIndex = 8;
@@ -463,7 +452,7 @@ namespace PBL
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.label1.Location = new System.Drawing.Point(349, 246);
+            this.label1.Location = new System.Drawing.Point(113, 215);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 18);
             this.label1.TabIndex = 0;
@@ -495,7 +484,7 @@ namespace PBL
             this.btnCancel.Location = new System.Drawing.Point(483, 352);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(103, 46);
-            this.btnCancel.TabIndex = 5;
+            this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -515,7 +504,7 @@ namespace PBL
             this.btnSave.Location = new System.Drawing.Point(215, 352);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(103, 46);
-            this.btnSave.TabIndex = 5;
+            this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
@@ -564,6 +553,6 @@ namespace PBL
         private Controller.RoundTextBox txtName;
         private Controller.RoundTextBox txtView;
         private Resources.Components.RJDatePicker regist;
-        private Resources.Components.RJComboBox cbbTeacherName;
+        private System.Windows.Forms.ComboBox cbbTeacherName;
     }
 }

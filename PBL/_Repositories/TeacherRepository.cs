@@ -34,7 +34,6 @@ namespace PBL._Repositories
             using (var ctx = new PBLContext())
             {
                 var teacher = ctx.Teachers.Find(id);
-                ctx.Lessons.RemoveRange(teacher.Lessons);
                 ctx.Teachers.Remove(teacher);
                 ctx.SaveChanges();
             }

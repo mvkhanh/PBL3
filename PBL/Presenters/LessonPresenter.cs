@@ -155,6 +155,5 @@ namespace PBL.Presenters
             else lessonList = repository.GetByValue(this.view.SearchValue);
             lessonsBindingSource.DataSource = lessonList;
         }
-
     }
 }

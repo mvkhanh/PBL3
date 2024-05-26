@@ -87,20 +87,20 @@ namespace PBL.Views.Admin.Students
 
         //Properties
         public int StudentId
-            { get => Convert.ToInt32(txtId.Text); set => txtId.Text = value.ToString(); }
+            { get => Convert.ToInt32(txtId.Texts); set => txtId.Texts = value.ToString(); }
 
         public string StudentName 
-            { get => txtName.Text; set => txtName.Text = value; }
+            { get => txtName.Texts; set => txtName.Texts = value; }
         public DateTime StudentBirth 
             { get => birth.Value; set => birth.Value = value; }
         public string StudentEmail 
-            { get => txtEmail.Text; set => txtEmail.Text = value; }
+            { get => txtEmail.Texts; set => txtEmail.Texts = value; }
         public string StudentPhone 
-            { get => txtPhone.Text; set => txtPhone.Text = value; }
+            { get => txtPhone.Texts; set => txtPhone.Texts = value; }
         public DateTime StudentRegistDay 
             { get => regist.Value; set => regist.Value = value; }
-        public string StudentAccount { get => txtAccount.Text; set => txtAccount.Text = value; }
-        public string StudentPassword { get => txtPassword.Text; set => txtPassword.Text = value; }
+        public string StudentAccount { get => txtAccount.Texts; set => txtAccount.Texts = value; }
+        public string StudentPassword { get => txtPassword.Texts; set => txtPassword.Texts = value; }
 
         public string SearchValue 
             { get => txtSearch.Text; set => txtSearch.Text = value; }

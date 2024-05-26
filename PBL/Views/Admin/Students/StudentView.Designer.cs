@@ -40,6 +40,10 @@
             this.lbSearch = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPageStudentDetail = new System.Windows.Forms.TabPage();
+            this.regist = new PBL.Resources.Components.RJDatePicker();
+            this.birth = new PBL.Resources.Components.RJDatePicker();
+            this.txtPassword = new PBL.Controller.RoundTextBox();
+            this.txtAccount = new PBL.Controller.RoundTextBox();
             this.txtEmail = new PBL.Controller.RoundTextBox();
             this.txtName = new PBL.Controller.RoundTextBox();
             this.txtPhone = new PBL.Controller.RoundTextBox();
@@ -55,10 +59,6 @@
             this.lbEmail = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.lbId = new System.Windows.Forms.Label();
-            this.txtAccount = new PBL.Controller.RoundTextBox();
-            this.txtPassword = new PBL.Controller.RoundTextBox();
-            this.birth = new PBL.Resources.Components.RJDatePicker();
-            this.regist = new PBL.Resources.Components.RJDatePicker();
             this.tabControl1.SuspendLayout();
             this.tabPageStudentList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -87,10 +87,10 @@
             this.tabPageStudentList.Controls.Add(this.lbSearch);
             this.tabPageStudentList.Controls.Add(this.dataGridView1);
             this.tabPageStudentList.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.tabPageStudentList.Location = new System.Drawing.Point(4, 29);
+            this.tabPageStudentList.Location = new System.Drawing.Point(4, 25);
             this.tabPageStudentList.Name = "tabPageStudentList";
             this.tabPageStudentList.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStudentList.Size = new System.Drawing.Size(898, 434);
+            this.tabPageStudentList.Size = new System.Drawing.Size(898, 438);
             this.tabPageStudentList.TabIndex = 0;
             this.tabPageStudentList.Text = "Student List";
             this.tabPageStudentList.UseVisualStyleBackColor = true;
@@ -186,8 +186,8 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(24, 23);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(609, 39);
-            this.txtSearch.TabIndex = 2;
+            this.txtSearch.Size = new System.Drawing.Size(609, 33);
+            this.txtSearch.TabIndex = 0;
             // 
             // lbSearch
             // 
@@ -198,7 +198,7 @@
             this.lbSearch.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbSearch.Location = new System.Drawing.Point(21, 3);
             this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(117, 16);
+            this.lbSearch.Size = new System.Drawing.Size(116, 16);
             this.lbSearch.TabIndex = 1;
             this.lbSearch.Text = "Search Student:";
             // 
@@ -242,7 +242,7 @@
             this.dataGridView1.RowTemplate.DividerHeight = 1;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(727, 369);
+            this.dataGridView1.Size = new System.Drawing.Size(727, 373);
             this.dataGridView1.TabIndex = 0;
             // 
             // tabPageStudentDetail
@@ -267,13 +267,83 @@
             this.tabPageStudentDetail.Controls.Add(this.lbName);
             this.tabPageStudentDetail.Controls.Add(this.lbId);
             this.tabPageStudentDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageStudentDetail.Location = new System.Drawing.Point(4, 29);
+            this.tabPageStudentDetail.Location = new System.Drawing.Point(4, 25);
             this.tabPageStudentDetail.Name = "tabPageStudentDetail";
             this.tabPageStudentDetail.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStudentDetail.Size = new System.Drawing.Size(898, 434);
+            this.tabPageStudentDetail.Size = new System.Drawing.Size(898, 438);
             this.tabPageStudentDetail.TabIndex = 1;
-            this.tabPageStudentDetail.Text = "Student detail";
+            this.tabPageStudentDetail.Text = "Student Detail";
             this.tabPageStudentDetail.UseVisualStyleBackColor = true;
+            // 
+            // regist
+            // 
+            this.regist.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.regist.BorderSize = 0;
+            this.regist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.regist.Location = new System.Drawing.Point(543, 297);
+            this.regist.MinimumSize = new System.Drawing.Size(0, 35);
+            this.regist.Name = "regist";
+            this.regist.Size = new System.Drawing.Size(200, 35);
+            this.regist.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.regist.TabIndex = 7;
+            this.regist.TextColor = System.Drawing.Color.White;
+            // 
+            // birth
+            // 
+            this.birth.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.birth.BorderSize = 0;
+            this.birth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.birth.Location = new System.Drawing.Point(307, 297);
+            this.birth.MinimumSize = new System.Drawing.Size(0, 35);
+            this.birth.Name = "birth";
+            this.birth.Size = new System.Drawing.Size(200, 35);
+            this.birth.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.birth.TabIndex = 6;
+            this.birth.TextColor = System.Drawing.Color.White;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPassword.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtPassword.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtPassword.BorderRadius = 0;
+            this.txtPassword.BorderSize = 2;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPassword.Location = new System.Drawing.Point(543, 222);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Multiline = false;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtPassword.PasswordChar = false;
+            this.txtPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtPassword.PlaceholderText = "";
+            this.txtPassword.Size = new System.Drawing.Size(203, 31);
+            this.txtPassword.TabIndex = 5;
+            this.txtPassword.Texts = "";
+            this.txtPassword.UnderlinedStyle = false;
+            // 
+            // txtAccount
+            // 
+            this.txtAccount.BackColor = System.Drawing.SystemColors.Window;
+            this.txtAccount.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtAccount.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtAccount.BorderRadius = 0;
+            this.txtAccount.BorderSize = 2;
+            this.txtAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtAccount.Location = new System.Drawing.Point(307, 222);
+            this.txtAccount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAccount.Multiline = false;
+            this.txtAccount.Name = "txtAccount";
+            this.txtAccount.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtAccount.PasswordChar = false;
+            this.txtAccount.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtAccount.PlaceholderText = "";
+            this.txtAccount.Size = new System.Drawing.Size(200, 31);
+            this.txtAccount.TabIndex = 4;
+            this.txtAccount.Texts = "";
+            this.txtAccount.UnderlinedStyle = false;
             // 
             // txtEmail
             // 
@@ -293,7 +363,7 @@
             this.txtEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtEmail.PlaceholderText = "";
             this.txtEmail.Size = new System.Drawing.Size(282, 31);
-            this.txtEmail.TabIndex = 19;
+            this.txtEmail.TabIndex = 3;
             this.txtEmail.Texts = "";
             this.txtEmail.UnderlinedStyle = false;
             // 
@@ -315,7 +385,7 @@
             this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtName.PlaceholderText = "";
             this.txtName.Size = new System.Drawing.Size(282, 31);
-            this.txtName.TabIndex = 19;
+            this.txtName.TabIndex = 1;
             this.txtName.Texts = "";
             this.txtName.UnderlinedStyle = false;
             // 
@@ -337,7 +407,7 @@
             this.txtPhone.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPhone.PlaceholderText = "";
             this.txtPhone.Size = new System.Drawing.Size(125, 31);
-            this.txtPhone.TabIndex = 19;
+            this.txtPhone.TabIndex = 2;
             this.txtPhone.Texts = "";
             this.txtPhone.UnderlinedStyle = false;
             // 
@@ -348,6 +418,7 @@
             this.txtId.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtId.BorderRadius = 0;
             this.txtId.BorderSize = 2;
+            this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtId.Location = new System.Drawing.Point(307, 65);
@@ -359,8 +430,8 @@
             this.txtId.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtId.PlaceholderText = "";
             this.txtId.Size = new System.Drawing.Size(125, 31);
-            this.txtId.TabIndex = 19;
-            this.txtId.Texts = "";
+            this.txtId.TabIndex = 0;
+            this.txtId.Texts = "0";
             this.txtId.UnderlinedStyle = false;
             // 
             // btnCancel
@@ -378,7 +449,7 @@
             this.btnCancel.Location = new System.Drawing.Point(554, 361);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(103, 46);
-            this.btnCancel.TabIndex = 5;
+            this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -398,7 +469,7 @@
             this.btnSave.Location = new System.Drawing.Point(404, 361);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(103, 46);
-            this.btnSave.TabIndex = 5;
+            this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
@@ -418,7 +489,7 @@
             this.lbRegist.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbRegist.Location = new System.Drawing.Point(540, 280);
             this.lbRegist.Name = "lbRegist";
-            this.lbRegist.Size = new System.Drawing.Size(104, 24);
+            this.lbRegist.Size = new System.Drawing.Size(84, 18);
             this.lbRegist.TabIndex = 12;
             this.lbRegist.Text = "Regist Day:";
             // 
@@ -429,7 +500,7 @@
             this.lbBirth.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbBirth.Location = new System.Drawing.Point(304, 280);
             this.lbBirth.Name = "lbBirth";
-            this.lbBirth.Size = new System.Drawing.Size(151, 24);
+            this.lbBirth.Size = new System.Drawing.Size(119, 18);
             this.lbBirth.TabIndex = 8;
             this.lbBirth.Text = "Student Birthday:";
             // 
@@ -440,7 +511,7 @@
             this.label2.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.label2.Location = new System.Drawing.Point(304, 206);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 24);
+            this.label2.Size = new System.Drawing.Size(120, 18);
             this.label2.TabIndex = 6;
             this.label2.Text = "Student Account:";
             // 
@@ -451,7 +522,7 @@
             this.lbPhone.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbPhone.Location = new System.Drawing.Point(304, 125);
             this.lbPhone.Name = "lbPhone";
-            this.lbPhone.Size = new System.Drawing.Size(140, 24);
+            this.lbPhone.Size = new System.Drawing.Size(109, 18);
             this.lbPhone.TabIndex = 6;
             this.lbPhone.Text = "Student Phone:";
             // 
@@ -462,7 +533,7 @@
             this.label1.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.label1.Location = new System.Drawing.Point(540, 206);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 24);
+            this.label1.Size = new System.Drawing.Size(133, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "Student Password:";
             // 
@@ -473,7 +544,7 @@
             this.lbEmail.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbEmail.Location = new System.Drawing.Point(461, 125);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(131, 24);
+            this.lbEmail.Size = new System.Drawing.Size(103, 18);
             this.lbEmail.TabIndex = 4;
             this.lbEmail.Text = "Student Email:";
             // 
@@ -484,7 +555,7 @@
             this.lbName.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbName.Location = new System.Drawing.Point(461, 49);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(135, 24);
+            this.lbName.Size = new System.Drawing.Size(106, 18);
             this.lbName.TabIndex = 2;
             this.lbName.Text = "Student Name:";
             // 
@@ -495,79 +566,9 @@
             this.lbId.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbId.Location = new System.Drawing.Point(304, 49);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(101, 24);
+            this.lbId.Size = new System.Drawing.Size(80, 18);
             this.lbId.TabIndex = 0;
             this.lbId.Text = "Student ID:";
-            // 
-            // txtAccount
-            // 
-            this.txtAccount.BackColor = System.Drawing.SystemColors.Window;
-            this.txtAccount.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtAccount.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtAccount.BorderRadius = 0;
-            this.txtAccount.BorderSize = 2;
-            this.txtAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtAccount.Location = new System.Drawing.Point(307, 222);
-            this.txtAccount.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAccount.Multiline = false;
-            this.txtAccount.Name = "txtAccount";
-            this.txtAccount.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtAccount.PasswordChar = false;
-            this.txtAccount.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtAccount.PlaceholderText = "";
-            this.txtAccount.Size = new System.Drawing.Size(200, 31);
-            this.txtAccount.TabIndex = 19;
-            this.txtAccount.Texts = "";
-            this.txtAccount.UnderlinedStyle = false;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPassword.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtPassword.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtPassword.BorderRadius = 0;
-            this.txtPassword.BorderSize = 2;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPassword.Location = new System.Drawing.Point(543, 222);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPassword.Multiline = false;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtPassword.PasswordChar = false;
-            this.txtPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtPassword.PlaceholderText = "";
-            this.txtPassword.Size = new System.Drawing.Size(203, 31);
-            this.txtPassword.TabIndex = 19;
-            this.txtPassword.Texts = "";
-            this.txtPassword.UnderlinedStyle = false;
-            // 
-            // birth
-            // 
-            this.birth.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.birth.BorderSize = 0;
-            this.birth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.birth.Location = new System.Drawing.Point(307, 297);
-            this.birth.MinimumSize = new System.Drawing.Size(0, 35);
-            this.birth.Name = "birth";
-            this.birth.Size = new System.Drawing.Size(200, 35);
-            this.birth.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.birth.TabIndex = 20;
-            this.birth.TextColor = System.Drawing.Color.White;
-            // 
-            // regist
-            // 
-            this.regist.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.regist.BorderSize = 0;
-            this.regist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.regist.Location = new System.Drawing.Point(543, 297);
-            this.regist.MinimumSize = new System.Drawing.Size(0, 35);
-            this.regist.Name = "regist";
-            this.regist.Size = new System.Drawing.Size(200, 35);
-            this.regist.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.regist.TabIndex = 21;
-            this.regist.TextColor = System.Drawing.Color.White;
             // 
             // StudentView
             // 
