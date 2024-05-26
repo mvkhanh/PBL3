@@ -45,6 +45,33 @@ namespace PBL.Presenters
             teachersBindingSource.DataSource = teacherList;//Set data source
         }
 
+        private void SearchTeacher(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(this.view.SearchValue)) teacherList = repository.GetAll();
+            else teacherList = repository.GetByValue(this.view.SearchValue);
+            teachersBindingSource.DataSource = teacherList;
+        }
+
+        private void AddNewTeacher(object sender, EventArgs e)
+        {
+            view.IsEdit = false;
+        }
+
+        private void LoadSelectedTeacherToEdit(object sender, EventArgs e)
+        {
+            if (teachersBindingSource.Current == null) throw new Exception("An error occured, could not edit teacher");
+            var teacher = (TeacherModel)teachersBindingSource.Current;
+            view.TeacherId = teacher.Id;
+            view.TeacherName = teacher.Name;
+            view.TeacherEmail = teacher.Email;
+            view.TeacherBith = teacher.Birth;
+            view.TeacherPhone = teacher.Phone;
+            view.TeacherRegistDay = teacher.RegistDay;
+            view.TeacherAccount = teacher.Account;
+            view.TeacherPassword = teacher.Password;
+            view.IsEdit = true;
+        }
+
         private void SaveTeacher(object sender, EventArgs e)
         {
             var model = new TeacherModel();
@@ -81,22 +108,11 @@ namespace PBL.Presenters
             }
         }
 
-        private void CleanViewFields()
-        {
-            view.TeacherId = 0;
-            view.TeacherName = "";
-            view.TeacherEmail = "";
-            view.TeacherBith = DateTime.Today;
-            view.TeacherPhone = "";
-            view.TeacherRegistDay = DateTime.Today;
-            view.TeacherAccount = "";
-            view.TeacherPassword = "";
-        }
-
         private void CancelAction(object sender, EventArgs e)
         {
             CleanViewFields();
         }
+
         private void DeleteSelectedTeacher(object sender, EventArgs e)
         {
             try
@@ -112,33 +128,18 @@ namespace PBL.Presenters
                 view.IsSuccessful = false;
                 view.Message = "An error occured, could not delete teacher";
             }
-}
-
-        private void LoadSelectedTeacherToEdit(object sender, EventArgs e)
-        {
-            if (teachersBindingSource.Current == null) throw new Exception("An error occured, could not edit teacher");
-            var teacher = (TeacherModel)teachersBindingSource.Current;
-            view.TeacherId = teacher.Id;
-            view.TeacherName = teacher.Name;
-            view.TeacherEmail = teacher.Email;
-            view.TeacherBith = teacher.Birth;
-            view.TeacherPhone = teacher.Phone;
-            view.TeacherRegistDay = teacher.RegistDay;
-            view.TeacherAccount = teacher.Account;
-            view.TeacherPassword = teacher.Password;
-            view.IsEdit = true;
         }
 
-        private void AddNewTeacher(object sender, EventArgs e)
+        private void CleanViewFields()
         {
-            view.IsEdit = false;
-        }
-
-        private void SearchTeacher(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(this.view.SearchValue)) teacherList = repository.GetAll();
-            else teacherList = repository.GetByValue(this.view.SearchValue);
-            teachersBindingSource.DataSource = teacherList;
+            view.TeacherId = 0;
+            view.TeacherName = "";
+            view.TeacherEmail = "";
+            view.TeacherBith = DateTime.Today;
+            view.TeacherPhone = "";
+            view.TeacherRegistDay = DateTime.Today;
+            view.TeacherAccount = "";
+            view.TeacherPassword = "";
         }
     }
 }

@@ -24,19 +24,18 @@ namespace PBL.Presenters
             this.mainView.ShowStudentView += ShowStudentsView;
             this.mainView.ShowLessonView += ShowLessonsView;
         }
+        private void ShowTeachersView(object sender, EventArgs e)
+        {
+            ITeacherView view = TeacherView.GetInstance();
+            ITeacherRepository repository = new TeacherRepository();
+            new TeacherPresenter(view, repository);
+        }
 
         private void ShowStudentsView(object sender, EventArgs e)
         {
             IStudentView view = StudentView.GetInstance();
             IStudentRepository repository = new StudentRepository();
             new StudentPresenter(view, repository);
-        }
-
-        private void ShowTeachersView(object sender, EventArgs e)
-        {
-            ITeacherView view = TeacherView.GetInstance();
-            ITeacherRepository repository = new TeacherRepository();
-            new TeacherPresenter(view, repository);
         }
 
         private void ShowLessonsView(object sender, EventArgs e)

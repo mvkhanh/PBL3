@@ -4,6 +4,7 @@ using PBL.Models.Lesson;
 using PBL.Views.Admin.Lessons;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,7 @@ namespace PBL.Presenters
             this.view.DeleteEvent += DeleteSelectedLesson;
             this.view.SaveEvent += SaveLesson;
             this.view.CancelEvent += CancelAction;
+            this.view.ViewEvent += ViewLesson;
             //Set Lessons binding source
             this.view.SetLessonListBindingSource(lessonsBindingSource);
             //Load Lesson list view
@@ -40,9 +42,9 @@ namespace PBL.Presenters
             LoadTeachersCBB();
             //Show view
             this.view.Show();
-
         }
 
+        //Methods
         private void LoadTeachersCBB()
         {
             var teacherList = new TeacherRepository().GetAll();
@@ -52,25 +54,44 @@ namespace PBL.Presenters
             }
         }
 
-        //Methods
         private void LoadAllLessonList()
         {
             lessonList = this.repository.GetAll();
             lessonsBindingSource.DataSource = lessonList;
         }
 
-        private void CancelAction(object sender, EventArgs e)
+        private void SearchLesson(object sender, EventArgs e)
         {
-            CleanViewFields();
+            if (string.IsNullOrWhiteSpace(this.view.SearchValue))
+            {
+                lessonList = repository.GetAll();
+            }
+            else lessonList = repository.GetByValue(this.view.SearchValue);
+            lessonsBindingSource.DataSource = lessonList;
         }
 
+        private void AddNewLesson(object sender, EventArgs e)
+        {
+            this.view.IsEdit = false;
+        }
+        private void LoadSelectedLessonToEdit(object sender, EventArgs e)
+        {
+            if (lessonsBindingSource.Current == null) throw new Exception("An error occured, could not edit Lesson");
+            var lesson = (LessonModel)lessonsBindingSource.Current;
+            view.LessonId = lesson.Id;
+            view.LessonName = lesson.Name;
+            view.LessonViews = lesson.Views;
+            view.LessonPublishDay = lesson.PublishDay;
+            view.LessonId_Teacher = lesson.Id_Teacher;
+            view.IsEdit = true;
+        }
         private void SaveLesson(object sender, EventArgs e)
         {
             var model = new LessonModel();
             model.Id = view.LessonId;
             model.Name = view.LessonName;
             model.PublishDay = view.LessonPublishDay;
-            if(!string.IsNullOrEmpty(view.LessonContentPath))
+            if (!string.IsNullOrEmpty(view.LessonContentPath))
                 model.Content = ConvertPathToContent(view.LessonContentPath);
             model.Views = view.LessonViews;
             model.Id_Teacher = view.LessonId_Teacher;
@@ -97,19 +118,9 @@ namespace PBL.Presenters
                 view.Message = ex.Message;
             }
         }
-
-        private byte[] ConvertPathToContent(string lessonContentPath)
+        private void CancelAction(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
-        }
-
-        private void CleanViewFields()
-        {
-            view.LessonId = 0;
-            view.LessonName = "";
-            view.LessonViews = 0;
-            view.LessonContentPath = "";
-            view.LessonPublishDay = DateTime.Today;
+            CleanViewFields();
         }
 
         private void DeleteSelectedLesson(object sender, EventArgs e)
@@ -121,40 +132,42 @@ namespace PBL.Presenters
                 view.IsSuccessful = true;
                 view.Message = "Lesson deleted successfully";
                 LoadAllLessonList();
-        }
+            }
             catch (Exception)
             {
                 view.IsSuccessful = false;
                 view.Message = "An error occured, could not delete Lesson";
             }
-}
-
-        private void LoadSelectedLessonToEdit(object sender, EventArgs e)
+        }
+        private void ViewLesson(object sender, EventArgs e)
         {
-            if (lessonsBindingSource.Current == null) throw new Exception("An error occured, could not edit Lesson");
             var lesson = (LessonModel)lessonsBindingSource.Current;
-            view.LessonId = lesson.Id;
-            view.LessonName = lesson.Name;
-            view.LessonViews = lesson.Views;
-            view.LessonPublishDay = lesson.PublishDay;
-            view.LessonId_Teacher = lesson.Id_Teacher;
-            view.IsEdit = true;
+            view.LessonContent = lesson.Content;
         }
-
-        private void AddNewLesson(object sender, EventArgs e)
+       
+        private byte[] ConvertPathToContent(string lessonContentPath)
         {
-            this.view.IsEdit = false;
-        }
-
-        private void SearchLesson(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(this.view.SearchValue))
+            byte[] buffer;
+            using(FileStream fileStream = new FileStream(lessonContentPath, FileMode.Open, FileAccess.Read))
             {
-                lessonList = repository.GetAll();
+                int length = (int)fileStream.Length;  // get file length
+                buffer = new byte[length];            // create buffer
+                int count;                            // actual number of bytes read
+                int sum = 0;                          // total number of bytes read
+                // read until Read method returns 0 (end of the stream has been reached)
+                while ((count = fileStream.Read(buffer, sum, length - sum)) > 0)
+                    sum += count;  // sum is a buffer offset for next reading
             }
-            else lessonList = repository.GetByValue(this.view.SearchValue);
-            lessonsBindingSource.DataSource = lessonList;
+            return buffer;
         }
 
+        private void CleanViewFields()
+        {
+            view.LessonId = 0;
+            view.LessonName = "";
+            view.LessonViews = 0;
+            view.LessonContentPath = "";
+            view.LessonPublishDay = DateTime.Today;
+        }
     }
 }
