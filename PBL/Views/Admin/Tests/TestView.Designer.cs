@@ -39,18 +39,18 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lbSearch = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPageTestDetail = new System.Windows.Forms.TabPage();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.txtIntroduction = new PBL.Controller.RoundTextBox();
+            this.txtDescription = new PBL.Controller.RoundTextBox();
             this.regist = new PBL.Resources.Components.RJDatePicker();
             this.txtName = new PBL.Controller.RoundTextBox();
             this.txtPaticipant = new PBL.Controller.RoundTextBox();
             this.txtId = new PBL.Controller.RoundTextBox();
             this.lbBirth = new System.Windows.Forms.Label();
             this.lbRegist = new System.Windows.Forms.Label();
-            this.lbIntroduction = new System.Windows.Forms.Label();
-            this.lbName = new System.Windows.Forms.Label();
             this.lbParticipant = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
+            this.lbIntroduction = new System.Windows.Forms.Label();
             this.lbId = new System.Windows.Forms.Label();
             this.btnAddQuestion = new FontAwesome.Sharp.IconButton();
             this.btnCancel = new FontAwesome.Sharp.IconButton();
@@ -252,29 +252,29 @@
             // 
             // tabPageTestDetail
             // 
-            this.tabPage2.Controls.Add(this.checkedListBox1);
-            this.tabPage2.Controls.Add(this.txtIntroduction);
-            this.tabPage2.Controls.Add(this.regist);
-            this.tabPage2.Controls.Add(this.txtName);
-            this.tabPage2.Controls.Add(this.txtPaticipant);
-            this.tabPage2.Controls.Add(this.txtId);
-            this.tabPage2.Controls.Add(this.lbBirth);
-            this.tabPage2.Controls.Add(this.lbRegist);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.lbName);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.lbId);
-            this.tabPage2.Controls.Add(this.btnAddQuestion);
-            this.tabPage2.Controls.Add(this.btnCancel);
-            this.tabPage2.Controls.Add(this.btnSave);
-            this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(961, 444);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Test detail";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPageTestDetail.Controls.Add(this.checkedListBox1);
+            this.tabPageTestDetail.Controls.Add(this.txtDescription);
+            this.tabPageTestDetail.Controls.Add(this.regist);
+            this.tabPageTestDetail.Controls.Add(this.txtName);
+            this.tabPageTestDetail.Controls.Add(this.txtPaticipant);
+            this.tabPageTestDetail.Controls.Add(this.txtId);
+            this.tabPageTestDetail.Controls.Add(this.lbBirth);
+            this.tabPageTestDetail.Controls.Add(this.lbRegist);
+            this.tabPageTestDetail.Controls.Add(this.lbParticipant);
+            this.tabPageTestDetail.Controls.Add(this.lbName);
+            this.tabPageTestDetail.Controls.Add(this.lbIntroduction);
+            this.tabPageTestDetail.Controls.Add(this.lbId);
+            this.tabPageTestDetail.Controls.Add(this.btnAddQuestion);
+            this.tabPageTestDetail.Controls.Add(this.btnCancel);
+            this.tabPageTestDetail.Controls.Add(this.btnSave);
+            this.tabPageTestDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageTestDetail.Location = new System.Drawing.Point(4, 25);
+            this.tabPageTestDetail.Name = "tabPageTestDetail";
+            this.tabPageTestDetail.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageTestDetail.Size = new System.Drawing.Size(961, 448);
+            this.tabPageTestDetail.TabIndex = 1;
+            this.tabPageTestDetail.Text = "Test detail";
+            this.tabPageTestDetail.UseVisualStyleBackColor = true;
             // 
             // checkedListBox1
             // 
@@ -291,30 +291,30 @@
             "Part 7"});
             this.checkedListBox1.Location = new System.Drawing.Point(764, 43);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(91, 180);
+            this.checkedListBox1.Size = new System.Drawing.Size(91, 166);
             this.checkedListBox1.TabIndex = 26;
             // 
-            // txtIntroduction
+            // txtDescription
             // 
-            this.txtIntroduction.BackColor = System.Drawing.SystemColors.Window;
-            this.txtIntroduction.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtIntroduction.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtIntroduction.BorderRadius = 0;
-            this.txtIntroduction.BorderSize = 2;
-            this.txtIntroduction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIntroduction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtIntroduction.Location = new System.Drawing.Point(312, 121);
-            this.txtIntroduction.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIntroduction.Multiline = true;
-            this.txtIntroduction.Name = "txtIntroduction";
-            this.txtIntroduction.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtIntroduction.PasswordChar = false;
-            this.txtIntroduction.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtIntroduction.PlaceholderText = "";
-            this.txtIntroduction.Size = new System.Drawing.Size(429, 210);
-            this.txtIntroduction.TabIndex = 25;
-            this.txtIntroduction.Texts = "";
-            this.txtIntroduction.UnderlinedStyle = false;
+            this.txtDescription.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDescription.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtDescription.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtDescription.BorderRadius = 0;
+            this.txtDescription.BorderSize = 2;
+            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDescription.Location = new System.Drawing.Point(312, 121);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtDescription.PasswordChar = false;
+            this.txtDescription.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtDescription.PlaceholderText = "";
+            this.txtDescription.Size = new System.Drawing.Size(429, 210);
+            this.txtDescription.TabIndex = 25;
+            this.txtDescription.Texts = "";
+            this.txtDescription.UnderlinedStyle = false;
             // 
             // regist
             // 
@@ -346,7 +346,7 @@
             this.txtName.PasswordChar = false;
             this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtName.PlaceholderText = "";
-            this.txtName.Size = new System.Drawing.Size(429, 35);
+            this.txtName.Size = new System.Drawing.Size(429, 31);
             this.txtName.TabIndex = 23;
             this.txtName.Texts = "";
             this.txtName.UnderlinedStyle = false;
@@ -368,7 +368,7 @@
             this.txtPaticipant.PasswordChar = false;
             this.txtPaticipant.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPaticipant.PlaceholderText = "";
-            this.txtPaticipant.Size = new System.Drawing.Size(221, 35);
+            this.txtPaticipant.Size = new System.Drawing.Size(221, 31);
             this.txtPaticipant.TabIndex = 23;
             this.txtPaticipant.Texts = "";
             this.txtPaticipant.UnderlinedStyle = false;
@@ -390,7 +390,7 @@
             this.txtId.PasswordChar = false;
             this.txtId.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtId.PlaceholderText = "";
-            this.txtId.Size = new System.Drawing.Size(221, 35);
+            this.txtId.Size = new System.Drawing.Size(221, 31);
             this.txtId.TabIndex = 23;
             this.txtId.Texts = "";
             this.txtId.UnderlinedStyle = false;
@@ -405,7 +405,7 @@
             this.lbBirth.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbBirth.Location = new System.Drawing.Point(760, 261);
             this.lbBirth.Name = "lbBirth";
-            this.lbBirth.Size = new System.Drawing.Size(140, 24);
+            this.lbBirth.Size = new System.Drawing.Size(109, 18);
             this.lbBirth.TabIndex = 21;
             this.lbBirth.Text = "Add Questions:";
             // 
@@ -423,19 +423,19 @@
             this.lbRegist.TabIndex = 12;
             this.lbRegist.Text = "Regist Day:";
             // 
-            // lbIntroduction
+            // lbParticipant
             // 
-            this.lbIntroduction.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lbParticipant.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.label2.Location = new System.Drawing.Point(309, 104);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 24);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Test Introduction:";
+            this.lbParticipant.AutoSize = true;
+            this.lbParticipant.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbParticipant.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.lbParticipant.Location = new System.Drawing.Point(309, 104);
+            this.lbParticipant.Name = "lbParticipant";
+            this.lbParticipant.Size = new System.Drawing.Size(122, 18);
+            this.lbParticipant.TabIndex = 2;
+            this.lbParticipant.Text = "Test Introduction:";
             // 
             // lbName
             // 
@@ -451,19 +451,19 @@
             this.lbName.TabIndex = 2;
             this.lbName.Text = "Test Name:";
             // 
-            // lbParticipant
+            // lbIntroduction
             // 
-            this.lbParticipant.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lbIntroduction.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.label1.Location = new System.Drawing.Point(43, 193);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Number Of Participants:";
+            this.lbIntroduction.AutoSize = true;
+            this.lbIntroduction.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIntroduction.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.lbIntroduction.Location = new System.Drawing.Point(43, 193);
+            this.lbIntroduction.Name = "lbIntroduction";
+            this.lbIntroduction.Size = new System.Drawing.Size(166, 18);
+            this.lbIntroduction.TabIndex = 0;
+            this.lbIntroduction.Text = "Number Of Participants:";
             // 
             // lbId
             // 
@@ -496,12 +496,11 @@
             this.btnAddQuestion.IconSize = 32;
             this.btnAddQuestion.Location = new System.Drawing.Point(761, 282);
             this.btnAddQuestion.Name = "btnAddQuestion";
-            this.btnAddQuestion.Size = new System.Drawing.Size(168, 46);
+            this.btnAddQuestion.Size = new System.Drawing.Size(168, 50);
             this.btnAddQuestion.TabIndex = 22;
             this.btnAddQuestion.Text = "Add Questions";
             this.btnAddQuestion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddQuestion.UseVisualStyleBackColor = false;
-            this.btnAddQuestion.Click += new System.EventHandler(this.btnAddQuestion_Click);
             // 
             // btnCancel
             // 
@@ -520,7 +519,7 @@
             this.btnCancel.IconSize = 32;
             this.btnCancel.Location = new System.Drawing.Point(495, 361);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(103, 46);
+            this.btnCancel.Size = new System.Drawing.Size(103, 50);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -543,7 +542,7 @@
             this.btnSave.IconSize = 32;
             this.btnSave.Location = new System.Drawing.Point(312, 361);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(103, 46);
+            this.btnSave.Size = new System.Drawing.Size(103, 50);
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -554,7 +553,7 @@
             this.tabPage3.Controls.Add(this.flowLayoutPanel1);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(192, 71);
+            this.tabPage3.Size = new System.Drawing.Size(961, 448);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Add Question";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -567,7 +566,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(192, 71);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(961, 448);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -581,14 +580,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(887, 71);
             this.panel1.TabIndex = 62;
-            // 
-            // addQuestion1
-            // 
-            this.addQuestion1.Location = new System.Drawing.Point(10, 10);
-            this.addQuestion1.Margin = new System.Windows.Forms.Padding(10);
-            this.addQuestion1.Name = "addQuestion1";
-            this.addQuestion1.Size = new System.Drawing.Size(913, 384);
-            this.addQuestion1.TabIndex = 0;
             // 
             // btnAdd
             // 
@@ -613,7 +604,6 @@
             this.btnAdd.Text = "Add ";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // BtnSave1
             // 
@@ -638,7 +628,6 @@
             this.BtnSave1.Text = "Save";
             this.BtnSave1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnSave1.UseVisualStyleBackColor = false;
-            this.BtnSave1.Click += new System.EventHandler(this.BtnSave1_Click);
             // 
             // btnCanCel1
             // 
@@ -703,8 +692,8 @@
         private FontAwesome.Sharp.IconButton btnSearch;
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnCancel;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbParticipant;
+        private System.Windows.Forms.Label lbIntroduction;
         private System.Windows.Forms.Label lbBirth;
         private FontAwesome.Sharp.IconButton btnAddQuestion;
         private Controller.RoundTextBox txtId;
