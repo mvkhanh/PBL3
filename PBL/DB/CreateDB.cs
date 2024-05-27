@@ -15,8 +15,8 @@ namespace PBL
             //Teacher
             context.Teachers.AddRange(new TeacherModel[]
             {
-                new TeacherModel {Id = 1, Name = "Mai Van Khanh", Birth = Convert.ToDateTime("10/02/2004").Date, Email = "mvkhanh100204@gmail.com", RegistDay = DateTime.Now.Date, Phone = "0364441833", Account = "maivankhanh", Password = "Mvkhanh181@"},
-                new TeacherModel {Id = 2, Name = "Nguyen Viet Huy", Birth = Convert.ToDateTime("10/02/2004").Date, Email = "nguyenvietheo2004@gmail.com", RegistDay = DateTime.Now.Date, Phone = "1234567890", Account = "nguyenviethuy", Password = "Nvhuy2004@"}
+                new TeacherModel {Id = 0, Name = "Mai Van Khanh", Birth = Convert.ToDateTime("10/02/2004").Date, Email = "mvkhanh100204@gmail.com", RegistDay = DateTime.Now.Date, Phone = "0364441833", Account = "maivankhanh", Password = "Mvkhanh181@"},
+                new TeacherModel {Id = 1, Name = "Nguyen Viet Huy", Birth = Convert.ToDateTime("10/02/2004").Date, Email = "nguyenvietheo2004@gmail.com", RegistDay = DateTime.Now.Date, Phone = "1234567890", Account = "nguyenviethuy", Password = "Nvhuy2004@"}
             });
             //Student
             context.Students.AddRange(new StudentModel[]

@@ -107,15 +107,14 @@ namespace PBL
         { get => Convert.ToInt32(txtPaticipant.Texts); set => txtPaticipant.Texts = value.ToString(); }
         public int TestId_Teacher
         {
-            //get => ((CBBItem)cbbTeacherName.SelectedItem).Value;
-            //set
-            //{
-            //    foreach (var item in cbbTeacherName.Items) if (((CBBItem)item).Value == value)
-            //        {
-            //            cbbTeacherName.SelectedItem = item;
-            //        }
-            //}
-            get; set;
+            get => ((CBBItem)cbbTeacherName.SelectedItem).Value;
+            set
+            {
+                foreach (var item in cbbTeacherName.Items) if (((CBBItem)item).Value == value)
+                    {
+                        cbbTeacherName.SelectedItem = item;
+                    }
+            }
         }
         public string SearchValue
         { get => txtSearch.Text; set => txtSearch.Text = value; }
