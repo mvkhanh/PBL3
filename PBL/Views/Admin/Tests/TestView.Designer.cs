@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPageTestList = new System.Windows.Forms.TabPage();
             this.btnEdit = new FontAwesome.Sharp.IconButton();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.btnDelete = new FontAwesome.Sharp.IconButton();
@@ -48,9 +48,9 @@
             this.txtId = new PBL.Controller.RoundTextBox();
             this.lbBirth = new System.Windows.Forms.Label();
             this.lbRegist = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbIntroduction = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbParticipant = new System.Windows.Forms.Label();
             this.lbId = new System.Windows.Forms.Label();
             this.btnAddQuestion = new FontAwesome.Sharp.IconButton();
             this.btnCancel = new FontAwesome.Sharp.IconButton();
@@ -62,9 +62,9 @@
             this.BtnSave1 = new FontAwesome.Sharp.IconButton();
             this.btnCanCel1 = new FontAwesome.Sharp.IconButton();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPageTestList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.tabPageTestDetail.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -72,8 +72,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPageTestList);
+            this.tabControl1.Controls.Add(this.tabPageTestDetail);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -83,22 +83,22 @@
             this.tabControl1.Size = new System.Drawing.Size(969, 477);
             this.tabControl1.TabIndex = 2;
             // 
-            // tabPage1
+            // tabPageTestList
             // 
-            this.tabPage1.Controls.Add(this.btnEdit);
-            this.tabPage1.Controls.Add(this.btnSearch);
-            this.tabPage1.Controls.Add(this.btnDelete);
-            this.tabPage1.Controls.Add(this.btnAddNew);
-            this.tabPage1.Controls.Add(this.txtSearch);
-            this.tabPage1.Controls.Add(this.lbSearch);
-            this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(961, 444);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Test List";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPageTestList.Controls.Add(this.btnEdit);
+            this.tabPageTestList.Controls.Add(this.btnSearch);
+            this.tabPageTestList.Controls.Add(this.btnDelete);
+            this.tabPageTestList.Controls.Add(this.btnAddNew);
+            this.tabPageTestList.Controls.Add(this.txtSearch);
+            this.tabPageTestList.Controls.Add(this.lbSearch);
+            this.tabPageTestList.Controls.Add(this.dataGridView1);
+            this.tabPageTestList.Location = new System.Drawing.Point(4, 25);
+            this.tabPageTestList.Name = "tabPageTestList";
+            this.tabPageTestList.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageTestList.Size = new System.Drawing.Size(961, 448);
+            this.tabPageTestList.TabIndex = 0;
+            this.tabPageTestList.Text = "Test List";
+            this.tabPageTestList.UseVisualStyleBackColor = true;
             // 
             // btnEdit
             // 
@@ -191,7 +191,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(24, 23);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(672, 39);
+            this.txtSearch.Size = new System.Drawing.Size(672, 33);
             this.txtSearch.TabIndex = 2;
             // 
             // lbSearch
@@ -203,7 +203,7 @@
             this.lbSearch.ForeColor = System.Drawing.Color.Black;
             this.lbSearch.Location = new System.Drawing.Point(21, 3);
             this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(117, 20);
+            this.lbSearch.Size = new System.Drawing.Size(95, 16);
             this.lbSearch.TabIndex = 1;
             this.lbSearch.Text = "Search Test:";
             // 
@@ -246,10 +246,11 @@
             this.dataGridView1.RowTemplate.DividerHeight = 1;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(790, 379);
+            this.dataGridView1.Size = new System.Drawing.Size(790, 383);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.ColumnAdded += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dataGridView1_ColumnAdded);
             // 
-            // tabPage2
+            // tabPageTestDetail
             // 
             this.tabPage2.Controls.Add(this.checkedListBox1);
             this.tabPage2.Controls.Add(this.txtIntroduction);
@@ -418,13 +419,13 @@
             this.lbRegist.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbRegist.Location = new System.Drawing.Point(43, 100);
             this.lbRegist.Name = "lbRegist";
-            this.lbRegist.Size = new System.Drawing.Size(104, 24);
+            this.lbRegist.Size = new System.Drawing.Size(84, 18);
             this.lbRegist.TabIndex = 12;
             this.lbRegist.Text = "Regist Day:";
             // 
-            // label2
+            // lbIntroduction
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lbIntroduction.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
@@ -446,13 +447,13 @@
             this.lbName.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbName.Location = new System.Drawing.Point(309, 27);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(107, 24);
+            this.lbName.Size = new System.Drawing.Size(85, 18);
             this.lbName.TabIndex = 2;
             this.lbName.Text = "Test Name:";
             // 
-            // label1
+            // lbParticipant
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lbParticipant.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
@@ -474,7 +475,7 @@
             this.lbId.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbId.Location = new System.Drawing.Point(43, 27);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(73, 24);
+            this.lbId.Size = new System.Drawing.Size(59, 18);
             this.lbId.TabIndex = 0;
             this.lbId.Text = "Test ID:";
             // 
@@ -551,9 +552,9 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.flowLayoutPanel1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(961, 444);
+            this.tabPage3.Size = new System.Drawing.Size(192, 71);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Add Question";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -566,7 +567,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(961, 444);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(192, 71);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -580,6 +581,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(887, 71);
             this.panel1.TabIndex = 62;
+            // 
+            // addQuestion1
+            // 
+            this.addQuestion1.Location = new System.Drawing.Point(10, 10);
+            this.addQuestion1.Margin = new System.Windows.Forms.Padding(10);
+            this.addQuestion1.Name = "addQuestion1";
+            this.addQuestion1.Size = new System.Drawing.Size(913, 384);
+            this.addQuestion1.TabIndex = 0;
             // 
             // btnAdd
             // 
@@ -665,11 +674,11 @@
             this.Name = "TestView";
             this.Text = "Teachers";
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabPageTestList.ResumeLayout(false);
+            this.tabPageTestList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tabPageTestDetail.ResumeLayout(false);
+            this.tabPageTestDetail.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -680,9 +689,9 @@
 
         #endregion
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPageTestList;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPageTestDetail;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lbSearch;
         private System.Windows.Forms.Label lbName;
@@ -702,7 +711,7 @@
         private Controller.RoundTextBox txtName;
         private Controller.RoundTextBox txtPaticipant;
         private Resources.Components.RJDatePicker regist;
-        private Controller.RoundTextBox txtIntroduction;
+        private Controller.RoundTextBox txtDescription;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;

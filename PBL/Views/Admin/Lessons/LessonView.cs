@@ -107,7 +107,7 @@ namespace PBL
         public string LessonName 
             { get => txtName.Texts; set => txtName.Texts = value; }
         public DateTime LessonPublishDay 
-            { get => Convert.ToDateTime(regist.Value); set => regist.Value = value; }
+            { get => regist.Value.Date; set => regist.Value = value.Date; }
         public string LessonContentPath 
             { get => txtPdf.Texts; set => txtPdf.Texts = value; }
         public byte[] LessonContent 
@@ -148,7 +148,6 @@ namespace PBL
         private void dataGridView1_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
         {
             if (e.Column.Name == "Content" || e.Column.Name == "Id_Teacher") e.Column.Visible = false;
-            else if (e.Column.Name == "Teacher") e.Column.HeaderText = "Nguoi dang";
         }
 
         private void DisplayContent()

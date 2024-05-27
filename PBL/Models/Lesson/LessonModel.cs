@@ -26,7 +26,9 @@ namespace PBL.Models
         public override DateTime PublishDay { get; set; }
 
         public int Id_Teacher { get; set; }
+
         [ForeignKey("Id_Teacher")]
+        [DisplayName("Nguoi dang")]
         public virtual TeacherModel Teacher { get; set; }
 
         public byte[] Content { get; set; }

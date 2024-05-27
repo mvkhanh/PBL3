@@ -42,7 +42,6 @@ namespace PBL._Repositories
             {
                 var lesson = ctx.Lessons.Find(lessonModel.Id);
                 lesson.Name = lessonModel.Name;
-                lesson.PublishDay = lessonModel.PublishDay;
                 if(lessonModel.Content != null) lesson.Content = lessonModel.Content;
                 lesson.Id_Teacher = lessonModel.Id_Teacher;
                 ctx.SaveChanges();

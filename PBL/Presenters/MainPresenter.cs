@@ -11,6 +11,8 @@ using PBL.Views.Student;
 using PBL.Views.Admin.Students;
 using PBL.Views.Admin.Lessons;
 using PBL.Models.Lesson;
+using PBL.Views.Admin.Tests;
+using PBL.Models.Test;
 
 namespace PBL.Presenters
 {
@@ -23,7 +25,9 @@ namespace PBL.Presenters
             this.mainView.ShowTeacherView += ShowTeachersView;
             this.mainView.ShowStudentView += ShowStudentsView;
             this.mainView.ShowLessonView += ShowLessonsView;
+            this.mainView.ShowTestView += ShowTestsView;
         }
+
         private void ShowTeachersView(object sender, EventArgs e)
         {
             ITeacherView view = TeacherView.GetInstance();
@@ -43,6 +47,13 @@ namespace PBL.Presenters
             ILessonView view = LessonView.GetInstance();
             ILessonRepository repository = new LessonRepository();
             new LessonPresenter(view, repository);
+        }
+
+        private void ShowTestsView(object sender, EventArgs e)
+        {
+            ITestView view = TestView.GetInstance();
+            ITestRepository repository = new TestRepository();
+            new TestPresenter(view, repository);
         }
     }
 }
