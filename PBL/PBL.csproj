@@ -237,6 +237,7 @@
     <Compile Include="_Repositories\LessonRepository.cs" />
     <Compile Include="_Repositories\StudentRepository.cs" />
     <Compile Include="_Repositories\TeacherRepository.cs" />
+    <Compile Include="_Repositories\TestRepository.cs" />
     <EmbeddedResource Include="Resources\Components\AddQuestion.resx">
       <DependentUpon>AddQuestion.cs</DependentUpon>
     </EmbeddedResource>
