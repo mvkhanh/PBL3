@@ -284,7 +284,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Profile.png" />
-    <None Include="Resources\Logo.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Eye.png" />
@@ -302,6 +301,7 @@
     <None Include="Resources\User%282%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\TOEIC Master.png" />
     <None Include="Resources\calendarDark.png" />
     <None Include="Resources\calendarWhite.png" />
     <Content Include="Resources\copy %281%29.png" />
