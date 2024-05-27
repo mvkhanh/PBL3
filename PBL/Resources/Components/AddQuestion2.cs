@@ -1,16 +1,17 @@
 ﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace PBL.Resources.Components
 {
-    public partial class AddQuestion : UserControl
+    public partial class AddQuestion2 : UserControl
     {
         public string AnswerA
         {
@@ -32,10 +33,10 @@ namespace PBL.Resources.Components
             get => txtD.Texts;
             set => txtD.Texts = value;
         }
-        public string Content
+        public Image Content
         {
-            get => txtContent.Texts;
-            set => txtContent.Texts = value;
+            get => ImageOK.Image;
+            set => ImageOK.Image = value;
         }
         public string ID
         {
@@ -43,7 +44,7 @@ namespace PBL.Resources.Components
             set => txtNumber.Texts = value;
         }
 
-        public AddQuestion()
+        public AddQuestion2()
         {
             InitializeComponent();
         }
@@ -52,5 +53,19 @@ namespace PBL.Resources.Components
         {
             this.Dispose();
         }
+
+        private void btnImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp"; // Optional: Filter to show only image files
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Load and display the image in the PictureBox
+                ImageOK.Image = Image.FromFile(openFileDialog.FileName);
+                ImageOK.SizeMode = PictureBoxSizeMode.CenterImage;
+            }
+        }
+
     }
 }

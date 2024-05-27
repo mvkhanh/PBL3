@@ -40,32 +40,34 @@
             this.lbSearch = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.txtIntroduction = new PBL.Controller.RoundTextBox();
+            this.regist = new PBL.Resources.Components.RJDatePicker();
+            this.txtName = new PBL.Controller.RoundTextBox();
+            this.txtPaticipant = new PBL.Controller.RoundTextBox();
+            this.txtId = new PBL.Controller.RoundTextBox();
             this.lbBirth = new System.Windows.Forms.Label();
             this.lbRegist = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbId = new System.Windows.Forms.Label();
-            this.iconButtonAddPdf = new FontAwesome.Sharp.IconButton();
+            this.btnAddQuestion = new FontAwesome.Sharp.IconButton();
             this.btnCancel = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
-            this.btnSave1 = new FontAwesome.Sharp.IconButton();
-            this.btnCancel1 = new FontAwesome.Sharp.IconButton();
-            this.txtIntroduction = new PBL.Controller.RoundTextBox();
-            this.regist = new PBL.Resources.Components.RJDatePicker();
-            this.txtName = new PBL.Controller.RoundTextBox();
-            this.txtPaticipant = new PBL.Controller.RoundTextBox();
-            this.txtId = new PBL.Controller.RoundTextBox();
-            this.addQuestion1 = new PBL.Resources.Components.AddQuestion();
+            this.BtnSave1 = new FontAwesome.Sharp.IconButton();
+            this.btnCanCel1 = new FontAwesome.Sharp.IconButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -249,6 +251,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.checkedListBox1);
             this.tabPage2.Controls.Add(this.txtIntroduction);
             this.tabPage2.Controls.Add(this.regist);
             this.tabPage2.Controls.Add(this.txtName);
@@ -260,7 +263,7 @@
             this.tabPage2.Controls.Add(this.lbName);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.lbId);
-            this.tabPage2.Controls.Add(this.iconButtonAddPdf);
+            this.tabPage2.Controls.Add(this.btnAddQuestion);
             this.tabPage2.Controls.Add(this.btnCancel);
             this.tabPage2.Controls.Add(this.btnSave);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -272,6 +275,125 @@
             this.tabPage2.Text = "Test detail";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox1.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Part 1",
+            "Part 2",
+            "Part 3",
+            "Part 4",
+            "Part 5",
+            "Part 6",
+            "Part 7"});
+            this.checkedListBox1.Location = new System.Drawing.Point(764, 43);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(91, 180);
+            this.checkedListBox1.TabIndex = 26;
+            // 
+            // txtIntroduction
+            // 
+            this.txtIntroduction.BackColor = System.Drawing.SystemColors.Window;
+            this.txtIntroduction.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtIntroduction.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtIntroduction.BorderRadius = 0;
+            this.txtIntroduction.BorderSize = 2;
+            this.txtIntroduction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIntroduction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtIntroduction.Location = new System.Drawing.Point(312, 121);
+            this.txtIntroduction.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIntroduction.Multiline = true;
+            this.txtIntroduction.Name = "txtIntroduction";
+            this.txtIntroduction.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtIntroduction.PasswordChar = false;
+            this.txtIntroduction.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtIntroduction.PlaceholderText = "";
+            this.txtIntroduction.Size = new System.Drawing.Size(429, 210);
+            this.txtIntroduction.TabIndex = 25;
+            this.txtIntroduction.Texts = "";
+            this.txtIntroduction.UnderlinedStyle = false;
+            // 
+            // regist
+            // 
+            this.regist.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.regist.BorderSize = 0;
+            this.regist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.regist.Location = new System.Drawing.Point(48, 121);
+            this.regist.MinimumSize = new System.Drawing.Size(0, 35);
+            this.regist.Name = "regist";
+            this.regist.Size = new System.Drawing.Size(221, 35);
+            this.regist.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.regist.TabIndex = 24;
+            this.regist.TextColor = System.Drawing.Color.White;
+            // 
+            // txtName
+            // 
+            this.txtName.BackColor = System.Drawing.SystemColors.Window;
+            this.txtName.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtName.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtName.BorderRadius = 0;
+            this.txtName.BorderSize = 2;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtName.Location = new System.Drawing.Point(312, 43);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Multiline = false;
+            this.txtName.Name = "txtName";
+            this.txtName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtName.PasswordChar = false;
+            this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtName.PlaceholderText = "";
+            this.txtName.Size = new System.Drawing.Size(429, 35);
+            this.txtName.TabIndex = 23;
+            this.txtName.Texts = "";
+            this.txtName.UnderlinedStyle = false;
+            // 
+            // txtPaticipant
+            // 
+            this.txtPaticipant.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPaticipant.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtPaticipant.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtPaticipant.BorderRadius = 0;
+            this.txtPaticipant.BorderSize = 2;
+            this.txtPaticipant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPaticipant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPaticipant.Location = new System.Drawing.Point(46, 215);
+            this.txtPaticipant.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPaticipant.Multiline = false;
+            this.txtPaticipant.Name = "txtPaticipant";
+            this.txtPaticipant.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtPaticipant.PasswordChar = false;
+            this.txtPaticipant.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtPaticipant.PlaceholderText = "";
+            this.txtPaticipant.Size = new System.Drawing.Size(221, 35);
+            this.txtPaticipant.TabIndex = 23;
+            this.txtPaticipant.Texts = "";
+            this.txtPaticipant.UnderlinedStyle = false;
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.SystemColors.Window;
+            this.txtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtId.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtId.BorderRadius = 0;
+            this.txtId.BorderSize = 2;
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtId.Location = new System.Drawing.Point(46, 43);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtId.Multiline = false;
+            this.txtId.Name = "txtId";
+            this.txtId.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtId.PasswordChar = false;
+            this.txtId.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtId.PlaceholderText = "";
+            this.txtId.Size = new System.Drawing.Size(221, 35);
+            this.txtId.TabIndex = 23;
+            this.txtId.Texts = "";
+            this.txtId.UnderlinedStyle = false;
+            // 
             // lbBirth
             // 
             this.lbBirth.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -280,7 +402,7 @@
             this.lbBirth.AutoSize = true;
             this.lbBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBirth.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.lbBirth.Location = new System.Drawing.Point(127, 272);
+            this.lbBirth.Location = new System.Drawing.Point(760, 261);
             this.lbBirth.Name = "lbBirth";
             this.lbBirth.Size = new System.Drawing.Size(140, 24);
             this.lbBirth.TabIndex = 21;
@@ -294,7 +416,7 @@
             this.lbRegist.AutoSize = true;
             this.lbRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRegist.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.lbRegist.Location = new System.Drawing.Point(125, 100);
+            this.lbRegist.Location = new System.Drawing.Point(43, 100);
             this.lbRegist.Name = "lbRegist";
             this.lbRegist.Size = new System.Drawing.Size(104, 24);
             this.lbRegist.TabIndex = 12;
@@ -308,7 +430,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.label2.Location = new System.Drawing.Point(391, 104);
+            this.label2.Location = new System.Drawing.Point(309, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 24);
             this.label2.TabIndex = 2;
@@ -322,7 +444,7 @@
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.lbName.Location = new System.Drawing.Point(391, 27);
+            this.lbName.Location = new System.Drawing.Point(309, 27);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(107, 24);
             this.lbName.TabIndex = 2;
@@ -336,7 +458,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.label1.Location = new System.Drawing.Point(125, 193);
+            this.label1.Location = new System.Drawing.Point(43, 193);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(208, 24);
             this.label1.TabIndex = 0;
@@ -350,34 +472,35 @@
             this.lbId.AutoSize = true;
             this.lbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbId.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.lbId.Location = new System.Drawing.Point(125, 27);
+            this.lbId.Location = new System.Drawing.Point(43, 27);
             this.lbId.Name = "lbId";
             this.lbId.Size = new System.Drawing.Size(73, 24);
             this.lbId.TabIndex = 0;
             this.lbId.Text = "Test ID:";
             // 
-            // iconButtonAddPdf
+            // btnAddQuestion
             // 
-            this.iconButtonAddPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnAddQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButtonAddPdf.AutoSize = true;
-            this.iconButtonAddPdf.BackColor = System.Drawing.Color.Orange;
-            this.iconButtonAddPdf.FlatAppearance.BorderSize = 0;
-            this.iconButtonAddPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonAddPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButtonAddPdf.ForeColor = System.Drawing.Color.White;
-            this.iconButtonAddPdf.IconChar = FontAwesome.Sharp.IconChar.Add;
-            this.iconButtonAddPdf.IconColor = System.Drawing.Color.White;
-            this.iconButtonAddPdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonAddPdf.IconSize = 32;
-            this.iconButtonAddPdf.Location = new System.Drawing.Point(128, 293);
-            this.iconButtonAddPdf.Name = "iconButtonAddPdf";
-            this.iconButtonAddPdf.Size = new System.Drawing.Size(2528, 1165);
-            this.iconButtonAddPdf.TabIndex = 22;
-            this.iconButtonAddPdf.Text = "Add A Question";
-            this.iconButtonAddPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonAddPdf.UseVisualStyleBackColor = false;
+            this.btnAddQuestion.AutoSize = true;
+            this.btnAddQuestion.BackColor = System.Drawing.Color.Orange;
+            this.btnAddQuestion.FlatAppearance.BorderSize = 0;
+            this.btnAddQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddQuestion.ForeColor = System.Drawing.Color.White;
+            this.btnAddQuestion.IconChar = FontAwesome.Sharp.IconChar.Add;
+            this.btnAddQuestion.IconColor = System.Drawing.Color.White;
+            this.btnAddQuestion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddQuestion.IconSize = 32;
+            this.btnAddQuestion.Location = new System.Drawing.Point(761, 282);
+            this.btnAddQuestion.Name = "btnAddQuestion";
+            this.btnAddQuestion.Size = new System.Drawing.Size(168, 46);
+            this.btnAddQuestion.TabIndex = 22;
+            this.btnAddQuestion.Text = "Add Questions";
+            this.btnAddQuestion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddQuestion.UseVisualStyleBackColor = false;
+            this.btnAddQuestion.Click += new System.EventHandler(this.btnAddQuestion_Click);
             // 
             // btnCancel
             // 
@@ -396,7 +519,7 @@
             this.btnCancel.IconSize = 32;
             this.btnCancel.Location = new System.Drawing.Point(495, 361);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(2410, 1173);
+            this.btnCancel.Size = new System.Drawing.Size(103, 46);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -419,7 +542,7 @@
             this.btnSave.IconSize = 32;
             this.btnSave.Location = new System.Drawing.Point(312, 361);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(2410, 1173);
+            this.btnSave.Size = new System.Drawing.Size(103, 46);
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -438,161 +561,99 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.addQuestion1);
-            this.flowLayoutPanel1.Controls.Add(this.btnAdd);
-            this.flowLayoutPanel1.Controls.Add(this.btnSave1);
-            this.flowLayoutPanel1.Controls.Add(this.btnCancel1);
+            this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(961, 444);
             this.flowLayoutPanel1.TabIndex = 0;
+            this.flowLayoutPanel1.WrapContents = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnAdd);
+            this.panel1.Controls.Add(this.BtnSave1);
+            this.panel1.Controls.Add(this.btnCanCel1);
+            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(887, 71);
+            this.panel1.TabIndex = 62;
             // 
             // btnAdd
             // 
-            this.btnAdd.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnAdd.IconColor = System.Drawing.Color.Black;
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.AutoSize = true;
+            this.btnAdd.BackColor = System.Drawing.Color.Orange;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.btnAdd.IconColor = System.Drawing.Color.White;
             this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAdd.Location = new System.Drawing.Point(3, 407);
+            this.btnAdd.IconSize = 32;
+            this.btnAdd.Location = new System.Drawing.Point(108, 10);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(138, 43);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Size = new System.Drawing.Size(137, 57);
+            this.btnAdd.TabIndex = 50;
+            this.btnAdd.Text = "Add ";
+            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnSave1
+            // BtnSave1
             // 
-            this.btnSave1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnSave1.IconColor = System.Drawing.Color.Black;
-            this.btnSave1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSave1.Location = new System.Drawing.Point(147, 407);
-            this.btnSave1.Name = "btnSave1";
-            this.btnSave1.Size = new System.Drawing.Size(138, 43);
-            this.btnSave1.TabIndex = 1;
-            this.btnSave1.Text = "Save";
-            this.btnSave1.UseVisualStyleBackColor = true;
+            this.BtnSave1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSave1.AutoSize = true;
+            this.BtnSave1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
+            this.BtnSave1.FlatAppearance.BorderSize = 0;
+            this.BtnSave1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSave1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSave1.ForeColor = System.Drawing.Color.White;
+            this.BtnSave1.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.BtnSave1.IconColor = System.Drawing.Color.White;
+            this.BtnSave1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnSave1.IconSize = 32;
+            this.BtnSave1.Location = new System.Drawing.Point(420, 10);
+            this.BtnSave1.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnSave1.Name = "BtnSave1";
+            this.BtnSave1.Size = new System.Drawing.Size(137, 57);
+            this.BtnSave1.TabIndex = 51;
+            this.BtnSave1.Text = "Save";
+            this.BtnSave1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnSave1.UseVisualStyleBackColor = false;
+            this.BtnSave1.Click += new System.EventHandler(this.BtnSave1_Click);
             // 
-            // btnCancel1
+            // btnCanCel1
             // 
-            this.btnCancel1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnCancel1.IconColor = System.Drawing.Color.Black;
-            this.btnCancel1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCancel1.Location = new System.Drawing.Point(291, 407);
-            this.btnCancel1.Name = "btnCancel1";
-            this.btnCancel1.Size = new System.Drawing.Size(138, 43);
-            this.btnCancel1.TabIndex = 1;
-            this.btnCancel1.Text = "Cancel";
-            this.btnCancel1.UseVisualStyleBackColor = true;
-            // 
-            // txtIntroduction
-            // 
-            this.txtIntroduction.BackColor = System.Drawing.SystemColors.Window;
-            this.txtIntroduction.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtIntroduction.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtIntroduction.BorderRadius = 0;
-            this.txtIntroduction.BorderSize = 2;
-            this.txtIntroduction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIntroduction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtIntroduction.Location = new System.Drawing.Point(394, 121);
-            this.txtIntroduction.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIntroduction.Multiline = true;
-            this.txtIntroduction.Name = "txtIntroduction";
-            this.txtIntroduction.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtIntroduction.PasswordChar = false;
-            this.txtIntroduction.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtIntroduction.PlaceholderText = "";
-            this.txtIntroduction.Size = new System.Drawing.Size(468, 210);
-            this.txtIntroduction.TabIndex = 25;
-            this.txtIntroduction.Texts = "";
-            this.txtIntroduction.UnderlinedStyle = false;
-            // 
-            // regist
-            // 
-            this.regist.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.regist.BorderSize = 0;
-            this.regist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.regist.Location = new System.Drawing.Point(130, 121);
-            this.regist.MinimumSize = new System.Drawing.Size(0, 35);
-            this.regist.Name = "regist";
-            this.regist.Size = new System.Drawing.Size(221, 35);
-            this.regist.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.regist.TabIndex = 24;
-            this.regist.TextColor = System.Drawing.Color.White;
-            // 
-            // txtName
-            // 
-            this.txtName.BackColor = System.Drawing.SystemColors.Window;
-            this.txtName.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtName.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtName.BorderRadius = 0;
-            this.txtName.BorderSize = 2;
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtName.Location = new System.Drawing.Point(394, 43);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtName.Multiline = false;
-            this.txtName.Name = "txtName";
-            this.txtName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtName.PasswordChar = false;
-            this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtName.PlaceholderText = "";
-            this.txtName.Size = new System.Drawing.Size(468, 35);
-            this.txtName.TabIndex = 23;
-            this.txtName.Texts = "";
-            this.txtName.UnderlinedStyle = false;
-            // 
-            // txtPaticipant
-            // 
-            this.txtPaticipant.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPaticipant.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtPaticipant.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtPaticipant.BorderRadius = 0;
-            this.txtPaticipant.BorderSize = 2;
-            this.txtPaticipant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaticipant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPaticipant.Location = new System.Drawing.Point(128, 215);
-            this.txtPaticipant.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPaticipant.Multiline = false;
-            this.txtPaticipant.Name = "txtPaticipant";
-            this.txtPaticipant.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtPaticipant.PasswordChar = false;
-            this.txtPaticipant.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtPaticipant.PlaceholderText = "";
-            this.txtPaticipant.Size = new System.Drawing.Size(221, 35);
-            this.txtPaticipant.TabIndex = 23;
-            this.txtPaticipant.Texts = "";
-            this.txtPaticipant.UnderlinedStyle = false;
-            // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.SystemColors.Window;
-            this.txtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtId.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtId.BorderRadius = 0;
-            this.txtId.BorderSize = 2;
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtId.Location = new System.Drawing.Point(128, 43);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4);
-            this.txtId.Multiline = false;
-            this.txtId.Name = "txtId";
-            this.txtId.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtId.PasswordChar = false;
-            this.txtId.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtId.PlaceholderText = "";
-            this.txtId.Size = new System.Drawing.Size(221, 35);
-            this.txtId.TabIndex = 23;
-            this.txtId.Texts = "";
-            this.txtId.UnderlinedStyle = false;
-            // 
-            // addQuestion1
-            // 
-            this.addQuestion1.Location = new System.Drawing.Point(10, 10);
-            this.addQuestion1.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.addQuestion1.Name = "addQuestion1";
-            this.addQuestion1.Size = new System.Drawing.Size(913, 384);
-            this.addQuestion1.TabIndex = 0;
+            this.btnCanCel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCanCel1.AutoSize = true;
+            this.btnCanCel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.btnCanCel1.FlatAppearance.BorderSize = 0;
+            this.btnCanCel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCanCel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCanCel1.ForeColor = System.Drawing.Color.White;
+            this.btnCanCel1.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.btnCanCel1.IconColor = System.Drawing.Color.White;
+            this.btnCanCel1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCanCel1.IconSize = 32;
+            this.btnCanCel1.Location = new System.Drawing.Point(746, 10);
+            this.btnCanCel1.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCanCel1.Name = "btnCanCel1";
+            this.btnCanCel1.Size = new System.Drawing.Size(137, 57);
+            this.btnCanCel1.TabIndex = 49;
+            this.btnCanCel1.Text = "Cancel";
+            this.btnCanCel1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCanCel1.UseVisualStyleBackColor = false;
             // 
             // TestView
             // 
@@ -611,6 +672,8 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -634,7 +697,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbBirth;
-        private FontAwesome.Sharp.IconButton iconButtonAddPdf;
+        private FontAwesome.Sharp.IconButton btnAddQuestion;
         private Controller.RoundTextBox txtId;
         private Controller.RoundTextBox txtName;
         private Controller.RoundTextBox txtPaticipant;
@@ -642,9 +705,10 @@
         private Controller.RoundTextBox txtIntroduction;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Resources.Components.AddQuestion addQuestion1;
+        private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnAdd;
-        private FontAwesome.Sharp.IconButton btnSave1;
-        private FontAwesome.Sharp.IconButton btnCancel1;
+        private FontAwesome.Sharp.IconButton BtnSave1;
+        private FontAwesome.Sharp.IconButton btnCanCel1;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }

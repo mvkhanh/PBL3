@@ -1,6 +1,6 @@
 ﻿namespace PBL.Resources.Components
 {
-    partial class AddQuestion
+    partial class AddQuestion2
     {
         /// <summary> 
         /// Required designer variable.
@@ -35,14 +35,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.cbbAnswer = new System.Windows.Forms.ComboBox();
-            this.txtContent = new PBL.Controller.RoundTextBox();
             this.txtD = new PBL.Controller.RoundTextBox();
             this.txtC = new PBL.Controller.RoundTextBox();
             this.txtB = new PBL.Controller.RoundTextBox();
             this.txtA = new PBL.Controller.RoundTextBox();
             this.txtNumber = new PBL.Controller.RoundTextBox();
+            this.ImageOK = new System.Windows.Forms.PictureBox();
+            this.btnDelete = new FontAwesome.Sharp.IconButton();
+            this.btnImage = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageOK)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -55,7 +57,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Question number:";
+            this.label1.Text = "Question number ";
             // 
             // label2
             // 
@@ -129,28 +131,6 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Answer D:";
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDelete.AutoSize = true;
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.btnDelete.IconColor = System.Drawing.Color.White;
-            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDelete.IconSize = 32;
-            this.btnDelete.Location = new System.Drawing.Point(579, -1);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(115, 38);
-            this.btnDelete.TabIndex = 6;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // cbbAnswer
             // 
             this.cbbAnswer.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -159,29 +139,6 @@
             this.cbbAnswer.Name = "cbbAnswer";
             this.cbbAnswer.Size = new System.Drawing.Size(203, 24);
             this.cbbAnswer.TabIndex = 7;
-            // 
-            // txtContent
-            // 
-            this.txtContent.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtContent.BackColor = System.Drawing.SystemColors.Window;
-            this.txtContent.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtContent.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtContent.BorderRadius = 0;
-            this.txtContent.BorderSize = 2;
-            this.txtContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtContent.Location = new System.Drawing.Point(21, 101);
-            this.txtContent.Margin = new System.Windows.Forms.Padding(4);
-            this.txtContent.Multiline = true;
-            this.txtContent.Name = "txtContent";
-            this.txtContent.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtContent.PasswordChar = false;
-            this.txtContent.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtContent.PlaceholderText = "";
-            this.txtContent.Size = new System.Drawing.Size(299, 122);
-            this.txtContent.TabIndex = 1;
-            this.txtContent.Texts = "";
-            this.txtContent.UnderlinedStyle = false;
             // 
             // txtD
             // 
@@ -298,14 +255,59 @@
             this.txtNumber.Texts = "";
             this.txtNumber.UnderlinedStyle = false;
             // 
-            // AddQuestion
+            // ImageOK
+            // 
+            this.ImageOK.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ImageOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ImageOK.Location = new System.Drawing.Point(22, 109);
+            this.ImageOK.Name = "ImageOK";
+            this.ImageOK.Size = new System.Drawing.Size(298, 124);
+            this.ImageOK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.ImageOK.TabIndex = 8;
+            this.ImageOK.TabStop = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDelete.AutoSize = true;
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnDelete.IconColor = System.Drawing.Color.White;
+            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDelete.IconSize = 32;
+            this.btnDelete.Location = new System.Drawing.Point(579, -1);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(115, 38);
+            this.btnDelete.TabIndex = 6;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnImage
+            // 
+            this.btnImage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnImage.Location = new System.Drawing.Point(185, 83);
+            this.btnImage.Name = "btnImage";
+            this.btnImage.Size = new System.Drawing.Size(81, 25);
+            this.btnImage.TabIndex = 9;
+            this.btnImage.Text = "Chọn Ảnh";
+            this.btnImage.UseVisualStyleBackColor = true;
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
+            // 
+            // AddQuestion2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.Controls.Add(this.btnImage);
+            this.Controls.Add(this.ImageOK);
             this.Controls.Add(this.cbbAnswer);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.txtContent);
             this.Controls.Add(this.txtD);
             this.Controls.Add(this.txtC);
             this.Controls.Add(this.txtB);
@@ -318,8 +320,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Name = "AddQuestion";
+            this.Name = "AddQuestion2";
             this.Size = new System.Drawing.Size(718, 301);
+            ((System.ComponentModel.ISupportInitialize)(this.ImageOK)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,7 +333,6 @@
         private System.Windows.Forms.Label label1;
         private Controller.RoundTextBox txtNumber;
         private System.Windows.Forms.Label label2;
-        private Controller.RoundTextBox txtContent;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private Controller.RoundTextBox txtA;
@@ -342,5 +344,7 @@
         private Controller.RoundTextBox txtD;
         private FontAwesome.Sharp.IconButton btnDelete;
         private System.Windows.Forms.ComboBox cbbAnswer;
+        private System.Windows.Forms.PictureBox ImageOK;
+        private System.Windows.Forms.Button btnImage;
     }
 }
