@@ -27,7 +27,7 @@ namespace PBL
             InitializeComponent();
             AssociateAndRaiseViewEvents();
             tabControl1.TabPages.Remove(tabPageTestDetail);
-            tabControl1.TabPages.Remove(tabPage3);
+            tabControl1.TabPages.Remove(tabPageQuestionList);
             Teachers = new List<CBBItem>();
             cbbTeacherName.DataSource = Teachers;
             li = new List<AddQuestion>();
@@ -162,7 +162,7 @@ namespace PBL
                 Add(3, ref count);
             }
             tabControl1.TabPages.Remove(tabPageTestDetail);
-            tabControl1.TabPages.Add(tabPage3);
+            tabControl1.TabPages.Add(tabPageQuestionList);
             
             panel1.Controls.Add(Fl[0]); K = 0;
         }
@@ -171,7 +171,6 @@ namespace PBL
             Label lb = new Label();
             lb.Text = "Part " + (K+1);
             lb.Size = new Size(panelbtn.Width, 30);
-            Dock = DockStyle.Top;
             FlowLayoutPanel questionContainer = new FlowLayoutPanel
             {
                 Dock = DockStyle.Fill,
@@ -207,8 +206,8 @@ namespace PBL
         void back()
         {
             panelbtn.Dock = DockStyle.Bottom;
-            tabPage3.Controls.Clear();
-            tabPage3.Controls.Add(panel1);
+            tabPageQuestionList.Controls.Clear();
+            tabPageQuestionList.Controls.Add(panel1);
             for (int i = 0; i < 7; i++) panel1.Controls.RemoveByKey("Part " + (i + 1));
             if (panelbtn.Parent != null)
             {
@@ -223,7 +222,7 @@ namespace PBL
             Fl.Clear();
             panel1.AutoScroll = true;
             panel1.Controls.Add(panelbtn);
-            tabControl1.TabPages.Remove(tabPage3);
+            tabControl1.TabPages.Remove(tabPageQuestionList);
             tabControl1.TabPages.Add(tabPageTestDetail);
             
         }
@@ -232,7 +231,7 @@ namespace PBL
             back();
             panel1.Controls.Add(panelbtn);
             panel1.AutoScroll = true;
-            tabControl1.TabPages.Remove(tabPage3);
+            tabControl1.TabPages.Remove(tabPageQuestionList);
             tabControl1.TabPages.Add(tabPageTestDetail);
         }
 
