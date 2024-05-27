@@ -9,9 +9,12 @@ using System.Threading.Tasks;
 
 namespace PBL.Models
 {
-    public class Test : StudyElement
+    [Table("Test")]
+    public class TestModel : StudyElement
     {
         [DisplayName("ID")]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public override int Id { get; set; }
 
         [DisplayName("Ten")]
@@ -23,11 +26,12 @@ namespace PBL.Models
         public override DateTime PublishDay { get; set; }
 
         public int Id_Teacher { get; set; }
+
         [ForeignKey("Id_Teacher")]
+        [DisplayName("Nguoi dang")]
         public virtual TeacherModel Teacher { get; set; }
 
         [DisplayName("Gioi thieu")]
-        [Required(ErrorMessage = "Nhap noi dung gioi thieu.")]
         public string Description {  get; set; }
 
         [DisplayName("So luong tham gia")]

@@ -87,13 +87,13 @@ namespace PBL.Views
         public string TeacherName 
             { get => txtName.Texts; set => txtName.Texts = value; }
         public DateTime TeacherBith 
-            { get => birth.Value; set => birth.Value = value; }
+            { get => birth.Value.Date; set => birth.Value = value.Date; }
         public string TeacherEmail
             { get => txtEmail.Texts; set => txtEmail.Texts = value; }
         public string TeacherPhone 
             { get => txtPhone.Texts; set => txtPhone.Texts = value; }
         public DateTime TeacherRegistDay 
-            { get => regist.Value; set => regist.Value = value; }
+            { get => regist.Value.Date; set => regist.Value = value.Date; }
         public string TeacherAccount 
             { get => txtAccount.Texts; set => txtAccount.Texts = value; }
         public string TeacherPassword 

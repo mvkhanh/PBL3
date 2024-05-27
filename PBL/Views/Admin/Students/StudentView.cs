@@ -92,13 +92,13 @@ namespace PBL.Views.Admin.Students
         public string StudentName 
             { get => txtName.Texts; set => txtName.Texts = value; }
         public DateTime StudentBirth 
-            { get => birth.Value; set => birth.Value = value; }
+            { get => birth.Value.Date; set => birth.Value = value.Date; }
         public string StudentEmail 
             { get => txtEmail.Texts; set => txtEmail.Texts = value; }
         public string StudentPhone 
             { get => txtPhone.Texts; set => txtPhone.Texts = value; }
         public DateTime StudentRegistDay 
-            { get => regist.Value; set => regist.Value = value; }
+            { get => regist.Value.Date; set => regist.Value = value.Date; }
         public string StudentAccount { get => txtAccount.Texts; set => txtAccount.Texts = value; }
         public string StudentPassword { get => txtPassword.Texts; set => txtPassword.Texts = value; }
 

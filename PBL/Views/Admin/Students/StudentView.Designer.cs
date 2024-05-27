@@ -53,9 +53,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbRegist = new System.Windows.Forms.Label();
             this.lbBirth = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbAccount = new System.Windows.Forms.Label();
             this.lbPhone = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbPassword = new System.Windows.Forms.Label();
             this.lbEmail = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.lbId = new System.Windows.Forms.Label();
@@ -260,9 +260,9 @@
             this.tabPageStudentDetail.Controls.Add(this.panel1);
             this.tabPageStudentDetail.Controls.Add(this.lbRegist);
             this.tabPageStudentDetail.Controls.Add(this.lbBirth);
-            this.tabPageStudentDetail.Controls.Add(this.label2);
+            this.tabPageStudentDetail.Controls.Add(this.lbAccount);
             this.tabPageStudentDetail.Controls.Add(this.lbPhone);
-            this.tabPageStudentDetail.Controls.Add(this.label1);
+            this.tabPageStudentDetail.Controls.Add(this.lbPassword);
             this.tabPageStudentDetail.Controls.Add(this.lbEmail);
             this.tabPageStudentDetail.Controls.Add(this.lbName);
             this.tabPageStudentDetail.Controls.Add(this.lbId);
@@ -272,7 +272,7 @@
             this.tabPageStudentDetail.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageStudentDetail.Size = new System.Drawing.Size(898, 438);
             this.tabPageStudentDetail.TabIndex = 1;
-            this.tabPageStudentDetail.Text = " ";
+            this.tabPageStudentDetail.Text = " Student Detail";
             this.tabPageStudentDetail.UseVisualStyleBackColor = true;
             // 
             // regist
@@ -280,6 +280,8 @@
             this.regist.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.regist.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.regist.BorderSize = 0;
+            this.regist.CustomFormat = "";
+            this.regist.Enabled = false;
             this.regist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.regist.Location = new System.Drawing.Point(543, 297);
             this.regist.MinimumSize = new System.Drawing.Size(0, 35);
@@ -294,6 +296,7 @@
             this.birth.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.birth.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.birth.BorderSize = 0;
+            this.birth.CustomFormat = "";
             this.birth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.birth.Location = new System.Drawing.Point(307, 297);
             this.birth.MinimumSize = new System.Drawing.Size(0, 35);
@@ -517,17 +520,17 @@
             this.lbBirth.TabIndex = 8;
             this.lbBirth.Text = "Student Birthday:";
             // 
-            // label2
+            // lbAccount
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.label2.Location = new System.Drawing.Point(304, 206);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 18);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Student Account:";
+            this.lbAccount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbAccount.AutoSize = true;
+            this.lbAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAccount.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.lbAccount.Location = new System.Drawing.Point(304, 206);
+            this.lbAccount.Name = "lbAccount";
+            this.lbAccount.Size = new System.Drawing.Size(120, 18);
+            this.lbAccount.TabIndex = 6;
+            this.lbAccount.Text = "Student Account:";
             // 
             // lbPhone
             // 
@@ -541,17 +544,17 @@
             this.lbPhone.TabIndex = 6;
             this.lbPhone.Text = "Student Phone:";
             // 
-            // label1
+            // lbPassword
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.label1.Location = new System.Drawing.Point(540, 206);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 18);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Student Password:";
+            this.lbPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbPassword.AutoSize = true;
+            this.lbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPassword.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.lbPassword.Location = new System.Drawing.Point(540, 206);
+            this.lbPassword.Name = "lbPassword";
+            this.lbPassword.Size = new System.Drawing.Size(133, 18);
+            this.lbPassword.TabIndex = 4;
+            this.lbPassword.Text = "Student Password:";
             // 
             // lbEmail
             // 
@@ -628,8 +631,8 @@
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnCancel;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbAccount;
+        private System.Windows.Forms.Label lbPassword;
         private Controller.RoundTextBox txtId;
         private Controller.RoundTextBox txtName;
         private Controller.RoundTextBox txtPhone;

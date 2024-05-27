@@ -124,13 +124,9 @@
   <ItemGroup>
     <Compile Include="CBBItem.cs" />
     <Compile Include="CreateDB.cs" />
+    <Compile Include="Models\Test\ITestRepository.cs" />
     <Compile Include="Presenters\LessonPresenter.cs" />
-    <Compile Include="QuestionView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuestionView.Designer.cs">
-      <DependentUpon>QuestionView.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Presenters\TestPresenter.cs" />
     <Compile Include="Resources\Components\AddQuestion.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -142,12 +138,6 @@
     </Compile>
     <Compile Include="Resources\Components\RJDatePicker.cs">
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TestThemCauHoi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TestThemCauHoi.Designer.cs">
-      <DependentUpon>TestThemCauHoi.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\Lessons\LessonView.cs">
       <SubType>Form</SubType>
@@ -180,10 +170,11 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="PBLContext.cs" />
-    <Compile Include="TestView.cs">
+    <Compile Include="Views\Admin\Tests\ITestView.cs" />
+    <Compile Include="Views\Admin\Tests\TestView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestView.Designer.cs">
+    <Compile Include="Views\Admin\Tests\TestView.Designer.cs">
       <DependentUpon>TestView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\Lessons\ILessonView.cs" />
@@ -215,7 +206,7 @@
     </Compile>
     <Compile Include="Views\Admin\Students\IStudentView.cs" />
     <Compile Include="Models\Lesson\LessonModel.cs" />
-    <Compile Include="Models\Test.cs" />
+    <Compile Include="Models\Test\TestModel.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Answer.cs" />
@@ -240,13 +231,14 @@
     <Compile Include="_Repositories\LessonRepository.cs" />
     <Compile Include="_Repositories\StudentRepository.cs" />
     <Compile Include="_Repositories\TeacherRepository.cs" />
+    <Compile Include="_Repositories\TestRepository.cs" />
     <EmbeddedResource Include="Views\Admin\Lessons\LessonView.resx">
       <DependentUpon>LessonView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Components\RoundTextBox.resx">
       <DependentUpon>RoundTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestView.resx">
+    <EmbeddedResource Include="Views\Admin\Tests\TestView.resx">
       <DependentUpon>TestView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\Main\MainView.resx">

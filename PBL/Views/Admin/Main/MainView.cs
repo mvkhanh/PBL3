@@ -130,6 +130,8 @@ namespace PBL.Views
         private void btnTests_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
+            ShowTestView(sender, EventArgs.Empty);
+            OpenChildForm(TestView.GetInstance());
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
