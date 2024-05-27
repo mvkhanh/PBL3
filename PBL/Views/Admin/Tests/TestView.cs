@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Metadata.Edm;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -155,31 +156,35 @@ namespace PBL
         }
 
         private void btnAddQuestion_Click(object sender, EventArgs e)
-        {  
+        {
+            Fl.Clear();
             int count = 1;
-            for(int i = 1; i <= 7; i++)
+            for (int i = 1; i <= 7; i++)
             {
-                Add(3, ref count);
+                Add(6, ref count);
             }
             tabControl1.TabPages.Remove(tabPageTestDetail);
             tabControl1.TabPages.Add(tabPageQuestionList);
             
             panel1.Controls.Add(Fl[0]); K = 0;
         }
+
         private void Add(int numQuestions, ref int questionCount)
         {
             Label lb = new Label();
-            lb.Text = "Part " + (K+1);
+            lb.Text = "Part " + ((questionCount%numQuestions)+(questionCount / numQuestions));
             lb.Size = new Size(panelbtn.Width, 30);
+            lb.Dock = DockStyle.Top;
+            
             FlowLayoutPanel questionContainer = new FlowLayoutPanel
             {
                 Dock = DockStyle.Fill,
-                FlowDirection = FlowDirection.TopDown,
-                WrapContents = false,
-                Height = this.Height-panelbtn.Height,
-                Width = panelbtn.Width,
+                FlowDirection = FlowDirection.LeftToRight,
+                WrapContents = true,
+                Height = this.Height - panelbtn.Height,
+                Width = panel1.Width,
                 AutoSize = true,
-                Anchor = AnchorStyles.Top|AnchorStyles.Left|AnchorStyles.Right,
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
                 Name = "Part 1"
             };
             questionContainer.Controls.Add(lb);
@@ -193,7 +198,7 @@ namespace PBL
 
                 Panel questionPanel = new Panel
                 {
-                    Size = new Size(panelbtn.Width-150, 301),
+                    Size = new Size(780, 301),
                 };
                 questionContainer.Location = new Point(0, 0);
                 questionPanel.Controls.Add(addQuestion);
@@ -203,51 +208,83 @@ namespace PBL
             }
             Fl.Add(questionContainer);
         }
+
         void back()
         {
-            panelbtn.Dock = DockStyle.Bottom;
-            tabPageQuestionList.Controls.Clear();
             tabPageQuestionList.Controls.Add(panel1);
-            for (int i = 0; i < 7; i++) panel1.Controls.RemoveByKey("Part " + (i + 1));
-            if (panelbtn.Parent != null)
-            {
-                panelbtn.Parent.Controls.Remove(panelbtn);
-            }
-            panelbtn.Location = new Point(22, 4);
+            panel1.Controls.Clear();
+            panel1.Controls.Add(panelbtn);
         }
+
         private void btnCanCel1_Click(object sender, EventArgs e)
         {
             back();
             li.Clear();
             Fl.Clear();
-            panel1.AutoScroll = true;
-            panel1.Controls.Add(panelbtn);
             tabControl1.TabPages.Remove(tabPageQuestionList);
             tabControl1.TabPages.Add(tabPageTestDetail);
-            
         }
+
         private void BtnSave1_Click(object sender, EventArgs e)
         {
             back();
-            panel1.Controls.Add(panelbtn);
-            panel1.AutoScroll = true;
+            li.Clear();
+            Fl.Clear();
             tabControl1.TabPages.Remove(tabPageQuestionList);
             tabControl1.TabPages.Add(tabPageTestDetail);
         }
 
         private void btnNext_Click(object sender, EventArgs e)
-        {  
+        {
             K++;
+            Fl[K - 1].Location = new Point(0, 0);
+            Fl[K ].Location = new Point(0, 0);
             back();
-            panel1.Controls.Add(panelbtn);
             panel1.Controls.Add(Fl[K]);
-            panelbtn.Location = new Point(Fl[K].Location.X, Fl[K].Location.Y + Fl[K].Height + 30);
         }
+
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             K--;
-            panel1.Controls.RemoveByKey("Part " + (K));
+            back();
+            Fl[K + 1].Location = new Point(0, 0);
+            panel1.Controls.Add(Fl[K]);
+           
+        }
+        private void tabControl1_SizeChanged(object sender, EventArgs e)
+        {
+            ReTypeFlow();
+                
+        }
+        private void ReTypeFlow()
+        {
+            if (Fl.Count > 0)
+            {
+                if (panel1.Width > 1000)
+                {
+                    for (int i = 0; i < Fl.Count; i++)
+                    {
+                        Fl[i].FlowDirection = FlowDirection.LeftToRight;
+                        Fl[i].WrapContents = true;
+                        int itemWidth = Fl[i].Controls[0].Width; // Assume all items have the same width
+                        int maxItemsPerRow = (int)Math.Floor((double)panel1.Width / itemWidth);
+                        int numRows = (int)Math.Ceiling((double)Fl[i].Controls.Count / maxItemsPerRow);
+                        Fl[i].Height = numRows * Fl[i].Controls[0].Height;
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < Fl.Count; i++)
+                    {
+                        Fl[i].FlowDirection = FlowDirection.TopDown;
+                        Fl[i].WrapContents = false;
+                        Fl[i].Height = Fl[i].Controls.Count * Fl[i].Controls[0].Height;
+                    }
+                }
+
+                    Fl[K].Refresh();
+            }
         }
     }
 
