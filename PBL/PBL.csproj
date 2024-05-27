@@ -133,12 +133,6 @@
     <Compile Include="Resources\Components\AddQuestion.Designer.cs">
       <DependentUpon>AddQuestion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Components\AddQuestion2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Resources\Components\AddQuestion2.Designer.cs">
-      <DependentUpon>AddQuestion2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Resources\Components\RJComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -240,9 +234,6 @@
     <Compile Include="_Repositories\TestRepository.cs" />
     <EmbeddedResource Include="Resources\Components\AddQuestion.resx">
       <DependentUpon>AddQuestion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Components\AddQuestion2.resx">
-      <DependentUpon>AddQuestion2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\Lessons\LessonView.resx">
       <DependentUpon>LessonView.cs</DependentUpon>
