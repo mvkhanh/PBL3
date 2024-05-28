@@ -348,7 +348,7 @@
             this.btnPart1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPart1.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btnPart1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnPart1.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.btnPart1.BorderRadius = 8;
             this.btnPart1.BorderSize = 0;
             this.btnPart1.FlatAppearance.BorderSize = 0;
