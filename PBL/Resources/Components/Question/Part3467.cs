@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL.Resources.Components.Question;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,52 +11,58 @@ using System.Windows.Forms;
 
 namespace PBL.Resources.Components
 {
-    public partial class AddQuestion : UserControl
+    public partial class Part3467 : QuestionBox
     {
-        public string AnswerA
+        public override string QuestionA
         {
             get => txtA.Texts;
             set => txtA.Texts = value;
         }
-        public string AnswerB
+        public override string QuestionB 
         {
             get => txtB.Texts;
             set => txtB.Texts = value;
         }
-        public string AnswerC
+        public override string QuestionC
         {
             get => txtC.Texts;
             set => txtC.Texts = value;
         }
-        public string AnswerD
+        public override string QuestionD
         {
             get => txtD.Texts;
             set => txtD.Texts = value;
         }
-        public string Content
+        public override string QuestionContent
         {
             get => txtContent.Texts;
             set => txtContent.Texts = value;
         }
-        public string ID
+        public override int QuestionNum
         {
-            get => txtNumber.Texts;
-            set => txtNumber.Texts = value;
+            get => Convert.ToInt32(txtNumber.Texts);
+            set => txtNumber.Texts = value.ToString();
         }
-        public Image ImageQ
+        public override Image QuestionImage
         {
-            get => ImageOK.Image;
-            set => ImageOK.Image = value;
+            get => imageBox.Image;
+            set => imageBox.Image = value;
         }
-        public AddQuestion()
+        public override string QuestionAnswer
+        {
+            get => cbbAnswers.SelectedItem.ToString();
+            set => cbbAnswers.SelectedItem = value;
+        }
+        public Part3467()
         {
             InitializeComponent();
-            cbbAnswer.Items.AddRange( new string[] { "A", "B", "C", "D" } );
+            cbbAnswers.Items.AddRange(new string[] { "A", "B", "C", "D" } );
+            cbbAnswers.SelectedIndex = 0;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            ImageOK.Image = null;
+            imageBox.Image = null;
         }
 
         private void btnImage_Click(object sender, EventArgs e)
@@ -66,8 +73,8 @@ namespace PBL.Resources.Components
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 // Load and display the image in the PictureBox
-                ImageOK.Image = Image.FromFile(openFileDialog.FileName);
-                ImageOK.SizeMode = PictureBoxSizeMode.CenterImage;
+                imageBox.Image = Image.FromFile(openFileDialog.FileName);
+                imageBox.SizeMode = PictureBoxSizeMode.Zoom;
             }
         }
     }

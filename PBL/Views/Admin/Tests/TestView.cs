@@ -1,4 +1,6 @@
-﻿using PBL.Resources.Components;
+﻿using PBL.Controller;
+using PBL.Resources.Components;
+using PBL.Resources.Components.Question;
 using PBL.Views.Admin.Tests;
 using System;
 using System.Collections.Generic;
@@ -20,9 +22,11 @@ namespace PBL
         private bool _IsEdit;
         private bool _IsSuccessful;
         private string _Message;
-        public List<AddQuestion> li;
-        List<FlowLayoutPanel> Fl;
-        int K = 0;
+        private int[] QuestionNumEachPart = { 6, 25, 39, 30, 30, 16, 54};
+        private int currentPage = 0;
+        private RoundButton currentButton;
+
+        //Constructor
         public TestView()
         {
             InitializeComponent();
@@ -31,9 +35,34 @@ namespace PBL
             tabControl1.TabPages.Remove(tabPageQuestionList);
             Teachers = new List<CBBItem>();
             cbbTeacherName.DataSource = Teachers;
-            li = new List<AddQuestion>();
-            Fl = new List<FlowLayoutPanel>();
+            Questions = new List<List<QuestionBox>>();
+            InitQuestionList();
+            AddQuestionToPanel();
+            SetCurrentButton(btnPart1);
+        }
 
+        private void SetCurrentButton(RoundButton btnPart)
+        {
+            if(currentButton != null)
+            {
+                SetNotChooseButton(currentButton);
+            }
+            currentButton = btnPart;
+            SetChooseButton(currentButton);
+        }
+
+        private void SetChooseButton(RoundButton btn)
+        {
+            btn.BorderSize = 0;
+            btn.BackgroundColor = Color.MediumSlateBlue;
+            btn.ForeColor = Color.White;
+        }
+
+        private void SetNotChooseButton(RoundButton btn)
+        {
+            btn.BorderSize = 2;
+            btn.BackgroundColor = Color.White;
+            btn.ForeColor = Color.MediumSlateBlue;
         }
 
         private void AssociateAndRaiseViewEvents()
@@ -94,6 +123,47 @@ namespace PBL
                 tabControl1.TabPages.Add(tabPageTestList);
             };
         }
+        private void InitQuestionList()
+        {
+            int partNum = 7, j = 0;
+            for(int i = 0; i < partNum; i++)
+            {
+                var list = new List<QuestionBox>();
+                int maxNum = j + QuestionNumEachPart[i];
+                switch (i)
+                {
+                    case 0:
+                        while (++j <= maxNum) list.Add(new Part1() { QuestionNum = j });
+                        break;
+                    case 1:
+                        while (++j <= maxNum) list.Add(new Part2() { QuestionNum = j });
+                        break;
+                    case 4:
+                        while (++j <= maxNum) list.Add(new Part5() { QuestionNum = j });
+                        break;
+                    default:
+                        while (++j <= maxNum) list.Add(new Part3467() { QuestionNum = j });
+                        break;
+                }
+                j--;
+                Questions.Add(list);
+            }
+        }
+        private void AddQuestionToPanel()
+        {
+            lbPart.Text = "Part " + (currentPage + 1);
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(lbPart);
+            panelMain.Controls.AddRange(Questions[currentPage].ToArray());
+            panelMain.Controls.Add(panelBtn);
+            btnBack.Visible = btnNext.Visible = btnPrevious.Visible = btnFinish.Visible = true;
+            if (currentPage == 6) btnNext.Visible = false;
+            else
+            {
+                btnFinish.Visible = false;
+                if (currentPage == 0) btnPrevious.Visible = false;
+            }
+        }
 
         //Properties
         public int TestId
@@ -127,6 +197,7 @@ namespace PBL
         { get => _Message; set => _Message = value; }
         public List<CBBItem> Teachers
         { get; set; }
+        public List<List<QuestionBox>> Questions { get; set; }
 
         //Events
         public event EventHandler SearchEvent;
@@ -138,9 +209,9 @@ namespace PBL
 
         private void dataGridView1_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
         {
-            if (e.Column.Name == "Id_Teacher" || e.Column.Name == "Description") e.Column.Visible = false;
+            if (e.Column.Name == "Id_Teacher" || e.Column.Name == "Description" || e.Column.Name == "Questions") e.Column.Visible = false;
         }
-
+        //Question number each part
         //Methods
         public void SetTestListBindingSource(BindingSource TestList)
         {
@@ -154,137 +225,42 @@ namespace PBL
             if (instance == null || instance.IsDisposed) instance = new TestView();
             return instance;
         }
-
         private void btnAddQuestion_Click(object sender, EventArgs e)
         {
-            Fl.Clear();
-            int count = 1;
-            for (int i = 1; i <= 7; i++)
-            {
-                Add(6, ref count);
-            }
             tabControl1.TabPages.Remove(tabPageTestDetail);
             tabControl1.TabPages.Add(tabPageQuestionList);
-            
-            panel1.Controls.Add(Fl[0]); K = 0;
         }
 
-        private void Add(int numQuestions, ref int questionCount)
+        private void btnPrevious_Click(object sender, EventArgs e)
         {
-            Label lb = new Label();
-            lb.Text = "Part " + ((questionCount%numQuestions)+(questionCount / numQuestions));
-            lb.Size = new Size(panelbtn.Width, 30);
-            lb.Dock = DockStyle.Top;
-            
-            FlowLayoutPanel questionContainer = new FlowLayoutPanel
-            {
-                Dock = DockStyle.Fill,
-                FlowDirection = FlowDirection.LeftToRight,
-                WrapContents = true,
-                Height = this.Height - panelbtn.Height,
-                Width = panel1.Width,
-                AutoSize = true,
-                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
-                Name = "Part 1"
-            };
-            questionContainer.Controls.Add(lb);
-            for (int j = 1; j <= numQuestions; j++)
-            {
-                AddQuestion addQuestion = new AddQuestion
-                {
-                    ID = questionCount.ToString(),
-                    Dock = DockStyle.Fill,
-                };
-
-                Panel questionPanel = new Panel
-                {
-                    Size = new Size(780, 301),
-                };
-                questionContainer.Location = new Point(0, 0);
-                questionPanel.Controls.Add(addQuestion);
-                li.Add(addQuestion);
-                questionContainer.Controls.Add(questionPanel);
-                questionCount++;
-            }
-            Fl.Add(questionContainer);
-        }
-
-        void back()
-        {
-            tabPageQuestionList.Controls.Add(panel1);
-            panel1.Controls.Clear();
-            panel1.Controls.Add(panelbtn);
-        }
-
-        private void btnCanCel1_Click(object sender, EventArgs e)
-        {
-            back();
-            li.Clear();
-            Fl.Clear();
-            tabControl1.TabPages.Remove(tabPageQuestionList);
-            tabControl1.TabPages.Add(tabPageTestDetail);
-        }
-
-        private void BtnSave1_Click(object sender, EventArgs e)
-        {
-            back();
-            li.Clear();
-            Fl.Clear();
-            tabControl1.TabPages.Remove(tabPageQuestionList);
-            tabControl1.TabPages.Add(tabPageTestDetail);
+            currentPage--;
+            AddQuestionToPanel();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            K++;
-            Fl[K - 1].Location = new Point(0, 0);
-            Fl[K ].Location = new Point(0, 0);
-            back();
-            panel1.Controls.Add(Fl[K]);
+            currentPage++;
+            AddQuestionToPanel();
         }
-
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            K--;
-            back();
-            Fl[K + 1].Location = new Point(0, 0);
-            panel1.Controls.Add(Fl[K]);
-           
+            tabControl1.TabPages.Remove(tabPageQuestionList);
+            tabControl1.TabPages.Add(tabPageTestDetail);
         }
-        private void tabControl1_SizeChanged(object sender, EventArgs e)
-        {
-            ReTypeFlow();
-                
-        }
-        private void ReTypeFlow()
-        {
-            if (Fl.Count > 0)
-            {
-                if (panel1.Width > 1000)
-                {
-                    for (int i = 0; i < Fl.Count; i++)
-                    {
-                        Fl[i].FlowDirection = FlowDirection.LeftToRight;
-                        Fl[i].WrapContents = true;
-                        int itemWidth = Fl[i].Controls[0].Width; // Assume all items have the same width
-                        int maxItemsPerRow = (int)Math.Floor((double)panel1.Width / itemWidth);
-                        int numRows = (int)Math.Ceiling((double)Fl[i].Controls.Count / maxItemsPerRow);
-                        Fl[i].Height = numRows * Fl[i].Controls[0].Height;
-                    }
-                }
-                else
-                {
-                    for (int i = 0; i < Fl.Count; i++)
-                    {
-                        Fl[i].FlowDirection = FlowDirection.TopDown;
-                        Fl[i].WrapContents = false;
-                        Fl[i].Height = Fl[i].Controls.Count * Fl[i].Controls[0].Height;
-                    }
-                }
 
-                    Fl[K].Refresh();
-            }
+        private void btnFinish_Click(object sender, EventArgs e)
+        {
+            //
+            tabControl1.TabPages.Remove(tabPageQuestionList);
+            tabControl1.TabPages.Add(tabPageTestDetail);
+        }
+        private void btnPart_Click(object sender, EventArgs e)
+        {
+            RoundButton btn = (RoundButton)sender;
+            SetCurrentButton(btn);
+            currentPage = btn.Text[btn.Text.Length - 1] - '0' - 1;
+            AddQuestionToPanel();
         }
     }
 
