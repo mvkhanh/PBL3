@@ -154,6 +154,12 @@
   <ItemGroup>
     <Compile Include="Models\Shared\ILoginRepository.cs" />
     <Compile Include="Presenters\Shared\LoginPresenter.cs" />
+    <Compile Include="Resources\Components\AddPartLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\Components\AddPartLabel.Designer.cs">
+      <DependentUpon>AddPartLabel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Components\CBBItem.cs" />
     <Compile Include="DB\CreateDB.cs" />
     <Compile Include="Models\Answer\IAnswerRepository.cs" />
@@ -353,6 +359,9 @@
     <Compile Include="_Repositories\StudentRepository.cs" />
     <Compile Include="_Repositories\TeacherRepository.cs" />
     <Compile Include="_Repositories\TestRepository.cs" />
+    <EmbeddedResource Include="Resources\Components\AddPartLabel.resx">
+      <DependentUpon>AddPartLabel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Components\Question\Part1.resx">
       <DependentUpon>Part1.cs</DependentUpon>
     </EmbeddedResource>

@@ -12,10 +12,12 @@ namespace PBL.Resources.Components
 {
     public partial class AddPartLabel : UserControl
     {
-        public string numP { get { return numPart.Text; } set { numPart.Text = value; } }
+        public string nameP { set { namePart.Text = value; } }
         public AddPartLabel()
         {
             InitializeComponent();
         }
+
+        
     }
 }

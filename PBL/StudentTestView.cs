@@ -17,7 +17,8 @@ namespace PBL
         public Point DisplayPartResult(string namePart, int start, int end, Point cur)
         {
             AddPartLabel part1 = new AddPartLabel();
-            part1.numP = namePart;
+            
+            part1.nameP = namePart;
             part1.Location = new Point(cur.X, cur.Y + 40);
             
             int k = 0, j = 200;
