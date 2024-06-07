@@ -77,7 +77,7 @@
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDelete.BackColor = System.Drawing.Color.White;
             this.btnDelete.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnDelete.Location = new System.Drawing.Point(151, 45);
+            this.btnDelete.Location = new System.Drawing.Point(171, 45);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(61, 24);
@@ -143,7 +143,7 @@
             this.txtNumber.PasswordChar = false;
             this.txtNumber.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtNumber.PlaceholderText = "";
-            this.txtNumber.Size = new System.Drawing.Size(35, 29);
+            this.txtNumber.Size = new System.Drawing.Size(43, 29);
             this.txtNumber.TabIndex = 49;
             this.txtNumber.Texts = "";
             this.txtNumber.UnderlinedStyle = false;
@@ -176,8 +176,7 @@
             // 
             // Part1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.roundPanel1);
             this.Name = "Part1";

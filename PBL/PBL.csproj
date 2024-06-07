@@ -305,6 +305,9 @@
     <EmbeddedResource Include="Resources\Components\Question\Part5.resx">
       <DependentUpon>Part5.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Components\Question\QuestionBox.resx">
+      <DependentUpon>QuestionBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\Lessons\LessonView.resx">
       <DependentUpon>LessonView.cs</DependentUpon>
     </EmbeddedResource>

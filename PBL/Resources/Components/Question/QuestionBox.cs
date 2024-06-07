@@ -23,13 +23,12 @@ namespace PBL.Resources.Components.Question
         public virtual string AnswerDContent { get; set; }
         public virtual string QuestionContent { get; set; }
         public virtual int QuestionNum { get; set; }
-        public virtual byte[] QuestionImage {  get; set; }
         public virtual int QuestionAnswer { get; set; }
         public QuestionBox()
         {
             InitializeComponent();
         }
-        protected string _ImagePath;
+        private string _ImagePath;
         public virtual string ImagePath
         {
             get => _ImagePath;
@@ -39,7 +38,25 @@ namespace PBL.Resources.Components.Question
                 OnImagePathChanged();
             }
         }
+        private byte[] _QuestionImage;
+        public virtual byte[] QuestionImage
+        {
+            get => _QuestionImage;
+            set
+            {
+                _QuestionImage = value;
+                OnQuestionImageChanged();
+            }
+        }
 
+        protected virtual void OnQuestionImageChanged()
+        {
+        }
+
+        public virtual void ClearFields()
+        {
+
+        }
         protected virtual void OnImagePathChanged()
         {
         }

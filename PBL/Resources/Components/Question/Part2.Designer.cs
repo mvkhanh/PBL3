@@ -50,7 +50,7 @@
             this.roundPanel1.Location = new System.Drawing.Point(0, 0);
             this.roundPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.roundPanel1.Name = "roundPanel1";
-            this.roundPanel1.Size = new System.Drawing.Size(144, 80);
+            this.roundPanel1.Size = new System.Drawing.Size(153, 80);
             this.roundPanel1.TabIndex = 1;
             // 
             // label1
@@ -59,7 +59,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(18, 16);
+            this.label1.Location = new System.Drawing.Point(14, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 18);
@@ -71,7 +71,7 @@
             this.cbbAnswers.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbbAnswers.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.cbbAnswers.FormattingEnabled = true;
-            this.cbbAnswers.Location = new System.Drawing.Point(86, 46);
+            this.cbbAnswers.Location = new System.Drawing.Point(90, 46);
             this.cbbAnswers.Margin = new System.Windows.Forms.Padding(2);
             this.cbbAnswers.Name = "cbbAnswers";
             this.cbbAnswers.Size = new System.Drawing.Size(38, 21);
@@ -88,7 +88,7 @@
             this.txtNumber.Enabled = false;
             this.txtNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumber.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtNumber.Location = new System.Drawing.Point(89, 11);
+            this.txtNumber.Location = new System.Drawing.Point(85, 11);
             this.txtNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumber.Multiline = false;
             this.txtNumber.Name = "txtNumber";
@@ -96,7 +96,7 @@
             this.txtNumber.PasswordChar = false;
             this.txtNumber.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtNumber.PlaceholderText = "";
-            this.txtNumber.Size = new System.Drawing.Size(35, 29);
+            this.txtNumber.Size = new System.Drawing.Size(43, 29);
             this.txtNumber.TabIndex = 31;
             this.txtNumber.Texts = "";
             this.txtNumber.UnderlinedStyle = false;
@@ -107,7 +107,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(22, 47);
+            this.label3.Location = new System.Drawing.Point(18, 47);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 18);
@@ -116,12 +116,11 @@
             // 
             // Part2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.roundPanel1);
             this.Name = "Part2";
-            this.Size = new System.Drawing.Size(144, 80);
+            this.Size = new System.Drawing.Size(153, 80);
             this.roundPanel1.ResumeLayout(false);
             this.roundPanel1.PerformLayout();
             this.ResumeLayout(false);

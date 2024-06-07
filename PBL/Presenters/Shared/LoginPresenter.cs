@@ -3,6 +3,7 @@ using PBL.Views;
 using PBL.Views.Common;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,6 +57,8 @@ namespace PBL.Presenters.Shared
                     view.isSuccessful = false;
                 }
             }
+            if (view.isSuccessful == true) { view.Message = "Login successfully"; }
+            else view.Message = "Check your account and password";
         }
     }
 }

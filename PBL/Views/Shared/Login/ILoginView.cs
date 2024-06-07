@@ -13,6 +13,7 @@ namespace PBL.Views.Common
         string Password { get; set; }
 
         bool isSuccessful {  get; set; }
+        string Message {  get; set; }
 
         //Events
         event EventHandler LoginEvent;

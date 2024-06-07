@@ -32,15 +32,11 @@ namespace PBL.Views.Shared
         {
             btnLogin.Click += delegate {
                 LoginEvent?.Invoke(this, EventArgs.Empty);
-                if (!isSuccessful)
-                {
-                    MessageBox.Show("Check your account and password");
-                }
-                else
+                if (isSuccessful)
                 {
                     this.Hide();
-                    MessageBox.Show("Login successfully");
                 }
+                MessageBox.Show(Message);
             };
         }
 
@@ -51,6 +47,8 @@ namespace PBL.Views.Shared
             { get => txtPassword.Texts; set => txtPassword.Texts = value; }
         public bool isSuccessful 
             { get => _IsSuccessful; set => _IsSuccessful = value; }
+
+        public string Message { get => _Message; set => _Message = value; }
 
         //Events
         public event EventHandler LoginEvent;

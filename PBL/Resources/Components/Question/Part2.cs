@@ -26,5 +26,9 @@ namespace PBL.Resources.Components
         }
         public override int QuestionNum { get => Convert.ToInt32(txtNumber.Texts); set => txtNumber.Texts = value.ToString(); }
         public override int QuestionAnswer { get => ((CBBItem)cbbAnswers.SelectedItem).Value; set => cbbAnswers.SelectedIndex = value; }
+        public override void ClearFields()
+        {
+            QuestionAnswer = 0;
+        }
     }
 }

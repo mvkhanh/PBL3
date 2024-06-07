@@ -103,10 +103,31 @@ namespace PBL.Resources.Components
             }
             else
             {
-                // Xử lý trường hợp đường dẫn hình ảnh không hợp lệ
+                imageBox.Image = null;
             }
 
             OnPropertyChanged(nameof(ImagePath));
+        }
+        protected override void OnQuestionImageChanged()
+        {
+            if (QuestionImage != null && QuestionImage.Length > 0)
+            {
+                using (var ms = new MemoryStream(QuestionImage))
+                {
+                    imageBox.Image = Image.FromStream(ms);
+                }
+            }
+            else
+            {
+                imageBox.Image = null;
+            }
+
+            OnPropertyChanged(nameof(QuestionImage));
+        }
+        public override void ClearFields()
+        {
+            QuestionAnswer = 0;
+            QuestionContent = AnswerAContent = AnswerBContent = AnswerCContent = AnswerDContent = ImagePath = "";
         }
     }
 }

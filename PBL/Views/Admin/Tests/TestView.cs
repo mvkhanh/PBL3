@@ -17,7 +17,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
-//Image trong cac questionbox khong tu cap nhat
+
 namespace PBL
 {
     public partial class TestView : Form, ITestView
@@ -39,10 +39,7 @@ namespace PBL
             tabControl1.TabPages.Remove(tabPageQuestionList);
             Teachers = new List<CBBItem>();
             cbbTeacherName.DataSource = Teachers;
-            Questions = new List<List<QuestionBox>>();
-            InitQuestionList();
-            AddQuestionToPanel();
-            SetCurrentButton(btnPart1);
+            InitQuestionTab();
         }
 
         private void AssociateAndRaiseViewEvents()
@@ -95,10 +92,6 @@ namespace PBL
                     ClearAudio();
                     tabControl1.TabPages.Remove(tabPageTestDetail);
                     tabControl1.TabPages.Add(tabPageTestList);
-                    //Questions = new List<List<QuestionBox>>();
-                    //InitQuestionList();
-                    //AddQuestionToPanel();
-                    //SetCurrentButton(btnPart1);
                 }
                 MessageBox.Show(Message);
             };
@@ -108,11 +101,14 @@ namespace PBL
                 CancelEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(tabPageTestDetail);
                 tabControl1.TabPages.Add(tabPageTestList);
-                //Questions = new List<List<QuestionBox>>();
-                //InitQuestionList();
-                //AddQuestionToPanel();
-                //SetCurrentButton(btnPart1);
             };
+        }
+        private void InitQuestionTab()
+        {
+            Questions = new List<List<QuestionBox>>();
+            InitQuestionList();
+            AddQuestionToPanel();
+            SetCurrentButton(btnPart1);
         }
 
         private void InitQuestionList()
@@ -143,6 +139,7 @@ namespace PBL
         }
         private void AddQuestionToPanel()
         {
+            panelMain.Controls.Clear();
             lbPart.Text = "Part " + (currentPage + 1);
             panelMain.Controls.Clear();
             panelMain.Controls.Add(lbPart);
@@ -311,7 +308,7 @@ namespace PBL
                 {
                     if (string.IsNullOrEmpty(TestAudioPath))
                     {
-                        fileName = "audio.mp3";
+                        fileName = "sdcdad.mp3";
                         File.WriteAllBytes(fileName, TestAudio);
                         InitAudio(fileName);
                     }
@@ -341,8 +338,6 @@ namespace PBL
         {
             if (outputDevice != null && outputDevice.PlaybackState == PlaybackState.Playing) outputDevice.Stop();
             if (File.Exists(fileName)) File.Delete(fileName);
-            audioFile = null;
-            outputDevice = null;
             isPlaying = false;
             btnPlay.Visible = false;
         }

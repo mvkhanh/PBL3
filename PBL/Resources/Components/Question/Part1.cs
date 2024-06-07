@@ -23,12 +23,28 @@ namespace PBL.Resources.Components
             }
             else
             {
-                // Xử lý trường hợp đường dẫn hình ảnh không hợp lệ
+                imageBox.Image = null;
             }
 
             OnPropertyChanged(nameof(ImagePath));
         }
 
+        protected override void OnQuestionImageChanged()
+        {
+            if (QuestionImage != null && QuestionImage.Length > 0)
+            {
+                using (var ms = new MemoryStream(QuestionImage))
+                {
+                    imageBox.Image = Image.FromStream(ms);
+                }
+            }
+            else
+            {
+                imageBox.Image = null;
+            }
+
+            OnPropertyChanged(nameof(QuestionImage));
+        }
         public Part1()
         {
             InitializeComponent();
@@ -78,6 +94,11 @@ namespace PBL.Resources.Components
                 // Load and display the image in the PictureBox
                 ImagePath = openFileDialog.FileName;
             }
+        }
+        public override void ClearFields()
+        {
+            QuestionAnswer = 0;
+            ImagePath = "";
         }
     }
 }

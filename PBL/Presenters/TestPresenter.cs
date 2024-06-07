@@ -241,8 +241,7 @@ namespace PBL.Presenters
             view.TestAudio = null;
             foreach(var part in view.Questions) foreach(var question in part)
                 {
-                    question.QuestionId = question.AnswerAId = question.AnswerBId = question.AnswerCId = question.AnswerDId = question.QuestionAnswer = 0;
-                    question.QuestionContent = question.ImagePath = question.AnswerAContent = question.AnswerBContent = question.AnswerCContent = question.AnswerDContent = "";
+                    question.ClearFields();
                 }
         }
     }

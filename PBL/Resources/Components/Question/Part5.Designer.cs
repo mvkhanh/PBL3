@@ -230,7 +230,7 @@
             this.txtNumber.PasswordChar = false;
             this.txtNumber.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtNumber.PlaceholderText = "";
-            this.txtNumber.Size = new System.Drawing.Size(35, 29);
+            this.txtNumber.Size = new System.Drawing.Size(43, 29);
             this.txtNumber.TabIndex = 19;
             this.txtNumber.Texts = "";
             this.txtNumber.UnderlinedStyle = false;
@@ -316,8 +316,7 @@
             // 
             // Part5
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.roundPanel1);
             this.Name = "Part5";

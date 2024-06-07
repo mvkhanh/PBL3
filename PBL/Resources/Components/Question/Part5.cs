@@ -56,5 +56,10 @@ namespace PBL.Resources.Components
             });
             cbbAnswers.SelectedIndex = 0;
         }
+        public override void ClearFields()
+        {
+            QuestionAnswer = 0;
+            QuestionContent = AnswerAContent = AnswerBContent = AnswerCContent = AnswerDContent = "";
+        }
     }
 }
