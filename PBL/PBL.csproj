@@ -61,6 +61,30 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Registry.4.7.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.2.2.1\lib\net472\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Asio, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Asio.2.2.1\lib\netstandard2.0\NAudio.Asio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Core.2.2.1\lib\netstandard2.0\NAudio.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Midi, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Midi.2.2.1\lib\netstandard2.0\NAudio.Midi.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Wasapi, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Wasapi.2.2.1\lib\netstandard2.0\NAudio.Wasapi.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WinForms, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.WinForms.2.2.1\lib\net472\NAudio.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WinMM, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.WinMM.2.2.1\lib\netstandard2.0\NAudio.WinMM.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="Spire.Pdf, Version=10.4.2.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
@@ -102,6 +126,12 @@
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.4.7.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.4.7.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
@@ -127,17 +157,83 @@
     <Compile Include="Models\Test\ITestRepository.cs" />
     <Compile Include="Presenters\LessonPresenter.cs" />
     <Compile Include="Presenters\TestPresenter.cs" />
+    <Compile Include="Resources\Components\AddPartLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\Components\AddPartLabel.Designer.cs">
+      <DependentUpon>AddPartLabel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Components\AddQuestion.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Resources\Components\AddQuestion.Designer.cs">
       <DependentUpon>AddQuestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Components\AddQuestionResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\Components\AddQuestionResult.Designer.cs">
+      <DependentUpon>AddQuestionResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Components\CommentsBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\Components\CommentsBox.Designer.cs">
+      <DependentUpon>CommentsBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Components\RJComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Resources\Components\RJDatePicker.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StudentLessonView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentLessonView.Designer.cs">
+      <DependentUpon>StudentLessonView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentMainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentMainView.Designer.cs">
+      <DependentUpon>StudentMainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentProfileView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentProfileView.Designer.cs">
+      <DependentUpon>StudentProfileView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentTestView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentTestView.Designer.cs">
+      <DependentUpon>StudentTestView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherLessonView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherLessonView.Designer.cs">
+      <DependentUpon>TeacherLessonView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherMainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherMainView.Designer.cs">
+      <DependentUpon>TeacherMainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherProfileView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherProfileView.Designer.cs">
+      <DependentUpon>TeacherProfileView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherTestView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherTestView.Designer.cs">
+      <DependentUpon>TeacherTestView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\Lessons\LessonView.cs">
       <SubType>Form</SubType>
@@ -232,8 +328,41 @@
     <Compile Include="_Repositories\StudentRepository.cs" />
     <Compile Include="_Repositories\TeacherRepository.cs" />
     <Compile Include="_Repositories\TestRepository.cs" />
+    <EmbeddedResource Include="Resources\Components\AddPartLabel.resx">
+      <DependentUpon>AddPartLabel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Components\AddQuestion.resx">
       <DependentUpon>AddQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Components\AddQuestionResult.resx">
+      <DependentUpon>AddQuestionResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Components\CommentsBox.resx">
+      <DependentUpon>CommentsBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentLessonView.resx">
+      <DependentUpon>StudentLessonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentMainView.resx">
+      <DependentUpon>StudentMainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentProfileView.resx">
+      <DependentUpon>StudentProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentTestView.resx">
+      <DependentUpon>StudentTestView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherLessonView.resx">
+      <DependentUpon>TeacherLessonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherMainView.resx">
+      <DependentUpon>TeacherMainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherProfileView.resx">
+      <DependentUpon>TeacherProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherTestView.resx">
+      <DependentUpon>TeacherTestView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\Lessons\LessonView.resx">
       <DependentUpon>LessonView.cs</DependentUpon>
@@ -304,9 +433,19 @@
     <None Include="Resources\User%282%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\StudentLessonView2.png" />
+    <None Include="Resources\StudentLessonView.png" />
+    <None Include="Resources\teacherprofileview.png" />
+    <None Include="Resources\studentProfile.png" />
     <None Include="Resources\TOEIC Master.png" />
     <None Include="Resources\calendarDark.png" />
     <None Include="Resources\calendarWhite.png" />
+    <None Include="Resources\background profile student.jpg" />
+    <None Include="Resources\backgroudlessson1.png" />
+    <None Include="Resources\backgroundlessson2.png" />
+    <None Include="Resources\backgroundLesson3.png" />
+    <Content Include="Resources\BTN_Thumb.bmp" />
+    <Content Include="Resources\BTN_ThumbBlue.bmp" />
     <Content Include="Resources\copy %281%29.png" />
     <Content Include="Resources\editing.png" />
     <Content Include="Resources\email.png" />

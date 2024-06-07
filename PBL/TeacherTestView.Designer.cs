@@ -1,6 +1,6 @@
 ﻿namespace PBL
 {
-    partial class TestView
+    partial class TeacherTestView
     {
         /// <summary>
         /// Required designer variable.
@@ -38,7 +38,6 @@
             this.btnNext = new FontAwesome.Sharp.IconButton();
             this.btnCanCel1 = new FontAwesome.Sharp.IconButton();
             this.tabPageTestDetail = new System.Windows.Forms.TabPage();
-            this.cbbTeacherName = new System.Windows.Forms.ComboBox();
             this.lbTeacherName = new System.Windows.Forms.Label();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.lbBirth = new System.Windows.Forms.Label();
@@ -64,6 +63,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lbSearch = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.roundTextBox1 = new PBL.Controller.RoundTextBox();
             this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelbtn.SuspendLayout();
@@ -128,7 +128,6 @@
             this.btnBack.Text = "Back";
             this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // BtnSave1
             // 
@@ -151,7 +150,6 @@
             this.BtnSave1.Text = "Save";
             this.BtnSave1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnSave1.UseVisualStyleBackColor = false;
-            this.BtnSave1.Click += new System.EventHandler(this.BtnSave1_Click);
             // 
             // btnNext
             // 
@@ -174,7 +172,6 @@
             this.btnNext.Text = "Next";
             this.btnNext.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNext.UseVisualStyleBackColor = false;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // btnCanCel1
             // 
@@ -197,11 +194,9 @@
             this.btnCanCel1.Text = "Cancel";
             this.btnCanCel1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCanCel1.UseVisualStyleBackColor = false;
-            this.btnCanCel1.Click += new System.EventHandler(this.btnCanCel1_Click);
             // 
             // tabPageTestDetail
             // 
-            this.tabPageTestDetail.Controls.Add(this.cbbTeacherName);
             this.tabPageTestDetail.Controls.Add(this.lbTeacherName);
             this.tabPageTestDetail.Controls.Add(this.checkedListBox1);
             this.tabPageTestDetail.Controls.Add(this.lbBirth);
@@ -216,6 +211,7 @@
             this.tabPageTestDetail.Controls.Add(this.txtDescription);
             this.tabPageTestDetail.Controls.Add(this.regist);
             this.tabPageTestDetail.Controls.Add(this.txtName);
+            this.tabPageTestDetail.Controls.Add(this.roundTextBox1);
             this.tabPageTestDetail.Controls.Add(this.txtPaticipant);
             this.tabPageTestDetail.Controls.Add(this.txtId);
             this.tabPageTestDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -226,15 +222,6 @@
             this.tabPageTestDetail.TabIndex = 1;
             this.tabPageTestDetail.Text = "Test detail";
             this.tabPageTestDetail.UseVisualStyleBackColor = true;
-            // 
-            // cbbTeacherName
-            // 
-            this.cbbTeacherName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbbTeacherName.FormattingEnabled = true;
-            this.cbbTeacherName.Location = new System.Drawing.Point(48, 305);
-            this.cbbTeacherName.Name = "cbbTeacherName";
-            this.cbbTeacherName.Size = new System.Drawing.Size(221, 24);
-            this.cbbTeacherName.TabIndex = 28;
             // 
             // lbTeacherName
             // 
@@ -359,7 +346,6 @@
             this.btnAddQuestion.Text = "Add Questions";
             this.btnAddQuestion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddQuestion.UseVisualStyleBackColor = false;
-            this.btnAddQuestion.Click += new System.EventHandler(this.btnAddQuestion_Click);
             // 
             // btnCancel
             // 
@@ -421,7 +407,7 @@
             this.txtDescription.PasswordChar = false;
             this.txtDescription.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtDescription.PlaceholderText = "";
-            this.txtDescription.Size = new System.Drawing.Size(429, 210);
+            this.txtDescription.Size = new System.Drawing.Size(429, 211);
             this.txtDescription.TabIndex = 25;
             this.txtDescription.Texts = "";
             this.txtDescription.UnderlinedStyle = false;
@@ -663,7 +649,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(790, 383);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.ColumnAdded += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dataGridView1_ColumnAdded);
             // 
             // lbSearch
             // 
@@ -691,14 +676,38 @@
             this.tabControl1.Size = new System.Drawing.Size(969, 477);
             this.tabControl1.TabIndex = 2;
             // 
-            // TestView
+            // roundTextBox1
+            // 
+            this.roundTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.roundTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.roundTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.roundTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.roundTextBox1.BorderRadius = 0;
+            this.roundTextBox1.BorderSize = 2;
+            this.roundTextBox1.Enabled = false;
+            this.roundTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roundTextBox1.Location = new System.Drawing.Point(48, 302);
+            this.roundTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.roundTextBox1.Multiline = false;
+            this.roundTextBox1.Name = "roundTextBox1";
+            this.roundTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.roundTextBox1.PasswordChar = false;
+            this.roundTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.roundTextBox1.PlaceholderText = "";
+            this.roundTextBox1.Size = new System.Drawing.Size(221, 31);
+            this.roundTextBox1.TabIndex = 23;
+            this.roundTextBox1.Texts = "";
+            this.roundTextBox1.UnderlinedStyle = false;
+            // 
+            // TeacherTestView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(969, 477);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "TestView";
+            this.Name = "TeacherTestView";
             this.Text = "Teachers";
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -725,7 +734,6 @@
         private FontAwesome.Sharp.IconButton btnNext;
         private FontAwesome.Sharp.IconButton btnCanCel1;
         private System.Windows.Forms.TabPage tabPageTestDetail;
-        private System.Windows.Forms.ComboBox cbbTeacherName;
         private System.Windows.Forms.Label lbTeacherName;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Label lbBirth;
@@ -751,5 +759,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lbSearch;
         private System.Windows.Forms.TabControl tabControl1;
+        private Controller.RoundTextBox roundTextBox1;
     }
 }
