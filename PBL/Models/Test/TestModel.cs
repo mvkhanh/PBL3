@@ -32,9 +32,20 @@ namespace PBL.Models
         public virtual TeacherModel Teacher { get; set; }
 
         [DisplayName("Gioi thieu")]
-        public string Description {  get; set; }
+        public string Description { get; set; }
+
+        public byte[] Audio {  get; set; }
 
         [DisplayName("So luong tham gia")]
         public int Count {  get; set; }
+
+        public virtual ICollection<QuestionModel> Questions { get; }
+
+        //Constructor
+        public TestModel()
+        {
+            Questions = new HashSet<QuestionModel>();
+        }
+        
     }
 }

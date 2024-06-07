@@ -20,6 +20,7 @@ namespace PBL._Repositories
                     PublishDay = testModel.PublishDay,
                     Description = testModel.Description,
                     Count = testModel.Count,
+                    Audio = testModel.Audio,
                     Id_Teacher = testModel.Id_Teacher
                 });
                 ctx.SaveChanges();
@@ -44,6 +45,7 @@ namespace PBL._Repositories
                 test.Name = testModel.Name;
                 test.Description = testModel.Description;
                 test.Id_Teacher = testModel.Id_Teacher;
+                if(testModel.Audio != null) test.Audio = testModel.Audio;
                 ctx.SaveChanges();
             }
         }
@@ -58,6 +60,11 @@ namespace PBL._Repositories
         public IEnumerable<TestModel> GetAll()
         {
             return new PBLContext().Tests.ToList();
+        }
+
+        public int GetLast()
+        {
+            return new PBLContext().Tests.ToList().Last().Id;
         }
     }
 }

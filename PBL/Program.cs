@@ -9,6 +9,8 @@ using PBL.Presenters;
 using PBL.Views;
 using PBL._Repositories;
 using System.Configuration;
+using PBL.Views.Common;
+using PBL.Presenters.Shared;
 
 namespace PBL
 {
@@ -23,8 +25,10 @@ namespace PBL
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            IMainView view = new MainView();
-            new MainPresenter(view);
+            ILoginView view = new LoginView();
+            ITeacherRepository teacherRepository = new TeacherRepository();
+            IStudentRepository studentRepository = new StudentRepository();
+            new LoginPresenter(view, teacherRepository, studentRepository);
 
             Application.Run(new StudentProfileView());
         }

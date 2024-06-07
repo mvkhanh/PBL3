@@ -13,5 +13,6 @@ namespace PBL.Models.Test
         void Delete(int id);
         IEnumerable<TestModel> GetAll();
         IEnumerable<TestModel> GetByValue(string search);
+        int GetLast();
     }
 }

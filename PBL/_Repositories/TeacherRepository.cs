@@ -65,5 +65,12 @@ namespace PBL._Repositories
             if (teacherId > 0) return new PBLContext().Teachers.Where(p => p.Id == teacherId).ToList();
             else return new PBLContext().Teachers.Where(p => p.Name.Contains(search)).ToList();
         }
+
+        public int LoginCheck(string username, string password)
+        {
+            var teacher = new PBLContext().Teachers.Where(p => p.Account == username && p.Password == password).FirstOrDefault();
+            if(teacher == null) return -1;
+            return teacher.Id;
+        }
     }
 }

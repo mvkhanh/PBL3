@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL.Views.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,44 +15,90 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PBL.Views.Shared
 {
-    public partial class Login : Form
+    public partial class LoginView : Form, ILoginView
     {
-        
-        public Login()
+        //Fields
+        private bool _IsSuccessful;
+        private string _Message;
+
+        //Constructor
+        public LoginView()
         {
             InitializeComponent();
+            AssociateAndRaiseViewEvents();
         }
 
+        private void AssociateAndRaiseViewEvents()
+        {
+            btnLogin.Click += delegate {
+                LoginEvent?.Invoke(this, EventArgs.Empty);
+                if (isSuccessful)
+                {
+                    this.Hide();
+                }
+                MessageBox.Show(Message);
+            };
+        }
+
+        //Properties
+        public string Account
+         { get => txtAccount.Texts; set => txtAccount.Texts = value; }
+        public string Password
+            { get => txtPassword.Texts; set => txtPassword.Texts = value; }
+        public bool isSuccessful 
+            { get => _IsSuccessful; set => _IsSuccessful = value; }
+
+        public string Message { get => _Message; set => _Message = value; }
+
+        //Events
+        public event EventHandler LoginEvent;
+
+        //Methods
         #region Show/Hide Password
         private void btOpenEye_Click(object sender, EventArgs e)
         {
-            if (txtPass.PasswordChar)
+            if (txtPassword.PasswordChar)
             {
                 btCloseEye.BringToFront();
-                txtPass.PasswordChar = false;
+                txtPassword.PasswordChar = false;
             }
         }
 
         private void btCloseEye_Click(object sender, EventArgs e)
         {
-            if (!txtPass.PasswordChar)
+            if (!txtPassword.PasswordChar)
             {
                 btOpenEye.BringToFront();
-                txtPass.PasswordChar = true;
+                txtPassword.PasswordChar = true;
             }
         }
 
         private void txtPass__TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtPass.Texts)) btCloseEye.Visible = btOpenEye.Visible = false;
+            if (string.IsNullOrEmpty(txtPassword.Texts)) btCloseEye.Visible = btOpenEye.Visible = false;
             else btCloseEye.Visible = btOpenEye.Visible = true;
         }
         #endregion
 
-        #region Close Button
+        #region Title Button
         private void button1_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
+        }
+        private void btnRestoreDown_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+        }
+        private void btnMinisize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
         #endregion
 
@@ -74,6 +121,7 @@ namespace PBL.Views.Shared
         private const int HT_BOTTOM = 0x0F;
         private const int HT_BOTTOMLEFT = 0x10;
         private const int HT_BOTTOMRIGHT = 0x11;
+
         // Handle the mouse down event on the form to enable dragging and resizing
         private void resizePanel_MouseDown(object sender, MouseEventArgs e)
         {
@@ -149,28 +197,11 @@ namespace PBL.Views.Shared
         {
             this.Hide(); 
             Register registerForm = new Register();
-            registerForm.ShowDialog();
+            registerForm.Show();
             try
             {
                 this.Show();
             } catch (Exception ex) { }
-        }
-
-        private void btnRestoreDown_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-        }
-
-        private void btnMinisize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

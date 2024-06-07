@@ -92,7 +92,7 @@ namespace PBL.Presenters
             model.Id = view.LessonId;
             model.Name = view.LessonName;
             model.PublishDay = view.LessonPublishDay;
-            if (!string.IsNullOrEmpty(view.LessonContentPath)) model.Content = ConvertPathToContent(view.LessonContentPath);
+            if (!string.IsNullOrEmpty(view.LessonContentPath)) model.Content = File.ReadAllBytes(view.LessonContentPath);
             model.Views = view.LessonViews;
             model.Id_Teacher = view.LessonId_Teacher;
             try
@@ -143,22 +143,6 @@ namespace PBL.Presenters
         {
             var lesson = (LessonModel)lessonsBindingSource.Current;
             view.LessonContent = lesson.Content;
-        }
-       
-        private byte[] ConvertPathToContent(string lessonContentPath)
-        {
-            byte[] buffer;
-            using(FileStream fileStream = new FileStream(lessonContentPath, FileMode.Open, FileAccess.Read))
-            {
-                int length = (int)fileStream.Length;  // get file length
-                buffer = new byte[length];            // create buffer
-                int count;                            // actual number of bytes read
-                int sum = 0;                          // total number of bytes read
-                // read until Read method returns 0 (end of the stream has been reached)
-                while ((count = fileStream.Read(buffer, sum, length - sum)) > 0)
-                    sum += count;  // sum is a buffer offset for next reading
-            }
-            return buffer;
         }
 
         private void CleanViewFields()

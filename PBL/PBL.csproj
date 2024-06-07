@@ -152,22 +152,44 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CBBItem.cs" />
-    <Compile Include="CreateDB.cs" />
+    <Compile Include="Models\Shared\ILoginRepository.cs" />
+    <Compile Include="Presenters\Shared\LoginPresenter.cs" />
+    <Compile Include="Resources\Components\CBBItem.cs" />
+    <Compile Include="DB\CreateDB.cs" />
+    <Compile Include="Models\Answer\IAnswerRepository.cs" />
+    <Compile Include="Models\Question\IQuestionRepository.cs" />
     <Compile Include="Models\Test\ITestRepository.cs" />
     <Compile Include="Presenters\LessonPresenter.cs" />
     <Compile Include="Presenters\TestPresenter.cs" />
-    <Compile Include="Resources\Components\AddPartLabel.cs">
+    <Compile Include="Resources\Components\Question\Part1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Resources\Components\AddPartLabel.Designer.cs">
-      <DependentUpon>AddPartLabel.cs</DependentUpon>
+    <Compile Include="Resources\Components\Question\Part1.Designer.cs">
+      <DependentUpon>Part1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Components\AddQuestion.cs">
+    <Compile Include="Resources\Components\Question\Part2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Resources\Components\AddQuestion.Designer.cs">
-      <DependentUpon>AddQuestion.cs</DependentUpon>
+    <Compile Include="Resources\Components\Question\Part2.Designer.cs">
+      <DependentUpon>Part2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Components\Question\Part5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\Components\Question\Part5.Designer.cs">
+      <DependentUpon>Part5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Components\Question\Part3467.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\Components\Question\Part3467.Designer.cs">
+      <DependentUpon>Part3467.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Components\Question\QuestionBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\Components\Question\QuestionBox.Designer.cs">
+      <DependentUpon>QuestionBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Resources\Components\AddQuestionResult.cs">
       <SubType>UserControl</SubType>
@@ -265,7 +287,7 @@
     <Compile Include="Resources\Components\RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="PBLContext.cs" />
+    <Compile Include="DB\PBLContext.cs" />
     <Compile Include="Views\Admin\Tests\ITestView.cs" />
     <Compile Include="Views\Admin\Tests\TestView.cs">
       <SubType>Form</SubType>
@@ -294,18 +316,19 @@
     <Compile Include="Views\Shared\ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Shared\Login.cs">
+    <Compile Include="Views\Shared\Login\ILoginView.cs" />
+    <Compile Include="Views\Shared\Login\LoginView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Shared\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Views\Shared\Login\LoginView.Designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\Students\IStudentView.cs" />
     <Compile Include="Models\Lesson\LessonModel.cs" />
     <Compile Include="Models\Test\TestModel.cs" />
-    <Compile Include="Models\Question.cs" />
+    <Compile Include="Models\Question\QuestionModel.cs" />
     <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\Answer.cs" />
+    <Compile Include="Models\Answer\AnswerModel.cs" />
     <Compile Include="Models\Teacher\TeacherModel.cs" />
     <Compile Include="Models\Student\StudentModel.cs" />
     <Compile Include="Models\UserModel.cs" />
@@ -324,15 +347,26 @@
     <Compile Include="Views\Admin\Teachers\TeacherView.Designer.cs">
       <DependentUpon>TeacherView.cs</DependentUpon>
     </Compile>
+    <Compile Include="_Repositories\AnswerRepository.cs" />
     <Compile Include="_Repositories\LessonRepository.cs" />
+    <Compile Include="_Repositories\QuestionRepository.cs" />
     <Compile Include="_Repositories\StudentRepository.cs" />
     <Compile Include="_Repositories\TeacherRepository.cs" />
     <Compile Include="_Repositories\TestRepository.cs" />
-    <EmbeddedResource Include="Resources\Components\AddPartLabel.resx">
-      <DependentUpon>AddPartLabel.cs</DependentUpon>
+    <EmbeddedResource Include="Resources\Components\Question\Part1.resx">
+      <DependentUpon>Part1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Components\AddQuestion.resx">
-      <DependentUpon>AddQuestion.cs</DependentUpon>
+    <EmbeddedResource Include="Resources\Components\Question\Part2.resx">
+      <DependentUpon>Part2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Components\Question\Part3467.resx">
+      <DependentUpon>Part3467.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Components\Question\Part5.resx">
+      <DependentUpon>Part5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Components\Question\QuestionBox.resx">
+      <DependentUpon>QuestionBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Components\AddQuestionResult.resx">
       <DependentUpon>AddQuestionResult.cs</DependentUpon>
@@ -382,8 +416,8 @@
     <EmbeddedResource Include="Views\Shared\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Shared\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Shared\Login\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

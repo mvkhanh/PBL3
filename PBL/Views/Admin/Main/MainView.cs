@@ -153,7 +153,10 @@ namespace PBL.Views
             iconCurrentChildForm.IconColor = Color.MediumPurple;
             lbTitleChildForm.Text = "Home";
         }
-
+        new public void Show()
+        {
+            base.Show();
+        }
         #region Drag form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -254,8 +257,6 @@ namespace PBL.Views
             else Cursor = Cursors.Default;
         }
         #endregion
-
-
         #region Modify window
         private void btnRestoreDown_Click(object sender, EventArgs e)
         {
@@ -276,7 +277,7 @@ namespace PBL.Views
 
         private void btClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
         #endregion
     }

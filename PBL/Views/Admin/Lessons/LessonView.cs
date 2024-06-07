@@ -28,7 +28,6 @@ namespace PBL
             tabControl1.TabPages.Remove(tabPageLessonContent);
             Teachers = new List<CBBItem>();
             cbbTeacherName.DataSource = Teachers;
-            
         }
 
         private void AssociateAndRaiseViewEvents()
@@ -101,7 +100,7 @@ namespace PBL
             };
         }
 
-        //Properties
+        #region Properties
         public int LessonId
             { get => Convert.ToInt32(txtId.Texts); set => txtId.Texts = value.ToString(); }
         public string LessonName 
@@ -135,7 +134,7 @@ namespace PBL
             { get => _Message; set => _Message = value; }
         public List<CBBItem> Teachers
             { get; set; }
-
+        #endregion
         //Events
         public event EventHandler SearchEvent;
         public event EventHandler AddNewEvent;
