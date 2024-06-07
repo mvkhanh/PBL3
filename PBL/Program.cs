@@ -30,7 +30,7 @@ namespace PBL
             IStudentRepository studentRepository = new StudentRepository();
             new LoginPresenter(view, teacherRepository, studentRepository);
 
-            Application.Run(new StudentProfileView());
+            Application.Run((Form)view);
         }
     }
 }
