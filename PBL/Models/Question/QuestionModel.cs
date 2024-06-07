@@ -15,9 +15,10 @@ namespace PBL.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Nhap cau hoi.")]
+        //[Required(ErrorMessage = "Nhap cau hoi.")]
         public string Content {  get; set; }
-        public byte[] Photo { get; set; }
+        public byte[] Image { get; set; }
+        public int RightAnswer {  get; set; }
         public int Id_Test { get; set; }
         [ForeignKey("Id_Test")]
         public virtual TestModel Test { get; set; }

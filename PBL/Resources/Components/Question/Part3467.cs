@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,22 +14,22 @@ namespace PBL.Resources.Components
 {
     public partial class Part3467 : QuestionBox
     {
-        public override string QuestionA
+        public override string AnswerAContent
         {
             get => txtA.Texts;
             set => txtA.Texts = value;
         }
-        public override string QuestionB 
+        public override string AnswerBContent
         {
             get => txtB.Texts;
             set => txtB.Texts = value;
         }
-        public override string QuestionC
+        public override string AnswerCContent
         {
             get => txtC.Texts;
             set => txtC.Texts = value;
         }
-        public override string QuestionD
+        public override string AnswerDContent
         {
             get => txtD.Texts;
             set => txtD.Texts = value;
@@ -43,26 +44,44 @@ namespace PBL.Resources.Components
             get => Convert.ToInt32(txtNumber.Texts);
             set => txtNumber.Texts = value.ToString();
         }
-        public override Image QuestionImage
-        {
-            get => imageBox.Image;
-            set => imageBox.Image = value;
-        }
-        public override string QuestionAnswer
-        {
-            get => cbbAnswers.SelectedItem.ToString();
-            set => cbbAnswers.SelectedItem = value;
-        }
+
+        public override int QuestionAnswer { get => ((CBBItem)cbbAnswers.SelectedItem).Value; set => cbbAnswers.SelectedIndex = value; }
+
         public Part3467()
         {
             InitializeComponent();
-            cbbAnswers.Items.AddRange(new string[] { "A", "B", "C", "D" } );
+            cbbAnswers.Items.AddRange(new CBBItem[]
+            {
+                new CBBItem{Value = 0, Text = "A"},
+                new CBBItem{Value = 1, Text = "B"},
+                new CBBItem{Value = 2, Text = "C"},
+                new CBBItem{Value=3, Text = "D"}
+            });
             cbbAnswers.SelectedIndex = 0;
+            if(QuestionImage != null)
+            {
+                LoadImage();
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             imageBox.Image = null;
+        }
+
+        private void LoadImage()
+        {
+            try
+            {
+                string fileName = "tmp.png";
+                File.WriteAllBytes(fileName, QuestionImage);
+                imageBox.Image = Image.FromFile(fileName);
+                File.Delete(fileName);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An error occured when display image");
+            }
         }
 
         private void btnImage_Click(object sender, EventArgs e)
@@ -73,9 +92,21 @@ namespace PBL.Resources.Components
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 // Load and display the image in the PictureBox
-                imageBox.Image = Image.FromFile(openFileDialog.FileName);
-                imageBox.SizeMode = PictureBoxSizeMode.Zoom;
+                ImagePath = openFileDialog.FileName;
             }
+        }
+        protected override void OnImagePathChanged()
+        {
+            if (!string.IsNullOrEmpty(ImagePath) && File.Exists(ImagePath))
+            {
+                imageBox.Image = Image.FromFile(ImagePath);
+            }
+            else
+            {
+                // Xử lý trường hợp đường dẫn hình ảnh không hợp lệ
+            }
+
+            OnPropertyChanged(nameof(ImagePath));
         }
     }
 }

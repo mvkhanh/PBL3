@@ -18,8 +18,9 @@ namespace PBL._Repositories
                 {
                     Id = questionModel.Id,
                     Content = questionModel.Content,
-                    Photo = questionModel.Photo,
-                    Id_Test = questionModel.Id_Test
+                    Image = questionModel.Image,
+                    Id_Test = questionModel.Id_Test,
+                    RightAnswer = questionModel.RightAnswer
                 });
                 ctx.SaveChanges();
             }
@@ -31,7 +32,8 @@ namespace PBL._Repositories
             {
                 var question = ctx.Questions.Find(questionModel.Id);
                 question.Content = questionModel.Content;
-                if(questionModel.Photo != null) question.Photo = questionModel.Photo;
+                if(questionModel.Image != null) question.Image = questionModel.Image;
+                question.RightAnswer = questionModel.RightAnswer;
                 ctx.SaveChanges();
             }
         }
@@ -39,6 +41,11 @@ namespace PBL._Repositories
         public IEnumerable<QuestionModel> GetByTest(int testId)
         {
             return new PBLContext().Tests.Find(testId).Questions;
+        }
+
+        public int GetLast()
+        {
+            return new PBLContext().Questions.ToList().Last().Id;
         }
     }
 }

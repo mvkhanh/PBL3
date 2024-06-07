@@ -13,22 +13,22 @@ namespace PBL.Resources.Components
 {
     public partial class Part5 : QuestionBox
     {
-        public override string QuestionA
+        public override string AnswerAContent
         {
             get => txtA.Texts;
             set => txtA.Texts = value;
         }
-        public override string QuestionB
+        public override string AnswerBContent
         {
             get => txtB.Texts;
             set => txtB.Texts = value;
         }
-        public override string QuestionC
+        public override string AnswerCContent
         {
             get => txtC.Texts;
             set => txtC.Texts = value;
         }
-        public override string QuestionD
+        public override string AnswerDContent
         {
             get => txtD.Texts;
             set => txtD.Texts = value;
@@ -43,15 +43,17 @@ namespace PBL.Resources.Components
             get => Convert.ToInt32(txtNumber.Texts);
             set => txtNumber.Texts = value.ToString();
         }
-        public override string QuestionAnswer
-        {
-            get => cbbAnswers.SelectedItem.ToString();
-            set => cbbAnswers.SelectedItem = value;
-        }
+        public override int QuestionAnswer { get => ((CBBItem)cbbAnswers.SelectedItem).Value; set => cbbAnswers.SelectedIndex = value; }
         public Part5()
         {
             InitializeComponent();
-            cbbAnswers.Items.AddRange(new string[] { "A", "B", "C", "D" });
+            cbbAnswers.Items.AddRange(new CBBItem[]
+            {
+                new CBBItem{Value = 0, Text = "A"},
+                new CBBItem{Value = 1, Text = "B"},
+                new CBBItem{Value = 2, Text = "C"},
+                new CBBItem{Value=3, Text = "D"}
+            });
             cbbAnswers.SelectedIndex = 0;
         }
     }

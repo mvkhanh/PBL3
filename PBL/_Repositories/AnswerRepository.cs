@@ -18,7 +18,6 @@ namespace PBL._Repositories
                 {
                     Id = answerModel.Id,
                     Content = answerModel.Content,
-                    Right = answerModel.Right,
                     Id_Question = answerModel.Id_Question
                 });
                 ctx.SaveChanges();
@@ -31,7 +30,6 @@ namespace PBL._Repositories
             {
                 var answer = ctx.Answers.Find(answerModel.Id);
                 answer.Content = answerModel.Content;
-                answer.Right = answerModel.Right;
                 ctx.SaveChanges();
             }
         }

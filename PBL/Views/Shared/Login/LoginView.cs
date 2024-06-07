@@ -30,12 +30,18 @@ namespace PBL.Views.Shared
 
         private void AssociateAndRaiseViewEvents()
         {
-            btnLogin.Click += delegate { LoginEvent?.Invoke(this, EventArgs.Empty); };
-            txtPassword.KeyDown += (s, e) =>
-            {
-                if (e.KeyCode == Keys.Enter) btnLogin.PerformClick();
+            btnLogin.Click += delegate {
+                LoginEvent?.Invoke(this, EventArgs.Empty);
+                if (!isSuccessful)
+                {
+                    MessageBox.Show("Check your account and password");
+                }
+                else
+                {
+                    this.Hide();
+                    MessageBox.Show("Login successfully");
+                }
             };
-            
         }
 
         //Properties
@@ -45,8 +51,6 @@ namespace PBL.Views.Shared
             { get => txtPassword.Texts; set => txtPassword.Texts = value; }
         public bool isSuccessful 
             { get => _IsSuccessful; set => _IsSuccessful = value; }
-        public string Message 
-            { get => _Message; set => _Message = value; }
 
         //Events
         public event EventHandler LoginEvent;
@@ -81,7 +85,7 @@ namespace PBL.Views.Shared
         #region Title Button
         private void button1_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
         private void btnRestoreDown_Click(object sender, EventArgs e)
         {

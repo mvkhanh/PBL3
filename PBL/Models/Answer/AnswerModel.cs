@@ -14,9 +14,8 @@ namespace PBL.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [Required(ErrorMessage = "Nhap dap an.")]
+        //[Required(ErrorMessage = "Nhap dap an.")]
         public string Content { get; set; }
-        public bool Right {  get; set; }
         public int Id_Question {  get; set; }
 
         [ForeignKey("Id_Question")]

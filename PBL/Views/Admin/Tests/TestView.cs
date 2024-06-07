@@ -1,19 +1,23 @@
-﻿using PBL.Controller;
+﻿using NAudio.Wave;
+using PBL.Controller;
 using PBL.Resources.Components;
 using PBL.Resources.Components.Question;
 using PBL.Views.Admin.Tests;
+using Spire.Additions.Xps.Schema;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Entity.Core.Metadata.Edm;
+using System.Data.Odbc;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
-
+//Image trong cac questionbox khong tu cap nhat
 namespace PBL
 {
     public partial class TestView : Form, ITestView
@@ -41,30 +45,6 @@ namespace PBL
             SetCurrentButton(btnPart1);
         }
 
-        private void SetCurrentButton(RoundButton btnPart)
-        {
-            if(currentButton != null)
-            {
-                SetNotChooseButton(currentButton);
-            }
-            currentButton = btnPart;
-            SetChooseButton(currentButton);
-        }
-
-        private void SetChooseButton(RoundButton btn)
-        {
-            btn.BorderSize = 0;
-            btn.BackgroundColor = Color.MediumSlateBlue;
-            btn.ForeColor = Color.White;
-        }
-
-        private void SetNotChooseButton(RoundButton btn)
-        {
-            btn.BorderSize = 2;
-            btn.BackgroundColor = Color.White;
-            btn.ForeColor = Color.MediumSlateBlue;
-        }
-
         private void AssociateAndRaiseViewEvents()
         {
             btnSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
@@ -90,6 +70,7 @@ namespace PBL
                     tabControl1.TabPages.Remove(tabPageTestList);
                     tabControl1.TabPages.Add(tabPageTestDetail);
                     tabPageTestDetail.Text = "Edit Test";
+                    if(TestAudio != null) btnPlay.Visible = true;
                 }
                 catch (Exception ex)
                 {
@@ -111,18 +92,29 @@ namespace PBL
                 SaveEvent?.Invoke(this, EventArgs.Empty);
                 if (IsSuccessful)
                 {
+                    ClearAudio();
                     tabControl1.TabPages.Remove(tabPageTestDetail);
                     tabControl1.TabPages.Add(tabPageTestList);
+                    //Questions = new List<List<QuestionBox>>();
+                    //InitQuestionList();
+                    //AddQuestionToPanel();
+                    //SetCurrentButton(btnPart1);
                 }
                 MessageBox.Show(Message);
             };
             btnCancel.Click += delegate
             {
+                ClearAudio();
                 CancelEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(tabPageTestDetail);
                 tabControl1.TabPages.Add(tabPageTestList);
+                //Questions = new List<List<QuestionBox>>();
+                //InitQuestionList();
+                //AddQuestionToPanel();
+                //SetCurrentButton(btnPart1);
             };
         }
+
         private void InitQuestionList()
         {
             int partNum = 7, j = 0;
@@ -160,12 +152,11 @@ namespace PBL
             if (currentPage == 6) btnNext.Visible = false;
             else
             {
-                btnFinish.Visible = false;
                 if (currentPage == 0) btnPrevious.Visible = false;
             }
         }
 
-        //Properties
+        #region Properties
         public int TestId
         { get => Convert.ToInt32(txtId.Texts); set => txtId.Texts = value.ToString(); }
         public string TestName
@@ -187,6 +178,9 @@ namespace PBL
                     }
             }
         }
+        public string TestAudioPath { get; set; }
+        public byte[] TestAudio { get; set; }
+
         public string SearchValue
         { get => txtSearch.Text; set => txtSearch.Text = value; }
         public bool IsEdit
@@ -198,6 +192,7 @@ namespace PBL
         public List<CBBItem> Teachers
         { get; set; }
         public List<List<QuestionBox>> Questions { get; set; }
+        #endregion
 
         //Events
         public event EventHandler SearchEvent;
@@ -207,24 +202,26 @@ namespace PBL
         public event EventHandler SaveEvent;
         public event EventHandler CancelEvent;
 
-        private void dataGridView1_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
-        {
-            if (e.Column.Name == "Id_Teacher" || e.Column.Name == "Description" || e.Column.Name == "Questions") e.Column.Visible = false;
-        }
-        //Question number each part
         //Methods
         public void SetTestListBindingSource(BindingSource TestList)
         {
             dataGridView1.DataSource = TestList;
         }
 
-        //Singleton
+        #region Singleton
         private static TestView instance;
         public static TestView GetInstance()
         {
             if (instance == null || instance.IsDisposed) instance = new TestView();
             return instance;
         }
+        #endregion
+
+        private void dataGridView1_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
+        {
+            if (e.Column.Name == "Id_Teacher" || e.Column.Name == "Description" || e.Column.Name == "Questions" || e.Column.Name == "Audio") e.Column.Visible = false;
+        }
+        #region Question list events ...
         private void btnAddQuestion_Click(object sender, EventArgs e)
         {
             tabControl1.TabPages.Remove(tabPageTestDetail);
@@ -251,9 +248,10 @@ namespace PBL
 
         private void btnFinish_Click(object sender, EventArgs e)
         {
-            //
+            //Check for empty data
             tabControl1.TabPages.Remove(tabPageQuestionList);
             tabControl1.TabPages.Add(tabPageTestDetail);
+            btnPart1.PerformClick();
         }
         private void btnPart_Click(object sender, EventArgs e)
         {
@@ -262,6 +260,93 @@ namespace PBL
             currentPage = btn.Text[btn.Text.Length - 1] - '0' - 1;
             AddQuestionToPanel();
         }
-    }
+        private void SetCurrentButton(RoundButton btnPart)
+        {
+            if (currentButton != null)
+            {
+                SetNotChooseButton(currentButton);
+            }
+            currentButton = btnPart;
+            SetChooseButton(currentButton);
+        }
 
+        private void SetChooseButton(RoundButton btn)
+        {
+            btn.BorderSize = 0;
+            btn.BackgroundColor = Color.MediumSlateBlue;
+            btn.ForeColor = Color.White;
+        }
+
+        private void SetNotChooseButton(RoundButton btn)
+        {
+            btn.BorderSize = 2;
+            btn.BackgroundColor = Color.White;
+            btn.ForeColor = Color.MediumSlateBlue;
+        }
+        #endregion
+
+        #region Audio
+        private void btnAddAudio_Click(object sender, EventArgs e)
+        {
+            var ofd = new OpenFileDialog();
+            ofd.Filter = "MP3 Files (*.mp3)|*.mp3";
+            if(ofd.ShowDialog() == DialogResult.OK)
+            {
+                if(outputDevice != null && outputDevice.PlaybackState == PlaybackState.Playing) { outputDevice.Stop(); }
+                TestAudioPath = ofd.FileName;
+                btnPlay.Visible = true;
+                InitAudio(TestAudioPath);
+            }
+        }
+
+        private bool isPlaying = false;
+        private AudioFileReader audioFile;
+        private WaveOutEvent outputDevice;
+        private string fileName;
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            if (!isPlaying)
+            {
+                try
+                {
+                    if (string.IsNullOrEmpty(TestAudioPath))
+                    {
+                        fileName = "audio.mp3";
+                        File.WriteAllBytes(fileName, TestAudio);
+                        InitAudio(fileName);
+                    }
+                    outputDevice.Play();
+                    isPlaying = true;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Error when play audio file");
+                }
+            }
+            else
+            {
+                if (outputDevice.PlaybackState == PlaybackState.Playing) outputDevice.Pause();
+                else outputDevice.Play();
+            }
+        }
+        private void InitAudio(string fileName)
+        {
+            audioFile = new AudioFileReader(fileName);
+            outputDevice = new WaveOutEvent();
+            outputDevice.Init(audioFile);
+            isPlaying = false;
+        }
+
+        private void ClearAudio()
+        {
+            if (outputDevice != null && outputDevice.PlaybackState == PlaybackState.Playing) outputDevice.Stop();
+            if (File.Exists(fileName)) File.Delete(fileName);
+            audioFile = null;
+            outputDevice = null;
+            isPlaying = false;
+            btnPlay.Visible = false;
+        }
+
+        #endregion
+    }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL.Resources.Components.Question;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,9 +15,12 @@ namespace PBL.Views.Admin.Tests
         string TestName { get; set; }
         DateTime TestPublishDay { get; set; }
         string TestDescription { get; set; }
+        string TestAudioPath {  get; set; }
+        byte[] TestAudio {  get; set; }
         int TestCount { get; set; }
         int TestId_Teacher { get; set; }
         List<CBBItem> Teachers { get; set; }
+        List<List<QuestionBox>> Questions {  get; set; }
 
         string SearchValue { get; set; }
         bool IsEdit { get; set; }

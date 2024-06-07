@@ -128,7 +128,7 @@
             this.imageBox.Margin = new System.Windows.Forms.Padding(2);
             this.imageBox.Name = "imageBox";
             this.imageBox.Size = new System.Drawing.Size(246, 80);
-            this.imageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.imageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imageBox.TabIndex = 26;
             this.imageBox.TabStop = false;
             // 

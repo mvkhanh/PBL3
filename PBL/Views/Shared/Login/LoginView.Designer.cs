@@ -221,10 +221,9 @@
             this.txtPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPassword.PlaceholderText = "Enter password";
             this.txtPassword.Size = new System.Drawing.Size(251, 35);
-            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TabIndex = 1;
             this.txtPassword.Texts = "";
             this.txtPassword.UnderlinedStyle = false;
-            this.txtPassword._TextChanged += new System.EventHandler(this.txtPass__TextChanged);
             // 
             // lbLogin
             // 
@@ -255,7 +254,7 @@
             this.txtAccount.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtAccount.PlaceholderText = "Enter user name";
             this.txtAccount.Size = new System.Drawing.Size(251, 35);
-            this.txtAccount.TabIndex = 3;
+            this.txtAccount.TabIndex = 0;
             this.txtAccount.Texts = "";
             this.txtAccount.UnderlinedStyle = false;
             // 
@@ -274,7 +273,7 @@
             this.btnLogin.Location = new System.Drawing.Point(80, 234);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(233, 38);
-            this.btnLogin.TabIndex = 4;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.TextColor = System.Drawing.Color.White;
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -348,7 +347,7 @@
             this.lbPass.TabIndex = 2;
             this.lbPass.Text = "Password";
             // 
-            // Login
+            // LoginView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FloralWhite;
@@ -359,7 +358,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "Login";
+            this.Name = "LoginView";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

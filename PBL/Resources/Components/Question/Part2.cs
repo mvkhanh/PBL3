@@ -16,10 +16,15 @@ namespace PBL.Resources.Components
         public Part2()
         {
             InitializeComponent();
-            cbbAnswers.Items.AddRange(new string[] { "A", "B", "C" });
+            cbbAnswers.Items.AddRange(new CBBItem[]
+            {
+                new CBBItem{Value = 0, Text = "A"},
+                new CBBItem{Value = 1, Text = "B"},
+                new CBBItem{Value = 2, Text = "C"}
+            });
             cbbAnswers.SelectedIndex = 0;
         }
         public override int QuestionNum { get => Convert.ToInt32(txtNumber.Texts); set => txtNumber.Texts = value.ToString(); }
-        public override string QuestionAnswer { get => cbbAnswers.SelectedItem.ToString(); set => cbbAnswers.SelectedItem = value; }
+        public override int QuestionAnswer { get => ((CBBItem)cbbAnswers.SelectedItem).Value; set => cbbAnswers.SelectedIndex = value; }
     }
 }

@@ -66,5 +66,14 @@ namespace PBL._Repositories
             if (StudentId > 0) return new PBLContext().Students.Where(p => p.Id == StudentId).ToList();
             else return new PBLContext().Students.Where(p => p.Name.Contains(search)).ToList();
         }
+
+        public int LoginCheck(string username, string password)
+        {
+            foreach(var student in GetAll())
+            {
+                if(username.Equals(student.Name) && password.Equals(student.Password)) return student.Id;
+            }
+            return -1;
+        }
     }
 }

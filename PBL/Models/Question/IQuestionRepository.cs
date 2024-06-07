@@ -11,5 +11,6 @@ namespace PBL.Models.Question
         void Add(QuestionModel questionModel);
         void Edit(QuestionModel questionModel);
         IEnumerable<QuestionModel> GetByTest(int testId);
+        int GetLast();
     }
 }

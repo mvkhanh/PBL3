@@ -84,6 +84,7 @@
             this.btnDelete.TabIndex = 53;
             this.btnDelete.Text = "Xoá";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnChoose
             // 
@@ -98,6 +99,7 @@
             this.btnChoose.TabIndex = 52;
             this.btnChoose.Text = "Chọn Ảnh";
             this.btnChoose.UseVisualStyleBackColor = false;
+            this.btnChoose.Click += new System.EventHandler(this.btnImage_Click);
             // 
             // imageBox
             // 
@@ -107,7 +109,7 @@
             this.imageBox.Margin = new System.Windows.Forms.Padding(2);
             this.imageBox.Name = "imageBox";
             this.imageBox.Size = new System.Drawing.Size(246, 159);
-            this.imageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.imageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imageBox.TabIndex = 51;
             this.imageBox.TabStop = false;
             // 

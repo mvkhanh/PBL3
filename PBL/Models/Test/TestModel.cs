@@ -34,6 +34,8 @@ namespace PBL.Models
         [DisplayName("Gioi thieu")]
         public string Description { get; set; }
 
+        public byte[] Audio {  get; set; }
+
         [DisplayName("So luong tham gia")]
         public int Count {  get; set; }
 
