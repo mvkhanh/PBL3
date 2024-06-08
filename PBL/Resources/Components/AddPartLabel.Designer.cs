@@ -1,5 +1,4 @@
-﻿
-namespace PBL.Resources.Components
+﻿namespace PBL.Resources.Components
 {
     partial class AddPartLabel
     {
@@ -29,28 +28,27 @@ namespace PBL.Resources.Components
         /// </summary>
         private void InitializeComponent()
         {
-            this.numPart = new System.Windows.Forms.Label();
+            this.namePart = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // numPart
+            // namePart
             // 
-            this.numPart.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numPart.AutoSize = true;
-            this.numPart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numPart.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.numPart.Location = new System.Drawing.Point(4, 0);
-            this.numPart.Name = "numPart";
-            this.numPart.Size = new System.Drawing.Size(48, 16);
-            this.numPart.TabIndex = 71;
-            this.numPart.Text = "Part 1";
+            this.namePart.AutoSize = true;
+            this.namePart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.namePart.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.namePart.Location = new System.Drawing.Point(2, 5);
+            this.namePart.Name = "namePart";
+            this.namePart.Size = new System.Drawing.Size(45, 15);
+            this.namePart.TabIndex = 50;
+            this.namePart.Text = "Part 1";
             // 
             // AddPartLabel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.numPart);
+            this.Controls.Add(this.namePart);
             this.Name = "AddPartLabel";
-            this.Size = new System.Drawing.Size(63, 19);
+            this.Size = new System.Drawing.Size(50, 26);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -58,6 +56,6 @@ namespace PBL.Resources.Components
 
         #endregion
 
-        private System.Windows.Forms.Label numPart;
+        private System.Windows.Forms.Label namePart;
     }
 }
