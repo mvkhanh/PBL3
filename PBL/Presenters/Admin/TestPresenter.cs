@@ -26,7 +26,6 @@ namespace PBL.Presenters
         private IAnswerRepository answerRepository;
         private BindingSource testsBindingSource;
         private IEnumerable<TestModel> testList;
-
         //Constructor
         public TestPresenter(ITestView view, ITestRepository testRepository, IQuestionRepository questionRepository, IAnswerRepository answerRepository)
         {
@@ -48,13 +47,12 @@ namespace PBL.Presenters
             LoadAllTestList();
             //Load Teachers to CBB
             LoadTeachersCBB();
-            //Show view
-            this.view.Show();
         }
 
         //Methods
         private void LoadTeachersCBB()
         {
+            view.Teachers.Clear();
             var teacherList = new TeacherRepository().GetAll();
             foreach (var teacher in teacherList)
             {

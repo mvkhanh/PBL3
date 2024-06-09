@@ -14,12 +14,7 @@ namespace PBL._Repositories
         {
             using (var ctx = new PBLContext())
             {
-                ctx.Answers.Add(new AnswerModel
-                {
-                    Id = answerModel.Id,
-                    Content = answerModel.Content,
-                    Id_Question = answerModel.Id_Question
-                });
+                ctx.Answers.Add(answerModel);
                 ctx.SaveChanges();
             }
         }

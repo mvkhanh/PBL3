@@ -13,10 +13,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PBL.Views.Shared
 {
-    public partial class ChangePassword : Form
+    public partial class ForgetPasssword : Form
     {
 
-        public ChangePassword()
+        public ForgetPasssword()
         {
             InitializeComponent();
         }
@@ -58,19 +58,19 @@ namespace PBL.Views.Shared
 
         private void btOpenEye_Click3(object sender, EventArgs e)
         {
-            if (txtPass3.PasswordChar)
+            if (txtEmail.PasswordChar)
             {
                 btCloseEye3.BringToFront();
-                txtPass3.PasswordChar = false;
+                txtEmail.PasswordChar = false;
             }
         }
 
         private void btCloseEye_Click3(object sender, EventArgs e)
         {
-            if (!txtPass3.PasswordChar)
+            if (!txtEmail.PasswordChar)
             {
                 btOpenEye3.BringToFront();
-                txtPass3.PasswordChar = true;
+                txtEmail.PasswordChar = true;
             }
         }
 
@@ -80,7 +80,7 @@ namespace PBL.Views.Shared
             else btCloseEye1.Visible = btOpenEye1.Visible = true;
             if (string.IsNullOrEmpty(txtPass2.Texts)) btCloseEye2.Visible = btOpenEye2.Visible = false;
             else btCloseEye2.Visible = btOpenEye2.Visible = true;
-            if (string.IsNullOrEmpty(txtPass3.Texts)) btCloseEye3.Visible = btOpenEye3.Visible = false;
+            if (string.IsNullOrEmpty(txtEmail.Texts)) btCloseEye3.Visible = btOpenEye3.Visible = false;
             else btCloseEye3.Visible = btOpenEye3.Visible = true;
         }
         #endregion

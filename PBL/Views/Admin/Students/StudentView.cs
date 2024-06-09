@@ -85,7 +85,7 @@ namespace PBL.Views.Admin.Students
             };
         }
 
-        //Properties
+        #region Properties
         public int StudentId
             { get => Convert.ToInt32(txtId.Texts); set => txtId.Texts = value.ToString(); }
 
@@ -110,7 +110,7 @@ namespace PBL.Views.Admin.Students
             { get => _IsSuccessful; set => _IsSuccessful = value; }
         public string Message 
             { get => _Message; set => _Message = value; }
-        
+        #endregion
 
         //Events
         public event EventHandler SearchEvent;
@@ -125,12 +125,18 @@ namespace PBL.Views.Admin.Students
             dataGridView1.DataSource = studentList;
         }
 
-        //Singleton
+        #region Singleton
         private static StudentView instance;
         public static StudentView GetInstance()
         {
             if(instance == null || instance.IsDisposed) instance = new StudentView();
             return instance;
+        }
+        #endregion
+
+        private void dataGridView1_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
+        {
+            if (e.Column.Name == "Id_Account" || e.Column.Name == "Account") e.Column.Visible = false;
         }
     }
 }

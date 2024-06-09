@@ -16,7 +16,6 @@ namespace PBL.Presenters
         private ITeacherRepository repository;
         private BindingSource teachersBindingSource;
         private IEnumerable<TeacherModel> teacherList;
-
         //Constructor
         public TeacherPresenter(ITeacherView view, ITeacherRepository repository)
         {
@@ -34,8 +33,6 @@ namespace PBL.Presenters
             this.view.SetTeacherListBindingSource(teachersBindingSource);
             //Load teacher list view
             LoadAllTeacherList();
-            //Show view
-            this.view.Show();
         }
 
         //Methods
@@ -67,8 +64,8 @@ namespace PBL.Presenters
             view.TeacherBith = teacher.Birth;
             view.TeacherPhone = teacher.Phone;
             view.TeacherRegistDay = teacher.RegistDay;
-            view.TeacherAccount = teacher.Account;
-            view.TeacherPassword = teacher.Password;
+            view.TeacherAccount = teacher.Account.Account;
+            view.TeacherPassword = teacher.Account.Password;
             view.IsEdit = true;
         }
 
@@ -81,12 +78,15 @@ namespace PBL.Presenters
             model.Birth = view.TeacherBith;
             model.Phone = view.TeacherPhone;
             model.RegistDay = view.TeacherRegistDay;
-            model.Account = view.TeacherAccount;
-            model.Password = view.TeacherPassword;
+            var account = new AccountModel();
+            account.Account = view.TeacherAccount;
+            account.Password = view.TeacherPassword;
+            model.Account = account;
 
             try
             {
                 new Common.ModelDataValidation().Validate(model);
+                new Common.ModelDataValidation().Validate(account);
                 if (view.IsEdit) //Edit model
                 {
                     repository.Edit(model);

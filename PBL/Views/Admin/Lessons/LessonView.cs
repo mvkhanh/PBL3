@@ -194,5 +194,6 @@ namespace PBL
             if (instance == null || instance.IsDisposed) instance = new LessonView();
             return instance;
         }
+
     }
 }

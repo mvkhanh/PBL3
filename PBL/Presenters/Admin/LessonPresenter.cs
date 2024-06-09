@@ -20,7 +20,6 @@ namespace PBL.Presenters
         private ILessonRepository repository;
         private BindingSource lessonsBindingSource;
         private IEnumerable<LessonModel> lessonList;
-
         //Constructor
         public LessonPresenter(ILessonView view, ILessonRepository repository)
         {
@@ -41,13 +40,12 @@ namespace PBL.Presenters
             LoadAllLessonList();
             //Load Teachers to CBB
             LoadTeachersCBB();
-            //Show view
-            this.view.Show();
         }
 
         //Methods
         private void LoadTeachersCBB()
         {
+            view.Teachers.Clear();
             var teacherList = new TeacherRepository().GetAll();
             foreach (var teacher in teacherList)
             {

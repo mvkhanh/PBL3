@@ -46,7 +46,7 @@
             this.picturePass = new System.Windows.Forms.PictureBox();
             this.lbForgot = new System.Windows.Forms.LinkLabel();
             this.pictureUser = new System.Windows.Forms.PictureBox();
-            this.lbCreate = new System.Windows.Forms.LinkLabel();
+            this.btnSignUp = new System.Windows.Forms.LinkLabel();
             this.lbUserName = new System.Windows.Forms.Label();
             this.lbPass = new System.Windows.Forms.Label();
             this.panelTitle.SuspendLayout();
@@ -164,7 +164,7 @@
             this.panelLogin.Controls.Add(this.picturePass);
             this.panelLogin.Controls.Add(this.lbForgot);
             this.panelLogin.Controls.Add(this.pictureUser);
-            this.panelLogin.Controls.Add(this.lbCreate);
+            this.panelLogin.Controls.Add(this.btnSignUp);
             this.panelLogin.Controls.Add(this.lbUserName);
             this.panelLogin.Controls.Add(this.lbPass);
             this.panelLogin.CornerRadius = 10;
@@ -252,7 +252,7 @@
             this.txtAccount.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtAccount.PasswordChar = false;
             this.txtAccount.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtAccount.PlaceholderText = "Enter user name";
+            this.txtAccount.PlaceholderText = "Enter account";
             this.txtAccount.Size = new System.Drawing.Size(251, 35);
             this.txtAccount.TabIndex = 0;
             this.txtAccount.Texts = "";
@@ -312,18 +312,17 @@
             this.pictureUser.TabIndex = 6;
             this.pictureUser.TabStop = false;
             // 
-            // lbCreate
+            // btnSignUp
             // 
-            this.lbCreate.AutoSize = true;
-            this.lbCreate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCreate.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(61)))), ((int)(((byte)(159)))));
-            this.lbCreate.Location = new System.Drawing.Point(129, 284);
-            this.lbCreate.Name = "lbCreate";
-            this.lbCreate.Size = new System.Drawing.Size(134, 19);
-            this.lbCreate.TabIndex = 2;
-            this.lbCreate.TabStop = true;
-            this.lbCreate.Text = "Create New Account";
-            this.lbCreate.Click += new System.EventHandler(this.lbCreate_Click);
+            this.btnSignUp.AutoSize = true;
+            this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignUp.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(61)))), ((int)(((byte)(159)))));
+            this.btnSignUp.Location = new System.Drawing.Point(129, 284);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(134, 19);
+            this.btnSignUp.TabIndex = 2;
+            this.btnSignUp.TabStop = true;
+            this.btnSignUp.Text = "Create New Account";
             // 
             // lbUserName
             // 
@@ -332,9 +331,9 @@
             this.lbUserName.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lbUserName.Location = new System.Drawing.Point(77, 78);
             this.lbUserName.Name = "lbUserName";
-            this.lbUserName.Size = new System.Drawing.Size(82, 20);
+            this.lbUserName.Size = new System.Drawing.Size(63, 20);
             this.lbUserName.TabIndex = 2;
-            this.lbUserName.Text = "User Name";
+            this.lbUserName.Text = "Account";
             // 
             // lbPass
             // 
@@ -383,7 +382,7 @@
         private System.Windows.Forms.Label lbLogin;
         private System.Windows.Forms.Label lbPass;
         private System.Windows.Forms.Label lbUserName;
-        private System.Windows.Forms.LinkLabel lbCreate;
+        private System.Windows.Forms.LinkLabel btnSignUp;
         private System.Windows.Forms.LinkLabel lbForgot;
         private Controller.RoundButton btnLogin;
         private RoundPanel panelLogin;

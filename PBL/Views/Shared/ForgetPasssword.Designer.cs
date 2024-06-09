@@ -1,6 +1,6 @@
 ﻿namespace PBL.Views.Shared
 {
-    partial class ChangePassword
+    partial class ForgetPasssword
     {
         /// <summary>
         /// Required designer variable.
@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             this.panelTitle = new System.Windows.Forms.Panel();
+            this.btnMinisize = new System.Windows.Forms.Button();
+            this.btnRestoreDown = new System.Windows.Forms.Button();
             this.btClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelLogin = new RoundPanel();
-            this.btReturn = new PBL.Controller.RoundButton();
+            this.btnReturn = new PBL.Controller.RoundButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbLogin = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btLogin = new PBL.Controller.RoundButton();
+            this.btnConfirm = new PBL.Controller.RoundButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,9 +52,7 @@
             this.txtPass1 = new PBL.Controller.RoundTextBox();
             this.btOpenEye3 = new System.Windows.Forms.Button();
             this.btCloseEye3 = new System.Windows.Forms.Button();
-            this.txtPass3 = new PBL.Controller.RoundTextBox();
-            this.btnMinisize = new System.Windows.Forms.Button();
-            this.btnRestoreDown = new System.Windows.Forms.Button();
+            this.txtEmail = new PBL.Controller.RoundTextBox();
             this.panelTitle.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panelLogin.SuspendLayout();
@@ -76,6 +76,34 @@
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.resizePanel_MouseDown);
             this.panelTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseMove);
             // 
+            // btnMinisize
+            // 
+            this.btnMinisize.BackgroundImage = global::PBL.Properties.Resources.editing1;
+            this.btnMinisize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMinisize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinisize.FlatAppearance.BorderSize = 0;
+            this.btnMinisize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinisize.Location = new System.Drawing.Point(823, 0);
+            this.btnMinisize.Name = "btnMinisize";
+            this.btnMinisize.Size = new System.Drawing.Size(20, 29);
+            this.btnMinisize.TabIndex = 7;
+            this.btnMinisize.UseVisualStyleBackColor = true;
+            this.btnMinisize.Click += new System.EventHandler(this.btnMinisize_Click);
+            // 
+            // btnRestoreDown
+            // 
+            this.btnRestoreDown.BackgroundImage = global::PBL.Properties.Resources.copy__1_;
+            this.btnRestoreDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnRestoreDown.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnRestoreDown.FlatAppearance.BorderSize = 0;
+            this.btnRestoreDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestoreDown.Location = new System.Drawing.Point(843, 0);
+            this.btnRestoreDown.Name = "btnRestoreDown";
+            this.btnRestoreDown.Size = new System.Drawing.Size(29, 29);
+            this.btnRestoreDown.TabIndex = 6;
+            this.btnRestoreDown.UseVisualStyleBackColor = true;
+            this.btnRestoreDown.Click += new System.EventHandler(this.btnRestoreDown_Click);
+            // 
             // btClose
             // 
             this.btClose.BackgroundImage = global::PBL.Properties.Resources.Close;
@@ -97,7 +125,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 20);
+            this.label1.Size = new System.Drawing.Size(103, 15);
             this.label1.TabIndex = 5;
             this.label1.Text = "Change Password";
             // 
@@ -118,12 +146,12 @@
             // 
             this.panelLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelLogin.BackColor = System.Drawing.Color.White;
-            this.panelLogin.Controls.Add(this.btReturn);
+            this.panelLogin.Controls.Add(this.btnReturn);
             this.panelLogin.Controls.Add(this.pictureBox3);
             this.panelLogin.Controls.Add(this.lbLogin);
             this.panelLogin.Controls.Add(this.pictureBox1);
             this.panelLogin.Controls.Add(this.pictureBox2);
-            this.panelLogin.Controls.Add(this.btLogin);
+            this.panelLogin.Controls.Add(this.btnConfirm);
             this.panelLogin.Controls.Add(this.label4);
             this.panelLogin.Controls.Add(this.label3);
             this.panelLogin.Controls.Add(this.label2);
@@ -135,31 +163,31 @@
             this.panelLogin.Controls.Add(this.txtPass1);
             this.panelLogin.Controls.Add(this.btOpenEye3);
             this.panelLogin.Controls.Add(this.btCloseEye3);
-            this.panelLogin.Controls.Add(this.txtPass3);
+            this.panelLogin.Controls.Add(this.txtEmail);
             this.panelLogin.CornerRadius = 10;
             this.panelLogin.Location = new System.Drawing.Point(262, 23);
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(379, 432);
             this.panelLogin.TabIndex = 0;
             // 
-            // btReturn
+            // btnReturn
             // 
-            this.btReturn.BackColor = System.Drawing.Color.White;
-            this.btReturn.BackgroundColor = System.Drawing.Color.White;
-            this.btReturn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btReturn.BorderRadius = 5;
-            this.btReturn.BorderSize = 0;
-            this.btReturn.FlatAppearance.BorderSize = 0;
-            this.btReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btReturn.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.btReturn.Location = new System.Drawing.Point(81, 374);
-            this.btReturn.Name = "btReturn";
-            this.btReturn.Size = new System.Drawing.Size(221, 34);
-            this.btReturn.TabIndex = 8;
-            this.btReturn.Text = "Return";
-            this.btReturn.TextColor = System.Drawing.Color.DarkOrchid;
-            this.btReturn.UseVisualStyleBackColor = false;
-            this.btReturn.Click += new System.EventHandler(this.btReturn_Click);
+            this.btnReturn.BackColor = System.Drawing.Color.White;
+            this.btnReturn.BackgroundColor = System.Drawing.Color.White;
+            this.btnReturn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnReturn.BorderRadius = 5;
+            this.btnReturn.BorderSize = 0;
+            this.btnReturn.FlatAppearance.BorderSize = 0;
+            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturn.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.btnReturn.Location = new System.Drawing.Point(81, 374);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(221, 34);
+            this.btnReturn.TabIndex = 8;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.TextColor = System.Drawing.Color.DarkOrchid;
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btReturn_Click);
             // 
             // pictureBox3
             // 
@@ -180,7 +208,7 @@
             this.lbLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(61)))), ((int)(((byte)(159)))));
             this.lbLogin.Location = new System.Drawing.Point(102, 21);
             this.lbLogin.Name = "lbLogin";
-            this.lbLogin.Size = new System.Drawing.Size(258, 40);
+            this.lbLogin.Size = new System.Drawing.Size(200, 31);
             this.lbLogin.TabIndex = 5;
             this.lbLogin.Text = "Change Password";
             // 
@@ -207,25 +235,25 @@
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
-            // btLogin
+            // btnConfirm
             // 
-            this.btLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(61)))), ((int)(((byte)(159)))));
-            this.btLogin.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(61)))), ((int)(((byte)(159)))));
-            this.btLogin.BorderColor = System.Drawing.Color.Empty;
-            this.btLogin.BorderRadius = 20;
-            this.btLogin.BorderSize = 0;
-            this.btLogin.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btLogin.FlatAppearance.BorderSize = 0;
-            this.btLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btLogin.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLogin.ForeColor = System.Drawing.Color.White;
-            this.btLogin.Location = new System.Drawing.Point(77, 321);
-            this.btLogin.Name = "btLogin";
-            this.btLogin.Size = new System.Drawing.Size(233, 38);
-            this.btLogin.TabIndex = 4;
-            this.btLogin.Text = "Change";
-            this.btLogin.TextColor = System.Drawing.Color.White;
-            this.btLogin.UseVisualStyleBackColor = false;
+            this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(61)))), ((int)(((byte)(159)))));
+            this.btnConfirm.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(61)))), ((int)(((byte)(159)))));
+            this.btnConfirm.BorderColor = System.Drawing.Color.Empty;
+            this.btnConfirm.BorderRadius = 20;
+            this.btnConfirm.BorderSize = 0;
+            this.btnConfirm.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnConfirm.FlatAppearance.BorderSize = 0;
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirm.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.ForeColor = System.Drawing.Color.White;
+            this.btnConfirm.Location = new System.Drawing.Point(77, 321);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(233, 38);
+            this.btnConfirm.TabIndex = 4;
+            this.btnConfirm.Text = "Change";
+            this.btnConfirm.TextColor = System.Drawing.Color.White;
+            this.btnConfirm.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -234,7 +262,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label4.Location = new System.Drawing.Point(73, 159);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 25);
+            this.label4.Size = new System.Drawing.Size(104, 20);
             this.label4.TabIndex = 5;
             this.label4.Text = "New Password";
             this.label4.Click += new System.EventHandler(this.label2_Click);
@@ -246,7 +274,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label3.Location = new System.Drawing.Point(77, 75);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 25);
+            this.label3.Size = new System.Drawing.Size(122, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Current Password";
             // 
@@ -257,7 +285,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label2.Location = new System.Drawing.Point(73, 241);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(207, 25);
+            this.label2.Size = new System.Drawing.Size(161, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Confirm New Password";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -309,7 +337,7 @@
             this.txtPass2.PasswordChar = true;
             this.txtPass2.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPass2.PlaceholderText = "Enter new password again";
-            this.txtPass2.Size = new System.Drawing.Size(251, 40);
+            this.txtPass2.Size = new System.Drawing.Size(251, 35);
             this.txtPass2.TabIndex = 3;
             this.txtPass2.Texts = "";
             this.txtPass2.UnderlinedStyle = false;
@@ -362,7 +390,7 @@
             this.txtPass1.PasswordChar = true;
             this.txtPass1.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPass1.PlaceholderText = "Enter password";
-            this.txtPass1.Size = new System.Drawing.Size(251, 40);
+            this.txtPass1.Size = new System.Drawing.Size(251, 35);
             this.txtPass1.TabIndex = 3;
             this.txtPass1.Texts = "";
             this.txtPass1.UnderlinedStyle = false;
@@ -398,60 +426,32 @@
             this.btCloseEye3.Visible = false;
             this.btCloseEye3.Click += new System.EventHandler(this.btCloseEye_Click3);
             // 
-            // txtPass3
+            // txtEmail
             // 
-            this.txtPass3.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPass3.BorderColor = System.Drawing.Color.Silver;
-            this.txtPass3.BorderFocusColor = System.Drawing.Color.Silver;
-            this.txtPass3.BorderRadius = 5;
-            this.txtPass3.BorderSize = 2;
-            this.txtPass3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtPass3.Location = new System.Drawing.Point(80, 94);
-            this.txtPass3.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPass3.Multiline = false;
-            this.txtPass3.Name = "txtPass3";
-            this.txtPass3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtPass3.PasswordChar = true;
-            this.txtPass3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtPass3.PlaceholderText = "Enter current password";
-            this.txtPass3.Size = new System.Drawing.Size(251, 40);
-            this.txtPass3.TabIndex = 2;
-            this.txtPass3.Texts = "";
-            this.txtPass3.UnderlinedStyle = false;
-            this.txtPass3._TextChanged += new System.EventHandler(this.txtPass__TextChanged);
-            // 
-            // btnMinisize
-            // 
-            this.btnMinisize.BackgroundImage = global::PBL.Properties.Resources.editing1;
-            this.btnMinisize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnMinisize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinisize.FlatAppearance.BorderSize = 0;
-            this.btnMinisize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinisize.Location = new System.Drawing.Point(823, 0);
-            this.btnMinisize.Name = "btnMinisize";
-            this.btnMinisize.Size = new System.Drawing.Size(20, 29);
-            this.btnMinisize.TabIndex = 7;
-            this.btnMinisize.UseVisualStyleBackColor = true;
-            this.btnMinisize.Click += new System.EventHandler(this.btnMinisize_Click);
-            // 
-            // btnRestoreDown
-            // 
-            this.btnRestoreDown.BackgroundImage = global::PBL.Properties.Resources.copy__1_;
-            this.btnRestoreDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnRestoreDown.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnRestoreDown.FlatAppearance.BorderSize = 0;
-            this.btnRestoreDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestoreDown.Location = new System.Drawing.Point(843, 0);
-            this.btnRestoreDown.Name = "btnRestoreDown";
-            this.btnRestoreDown.Size = new System.Drawing.Size(29, 29);
-            this.btnRestoreDown.TabIndex = 6;
-            this.btnRestoreDown.UseVisualStyleBackColor = true;
-            this.btnRestoreDown.Click += new System.EventHandler(this.btnRestoreDown_Click);
+            this.txtEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.txtEmail.BorderColor = System.Drawing.Color.Silver;
+            this.txtEmail.BorderFocusColor = System.Drawing.Color.Silver;
+            this.txtEmail.BorderRadius = 5;
+            this.txtEmail.BorderSize = 2;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtEmail.Location = new System.Drawing.Point(80, 94);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Multiline = false;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtEmail.PasswordChar = true;
+            this.txtEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtEmail.PlaceholderText = "Enter current password";
+            this.txtEmail.Size = new System.Drawing.Size(251, 35);
+            this.txtEmail.TabIndex = 2;
+            this.txtEmail.Texts = "";
+            this.txtEmail.UnderlinedStyle = false;
+            this.txtEmail._TextChanged += new System.EventHandler(this.txtPass__TextChanged);
             // 
             // ChangePassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(901, 564);
@@ -479,7 +479,7 @@
         #endregion
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Label lbLogin;
-        private Controller.RoundButton btLogin;
+        private Controller.RoundButton btnConfirm;
         private RoundPanel panelLogin;
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Label label1;
@@ -489,13 +489,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btOpenEye2;
         private System.Windows.Forms.Button btCloseEye2;
-        private Controller.RoundButton btReturn;
+        private Controller.RoundButton btnReturn;
         private System.Windows.Forms.Button btOpenEye1;
         private System.Windows.Forms.Button btOpenEye3;
         private System.Windows.Forms.Button btCloseEye1;
         private System.Windows.Forms.Button btCloseEye3;
         private Controller.RoundTextBox txtPass1;
-        private Controller.RoundTextBox txtPass3;
+        private Controller.RoundTextBox txtEmail;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;

@@ -38,21 +38,27 @@ namespace PBL.Views.Shared
                 }
                 MessageBox.Show(Message);
             };
+            btnSignUp.Click += delegate
+            {
+                SignUpEvent?.Invoke(this, EventArgs.Empty);
+                this.Hide();
+            };
         }
 
-        //Properties
+        #region Properties
         public string Account
          { get => txtAccount.Texts; set => txtAccount.Texts = value; }
         public string Password
             { get => txtPassword.Texts; set => txtPassword.Texts = value; }
+
         public bool isSuccessful 
             { get => _IsSuccessful; set => _IsSuccessful = value; }
-
         public string Message { get => _Message; set => _Message = value; }
+        #endregion
 
         //Events
         public event EventHandler LoginEvent;
-
+        public event EventHandler SignUpEvent;
         //Methods
         #region Show/Hide Password
         private void btOpenEye_Click(object sender, EventArgs e)
@@ -193,15 +199,17 @@ namespace PBL.Views.Shared
         }
         #endregion
 
-        private void lbCreate_Click(object sender, EventArgs e)
+
+        #region Singleton
+        private static LoginView instance;
+        public static LoginView GetInstance()
         {
-            this.Hide(); 
-            Register registerForm = new Register();
-            registerForm.Show();
-            try
+            if (instance == null || instance.IsDisposed)
             {
-                this.Show();
-            } catch (Exception ex) { }
+                instance = new LoginView();
+            }
+            return instance;
         }
+        #endregion
     }
 }

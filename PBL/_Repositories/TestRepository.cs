@@ -14,15 +14,7 @@ namespace PBL._Repositories
         {
             using (var ctx = new PBLContext())
             {
-                ctx.Tests.Add(new TestModel
-                {
-                    Name = testModel.Name,
-                    PublishDay = testModel.PublishDay,
-                    Description = testModel.Description,
-                    Count = testModel.Count,
-                    Audio = testModel.Audio,
-                    Id_Teacher = testModel.Id_Teacher
-                });
+                ctx.Tests.Add(testModel);
                 ctx.SaveChanges();
             }
         }

@@ -37,8 +37,15 @@
             this.btnNext = new FontAwesome.Sharp.IconButton();
             this.btnPrevious = new FontAwesome.Sharp.IconButton();
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.btnPart7 = new PBL.Controller.RoundButton();
+            this.btnPart6 = new PBL.Controller.RoundButton();
             this.btnFinish = new FontAwesome.Sharp.IconButton();
+            this.btnPart5 = new PBL.Controller.RoundButton();
             this.btnBack = new FontAwesome.Sharp.IconButton();
+            this.btnPart4 = new PBL.Controller.RoundButton();
+            this.btnPart3 = new PBL.Controller.RoundButton();
+            this.btnPart2 = new PBL.Controller.RoundButton();
+            this.btnPart1 = new PBL.Controller.RoundButton();
             this.tabPageTestDetail = new System.Windows.Forms.TabPage();
             this.btnPlay = new FontAwesome.Sharp.IconButton();
             this.btnAddAudio = new FontAwesome.Sharp.IconButton();
@@ -54,6 +61,11 @@
             this.btnQuestions = new FontAwesome.Sharp.IconButton();
             this.btnCancel = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
+            this.txtDescription = new PBL.Controller.RoundTextBox();
+            this.regist = new PBL.Resources.Components.RJDatePicker();
+            this.txtName = new PBL.Controller.RoundTextBox();
+            this.txtPaticipant = new PBL.Controller.RoundTextBox();
+            this.txtId = new PBL.Controller.RoundTextBox();
             this.tabPageTestList = new System.Windows.Forms.TabPage();
             this.btnEdit = new FontAwesome.Sharp.IconButton();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
@@ -63,18 +75,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lbSearch = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.txtDescription = new PBL.Controller.RoundTextBox();
-            this.regist = new PBL.Resources.Components.RJDatePicker();
-            this.txtName = new PBL.Controller.RoundTextBox();
-            this.txtPaticipant = new PBL.Controller.RoundTextBox();
-            this.txtId = new PBL.Controller.RoundTextBox();
-            this.btnPart7 = new PBL.Controller.RoundButton();
-            this.btnPart6 = new PBL.Controller.RoundButton();
-            this.btnPart5 = new PBL.Controller.RoundButton();
-            this.btnPart4 = new PBL.Controller.RoundButton();
-            this.btnPart3 = new PBL.Controller.RoundButton();
-            this.btnPart2 = new PBL.Controller.RoundButton();
-            this.btnPart1 = new PBL.Controller.RoundButton();
             this.tabPageQuestionList.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panelBtn.SuspendLayout();
@@ -182,6 +182,46 @@
             this.panelLeft.Size = new System.Drawing.Size(83, 448);
             this.panelLeft.TabIndex = 2;
             // 
+            // btnPart7
+            // 
+            this.btnPart7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPart7.BackColor = System.Drawing.Color.Transparent;
+            this.btnPart7.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnPart7.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart7.BorderRadius = 8;
+            this.btnPart7.BorderSize = 2;
+            this.btnPart7.FlatAppearance.BorderSize = 0;
+            this.btnPart7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPart7.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart7.Location = new System.Drawing.Point(3, 362);
+            this.btnPart7.Name = "btnPart7";
+            this.btnPart7.Size = new System.Drawing.Size(77, 30);
+            this.btnPart7.TabIndex = 6;
+            this.btnPart7.Text = "Part 7";
+            this.btnPart7.TextColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart7.UseVisualStyleBackColor = false;
+            this.btnPart7.Click += new System.EventHandler(this.btnPart_Click);
+            // 
+            // btnPart6
+            // 
+            this.btnPart6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPart6.BackColor = System.Drawing.Color.Transparent;
+            this.btnPart6.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnPart6.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart6.BorderRadius = 8;
+            this.btnPart6.BorderSize = 2;
+            this.btnPart6.FlatAppearance.BorderSize = 0;
+            this.btnPart6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPart6.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart6.Location = new System.Drawing.Point(3, 312);
+            this.btnPart6.Name = "btnPart6";
+            this.btnPart6.Size = new System.Drawing.Size(77, 30);
+            this.btnPart6.TabIndex = 5;
+            this.btnPart6.Text = "Part 6";
+            this.btnPart6.TextColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart6.UseVisualStyleBackColor = false;
+            this.btnPart6.Click += new System.EventHandler(this.btnPart_Click);
+            // 
             // btnFinish
             // 
             this.btnFinish.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -204,6 +244,26 @@
             this.btnFinish.UseVisualStyleBackColor = false;
             this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
             // 
+            // btnPart5
+            // 
+            this.btnPart5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPart5.BackColor = System.Drawing.Color.Transparent;
+            this.btnPart5.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnPart5.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart5.BorderRadius = 8;
+            this.btnPart5.BorderSize = 2;
+            this.btnPart5.FlatAppearance.BorderSize = 0;
+            this.btnPart5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPart5.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart5.Location = new System.Drawing.Point(3, 262);
+            this.btnPart5.Name = "btnPart5";
+            this.btnPart5.Size = new System.Drawing.Size(77, 30);
+            this.btnPart5.TabIndex = 4;
+            this.btnPart5.Text = "Part 5";
+            this.btnPart5.TextColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart5.UseVisualStyleBackColor = false;
+            this.btnPart5.Click += new System.EventHandler(this.btnPart_Click);
+            // 
             // btnBack
             // 
             this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -225,6 +285,86 @@
             this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnPart4
+            // 
+            this.btnPart4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPart4.BackColor = System.Drawing.Color.Transparent;
+            this.btnPart4.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnPart4.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart4.BorderRadius = 8;
+            this.btnPart4.BorderSize = 2;
+            this.btnPart4.FlatAppearance.BorderSize = 0;
+            this.btnPart4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPart4.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart4.Location = new System.Drawing.Point(3, 212);
+            this.btnPart4.Name = "btnPart4";
+            this.btnPart4.Size = new System.Drawing.Size(77, 30);
+            this.btnPart4.TabIndex = 3;
+            this.btnPart4.Text = "Part 4";
+            this.btnPart4.TextColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart4.UseVisualStyleBackColor = false;
+            this.btnPart4.Click += new System.EventHandler(this.btnPart_Click);
+            // 
+            // btnPart3
+            // 
+            this.btnPart3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPart3.BackColor = System.Drawing.Color.Transparent;
+            this.btnPart3.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnPart3.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart3.BorderRadius = 8;
+            this.btnPart3.BorderSize = 2;
+            this.btnPart3.FlatAppearance.BorderSize = 0;
+            this.btnPart3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPart3.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart3.Location = new System.Drawing.Point(3, 162);
+            this.btnPart3.Name = "btnPart3";
+            this.btnPart3.Size = new System.Drawing.Size(77, 30);
+            this.btnPart3.TabIndex = 2;
+            this.btnPart3.Text = "Part 3";
+            this.btnPart3.TextColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart3.UseVisualStyleBackColor = false;
+            this.btnPart3.Click += new System.EventHandler(this.btnPart_Click);
+            // 
+            // btnPart2
+            // 
+            this.btnPart2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPart2.BackColor = System.Drawing.Color.Transparent;
+            this.btnPart2.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnPart2.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart2.BorderRadius = 8;
+            this.btnPart2.BorderSize = 2;
+            this.btnPart2.FlatAppearance.BorderSize = 0;
+            this.btnPart2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPart2.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart2.Location = new System.Drawing.Point(3, 112);
+            this.btnPart2.Name = "btnPart2";
+            this.btnPart2.Size = new System.Drawing.Size(77, 30);
+            this.btnPart2.TabIndex = 1;
+            this.btnPart2.Text = "Part 2";
+            this.btnPart2.TextColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart2.UseVisualStyleBackColor = false;
+            this.btnPart2.Click += new System.EventHandler(this.btnPart_Click);
+            // 
+            // btnPart1
+            // 
+            this.btnPart1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPart1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart1.BorderRadius = 8;
+            this.btnPart1.BorderSize = 0;
+            this.btnPart1.FlatAppearance.BorderSize = 0;
+            this.btnPart1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPart1.ForeColor = System.Drawing.Color.White;
+            this.btnPart1.Location = new System.Drawing.Point(3, 62);
+            this.btnPart1.Name = "btnPart1";
+            this.btnPart1.Size = new System.Drawing.Size(77, 30);
+            this.btnPart1.TabIndex = 0;
+            this.btnPart1.Text = "Part 1";
+            this.btnPart1.TextColor = System.Drawing.Color.White;
+            this.btnPart1.UseVisualStyleBackColor = false;
+            this.btnPart1.Click += new System.EventHandler(this.btnPart_Click);
             // 
             // tabPageTestDetail
             // 
@@ -468,6 +608,115 @@
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
             // 
+            // txtDescription
+            // 
+            this.txtDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDescription.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDescription.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtDescription.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtDescription.BorderRadius = 0;
+            this.txtDescription.BorderSize = 2;
+            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDescription.Location = new System.Drawing.Point(312, 121);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtDescription.PasswordChar = false;
+            this.txtDescription.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtDescription.PlaceholderText = "";
+            this.txtDescription.Size = new System.Drawing.Size(429, 210);
+            this.txtDescription.TabIndex = 25;
+            this.txtDescription.Texts = "";
+            this.txtDescription.UnderlinedStyle = false;
+            // 
+            // regist
+            // 
+            this.regist.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.regist.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.regist.BorderSize = 0;
+            this.regist.Enabled = false;
+            this.regist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.regist.Location = new System.Drawing.Point(48, 121);
+            this.regist.MinimumSize = new System.Drawing.Size(0, 35);
+            this.regist.Name = "regist";
+            this.regist.Size = new System.Drawing.Size(221, 35);
+            this.regist.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.regist.TabIndex = 24;
+            this.regist.TextColor = System.Drawing.Color.White;
+            // 
+            // txtName
+            // 
+            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtName.BackColor = System.Drawing.SystemColors.Window;
+            this.txtName.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtName.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtName.BorderRadius = 0;
+            this.txtName.BorderSize = 2;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtName.Location = new System.Drawing.Point(312, 43);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Multiline = false;
+            this.txtName.Name = "txtName";
+            this.txtName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtName.PasswordChar = false;
+            this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtName.PlaceholderText = "";
+            this.txtName.Size = new System.Drawing.Size(429, 31);
+            this.txtName.TabIndex = 23;
+            this.txtName.Texts = "";
+            this.txtName.UnderlinedStyle = false;
+            // 
+            // txtPaticipant
+            // 
+            this.txtPaticipant.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPaticipant.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPaticipant.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtPaticipant.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtPaticipant.BorderRadius = 0;
+            this.txtPaticipant.BorderSize = 2;
+            this.txtPaticipant.Enabled = false;
+            this.txtPaticipant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPaticipant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPaticipant.Location = new System.Drawing.Point(46, 215);
+            this.txtPaticipant.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPaticipant.Multiline = false;
+            this.txtPaticipant.Name = "txtPaticipant";
+            this.txtPaticipant.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtPaticipant.PasswordChar = false;
+            this.txtPaticipant.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtPaticipant.PlaceholderText = "";
+            this.txtPaticipant.Size = new System.Drawing.Size(221, 31);
+            this.txtPaticipant.TabIndex = 23;
+            this.txtPaticipant.Texts = "0";
+            this.txtPaticipant.UnderlinedStyle = false;
+            // 
+            // txtId
+            // 
+            this.txtId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtId.BackColor = System.Drawing.SystemColors.Window;
+            this.txtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtId.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtId.BorderRadius = 0;
+            this.txtId.BorderSize = 2;
+            this.txtId.Enabled = false;
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtId.Location = new System.Drawing.Point(46, 43);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtId.Multiline = false;
+            this.txtId.Name = "txtId";
+            this.txtId.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtId.PasswordChar = false;
+            this.txtId.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtId.PlaceholderText = "";
+            this.txtId.Size = new System.Drawing.Size(221, 31);
+            this.txtId.TabIndex = 23;
+            this.txtId.Texts = "0";
+            this.txtId.UnderlinedStyle = false;
+            // 
             // tabPageTestList
             // 
             this.tabPageTestList.Controls.Add(this.btnEdit);
@@ -631,7 +880,7 @@
             this.lbSearch.ForeColor = System.Drawing.Color.Black;
             this.lbSearch.Location = new System.Drawing.Point(21, 3);
             this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(96, 16);
+            this.lbSearch.Size = new System.Drawing.Size(95, 16);
             this.lbSearch.TabIndex = 1;
             this.lbSearch.Text = "Search Test:";
             // 
@@ -648,255 +897,6 @@
             this.tabControl1.Size = new System.Drawing.Size(969, 477);
             this.tabControl1.TabIndex = 2;
             // 
-            // txtDescription
-            // 
-            this.txtDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDescription.BackColor = System.Drawing.SystemColors.Window;
-            this.txtDescription.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtDescription.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtDescription.BorderRadius = 0;
-            this.txtDescription.BorderSize = 2;
-            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDescription.Location = new System.Drawing.Point(312, 121);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtDescription.PasswordChar = false;
-            this.txtDescription.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtDescription.PlaceholderText = "";
-            this.txtDescription.Size = new System.Drawing.Size(429, 210);
-            this.txtDescription.TabIndex = 25;
-            this.txtDescription.Texts = "";
-            this.txtDescription.UnderlinedStyle = false;
-            // 
-            // regist
-            // 
-            this.regist.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.regist.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.regist.BorderSize = 0;
-            this.regist.Enabled = false;
-            this.regist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.regist.Location = new System.Drawing.Point(48, 121);
-            this.regist.MinimumSize = new System.Drawing.Size(0, 35);
-            this.regist.Name = "regist";
-            this.regist.Size = new System.Drawing.Size(221, 35);
-            this.regist.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.regist.TabIndex = 24;
-            this.regist.TextColor = System.Drawing.Color.White;
-            // 
-            // txtName
-            // 
-            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtName.BackColor = System.Drawing.SystemColors.Window;
-            this.txtName.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtName.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtName.BorderRadius = 0;
-            this.txtName.BorderSize = 2;
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtName.Location = new System.Drawing.Point(312, 43);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtName.Multiline = false;
-            this.txtName.Name = "txtName";
-            this.txtName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtName.PasswordChar = false;
-            this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtName.PlaceholderText = "";
-            this.txtName.Size = new System.Drawing.Size(429, 31);
-            this.txtName.TabIndex = 23;
-            this.txtName.Texts = "";
-            this.txtName.UnderlinedStyle = false;
-            // 
-            // txtPaticipant
-            // 
-            this.txtPaticipant.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPaticipant.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPaticipant.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtPaticipant.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtPaticipant.BorderRadius = 0;
-            this.txtPaticipant.BorderSize = 2;
-            this.txtPaticipant.Enabled = false;
-            this.txtPaticipant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaticipant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPaticipant.Location = new System.Drawing.Point(46, 215);
-            this.txtPaticipant.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPaticipant.Multiline = false;
-            this.txtPaticipant.Name = "txtPaticipant";
-            this.txtPaticipant.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtPaticipant.PasswordChar = false;
-            this.txtPaticipant.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtPaticipant.PlaceholderText = "";
-            this.txtPaticipant.Size = new System.Drawing.Size(221, 31);
-            this.txtPaticipant.TabIndex = 23;
-            this.txtPaticipant.Texts = "0";
-            this.txtPaticipant.UnderlinedStyle = false;
-            // 
-            // txtId
-            // 
-            this.txtId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtId.BackColor = System.Drawing.SystemColors.Window;
-            this.txtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtId.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtId.BorderRadius = 0;
-            this.txtId.BorderSize = 2;
-            this.txtId.Enabled = false;
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtId.Location = new System.Drawing.Point(46, 43);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4);
-            this.txtId.Multiline = false;
-            this.txtId.Name = "txtId";
-            this.txtId.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtId.PasswordChar = false;
-            this.txtId.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtId.PlaceholderText = "";
-            this.txtId.Size = new System.Drawing.Size(221, 31);
-            this.txtId.TabIndex = 23;
-            this.txtId.Texts = "0";
-            this.txtId.UnderlinedStyle = false;
-            // 
-            // btnPart7
-            // 
-            this.btnPart7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPart7.BackColor = System.Drawing.Color.Transparent;
-            this.btnPart7.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnPart7.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart7.BorderRadius = 8;
-            this.btnPart7.BorderSize = 2;
-            this.btnPart7.FlatAppearance.BorderSize = 0;
-            this.btnPart7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPart7.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart7.Location = new System.Drawing.Point(3, 362);
-            this.btnPart7.Name = "btnPart7";
-            this.btnPart7.Size = new System.Drawing.Size(77, 30);
-            this.btnPart7.TabIndex = 6;
-            this.btnPart7.Text = "Part 7";
-            this.btnPart7.TextColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart7.UseVisualStyleBackColor = false;
-            this.btnPart7.Click += new System.EventHandler(this.btnPart_Click);
-            // 
-            // btnPart6
-            // 
-            this.btnPart6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPart6.BackColor = System.Drawing.Color.Transparent;
-            this.btnPart6.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnPart6.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart6.BorderRadius = 8;
-            this.btnPart6.BorderSize = 2;
-            this.btnPart6.FlatAppearance.BorderSize = 0;
-            this.btnPart6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPart6.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart6.Location = new System.Drawing.Point(3, 312);
-            this.btnPart6.Name = "btnPart6";
-            this.btnPart6.Size = new System.Drawing.Size(77, 30);
-            this.btnPart6.TabIndex = 5;
-            this.btnPart6.Text = "Part 6";
-            this.btnPart6.TextColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart6.UseVisualStyleBackColor = false;
-            this.btnPart6.Click += new System.EventHandler(this.btnPart_Click);
-            // 
-            // btnPart5
-            // 
-            this.btnPart5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPart5.BackColor = System.Drawing.Color.Transparent;
-            this.btnPart5.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnPart5.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart5.BorderRadius = 8;
-            this.btnPart5.BorderSize = 2;
-            this.btnPart5.FlatAppearance.BorderSize = 0;
-            this.btnPart5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPart5.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart5.Location = new System.Drawing.Point(3, 262);
-            this.btnPart5.Name = "btnPart5";
-            this.btnPart5.Size = new System.Drawing.Size(77, 30);
-            this.btnPart5.TabIndex = 4;
-            this.btnPart5.Text = "Part 5";
-            this.btnPart5.TextColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart5.UseVisualStyleBackColor = false;
-            this.btnPart5.Click += new System.EventHandler(this.btnPart_Click);
-            // 
-            // btnPart4
-            // 
-            this.btnPart4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPart4.BackColor = System.Drawing.Color.Transparent;
-            this.btnPart4.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnPart4.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart4.BorderRadius = 8;
-            this.btnPart4.BorderSize = 2;
-            this.btnPart4.FlatAppearance.BorderSize = 0;
-            this.btnPart4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPart4.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart4.Location = new System.Drawing.Point(3, 212);
-            this.btnPart4.Name = "btnPart4";
-            this.btnPart4.Size = new System.Drawing.Size(77, 30);
-            this.btnPart4.TabIndex = 3;
-            this.btnPart4.Text = "Part 4";
-            this.btnPart4.TextColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart4.UseVisualStyleBackColor = false;
-            this.btnPart4.Click += new System.EventHandler(this.btnPart_Click);
-            // 
-            // btnPart3
-            // 
-            this.btnPart3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPart3.BackColor = System.Drawing.Color.Transparent;
-            this.btnPart3.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnPart3.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart3.BorderRadius = 8;
-            this.btnPart3.BorderSize = 2;
-            this.btnPart3.FlatAppearance.BorderSize = 0;
-            this.btnPart3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPart3.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart3.Location = new System.Drawing.Point(3, 162);
-            this.btnPart3.Name = "btnPart3";
-            this.btnPart3.Size = new System.Drawing.Size(77, 30);
-            this.btnPart3.TabIndex = 2;
-            this.btnPart3.Text = "Part 3";
-            this.btnPart3.TextColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart3.UseVisualStyleBackColor = false;
-            this.btnPart3.Click += new System.EventHandler(this.btnPart_Click);
-            // 
-            // btnPart2
-            // 
-            this.btnPart2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPart2.BackColor = System.Drawing.Color.Transparent;
-            this.btnPart2.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnPart2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart2.BorderRadius = 8;
-            this.btnPart2.BorderSize = 2;
-            this.btnPart2.FlatAppearance.BorderSize = 0;
-            this.btnPart2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPart2.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart2.Location = new System.Drawing.Point(3, 112);
-            this.btnPart2.Name = "btnPart2";
-            this.btnPart2.Size = new System.Drawing.Size(77, 30);
-            this.btnPart2.TabIndex = 1;
-            this.btnPart2.Text = "Part 2";
-            this.btnPart2.TextColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart2.UseVisualStyleBackColor = false;
-            this.btnPart2.Click += new System.EventHandler(this.btnPart_Click);
-            // 
-            // btnPart1
-            // 
-            this.btnPart1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPart1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPart1.BorderRadius = 8;
-            this.btnPart1.BorderSize = 0;
-            this.btnPart1.FlatAppearance.BorderSize = 0;
-            this.btnPart1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPart1.ForeColor = System.Drawing.Color.White;
-            this.btnPart1.Location = new System.Drawing.Point(3, 62);
-            this.btnPart1.Name = "btnPart1";
-            this.btnPart1.Size = new System.Drawing.Size(77, 30);
-            this.btnPart1.TabIndex = 0;
-            this.btnPart1.Text = "Part 1";
-            this.btnPart1.TextColor = System.Drawing.Color.White;
-            this.btnPart1.UseVisualStyleBackColor = false;
-            this.btnPart1.Click += new System.EventHandler(this.btnPart_Click);
-            // 
             // TestView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -905,7 +905,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TestView";
-            this.Text = "Teachers";
+            this.Text = "Tests";
             this.tabPageQuestionList.ResumeLayout(false);
             this.tabPageQuestionList.PerformLayout();
             this.panelMain.ResumeLayout(false);

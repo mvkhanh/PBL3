@@ -14,14 +14,7 @@ namespace PBL._Repositories
         {
             using (var ctx = new PBLContext())
             {
-                ctx.Lessons.Add(new LessonModel
-                {
-                    Name = lessonModel.Name,
-                    PublishDay = lessonModel.PublishDay,
-                    Content = lessonModel.Content,
-                    Views = lessonModel.Views,
-                    Id_Teacher = lessonModel.Id_Teacher
-                });
+                ctx.Lessons.Add(lessonModel);
                 ctx.SaveChanges();
             }
         }

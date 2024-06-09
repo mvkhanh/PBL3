@@ -13,6 +13,6 @@ namespace PBL.Models
         void Delete(int id);
         IEnumerable<StudentModel> GetAll();
         IEnumerable<StudentModel> GetByValue(string value);
-        int LoginCheck(string username, string password);
+        int GetByAccount(int id_Account);
     }
 }

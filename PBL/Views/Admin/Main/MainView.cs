@@ -28,10 +28,10 @@ namespace PBL.Views
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
-            this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         //Events
@@ -40,7 +40,7 @@ namespace PBL.Views
         public event EventHandler ShowLessonView;
         public event EventHandler ShowTestView;
         public event EventHandler ShowDashBoardView;
-
+        public event EventHandler LogOutEvent;
         #region Menu Item Colors
         private struct RGBColors
         {
@@ -53,6 +53,8 @@ namespace PBL.Views
         }
         #endregion
         //Methods
+
+        #region Open child form
         private void ActivateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
@@ -87,6 +89,7 @@ namespace PBL.Views
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
+            currentBtn = null;
         }
 
         private void OpenChildForm(Form childForm)
@@ -106,45 +109,6 @@ namespace PBL.Views
             lbTitleChildForm.Text = childForm.Text;
         }
 
-        private void btnTeachers_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color2);
-            ShowTeacherView(sender, EventArgs.Empty);
-            OpenChildForm(TeacherView.GetInstance());
-        }
-
-        private void btnStudents_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color3);
-            ShowStudentView(sender, EventArgs.Empty);
-            OpenChildForm(StudentView.GetInstance());
-        }
-
-        private void btnLessons_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
-            ShowLessonView(sender, EventArgs.Empty);
-            OpenChildForm(LessonView.GetInstance());
-        }
-
-        private void btnTests_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color5);
-            ShowTestView(sender, EventArgs.Empty);
-            OpenChildForm(TestView.GetInstance());
-        }
-
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color6);
-        }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            currentChildForm.Close();
-            Reset();
-        }
-
         private void Reset()
         {
             DisableButton();
@@ -152,11 +116,11 @@ namespace PBL.Views
             iconCurrentChildForm.IconChar = IconChar.Home;
             iconCurrentChildForm.IconColor = Color.MediumPurple;
             lbTitleChildForm.Text = "Home";
+            currentChildForm = null;
         }
-        new public void Show()
-        {
-            base.Show();
-        }
+
+        #endregion
+
         #region Drag form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -238,7 +202,7 @@ namespace PBL.Views
         private void panelMenu_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.X <= 5 && e.Y >= panelMain.Height - 5) Cursor = Cursors.SizeNESW;
-            else if(e.X <= 5) Cursor = Cursors.SizeWE;
+            else if (e.X <= 5) Cursor = Cursors.SizeWE;
             else if (e.Y >= panelMain.Height - 5) Cursor = Cursors.SizeNS;
             else Cursor = Cursors.Default;
         }
@@ -257,6 +221,7 @@ namespace PBL.Views
             else Cursor = Cursors.Default;
         }
         #endregion
+
         #region Modify window
         private void btnRestoreDown_Click(object sender, EventArgs e)
         {
@@ -278,6 +243,66 @@ namespace PBL.Views
         private void btClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        #endregion
+
+        private void btnTeachers_Click(object sender, EventArgs e)
+        {
+            if (currentBtn == sender) return;
+            ActivateButton(sender, RGBColors.color2);
+            ShowTeacherView(sender, EventArgs.Empty);
+            OpenChildForm(TeacherView.GetInstance());
+        }
+
+        private void btnStudents_Click(object sender, EventArgs e)
+        {
+            if (currentBtn == sender) return;
+            ActivateButton(sender, RGBColors.color3);
+            ShowStudentView(sender, EventArgs.Empty);
+            OpenChildForm(StudentView.GetInstance());
+        }
+
+        private void btnLessons_Click(object sender, EventArgs e)
+        {
+            if (currentBtn == sender) return;
+            ActivateButton(sender, RGBColors.color1);
+            ShowLessonView(sender, EventArgs.Empty);
+            OpenChildForm(LessonView.GetInstance());
+        }
+
+        private void btnTests_Click(object sender, EventArgs e)
+        {
+            if (currentBtn == sender) return;
+            ActivateButton(sender, RGBColors.color5);
+            ShowTestView(sender, EventArgs.Empty);
+            OpenChildForm(TestView.GetInstance());
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color6);
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            if (currentBtn == sender) return;
+            if (currentChildForm != null) currentChildForm.Close();
+            Reset();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            LogOutEvent?.Invoke(this, EventArgs.Empty);
+            if (this.currentChildForm != null) currentChildForm.Close();
+            this.Hide();
+            Reset();
+        }
+        #region Singleton
+        private static MainView instance;
+        public static MainView GetInstance()
+        {
+            if (instance == null || instance.IsDisposed) instance = new MainView();
+            return instance;
         }
         #endregion
     }

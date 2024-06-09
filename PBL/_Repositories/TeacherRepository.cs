@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,15 +17,8 @@ namespace PBL._Repositories
         {
             using (var ctx = new PBLContext())
             {
-                ctx.Teachers.Add(new TeacherModel {
-                    Name = teacherModel.Name,
-                    Email = teacherModel.Email,
-                    Birth = teacherModel.Birth,
-                    Phone = teacherModel.Phone,
-                    RegistDay = teacherModel.RegistDay,
-                    Account = teacherModel.Account,
-                    Password = teacherModel.Password
-                });
+                if (ctx.Accounts.Where(p => p.Account.Equals(teacherModel.Account.Account)).ToList().Count != 0) throw new Exception("Account exist");
+                ctx.Teachers.Add(teacherModel);
                 ctx.SaveChanges();
             }
         }
@@ -34,7 +28,8 @@ namespace PBL._Repositories
             using (var ctx = new PBLContext())
             {
                 var teacher = ctx.Teachers.Find(id);
-                ctx.Teachers.Remove(teacher);
+                var account = ctx.Accounts.Where(p => p.Id == teacher.Id_Account).FirstOrDefault();
+                ctx.Accounts.Remove(account);
                 ctx.SaveChanges();
             }
         }
@@ -48,8 +43,7 @@ namespace PBL._Repositories
                 teacher.Name = teacherModel.Name;
                 teacher.Birth = teacherModel.Birth;
                 teacher.Email = teacherModel.Email;
-                teacher.Account = teacherModel.Account;
-                teacher.Password = teacherModel.Password;
+                teacher.Account.Password = teacherModel.Account.Password;
                 ctx.SaveChanges();
             }
         }
@@ -66,11 +60,11 @@ namespace PBL._Repositories
             else return new PBLContext().Teachers.Where(p => p.Name.Contains(search)).ToList();
         }
 
-        public int LoginCheck(string username, string password)
+        public int GetByAccount(int id_Account)
         {
-            var teacher = new PBLContext().Teachers.Where(p => p.Account == username && p.Password == password).FirstOrDefault();
-            if(teacher == null) return -1;
-            return teacher.Id;
+            var teacherModel = new PBLContext().Teachers.Where(p => p.Id_Account == (int)id_Account).FirstOrDefault();
+            if (teacherModel == null) return -1;
+            return teacherModel.Id;
         }
     }
 }

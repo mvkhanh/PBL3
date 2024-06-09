@@ -80,8 +80,8 @@ namespace PBL.Views
                 tabControl1.TabPages.Add(tabPageTeacherList);
             };
         }
-        
-        //Properties
+
+        #region Properties
         public int TeacherId 
             { get => Convert.ToInt32(txtId.Texts); set => txtId.Texts = value.ToString(); }
         public string TeacherName 
@@ -107,6 +107,7 @@ namespace PBL.Views
             { get => _IsSuccessfull; set => _IsSuccessfull = value; }
         public string Message 
             { get => _Message; set => _Message = value; }
+        #endregion
 
         //Events
         public event EventHandler SearchEvent;
@@ -118,7 +119,7 @@ namespace PBL.Views
 
         private void dataGridView1_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
         {
-            if (e.Column.Name == "Lessons" || e.Column.Name == "Tests") e.Column.Visible = false;
+            if (e.Column.Name == "Lessons" || e.Column.Name == "Tests" || e.Column.Name == "Id_Account" || e.Column.Name == "Account") e.Column.Visible = false;
         }
 
         //Methods
@@ -127,7 +128,7 @@ namespace PBL.Views
             dataGridView1.DataSource = teacherList;
         }
 
-        //Singleton pattern 
+        #region Singleton
         private static TeacherView instance;
         public static TeacherView GetInstance()
         {
@@ -137,5 +138,6 @@ namespace PBL.Views
             }
             return instance;
         }
+        #endregion
     }
 }

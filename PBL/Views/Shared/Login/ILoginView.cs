@@ -17,6 +17,7 @@ namespace PBL.Views.Common
 
         //Events
         event EventHandler LoginEvent;
+        event EventHandler SignUpEvent;
         //Methods
         void Show();
     }

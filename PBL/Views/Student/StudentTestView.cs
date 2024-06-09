@@ -1,4 +1,5 @@
 ﻿using PBL.Resources.Components;
+using PBL.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PBL.Resources.Components;
+
 namespace PBL
 {
     
@@ -106,6 +107,15 @@ namespace PBL
 
         }
 
-        
+        //Singleton pattern 
+        private static StudentTestView instance;
+        public static StudentTestView GetInstance()
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new StudentTestView();
+            }
+            return instance;
+        }
     }
 }

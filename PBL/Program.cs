@@ -25,12 +25,10 @@ namespace PBL
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            ILoginView view = new LoginView();
-            ITeacherRepository teacherRepository = new TeacherRepository();
-            IStudentRepository studentRepository = new StudentRepository();
-            new LoginPresenter(view, teacherRepository, studentRepository);
+            new LoginPresenter(LoginView.GetInstance(), new TeacherRepository(), new StudentRepository(), new AccountRepository());
 
-            Application.Run((Form)view);
+            Application.Run(LoginView.GetInstance());
+            //Application.Run(new StudentMainView());
         }
     }
 }

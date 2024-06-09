@@ -139,7 +139,6 @@ namespace PBL
         }
         private void AddQuestionToPanel()
         {
-            panelMain.Controls.Clear();
             lbPart.Text = "Part " + (currentPage + 1);
             panelMain.Controls.Clear();
             panelMain.Controls.Add(lbPart);
@@ -292,6 +291,7 @@ namespace PBL
                 if(outputDevice != null && outputDevice.PlaybackState == PlaybackState.Playing) { outputDevice.Stop(); }
                 TestAudioPath = ofd.FileName;
                 btnPlay.Visible = true;
+                ChangeBtnPlay(true);
                 InitAudio(TestAudioPath);
             }
         }
@@ -313,6 +313,7 @@ namespace PBL
                         InitAudio(fileName);
                     }
                     outputDevice.Play();
+                    ChangeBtnPlay(false);
                     isPlaying = true;
                 }
                 catch (Exception)
@@ -322,8 +323,16 @@ namespace PBL
             }
             else
             {
-                if (outputDevice.PlaybackState == PlaybackState.Playing) outputDevice.Pause();
-                else outputDevice.Play();
+                if (outputDevice.PlaybackState == PlaybackState.Playing)
+                {
+                    outputDevice.Pause();
+                    ChangeBtnPlay(true);
+                }
+                else
+                {
+                    outputDevice.Play();
+                    ChangeBtnPlay(false);
+                }
             }
         }
         private void InitAudio(string fileName)
@@ -340,8 +349,22 @@ namespace PBL
             if (File.Exists(fileName)) File.Delete(fileName);
             isPlaying = false;
             btnPlay.Visible = false;
+            ChangeBtnPlay(true);
         }
 
+        private void ChangeBtnPlay(bool state)
+        {
+            if (state)
+            {
+                btnPlay.IconChar = FontAwesome.Sharp.IconChar.Play;
+                btnPlay.Text = "Play";
+            }
+            else
+            {
+                btnPlay.IconChar = FontAwesome.Sharp.IconChar.Pause;
+                btnPlay.Text = "Pause";
+            }
+        }
         #endregion
     }
 }

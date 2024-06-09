@@ -244,6 +244,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(727, 373);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.ColumnAdded += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dataGridView1_ColumnAdded);
             // 
             // tabPageStudentDetail
             // 
@@ -600,7 +601,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StudentView";
-            this.Text = "Teachers";
+            this.Text = "Students";
             this.tabControl1.ResumeLayout(false);
             this.tabPageStudentList.ResumeLayout(false);
             this.tabPageStudentList.PerformLayout();

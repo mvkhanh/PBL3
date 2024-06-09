@@ -152,8 +152,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Account\AccountModel.cs" />
+    <Compile Include="Models\Account\IAccountRepository.cs" />
     <Compile Include="Models\Shared\ILoginRepository.cs" />
     <Compile Include="Presenters\Shared\LoginPresenter.cs" />
+    <Compile Include="Presenters\Shared\RegisterPresenter.cs" />
+    <Compile Include="Presenters\Student\StudentLessonPresenter.cs" />
+    <Compile Include="Presenters\Student\StudentMainPresenter.cs" />
+    <Compile Include="Presenters\Student\StudentProfilePresenter.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Components\AddPartLabel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -165,8 +176,14 @@
     <Compile Include="Models\Answer\IAnswerRepository.cs" />
     <Compile Include="Models\Question\IQuestionRepository.cs" />
     <Compile Include="Models\Test\ITestRepository.cs" />
-    <Compile Include="Presenters\LessonPresenter.cs" />
-    <Compile Include="Presenters\TestPresenter.cs" />
+    <Compile Include="Presenters\Admin\LessonPresenter.cs" />
+    <Compile Include="Presenters\Admin\TestPresenter.cs" />
+    <Compile Include="Resources\Components\Lesson\LessonBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\Components\Lesson\LessonBox.Designer.cs">
+      <DependentUpon>LessonBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Components\Question\Part1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -215,28 +232,32 @@
     <Compile Include="Resources\Components\RJDatePicker.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="StudentLessonView.cs">
+    <Compile Include="Views\Shared\Register\IRegisterView.cs" />
+    <Compile Include="Views\Student\StudentLessonView\IStudentLessonView.cs" />
+    <Compile Include="Views\Student\StudentMain\IStudentMainView.cs" />
+    <Compile Include="Views\Student\StudentLessonView\StudentLessonView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentLessonView.Designer.cs">
+    <Compile Include="Views\Student\StudentLessonView\StudentLessonView.Designer.cs">
       <DependentUpon>StudentLessonView.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentMainView.cs">
+    <Compile Include="Views\Student\StudentMain\StudentMainView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentMainView.Designer.cs">
+    <Compile Include="Views\Student\StudentMain\StudentMainView.Designer.cs">
       <DependentUpon>StudentMainView.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentProfileView.cs">
+    <Compile Include="Views\Student\StudentProfile\IStudentProfileView.cs" />
+    <Compile Include="Views\Student\StudentProfile\StudentProfileView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentProfileView.Designer.cs">
+    <Compile Include="Views\Student\StudentProfile\StudentProfileView.Designer.cs">
       <DependentUpon>StudentProfileView.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentTestView.cs">
+    <Compile Include="Views\Student\StudentTestView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentTestView.Designer.cs">
+    <Compile Include="Views\Student\StudentTestView.Designer.cs">
       <DependentUpon>StudentTestView.cs</DependentUpon>
     </Compile>
     <Compile Include="TeacherLessonView.cs">
@@ -273,14 +294,9 @@
     <Compile Include="Models\Student\IStudentRepository.cs" />
     <Compile Include="Models\Teacher\ITeacherRepository.cs" />
     <Compile Include="Presenters\Common\ModelDataValidation.cs" />
-    <Compile Include="Presenters\MainPresenter.cs" />
-    <Compile Include="Presenters\StudentPresenter.cs" />
-    <Compile Include="Presenters\TeacherPresenter.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <Compile Include="Presenters\Admin\MainPresenter.cs" />
+    <Compile Include="Presenters\Admin\StudentPresenter.cs" />
+    <Compile Include="Presenters\Admin\TeacherPresenter.cs" />
     <Compile Include="Resources\Components\RoundPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -316,11 +332,11 @@
     <Compile Include="Views\Admin\Main\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Shared\ChangePassword.cs">
+    <Compile Include="Views\Shared\ForgetPasssword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Shared\ChangePassword.Designer.cs">
-      <DependentUpon>ChangePassword.cs</DependentUpon>
+    <Compile Include="Views\Shared\ForgetPasssword.Designer.cs">
+      <DependentUpon>ForgetPasssword.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Shared\Login\ILoginView.cs" />
     <Compile Include="Views\Shared\Login\LoginView.cs">
@@ -341,11 +357,11 @@
     <Compile Include="Models\StudyElement.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Shared\Register.cs">
+    <Compile Include="Views\Shared\Register\RegisterView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Shared\Register.Designer.cs">
-      <DependentUpon>Register.cs</DependentUpon>
+    <Compile Include="Views\Shared\Register\RegisterView.Designer.cs">
+      <DependentUpon>RegisterView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\Teachers\TeacherView.cs">
       <SubType>Form</SubType>
@@ -353,6 +369,7 @@
     <Compile Include="Views\Admin\Teachers\TeacherView.Designer.cs">
       <DependentUpon>TeacherView.cs</DependentUpon>
     </Compile>
+    <Compile Include="_Repositories\AccountRepository.cs" />
     <Compile Include="_Repositories\AnswerRepository.cs" />
     <Compile Include="_Repositories\LessonRepository.cs" />
     <Compile Include="_Repositories\QuestionRepository.cs" />
@@ -361,6 +378,9 @@
     <Compile Include="_Repositories\TestRepository.cs" />
     <EmbeddedResource Include="Resources\Components\AddPartLabel.resx">
       <DependentUpon>AddPartLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Components\Lesson\LessonBox.resx">
+      <DependentUpon>LessonBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Components\Question\Part1.resx">
       <DependentUpon>Part1.cs</DependentUpon>
@@ -383,16 +403,16 @@
     <EmbeddedResource Include="Resources\Components\CommentsBox.resx">
       <DependentUpon>CommentsBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentLessonView.resx">
+    <EmbeddedResource Include="Views\Student\StudentLessonView\StudentLessonView.resx">
       <DependentUpon>StudentLessonView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentMainView.resx">
+    <EmbeddedResource Include="Views\Student\StudentMain\StudentMainView.resx">
       <DependentUpon>StudentMainView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentProfileView.resx">
+    <EmbeddedResource Include="Views\Student\StudentProfile\StudentProfileView.resx">
       <DependentUpon>StudentProfileView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentTestView.resx">
+    <EmbeddedResource Include="Views\Student\StudentTestView.resx">
       <DependentUpon>StudentTestView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherLessonView.resx">
@@ -422,8 +442,8 @@
     <EmbeddedResource Include="Views\Admin\Students\StudentView.resx">
       <DependentUpon>StudentView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Shared\ChangePassword.resx">
-      <DependentUpon>ChangePassword.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Shared\ForgetPasssword.resx">
+      <DependentUpon>ForgetPasssword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Shared\Login\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
@@ -433,8 +453,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Shared\Register.resx">
-      <DependentUpon>Register.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Shared\Register\RegisterView.resx">
+      <DependentUpon>RegisterView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\Teachers\TeacherView.resx">
       <DependentUpon>TeacherView.cs</DependentUpon>
@@ -454,7 +474,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Student\" />
     <Folder Include="Views\Teacher\" />
   </ItemGroup>
   <ItemGroup>
@@ -476,9 +495,6 @@
     <None Include="Resources\User%282%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\StudentLessonView2.png" />
-    <None Include="Resources\StudentLessonView.png" />
-    <None Include="Resources\teacherprofileview.png" />
     <None Include="Resources\studentProfile.png" />
     <None Include="Resources\TOEIC Master.png" />
     <None Include="Resources\calendarDark.png" />

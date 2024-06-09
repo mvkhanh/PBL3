@@ -1,6 +1,8 @@
-﻿using System;
+﻿using PBL.Views.Shared.Register;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -13,13 +15,55 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PBL.Views.Shared
 {
-    public partial class Register : Form
+    public partial class RegisterView : Form, IRegisterView
     {
+        //Fields
+        private bool _IsSuccessfully;
+        private string _Message;
 
-        public Register()
+        public RegisterView()
         {
             InitializeComponent();
+            AssociateAndRaiseViewEvents();
         }
+
+        private void AssociateAndRaiseViewEvents()
+        {
+            btnSignUp.Click += delegate
+            {
+                if(txtPass1.Texts != txtPass2.Texts)
+                {
+                    MessageBox.Show("Password enter again not same");
+                    return;
+                }
+                SignUpEvent?.Invoke(this, EventArgs.Empty);
+                MessageBox.Show(Message);
+                if (IsSuccessful)
+                {
+                    txtPass2.Texts = "";
+                    btnReturn.PerformClick();
+                }
+            };
+            btnReturn.Click += delegate
+            {
+                ReturnEvent?.Invoke(this, EventArgs.Empty);
+                txtPass2.Texts = "";
+                this.Hide();
+            };
+        }
+
+        public event EventHandler ReturnEvent;
+        public event EventHandler SignUpEvent;
+
+
+        #region Properties
+        public string Account { get => txtAccount.Texts; set => txtAccount.Texts = value; }
+        public string UserName { get => txtUserName.Texts; set => txtUserName.Texts = value; }
+        public string Password { get => txtPass1.Texts; set => txtPass1.Texts = value; }
+        public string Email { get => txtEmail.Texts; set => txtEmail.Texts = value; }
+        public bool IsSuccessful { get => _IsSuccessfully; set => _IsSuccessfully = value; }
+        public string Message { get => _Message; set => _Message = value; }
+        #endregion
 
         #region Show/Hide Password
         private void btCloseEye_Click1(object sender, EventArgs e)
@@ -91,6 +135,7 @@ namespace PBL.Views.Shared
         private const int HT_BOTTOM = 0x0F;
         private const int HT_BOTTOMLEFT = 0x10;
         private const int HT_BOTTOMRIGHT = 0x11;
+
         // Handle the mouse down event on the form to enable dragging and resizing
         private void resizePanel_MouseDown(object sender, MouseEventArgs e)
         {
@@ -160,23 +205,6 @@ namespace PBL.Views.Shared
             else if (e.X <= 5 || e.X >= this.Width - 5) Cursor = Cursors.SizeWE;
             else Cursor = Cursors.Default;
         }
-        #endregion
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btReturn_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void btnRestoreDown_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Maximized)
@@ -193,5 +221,15 @@ namespace PBL.Views.Shared
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        #endregion
+
+        #region Singleton
+        private static RegisterView instance;
+        public static RegisterView GetInstance()
+        {
+            if(instance == null || instance.IsDisposed) { instance = new RegisterView(); }
+            return instance;
+        }
+        #endregion
     }
 }
