@@ -37,9 +37,17 @@ namespace PBL.Models
         [DisplayName("Ngay dang ky")]
         public override DateTime RegistDay { get; set; }
 
-        public int Id_Account { get; set; }
+        [DisplayName("Tai Khoan")]
+        [Required(ErrorMessage = "Nhap tai khoan.")]
+        [StringLength(50, MinimumLength = 6, ErrorMessage = "Tai khoan phai co do dai tu 6-50 ki tu.")]
+        public override string Account { get; set; }
 
-        [ForeignKey("Id_Account")]
-        public virtual AccountModel Account { get; set; }
+        [DisplayName("Mat Khau")]
+        [Required(ErrorMessage = "Nhap mat khau.")]
+        [StringLength(50, MinimumLength = 8, ErrorMessage = "Mat khau phai co do dai tu 8-50 ki tu.")]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).*$",
+        ErrorMessage = "Mat khau phai chua chu hoa, chu thuong, chu so va ki tu dac biet.")]
+        public override string Password { get; set; }
+
     }
 }

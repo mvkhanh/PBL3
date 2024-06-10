@@ -55,14 +55,14 @@ namespace PBL.Presenters.Student
 
         private void ChangeStudentPass(object sender, EventArgs e)
         {
-            if(view.StudentCurrentPassword != studentModel.Account.Password)
+            if(view.StudentCurrentPassword != studentModel.Password)
             {
                 view.Message = "Wrong password";
                 view.IsSuccessful = false;
                 return;
             }
-            string oldPassword = studentModel.Account.Password;
-            studentModel.Account.Password = view.StudentNewPassword;
+            string oldPassword = studentModel.Password;
+            studentModel.Password = view.StudentNewPassword;
             try
             {
                 new Common.ModelDataValidation().Validate(studentModel);
@@ -74,7 +74,7 @@ namespace PBL.Presenters.Student
             {
                 view.IsSuccessful = false;
                 view.Message = ex.Message;
-                studentModel.Account.Password = oldPassword;
+                studentModel.Password = oldPassword;
             }
         }
 

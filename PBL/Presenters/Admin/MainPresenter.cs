@@ -41,7 +41,7 @@ namespace PBL.Presenters
 
         private void LogOutAction(object sender, EventArgs e)
         {
-            new LoginPresenter(LoginView.GetInstance(), new TeacherRepository(), new StudentRepository(), new AccountRepository());
+            new LoginPresenter(LoginView.GetInstance(), new TeacherRepository(), new StudentRepository());
         }
 
         private void ShowTeachersView(object sender, EventArgs e)

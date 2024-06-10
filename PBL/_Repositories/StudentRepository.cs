@@ -17,7 +17,7 @@ namespace PBL._Repositories
         {
             using (var ctx = new PBLContext())
             {
-                if (ctx.Accounts.Where(p => p.Account.Equals(studentModel.Account.Account)).ToList().Count != 0) throw new Exception("Account exist");
+                if (AccountRepository.CheckAccount(studentModel.Account)) throw new Exception("Account exist");
                 ctx.Students.Add(studentModel);
                 ctx.SaveChanges();
             }
@@ -28,8 +28,7 @@ namespace PBL._Repositories
             using (var ctx = new PBLContext())
             {
                 var student = ctx.Students.Find(id);
-                var account = ctx.Accounts.Where(p => p.Id == student.Id_Account).FirstOrDefault();
-                ctx.Accounts.Remove(account);
+                ctx.Students.Remove(student);
                 ctx.SaveChanges();
             }
         }
@@ -43,7 +42,7 @@ namespace PBL._Repositories
                 student.Name = studentModel.Name;
                 student.Birth = studentModel.Birth;
                 student.Email = studentModel.Email;
-                student.Account.Password = studentModel.Account.Password;
+                student.Password = studentModel.Password;
                 ctx.SaveChanges();
             }
         }
@@ -60,9 +59,9 @@ namespace PBL._Repositories
             else return new PBLContext().Students.Where(p => p.Name.Contains(search)).ToList();
         }
 
-        public int GetByAccount(int id_Account)
+        public int GetByAccount(string account, string password)
         {
-            var studentModel = new PBLContext().Students.Where(p => p.Id_Account == (int)id_Account).FirstOrDefault();
+            var studentModel = new PBLContext().Students.Where(p => p.Account == account && p.Password == password).FirstOrDefault();
             if (studentModel == null) return -1;
             return studentModel.Id;
         }

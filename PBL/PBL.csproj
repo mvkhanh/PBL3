@@ -152,9 +152,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Account\AccountModel.cs" />
-    <Compile Include="Models\Account\IAccountRepository.cs" />
     <Compile Include="Models\Shared\ILoginRepository.cs" />
+    <Compile Include="Models\StudentLesson\IStudentLessonRepository.cs" />
+    <Compile Include="Models\StudentLesson\StudentLessonModel.cs" />
     <Compile Include="Presenters\Shared\LoginPresenter.cs" />
     <Compile Include="Presenters\Shared\RegisterPresenter.cs" />
     <Compile Include="Presenters\Student\StudentLessonPresenter.cs" />
@@ -373,6 +373,7 @@
     <Compile Include="_Repositories\AnswerRepository.cs" />
     <Compile Include="_Repositories\LessonRepository.cs" />
     <Compile Include="_Repositories\QuestionRepository.cs" />
+    <Compile Include="_Repositories\StudentLessonRepository.cs" />
     <Compile Include="_Repositories\StudentRepository.cs" />
     <Compile Include="_Repositories\TeacherRepository.cs" />
     <Compile Include="_Repositories\TestRepository.cs" />

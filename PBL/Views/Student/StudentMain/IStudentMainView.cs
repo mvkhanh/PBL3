@@ -15,7 +15,6 @@ namespace PBL.Views.Student
         event EventHandler ShowProfileView;
         event EventHandler ShowLessonView;
         event EventHandler ShowTestView;
-        event EventHandler ShowFavoriteLessonView;
         event EventHandler ShowPracticeHistoryView;
         event EventHandler LogOutEvent;
 

@@ -35,5 +35,6 @@ namespace PBL.Models
 
         [DisplayName("Luot xem")]
         public int Views { get; set; }
+
     }
 }

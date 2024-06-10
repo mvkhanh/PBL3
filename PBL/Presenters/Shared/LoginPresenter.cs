@@ -1,6 +1,5 @@
 ﻿using PBL._Repositories;
 using PBL.Models;
-using PBL.Models.Account;
 using PBL.Presenters.Student;
 using PBL.Views;
 using PBL.Views.Common;
@@ -21,14 +20,12 @@ namespace PBL.Presenters.Shared
         private static bool check = false;
         ITeacherRepository teacherRepository;
         IStudentRepository studentRepository;
-        IAccountRepository accountRepository;
         ILoginView view;
 
-        public LoginPresenter(ILoginView view, ITeacherRepository teacherRepository, IStudentRepository studentRepository, IAccountRepository accountRepository)
+        public LoginPresenter(ILoginView view, ITeacherRepository teacherRepository, IStudentRepository studentRepository)
         {
             this.teacherRepository = teacherRepository;
             this.studentRepository = studentRepository;
-            this.accountRepository = accountRepository;
             this.view = view;
             //Subscribe event handler methods to view events
             if (!check)
@@ -48,14 +45,7 @@ namespace PBL.Presenters.Shared
 
         private void Login(object sender, EventArgs e)
         {
-            int id_Account = accountRepository.GetAccount(view.Account, view.Password);
-            if(id_Account == -1)
-            {
-                view.isSuccessful = false;
-                view.Message = "Check your account and password";
-                return;
-            }
-            int id = teacherRepository.GetByAccount(id_Account);
+            int id = teacherRepository.GetByAccount(view.Account, view.Password);
             if (id != -1)
             {
                 if (id == 1)
@@ -66,13 +56,24 @@ namespace PBL.Presenters.Shared
                 {
                     //Start teacher with their id
                 }
+                view.isSuccessful = true;
+                view.Message = "Login successfully";
             }
             else
             {
-                new StudentMainPresenter(StudentMainView.GetInstance(), studentRepository.GetByAccount(id_Account));
+                id = studentRepository.GetByAccount(view.Account, view.Password);
+                if (id != -1)
+                {
+                    new StudentMainPresenter(StudentMainView.GetInstance(), id);
+                    view.isSuccessful = true;
+                    view.Message = "Login successfully";
+                }
+                else
+                {
+                    view.isSuccessful = false;
+                    view.Message = "Check your account and password";
+                }
             }
-            view.isSuccessful = true;
-            view.Message = "Login successfully";
         }
     }
 }

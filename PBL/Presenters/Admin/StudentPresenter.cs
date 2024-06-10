@@ -64,8 +64,8 @@ namespace PBL.Presenters
             view.StudentPhone = student.Phone;
             view.StudentBirth = student.Birth;
             view.StudentRegistDay = student.RegistDay;
-            view.StudentAccount = student.Account.Account;
-            view.StudentPassword = student.Account.Password;
+            view.StudentAccount = student.Account;
+            view.StudentPassword = student.Password;
             view.IsEdit = true;
         }
 
@@ -78,14 +78,11 @@ namespace PBL.Presenters
             model.Phone = view.StudentPhone;
             model.RegistDay = view.StudentRegistDay;
             model.Birth = view.StudentBirth;
-            var account = new AccountModel();
-            account.Account = view.StudentAccount;
-            account.Password = view.StudentPassword;
-            model.Account = account;
+            model.Account = view.StudentAccount;
+            model.Password = view.StudentPassword;
             try
             {
                 new Common.ModelDataValidation().Validate(model);
-                new Common.ModelDataValidation().Validate(account);
                 if (view.IsEdit)
                 {
                     repository.Edit(model);

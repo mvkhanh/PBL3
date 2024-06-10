@@ -30,7 +30,6 @@
         {
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnPracHistory = new FontAwesome.Sharp.IconButton();
-            this.btnFavLessons = new FontAwesome.Sharp.IconButton();
             this.btnTests = new FontAwesome.Sharp.IconButton();
             this.btnLessons = new FontAwesome.Sharp.IconButton();
             this.btnProfile = new FontAwesome.Sharp.IconButton();
@@ -65,7 +64,6 @@
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panelMenu.Controls.Add(this.btnPracHistory);
-            this.panelMenu.Controls.Add(this.btnFavLessons);
             this.panelMenu.Controls.Add(this.btnTests);
             this.panelMenu.Controls.Add(this.btnLessons);
             this.panelMenu.Controls.Add(this.btnProfile);
@@ -89,7 +87,7 @@
             this.btnPracHistory.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPracHistory.IconSize = 32;
             this.btnPracHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPracHistory.Location = new System.Drawing.Point(0, 380);
+            this.btnPracHistory.Location = new System.Drawing.Point(0, 320);
             this.btnPracHistory.Margin = new System.Windows.Forms.Padding(6);
             this.btnPracHistory.Name = "btnPracHistory";
             this.btnPracHistory.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
@@ -100,30 +98,6 @@
             this.btnPracHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPracHistory.UseVisualStyleBackColor = true;
             this.btnPracHistory.Click += new System.EventHandler(this.btnPracHistory_Click);
-            // 
-            // btnFavLessons
-            // 
-            this.btnFavLessons.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFavLessons.FlatAppearance.BorderSize = 0;
-            this.btnFavLessons.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFavLessons.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFavLessons.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnFavLessons.IconChar = FontAwesome.Sharp.IconChar.Star;
-            this.btnFavLessons.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnFavLessons.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFavLessons.IconSize = 32;
-            this.btnFavLessons.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFavLessons.Location = new System.Drawing.Point(0, 320);
-            this.btnFavLessons.Margin = new System.Windows.Forms.Padding(6);
-            this.btnFavLessons.Name = "btnFavLessons";
-            this.btnFavLessons.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnFavLessons.Size = new System.Drawing.Size(220, 60);
-            this.btnFavLessons.TabIndex = 6;
-            this.btnFavLessons.Text = "Favorite lessons";
-            this.btnFavLessons.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFavLessons.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFavLessons.UseVisualStyleBackColor = true;
-            this.btnFavLessons.Click += new System.EventHandler(this.btnFavLessons_Click);
             // 
             // btnTests
             // 
@@ -428,7 +402,6 @@
 
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelLogo;
-        private FontAwesome.Sharp.IconButton btnFavLessons;
         private FontAwesome.Sharp.IconButton btnTests;
         private FontAwesome.Sharp.IconButton btnLessons;
         private FontAwesome.Sharp.IconButton btnProfile;

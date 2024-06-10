@@ -25,7 +25,7 @@ namespace PBL
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            new LoginPresenter(LoginView.GetInstance(), new TeacherRepository(), new StudentRepository(), new AccountRepository());
+            new LoginPresenter(LoginView.GetInstance(), new TeacherRepository(), new StudentRepository());
 
             Application.Run(LoginView.GetInstance());
             //Application.Run(new StudentMainView());

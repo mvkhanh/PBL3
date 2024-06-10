@@ -30,14 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LessonBox));
             this.roundPanel1 = new RoundPanel();
-            this.lbLessonTeacher = new FontAwesome.Sharp.IconButton();
-            this.lbLessonPublishDay = new FontAwesome.Sharp.IconButton();
-            this.lbLessonViews = new FontAwesome.Sharp.IconButton();
+            this.lbLessonPublishDay = new System.Windows.Forms.TextBox();
+            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
+            this.lbLessonViews = new System.Windows.Forms.TextBox();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.lbLessonTeacher = new System.Windows.Forms.TextBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtLessonName = new PBL.Controller.RoundTextBox();
+            this.txtLessonName = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.roundPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,9 +52,12 @@
             // 
             this.roundPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.roundPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.roundPanel1.Controls.Add(this.lbLessonTeacher);
             this.roundPanel1.Controls.Add(this.lbLessonPublishDay);
+            this.roundPanel1.Controls.Add(this.iconPictureBox3);
             this.roundPanel1.Controls.Add(this.lbLessonViews);
+            this.roundPanel1.Controls.Add(this.iconPictureBox2);
+            this.roundPanel1.Controls.Add(this.lbLessonTeacher);
+            this.roundPanel1.Controls.Add(this.iconPictureBox1);
             this.roundPanel1.Controls.Add(this.panel1);
             this.roundPanel1.CornerRadius = 15;
             this.roundPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -57,69 +66,86 @@
             this.roundPanel1.Size = new System.Drawing.Size(326, 205);
             this.roundPanel1.TabIndex = 0;
             // 
-            // lbLessonTeacher
-            // 
-            this.lbLessonTeacher.BackColor = System.Drawing.Color.Transparent;
-            this.lbLessonTeacher.Enabled = false;
-            this.lbLessonTeacher.FlatAppearance.BorderSize = 0;
-            this.lbLessonTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbLessonTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLessonTeacher.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbLessonTeacher.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.lbLessonTeacher.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.lbLessonTeacher.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.lbLessonTeacher.IconSize = 28;
-            this.lbLessonTeacher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbLessonTeacher.Location = new System.Drawing.Point(12, 146);
-            this.lbLessonTeacher.Name = "lbLessonTeacher";
-            this.lbLessonTeacher.Size = new System.Drawing.Size(216, 30);
-            this.lbLessonTeacher.TabIndex = 1;
-            this.lbLessonTeacher.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.lbLessonTeacher.UseVisualStyleBackColor = false;
-            // 
             // lbLessonPublishDay
             // 
-            this.lbLessonPublishDay.BackColor = System.Drawing.Color.Transparent;
-            this.lbLessonPublishDay.Enabled = false;
-            this.lbLessonPublishDay.FlatAppearance.BorderSize = 0;
-            this.lbLessonPublishDay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbLessonPublishDay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.lbLessonPublishDay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbLessonPublishDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLessonPublishDay.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbLessonPublishDay.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
-            this.lbLessonPublishDay.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.lbLessonPublishDay.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.lbLessonPublishDay.IconSize = 20;
-            this.lbLessonPublishDay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbLessonPublishDay.Location = new System.Drawing.Point(234, 171);
+            this.lbLessonPublishDay.Location = new System.Drawing.Point(225, 174);
             this.lbLessonPublishDay.Name = "lbLessonPublishDay";
-            this.lbLessonPublishDay.Size = new System.Drawing.Size(107, 33);
-            this.lbLessonPublishDay.TabIndex = 1;
-            this.lbLessonPublishDay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.lbLessonPublishDay.UseVisualStyleBackColor = false;
+            this.lbLessonPublishDay.ReadOnly = true;
+            this.lbLessonPublishDay.Size = new System.Drawing.Size(100, 17);
+            this.lbLessonPublishDay.TabIndex = 3;
+            // 
+            // iconPictureBox3
+            // 
+            this.iconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconPictureBox3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.CalendarDay;
+            this.iconPictureBox3.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox3.IconSize = 27;
+            this.iconPictureBox3.Location = new System.Drawing.Point(194, 169);
+            this.iconPictureBox3.Name = "iconPictureBox3";
+            this.iconPictureBox3.Size = new System.Drawing.Size(33, 27);
+            this.iconPictureBox3.TabIndex = 2;
+            this.iconPictureBox3.TabStop = false;
             // 
             // lbLessonViews
             // 
-            this.lbLessonViews.BackColor = System.Drawing.Color.Transparent;
-            this.lbLessonViews.Enabled = false;
-            this.lbLessonViews.FlatAppearance.BorderSize = 0;
-            this.lbLessonViews.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbLessonViews.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.lbLessonViews.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbLessonViews.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLessonViews.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbLessonViews.IconChar = FontAwesome.Sharp.IconChar.Eye;
-            this.lbLessonViews.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.lbLessonViews.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.lbLessonViews.IconSize = 20;
-            this.lbLessonViews.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbLessonViews.Location = new System.Drawing.Point(234, 146);
+            this.lbLessonViews.Location = new System.Drawing.Point(225, 149);
             this.lbLessonViews.Name = "lbLessonViews";
-            this.lbLessonViews.Size = new System.Drawing.Size(87, 30);
-            this.lbLessonViews.TabIndex = 1;
-            this.lbLessonViews.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.lbLessonViews.UseVisualStyleBackColor = false;
+            this.lbLessonViews.ReadOnly = true;
+            this.lbLessonViews.Size = new System.Drawing.Size(100, 17);
+            this.lbLessonViews.TabIndex = 3;
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 27;
+            this.iconPictureBox2.Location = new System.Drawing.Point(194, 144);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(33, 27);
+            this.iconPictureBox2.TabIndex = 2;
+            this.iconPictureBox2.TabStop = false;
+            // 
+            // lbLessonTeacher
+            // 
+            this.lbLessonTeacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.lbLessonTeacher.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbLessonTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLessonTeacher.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbLessonTeacher.Location = new System.Drawing.Point(50, 154);
+            this.lbLessonTeacher.Name = "lbLessonTeacher";
+            this.lbLessonTeacher.ReadOnly = true;
+            this.lbLessonTeacher.Size = new System.Drawing.Size(156, 22);
+            this.lbLessonTeacher.TabIndex = 3;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.Location = new System.Drawing.Point(11, 149);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox1.TabIndex = 2;
+            this.iconPictureBox1.TabStop = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BackColor = System.Drawing.Color.Bisque;
             this.panel1.Controls.Add(this.txtLessonName);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -131,26 +157,16 @@
             // 
             // txtLessonName
             // 
-            this.txtLessonName.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtLessonName.BorderColor = System.Drawing.Color.Transparent;
-            this.txtLessonName.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtLessonName.BorderRadius = 0;
-            this.txtLessonName.BorderSize = 2;
-            this.txtLessonName.Enabled = false;
+            this.txtLessonName.BackColor = System.Drawing.Color.Bisque;
+            this.txtLessonName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLessonName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLessonName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(151)))), ((int)(((byte)(70)))));
-            this.txtLessonName.Location = new System.Drawing.Point(11, 24);
-            this.txtLessonName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLessonName.Multiline = true;
+            this.txtLessonName.Location = new System.Drawing.Point(12, 26);
             this.txtLessonName.Name = "txtLessonName";
-            this.txtLessonName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtLessonName.PasswordChar = false;
-            this.txtLessonName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtLessonName.PlaceholderText = "";
-            this.txtLessonName.Size = new System.Drawing.Size(175, 112);
-            this.txtLessonName.TabIndex = 2;
-            this.txtLessonName.Texts = "Lesson name 123123123";
-            this.txtLessonName.UnderlinedStyle = false;
+            this.txtLessonName.ReadOnly = true;
+            this.txtLessonName.Size = new System.Drawing.Size(173, 97);
+            this.txtLessonName.TabIndex = 3;
+            this.txtLessonName.Text = "";
             // 
             // label1
             // 
@@ -183,6 +199,10 @@
             this.Name = "LessonBox";
             this.Size = new System.Drawing.Size(326, 205);
             this.roundPanel1.ResumeLayout(false);
+            this.roundPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -196,9 +216,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconButton lbLessonViews;
-        private Controller.RoundTextBox txtLessonName;
-        private FontAwesome.Sharp.IconButton lbLessonPublishDay;
-        private FontAwesome.Sharp.IconButton lbLessonTeacher;
+        private System.Windows.Forms.RichTextBox txtLessonName;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.TextBox lbLessonViews;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private System.Windows.Forms.TextBox lbLessonTeacher;
+        private System.Windows.Forms.TextBox lbLessonPublishDay;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
     }
 }

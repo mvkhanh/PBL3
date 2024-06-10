@@ -37,7 +37,6 @@ namespace PBL
         public event EventHandler ShowProfileView;
         public event EventHandler ShowLessonView;
         public event EventHandler ShowTestView;
-        public event EventHandler ShowFavoriteLessonView;
         public event EventHandler ShowPracticeHistoryView;
         public event EventHandler LogOutEvent;
 
@@ -117,6 +116,7 @@ namespace PBL
             iconCurrentChildForm.IconColor = Color.MediumPurple;
             lbTitleChildForm.Text = "Home";
             currentChildForm = null;
+            currentBtn = null;
         }
 
         #endregion
@@ -267,13 +267,6 @@ namespace PBL
             ActivateButton(sender, RGBColors.color3);
             ShowTestView(sender, EventArgs.Empty);
             OpenChildForm(StudentTestView.GetInstance());
-        }
-
-        private void btnFavLessons_Click(object sender, EventArgs e)
-        {
-            if (currentBtn == sender) return;
-            ActivateButton(sender, RGBColors.color4);
-            ShowFavoriteLessonView(sender, EventArgs.Empty);
         }
 
         private void btnPracHistory_Click(object sender, EventArgs e)

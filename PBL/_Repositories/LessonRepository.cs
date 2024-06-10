@@ -37,6 +37,7 @@ namespace PBL._Repositories
                 lesson.Name = lessonModel.Name;
                 if(lessonModel.Content != null) lesson.Content = lessonModel.Content;
                 lesson.Id_Teacher = lessonModel.Id_Teacher;
+                lesson.Views = lessonModel.Views;
                 ctx.SaveChanges();
             }
         }

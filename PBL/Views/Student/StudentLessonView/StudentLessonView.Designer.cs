@@ -40,7 +40,9 @@ namespace PBL
             this.tabPageLessonContent = new System.Windows.Forms.TabPage();
             this.pdfViewer1 = new Spire.PdfViewer.Forms.PdfViewer();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSave = new FontAwesome.Sharp.IconButton();
             this.btnBack = new FontAwesome.Sharp.IconButton();
+            this.cbSavedLessons = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPageLessonList.SuspendLayout();
             this.panelTop.SuspendLayout();
@@ -85,6 +87,7 @@ namespace PBL
             // 
             // panelTop
             // 
+            this.panelTop.Controls.Add(this.cbSavedLessons);
             this.panelTop.Controls.Add(this.label28);
             this.panelTop.Controls.Add(this.txtSearch);
             this.panelTop.Controls.Add(this.btnSearch);
@@ -170,11 +173,11 @@ namespace PBL
             this.pdfViewer1.FormFillEnabled = false;
             this.pdfViewer1.IgnoreCase = false;
             this.pdfViewer1.IsToolBarVisible = false;
-            this.pdfViewer1.Location = new System.Drawing.Point(0, 24);
+            this.pdfViewer1.Location = new System.Drawing.Point(0, 48);
             this.pdfViewer1.MultiPagesThreshold = 60;
             this.pdfViewer1.Name = "pdfViewer1";
             this.pdfViewer1.OnRenderPageExceptionEvent = null;
-            this.pdfViewer1.Size = new System.Drawing.Size(861, 414);
+            this.pdfViewer1.Size = new System.Drawing.Size(861, 390);
             this.pdfViewer1.TabIndex = 0;
             this.pdfViewer1.Text = "pdfViewer1";
             this.pdfViewer1.Threshold = 60;
@@ -182,30 +185,65 @@ namespace PBL
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(861, 24);
+            this.panel1.Size = new System.Drawing.Size(861, 48);
             this.panel1.TabIndex = 1;
+            // 
+            // btnSave
+            // 
+            this.btnSave.AutoSize = true;
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnSave.IconColor = System.Drawing.Color.Black;
+            this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSave.IconSize = 24;
+            this.btnSave.Location = new System.Drawing.Point(771, 0);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(90, 48);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.Text = "Save";
+            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
             // btnBack
             // 
+            this.btnBack.AutoSize = true;
             this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
             this.btnBack.IconColor = System.Drawing.Color.Black;
             this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBack.IconSize = 16;
+            this.btnBack.IconSize = 24;
             this.btnBack.Location = new System.Drawing.Point(0, 0);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 24);
+            this.btnBack.Size = new System.Drawing.Size(89, 48);
             this.btnBack.TabIndex = 0;
             this.btnBack.Text = "Back";
             this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // cbSavedLessons
+            // 
+            this.cbSavedLessons.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbSavedLessons.AutoSize = true;
+            this.cbSavedLessons.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSavedLessons.Location = new System.Drawing.Point(582, 58);
+            this.cbSavedLessons.Name = "cbSavedLessons";
+            this.cbSavedLessons.Size = new System.Drawing.Size(218, 22);
+            this.cbSavedLessons.TabIndex = 64;
+            this.cbSavedLessons.Text = "Show only saved lessons";
+            this.cbSavedLessons.UseVisualStyleBackColor = true;
             // 
             // StudentLessonView
             // 
@@ -224,6 +262,7 @@ namespace PBL
             this.panelTop.PerformLayout();
             this.tabPageLessonContent.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -240,5 +279,7 @@ namespace PBL
         private Controller.RoundTextBox txtSearch;
         private System.Windows.Forms.FlowLayoutPanel panelContent;
         private RoundPanel panelTop;
+        private FontAwesome.Sharp.IconButton btnSave;
+        private System.Windows.Forms.CheckBox cbSavedLessons;
     }
 }

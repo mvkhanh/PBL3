@@ -64,8 +64,8 @@ namespace PBL.Presenters
             view.TeacherBith = teacher.Birth;
             view.TeacherPhone = teacher.Phone;
             view.TeacherRegistDay = teacher.RegistDay;
-            view.TeacherAccount = teacher.Account.Account;
-            view.TeacherPassword = teacher.Account.Password;
+            view.TeacherAccount = teacher.Account;
+            view.TeacherPassword = teacher.Password;
             view.IsEdit = true;
         }
 
@@ -78,15 +78,12 @@ namespace PBL.Presenters
             model.Birth = view.TeacherBith;
             model.Phone = view.TeacherPhone;
             model.RegistDay = view.TeacherRegistDay;
-            var account = new AccountModel();
-            account.Account = view.TeacherAccount;
-            account.Password = view.TeacherPassword;
-            model.Account = account;
+            model.Account = view.TeacherAccount;
+            model.Password = view.TeacherPassword;
 
             try
             {
                 new Common.ModelDataValidation().Validate(model);
-                new Common.ModelDataValidation().Validate(account);
                 if (view.IsEdit) //Edit model
                 {
                     repository.Edit(model);

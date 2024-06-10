@@ -34,7 +34,7 @@ namespace PBL.Presenters.Shared
         private void ReturnAction(object sender, EventArgs e)
         {
             CleanViewFields();
-            new LoginPresenter(LoginView.GetInstance(), new TeacherRepository(), new StudentRepository(), new AccountRepository());
+            new LoginPresenter(LoginView.GetInstance(), new TeacherRepository(), new StudentRepository());
         }
 
         private void SignUpAction(object sender, EventArgs e)
@@ -42,16 +42,13 @@ namespace PBL.Presenters.Shared
             var model = new StudentModel();
             model.Name = view.UserName;
             model.Email = view.Email;
-            var account = new AccountModel();
-            account.Account = view.Account;
-            account.Password = view.Password;
-            model.Account = account;
+            model.Account = view.Account;
+            model.Password = view.Password;
             model.RegistDay = DateTime.Today.Date;
             model.Birth = DateTime.Today;
             try
             {
                 new Common.ModelDataValidation().Validate(model);
-                new Common.ModelDataValidation().Validate(account);
                 repository.Add(model);
                 view.IsSuccessful = true;
                 view.Message = "Sign up successfully";

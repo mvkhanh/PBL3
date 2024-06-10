@@ -1,5 +1,4 @@
-﻿using PBL.Models.Account;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace PBL._Repositories
 {
-    public class AccountRepository : IAccountRepository
+    static public class AccountRepository
     {
-        public int GetAccount(string account, string password)
+        public static bool CheckAccount(string account)
         {
-            var accountModel = new PBLContext().Accounts.Where(p => p.Account ==  account && p.Password == password).FirstOrDefault();
-            if (accountModel == null) return -1;
-            return accountModel.Id;
+            using(var ctx = new PBLContext())
+            {
+                if (ctx.Teachers.Where(p => p.Account == account).Any() || ctx.Students.Where(p => p.Account == account).Any()) return true;
+                return false;
+            }
         }
     }
 }

@@ -136,7 +136,7 @@ namespace PBL.Views.Admin.Students
 
         private void dataGridView1_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
         {
-            if (e.Column.Name == "Id_Account" || e.Column.Name == "Account") e.Column.Visible = false;
+            if (e.Column.Name == "Account" || e.Column.Name == "Password") e.Column.Visible = false;
         }
     }
 }

@@ -37,12 +37,12 @@ namespace PBL.Views.Shared
                     return;
                 }
                 SignUpEvent?.Invoke(this, EventArgs.Empty);
-                MessageBox.Show(Message);
                 if (IsSuccessful)
                 {
                     txtPass2.Texts = "";
                     btnReturn.PerformClick();
                 }
+                MessageBox.Show(Message);
             };
             btnReturn.Click += delegate
             {

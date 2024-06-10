@@ -12,13 +12,14 @@ namespace PBL
         {
             Database.SetInitializer<PBLContext>(new CreateDB());
         }
-        public virtual DbSet<AccountModel> Accounts { get; set; }
+
         public virtual DbSet<StudentModel> Students { get; set; }
         public virtual DbSet<TeacherModel> Teachers { get; set; }
         public virtual DbSet<LessonModel> Lessons { get; set; }
         public virtual DbSet<TestModel> Tests { get; set; }
         public virtual DbSet<QuestionModel> Questions { get; set; }
         public virtual DbSet<AnswerModel> Answers { get; set; }
+        public virtual DbSet<StudentLessonModel> StudentLessons { get; set; }
         
     }
 

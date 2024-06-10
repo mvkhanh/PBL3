@@ -119,7 +119,7 @@ namespace PBL.Views
 
         private void dataGridView1_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
         {
-            if (e.Column.Name == "Lessons" || e.Column.Name == "Tests" || e.Column.Name == "Id_Account" || e.Column.Name == "Account") e.Column.Visible = false;
+            if (e.Column.Name == "Lessons" || e.Column.Name == "Tests" || e.Column.Name == "Password" || e.Column.Name == "Account") e.Column.Visible = false;
         }
 
         //Methods

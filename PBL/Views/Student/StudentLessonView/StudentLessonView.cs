@@ -21,6 +21,7 @@ namespace PBL
         private int currentPage = 0;
         private RoundButton currentButton;
         private FlowLayoutPanel pagePanel;
+        private LessonBox currentLessonBox;
 
         //Constructor
         public StudentLessonView()
@@ -34,33 +35,96 @@ namespace PBL
             btnSearch.Click += delegate
             {
                 SearchEvent?.Invoke(this, EventArgs.Empty);
-                InitLessonView();
+                if(CurrentLessons.Count > 0) InitLessonView();
+                else
+                {
+                    tabPageLessonList.Controls.Remove(pagePanel);
+                    panelContent.Controls.Clear();
+                    var lb = new Label();
+                    lb.Text = "Non exist result";
+                    lb.AutoSize = true;
+                    lb.ForeColor = Color.Red;
+                    panelContent.Controls.Add(lb);
+                }
+            };
+            cbSavedLessons.CheckedChanged += delegate
+            {
+                SearchEvent?.Invoke(this, EventArgs.Empty);
+                if (CurrentLessons.Count > 0) InitLessonView();
+                else
+                {
+                    tabPageLessonList.Controls.Remove(pagePanel);
+                    panelContent.Controls.Clear();
+                    var lb = new Label();
+                    lb.Text = "Non exist result";
+                    lb.AutoSize = true;
+                    lb.ForeColor = Color.Red;
+                    panelContent.Controls.Add(lb);
+                }
             };
             foreach (var lessonBox in Lessons)
             {
-                lessonBox.Click += delegate
+                foreach(Control control in lessonBox.controls)
+                control.Click += delegate
                 {
-                    OpenEvent?.Invoke(this, EventArgs.Empty);
-                    tabControl1.TabPages.Add(tabPageLessonList);
-                    tabControl1.TabPages.Remove(tabPageLessonContent);
+                    OpenEvent?.Invoke(lessonBox, EventArgs.Empty);
+                    tabControl1.TabPages.Remove(tabPageLessonList);
+                    tabControl1.TabPages.Add(tabPageLessonContent);
                     DisplayContent();
+                    currentLessonBox = lessonBox;
+                    if (currentLessonBox.LessonSaved) SaveButton();
+                    else UnSaveButton();
                 };
             }
-            CurrentLessons = Lessons;
+            btnSave.Click += delegate
+            {
+                if (currentLessonBox.LessonSaved)
+                {
+                    UnSaveEvent?.Invoke(currentLessonBox, EventArgs.Empty);
+                    currentLessonBox.LessonSaved = false;
+                    UnSaveButton();
+                    if (cbSavedLessons.Checked) btnSearch.PerformClick();
+                }
+                else
+                {
+                    SaveEvent?.Invoke(currentLessonBox, EventArgs.Empty);
+                    currentLessonBox.LessonSaved = true;
+                    SaveButton();
+                }
+            };
+        }
+
+        private void UnSaveButton()
+        {
+            btnSave.BackColor = Color.Transparent;
+            btnSave.Text = "Save";
+            btnSave.IconChar = FontAwesome.Sharp.IconChar.None;
+        }
+
+        private void SaveButton()
+        {
+            btnSave.BackColor = Color.Green;
+            btnSave.Text = "Saved!";
+            btnSave.IconChar = FontAwesome.Sharp.IconChar.Check;
         }
 
         public void InitLessonView()
         {
-            panelContent.Controls.Clear();
-            int i = currentPage * 8, j = i + 8 < CurrentLessons.Count ? i + 8 : CurrentLessons.Count;
-            while(i < j)
-            {
-                panelContent.Controls.Add(CurrentLessons[i++]);
-            }
+            AddLessonToPanel();
             tabPageLessonList.Controls.Remove(pagePanel);
             makePanelPageNumber();
             tabPageLessonList.Controls.Add(pagePanel);
             pagePanel.Dock = DockStyle.Bottom;
+        }
+
+        private void AddLessonToPanel()
+        {
+            panelContent.Controls.Clear();
+            int i = currentPage * 8, j = i + 8 < CurrentLessons.Count ? i + 8 : CurrentLessons.Count;
+            while (i < j)
+            {
+                panelContent.Controls.Add(CurrentLessons[i++]);
+            }
         }
 
         private void makePanelPageNumber()
@@ -73,17 +137,17 @@ namespace PBL
                 btn.Size = new Size(40, 40);
                 btn.BorderRadius = 20;
                 btn.Text = (i + 1).ToString();
-                if(i == 0) SetChooseButton(btn);
+                if(i == 0) SetCurrentButton(btn);
                 else SetNotChooseButton(btn);
                 btn.BorderColor = Color.MediumSlateBlue;
                 btn.FlatStyle = FlatStyle.Flat;
-                btn.Click += delegate
+                btn.Click += (s, e) =>
                 {
-                    if (currentButton == btn) return;
-                    SetCurrentButton(btn);
-                    currentPage = btn.Text[btn.Text.Length - 1] - '0' - 1;
-                    InitLessonView();
-                    MessageBox.Show(currentButton.Text);
+                    var btn2 = (RoundButton)s;
+                    if (currentButton == btn2) return;
+                    SetCurrentButton(btn2);
+                    currentPage = btn2.Text[btn2.Text.Length - 1] - '0' - 1;
+                    AddLessonToPanel();
                 };
                 btnPage.Add(btn);
             }
@@ -114,7 +178,10 @@ namespace PBL
 
         public event EventHandler SearchEvent;
         public event EventHandler OpenEvent;
+        public event EventHandler SaveEvent;
+        public event EventHandler UnSaveEvent;
 
+        public bool GetSaved { get => cbSavedLessons.Checked; set => cbSavedLessons.Checked = value; }
         public byte[] LessonContent { get; set; }
         public List<LessonBox> Lessons { get; set; }
         public List<LessonBox> CurrentLessons { get; set; }

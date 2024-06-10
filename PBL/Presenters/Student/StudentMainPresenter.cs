@@ -26,7 +26,7 @@ namespace PBL.Presenters.Student
                 this.mainView.ShowProfileView += ShowProfileView;
                 this.mainView.ShowLessonView += ShowLessonsView;
                 //this.mainView.ShowTestView += ShowTestsView;
-                //Thieu 2 form
+                //Show lich su test
                 this.mainView.LogOutEvent += LogOutAction;
                 check = true;
             }
@@ -35,12 +35,12 @@ namespace PBL.Presenters.Student
 
         private void ShowLessonsView(object sender, EventArgs e)
         {
-            new StudentLessonPresenter(StudentLessonView.GetInstance(), new LessonRepository());
+            new StudentLessonPresenter(StudentLessonView.GetInstance(), new LessonRepository(), new StudentLessonRepository(), this.mainView.StudentId);
         }
 
         private void LogOutAction(object sender, EventArgs e)
         {
-            new LoginPresenter(LoginView.GetInstance(), new TeacherRepository(), new StudentRepository(), new AccountRepository());
+            new LoginPresenter(LoginView.GetInstance(), new TeacherRepository(), new StudentRepository());
         }
 
         private void ShowProfileView(object sender, EventArgs e)
