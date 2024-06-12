@@ -22,7 +22,7 @@ namespace PBL.Presenters.Teacher
         private ITestRepository testRepository;
         private int TeacherId;
         private TeacherModel TeacherModel;
-        private static bool check = false;
+
         public TeacherProfilePresenter(ITeacherProfileView view, ITeacherRepository teacherRepository, ILessonRepository lessonRepository, ITestRepository testRepository, int id)
         {
             this.view = view;

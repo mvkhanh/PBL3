@@ -112,7 +112,6 @@ namespace PBL.Views.Teacher.TeacherLessonView
         { get; set; }
         public int LessonViews
         { get => Convert.ToInt32(txtView.Texts); set => txtView.Texts = value.ToString(); }
-        public string TeacherName {  get => lbTeacherName.Text = txtPublish.Texts; set => txtPublish.Texts = lbTeacherName.Text =value; }
         public int TeacherID { get; set; }
         public string SearchValue
         { get => txtSearch.Text; set => txtSearch.Text = value; }

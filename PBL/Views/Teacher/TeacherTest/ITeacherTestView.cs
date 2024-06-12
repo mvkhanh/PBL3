@@ -19,7 +19,6 @@ namespace PBL.Views.Teacher.TeacherTestView
         byte[] TestAudio { get; set; }
         int TestCount { get; set; }
         int TeacherID { get; set; }
-        string TeacherName { get; set; }
         List<List<QuestionBox>> Questions { get; set; }
 
         string SearchValue { get; set; }

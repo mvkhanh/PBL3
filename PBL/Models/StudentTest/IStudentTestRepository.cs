@@ -10,8 +10,8 @@ namespace PBL.Models.StudentTest
     {
         void Add(StudentTestModel studentTestModel);
         void Delete(int studentId, int testId);
-        IEnumerable<int> GetByTest(int testId);
-        IEnumerable<int> GetByStudent(int studentId);
+        IEnumerable<StudentTestModel> GetByTest(int testId);
+        IEnumerable<StudentTestModel> GetByStudent(int studentId);
         StudentTestModel GetInfo(int studentId, int testId);
     }
 }

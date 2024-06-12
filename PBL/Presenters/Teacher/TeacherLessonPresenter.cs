@@ -23,14 +23,12 @@ namespace PBL.Presenters.Teacher
         private BindingSource lessonsBindingSource;
         private IEnumerable<LessonModel> lessonList;
         //Constructor
-        public TeacherLessonPresenter(ITeacherLessonView view, ILessonRepository lessonRepository, int id,string name)
+        public TeacherLessonPresenter(ITeacherLessonView view, ILessonRepository lessonRepository, int id)
         {
             this.lessonsBindingSource = new BindingSource();
             this.view = view;
             this.lessonRepository = lessonRepository;
-            //Load Teachers to CBB
             view.TeacherID = id;
-            view.TeacherName = name;
             //Subscribe event handler methods to view events
             this.view.SearchEvent += SearchLesson;
             this.view.AddNewEvent += AddNewLesson;

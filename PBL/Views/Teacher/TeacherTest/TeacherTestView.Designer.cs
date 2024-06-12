@@ -50,7 +50,6 @@
             this.btnPlay = new FontAwesome.Sharp.IconButton();
             this.btnAddAudio = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbTeacherName = new System.Windows.Forms.Label();
             this.lbBirth = new System.Windows.Forms.Label();
             this.lbRegist = new System.Windows.Forms.Label();
             this.lbIntroduction = new System.Windows.Forms.Label();
@@ -74,7 +73,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lbSearch = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.txtTeacherName = new PBL.Controller.RoundTextBox();
             this.tabPageQuestionList.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panelBtn.SuspendLayout();
@@ -371,7 +369,6 @@
             this.tabPageTestDetail.Controls.Add(this.btnPlay);
             this.tabPageTestDetail.Controls.Add(this.btnAddAudio);
             this.tabPageTestDetail.Controls.Add(this.label1);
-            this.tabPageTestDetail.Controls.Add(this.lbTeacherName);
             this.tabPageTestDetail.Controls.Add(this.lbBirth);
             this.tabPageTestDetail.Controls.Add(this.lbRegist);
             this.tabPageTestDetail.Controls.Add(this.lbIntroduction);
@@ -385,7 +382,6 @@
             this.tabPageTestDetail.Controls.Add(this.regist);
             this.tabPageTestDetail.Controls.Add(this.txtName);
             this.tabPageTestDetail.Controls.Add(this.txtPaticipant);
-            this.tabPageTestDetail.Controls.Add(this.txtTeacherName);
             this.tabPageTestDetail.Controls.Add(this.txtId);
             this.tabPageTestDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageTestDetail.Location = new System.Drawing.Point(4, 25);
@@ -450,18 +446,6 @@
             this.label1.Size = new System.Drawing.Size(49, 18);
             this.label1.TabIndex = 30;
             this.label1.Text = "Audio:";
-            // 
-            // lbTeacherName
-            // 
-            this.lbTeacherName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbTeacherName.AutoSize = true;
-            this.lbTeacherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTeacherName.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.lbTeacherName.Location = new System.Drawing.Point(45, 280);
-            this.lbTeacherName.Name = "lbTeacherName";
-            this.lbTeacherName.Size = new System.Drawing.Size(79, 18);
-            this.lbTeacherName.TabIndex = 27;
-            this.lbTeacherName.Text = "Publish by:";
             // 
             // lbBirth
             // 
@@ -888,30 +872,6 @@
             this.tabControl1.Size = new System.Drawing.Size(969, 477);
             this.tabControl1.TabIndex = 2;
             // 
-            // txtTeacherName
-            // 
-            this.txtTeacherName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTeacherName.BackColor = System.Drawing.SystemColors.Window;
-            this.txtTeacherName.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtTeacherName.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtTeacherName.BorderRadius = 0;
-            this.txtTeacherName.BorderSize = 2;
-            this.txtTeacherName.Enabled = false;
-            this.txtTeacherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTeacherName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTeacherName.Location = new System.Drawing.Point(48, 302);
-            this.txtTeacherName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTeacherName.Multiline = false;
-            this.txtTeacherName.Name = "txtTeacherName";
-            this.txtTeacherName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtTeacherName.PasswordChar = false;
-            this.txtTeacherName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtTeacherName.PlaceholderText = "";
-            this.txtTeacherName.Size = new System.Drawing.Size(221, 31);
-            this.txtTeacherName.TabIndex = 23;
-            this.txtTeacherName.Texts = "0";
-            this.txtTeacherName.UnderlinedStyle = false;
-            // 
             // TeacherTestView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -942,7 +902,6 @@
 
         private System.Windows.Forms.TabPage tabPageQuestionList;
         private System.Windows.Forms.TabPage tabPageTestDetail;
-        private System.Windows.Forms.Label lbTeacherName;
         private System.Windows.Forms.Label lbBirth;
         private System.Windows.Forms.Label lbRegist;
         private System.Windows.Forms.Label lbIntroduction;
@@ -984,6 +943,5 @@
         private FontAwesome.Sharp.IconButton btnAddAudio;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton btnPlay;
-        private Controller.RoundTextBox txtTeacherName;
     }
 }

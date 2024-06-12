@@ -1,7 +1,7 @@
 ﻿
 namespace PBL.Resources.Components
 {
-    partial class QuestionResult
+    partial class TestResult
     {
         /// <summary> 
         /// Required designer variable.

@@ -1,4 +1,5 @@
 ﻿using PBL.Models;
+using PBL.Models.StudentTest;
 using PBL.Views.Student.StudentProfile;
 using System;
 using System.Collections.Generic;
@@ -14,13 +15,15 @@ namespace PBL.Presenters.Student
         //Fields
         private IStudentProfileView view;
         private IStudentRepository repository;
+        private IStudentTestRepository studentTestRepository;
         private int studentId;
         private StudentModel studentModel;
-        private static bool check = false;
-        public StudentProfilePresenter(IStudentProfileView view, IStudentRepository repository, int studentId)
+
+        public StudentProfilePresenter(IStudentProfileView view, IStudentRepository repository, IStudentTestRepository studentTestRepository, int studentId)
         {
             this.view = view;
             this.repository = repository;
+            this.studentTestRepository = studentTestRepository;
             this.studentId = studentId;
             //Subscribe event handler methods to view events
             this.view.EditEvent += EditStudent;
@@ -37,6 +40,8 @@ namespace PBL.Presenters.Student
             view.StudentPhone = studentModel.Phone;
             view.StudentBirth = studentModel.Birth;
             view.StudentEmail = studentModel.Email;
+            view.StudentTests = studentTestRepository.GetByStudent(studentId).Count();
+            view.StudentAverageScores = Convert.ToInt32(studentTestRepository.GetByStudent(studentId).Select(p => p.Scores).Average());
         }
 
         private void CancelAction(object sender, EventArgs e)

@@ -17,15 +17,13 @@ namespace PBL.Presenters.Student
     {
         private IStudentDoTestView view;
         private IQuestionRepository questionRepository;
-        private ITestRepository testRepository;
         private StudentTestPresenter presenter;
         private int testId;
         private bool isFullTest = false;
-        public StudentDoTestPrersenter(StudentTestPresenter studentTestPresenter, IStudentDoTestView view, ITestRepository testRepository, IQuestionRepository questionRepository, int testId , List<int> parts, int minutes)
+        public StudentDoTestPrersenter(StudentTestPresenter studentTestPresenter, IStudentDoTestView view, IQuestionRepository questionRepository, int testId , List<int> parts, int minutes)
         {
             this.view = view;
             this.presenter = studentTestPresenter;
-            this.testRepository = testRepository;
             this.questionRepository = questionRepository;
             this.testId = testId;
             if (parts.Count == 0)

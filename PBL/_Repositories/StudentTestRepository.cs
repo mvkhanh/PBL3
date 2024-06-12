@@ -29,14 +29,14 @@ namespace PBL._Repositories
             }
         }
 
-        public IEnumerable<int> GetByStudent(int studentId)
+        public IEnumerable<StudentTestModel> GetByStudent(int studentId)
         {
-            return new PBLContext().StudentTests.Where(p => p.StudentId == studentId).Select(p => p.TestId).ToList();
+            return new PBLContext().StudentTests.Where(p => p.StudentId == studentId).ToList();
         }
 
-        public IEnumerable<int> GetByTest(int testId)
+        public IEnumerable<StudentTestModel> GetByTest(int testId)
         {
-            return new PBLContext().StudentTests.Where(p => p.TestId == testId).Select(p => p.StudentId).ToList();
+            return new PBLContext().StudentTests.Where(p => p.TestId == testId).ToList();
         }
 
         public StudentTestModel GetInfo(int studentId, int testId)

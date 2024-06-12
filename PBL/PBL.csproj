@@ -162,6 +162,7 @@
     <Compile Include="Presenters\Student\StudentDoTestPrersenter.cs" />
     <Compile Include="Presenters\Student\StudentLessonPresenter.cs" />
     <Compile Include="Presenters\Student\StudentMainPresenter.cs" />
+    <Compile Include="Presenters\Student\StudentPracticeHistoryPresenter.cs" />
     <Compile Include="Presenters\Student\StudentProfilePresenter.cs" />
     <Compile Include="Presenters\Teacher\TeacherLessonPresenter.cs" />
     <Compile Include="Presenters\Teacher\TeacherMainPresenter.cs" />
@@ -220,11 +221,17 @@
     <Compile Include="Resources\Components\Question\QuestionBox.Designer.cs">
       <DependentUpon>QuestionBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Components\Test\QuestionResult.cs">
+    <Compile Include="Resources\Components\TestHistory\HistoryBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Resources\Components\Test\QuestionResult.Designer.cs">
-      <DependentUpon>QuestionResult.cs</DependentUpon>
+    <Compile Include="Resources\Components\TestHistory\HistoryBox.Designer.cs">
+      <DependentUpon>HistoryBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Components\Test\TestResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\Components\Test\TestResult.Designer.cs">
+      <DependentUpon>TestResult.cs</DependentUpon>
     </Compile>
     <Compile Include="Resources\Components\CommentsBox.cs">
       <SubType>UserControl</SubType>
@@ -284,6 +291,13 @@
     <Compile Include="Views\Student\StudentMain\StudentMainView.Designer.cs">
       <DependentUpon>StudentMainView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Student\StudentPracticeHistory\IStudentPracticeHistoryView.cs" />
+    <Compile Include="Views\Student\StudentPracticeHistory\StudentPracticeHistoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Student\StudentPracticeHistory\StudentPracticeHistoryView.Designer.cs">
+      <DependentUpon>StudentPracticeHistoryView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Student\StudentProfile\IStudentProfileView.cs" />
     <Compile Include="Views\Student\StudentProfile\StudentProfileView.cs">
       <SubType>Form</SubType>
@@ -304,11 +318,11 @@
     <Compile Include="Views\Student\StudentTest\StudentTestView.Designer.cs">
       <DependentUpon>StudentTestView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Teacher\TeacherLessonView\ITeacherLessonView.cs" />
-    <Compile Include="Views\Teacher\TeacherLessonView\TeacherLessonView.cs">
+    <Compile Include="Views\Teacher\TeacherLesson\ITeacherLessonView.cs" />
+    <Compile Include="Views\Teacher\TeacherLesson\TeacherLessonView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Teacher\TeacherLessonView\TeacherLessonView.Designer.cs">
+    <Compile Include="Views\Teacher\TeacherLesson\TeacherLessonView.Designer.cs">
       <DependentUpon>TeacherLessonView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Teacher\TeacherMain\ITeacherMainView.cs" />
@@ -325,11 +339,11 @@
     <Compile Include="Views\Teacher\TeacherProfile\TeacherProfileView.Designer.cs">
       <DependentUpon>TeacherProfileView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Teacher\TeacherTestView\ITeacherTestView.cs" />
-    <Compile Include="Views\Teacher\TeacherTestView\TeacherTestView.cs">
+    <Compile Include="Views\Teacher\TeacherTest\ITeacherTestView.cs" />
+    <Compile Include="Views\Teacher\TeacherTest\TeacherTestView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Teacher\TeacherTestView\TeacherTestView.Designer.cs">
+    <Compile Include="Views\Teacher\TeacherTest\TeacherTestView.Designer.cs">
       <DependentUpon>TeacherTestView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\Lessons\LessonView.cs">
@@ -444,8 +458,11 @@
     <EmbeddedResource Include="Resources\Components\Question\QuestionBox.resx">
       <DependentUpon>QuestionBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Components\Test\QuestionResult.resx">
-      <DependentUpon>QuestionResult.cs</DependentUpon>
+    <EmbeddedResource Include="Resources\Components\TestHistory\HistoryBox.resx">
+      <DependentUpon>HistoryBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Components\Test\TestResult.resx">
+      <DependentUpon>TestResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Components\CommentsBox.resx">
       <DependentUpon>CommentsBox.cs</DependentUpon>
@@ -471,13 +488,16 @@
     <EmbeddedResource Include="Views\Student\StudentMain\StudentMainView.resx">
       <DependentUpon>StudentMainView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\StudentPracticeHistory\StudentPracticeHistoryView.resx">
+      <DependentUpon>StudentPracticeHistoryView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Student\StudentProfile\StudentProfileView.resx">
       <DependentUpon>StudentProfileView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Student\StudentTest\StudentTestView.resx">
       <DependentUpon>StudentTestView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Teacher\TeacherLessonView\TeacherLessonView.resx">
+    <EmbeddedResource Include="Views\Teacher\TeacherLesson\TeacherLessonView.resx">
       <DependentUpon>TeacherLessonView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Teacher\TeacherMain\TeacherMainView.resx">
@@ -486,7 +506,7 @@
     <EmbeddedResource Include="Views\Teacher\TeacherProfile\TeacherProfileView.resx">
       <DependentUpon>TeacherProfileView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Teacher\TeacherTestView\TeacherTestView.resx">
+    <EmbeddedResource Include="Views\Teacher\TeacherTest\TeacherTestView.resx">
       <DependentUpon>TeacherTestView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\Lessons\LessonView.resx">

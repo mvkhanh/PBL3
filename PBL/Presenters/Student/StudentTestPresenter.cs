@@ -37,7 +37,7 @@ namespace PBL.Presenters.Student
 
         private void DoTestAction(object sender, EventArgs e)
         {
-            new StudentDoTestPrersenter(this, StudentDoTestView.GetInstance(), new TestRepository(), new QuestionRepository(), view.CurrentTestId, view.part, view.Minutes);
+            new StudentDoTestPrersenter(this, StudentDoTestView.GetInstance(), new QuestionRepository(), view.CurrentTestId, view.part, view.Minutes);
         }
 
         private void OpenAction(object sender, EventArgs e)

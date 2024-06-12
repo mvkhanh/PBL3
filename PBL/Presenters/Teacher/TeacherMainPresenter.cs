@@ -32,11 +32,11 @@ namespace PBL.Presenters.Teacher
 
         private void ShowLessonsView(object sender, EventArgs e)
         {
-            new TeacherLessonPresenter(TeacherLessonView.GetInstance(), new LessonRepository(), this.mainView.TeacherId, this.mainView.TeacherName);
+            new TeacherLessonPresenter(TeacherLessonView.GetInstance(), new LessonRepository(), this.mainView.TeacherId);
         }
         private void ShowTestsView(object sender, EventArgs e)
         {
-            new TeacherTestPresenter(TeacherTestView.GetInstance() ,new TestRepository() , new QuestionRepository() ,new AnswerRepository() , this.mainView.TeacherId, this.mainView.TeacherName);
+            new TeacherTestPresenter(TeacherTestView.GetInstance() ,new TestRepository() , new QuestionRepository() ,new AnswerRepository() , this.mainView.TeacherId);
         }
         private void LogOutAction(object sender, EventArgs e)
         {

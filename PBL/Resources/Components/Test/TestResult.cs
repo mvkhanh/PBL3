@@ -11,7 +11,7 @@ using System.Windows.Navigation;
 
 namespace PBL.Resources.Components
 {
-    public partial class QuestionResult : UserControl
+    public partial class TestResult : UserControl
     {
         private int _StudentAnswer;
         private int _numQues;
@@ -84,7 +84,7 @@ namespace PBL.Resources.Components
                 if (numQues == 1) MessageBox.Show(StudentAnswer.ToString() + " " + value.ToString());
             }
         }
-        public QuestionResult()
+        public TestResult()
         {
             InitializeComponent();
         }

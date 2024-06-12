@@ -158,7 +158,6 @@ namespace PBL.Views.Teacher.TeacherTestView
         { get => txtDescription.Texts; set => txtDescription.Texts = value; }
         public int TestCount
         { get => Convert.ToInt32(txtPaticipant.Texts); set => txtPaticipant.Texts = value.ToString(); }
-        public string TeacherName { get => lbTeacherName.Text= txtTeacherName.Text ; set => txtTeacherName.Texts = lbTeacherName.Text = value; }
         public int TeacherID { get; set; }
         public string TestAudioPath { get; set; }
         public byte[] TestAudio { get; set; }

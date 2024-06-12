@@ -45,22 +45,20 @@ namespace PBL.Views.Teacher.TeacherLessonView
             this.btnAddPdf = new FontAwesome.Sharp.IconButton();
             this.lbRegist = new System.Windows.Forms.Label();
             this.lbBirth = new System.Windows.Forms.Label();
-            this.lbTeacherName = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.lbView = new System.Windows.Forms.Label();
             this.lbId = new System.Windows.Forms.Label();
             this.btnCancel = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
-            this.tabPageLessonContent = new System.Windows.Forms.TabPage();
-            this.pdfViewer1 = new Spire.PdfViewer.Forms.PdfViewer();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBack = new FontAwesome.Sharp.IconButton();
             this.regist = new PBL.Resources.Components.RJDatePicker();
             this.txtView = new PBL.Controller.RoundTextBox();
             this.txtId = new PBL.Controller.RoundTextBox();
             this.txtLessonName = new PBL.Controller.RoundTextBox();
-            this.txtPublish = new PBL.Controller.RoundTextBox();
             this.txtPdf = new PBL.Controller.RoundTextBox();
+            this.tabPageLessonContent = new System.Windows.Forms.TabPage();
+            this.pdfViewer1 = new Spire.PdfViewer.Forms.PdfViewer();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBack = new FontAwesome.Sharp.IconButton();
             this.tabControl1.SuspendLayout();
             this.tabPageLessonList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -269,13 +267,13 @@ namespace PBL.Views.Teacher.TeacherLessonView
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(690, 373);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.ColumnAdded += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dataGridView1_ColumnAdded);
             // 
             // tabPageLessonDetail
             // 
             this.tabPageLessonDetail.Controls.Add(this.btnAddPdf);
             this.tabPageLessonDetail.Controls.Add(this.lbRegist);
             this.tabPageLessonDetail.Controls.Add(this.lbBirth);
-            this.tabPageLessonDetail.Controls.Add(this.lbTeacherName);
             this.tabPageLessonDetail.Controls.Add(this.lbName);
             this.tabPageLessonDetail.Controls.Add(this.lbView);
             this.tabPageLessonDetail.Controls.Add(this.lbId);
@@ -285,7 +283,6 @@ namespace PBL.Views.Teacher.TeacherLessonView
             this.tabPageLessonDetail.Controls.Add(this.txtView);
             this.tabPageLessonDetail.Controls.Add(this.txtId);
             this.tabPageLessonDetail.Controls.Add(this.txtLessonName);
-            this.tabPageLessonDetail.Controls.Add(this.txtPublish);
             this.tabPageLessonDetail.Controls.Add(this.txtPdf);
             this.tabPageLessonDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageLessonDetail.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -317,6 +314,7 @@ namespace PBL.Views.Teacher.TeacherLessonView
             this.btnAddPdf.Text = "Add File PDF";
             this.btnAddPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddPdf.UseVisualStyleBackColor = false;
+            this.btnAddPdf.Click += new System.EventHandler(this.btnAddPdf_Click);
             // 
             // lbRegist
             // 
@@ -341,18 +339,6 @@ namespace PBL.Views.Teacher.TeacherLessonView
             this.lbBirth.Size = new System.Drawing.Size(117, 18);
             this.lbBirth.TabIndex = 8;
             this.lbBirth.Text = "Lesson Content:";
-            // 
-            // lbTeacherName
-            // 
-            this.lbTeacherName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbTeacherName.AutoSize = true;
-            this.lbTeacherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTeacherName.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.lbTeacherName.Location = new System.Drawing.Point(349, 125);
-            this.lbTeacherName.Name = "lbTeacherName";
-            this.lbTeacherName.Size = new System.Drawing.Size(79, 18);
-            this.lbTeacherName.TabIndex = 2;
-            this.lbTeacherName.Text = "Publish by:";
             // 
             // lbName
             // 
@@ -432,62 +418,6 @@ namespace PBL.Views.Teacher.TeacherLessonView
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
             // 
-            // tabPageLessonContent
-            // 
-            this.tabPageLessonContent.Controls.Add(this.pdfViewer1);
-            this.tabPageLessonContent.Controls.Add(this.panel1);
-            this.tabPageLessonContent.Location = new System.Drawing.Point(4, 25);
-            this.tabPageLessonContent.Name = "tabPageLessonContent";
-            this.tabPageLessonContent.Size = new System.Drawing.Size(861, 438);
-            this.tabPageLessonContent.TabIndex = 2;
-            this.tabPageLessonContent.Text = "Lesson Content";
-            this.tabPageLessonContent.UseVisualStyleBackColor = true;
-            // 
-            // pdfViewer1
-            // 
-            this.pdfViewer1.BackColor = System.Drawing.Color.White;
-            this.pdfViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pdfViewer1.FindTextHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(153)))), ((int)(((byte)(193)))), ((int)(((byte)(218)))));
-            this.pdfViewer1.ForeColor = System.Drawing.Color.Black;
-            this.pdfViewer1.FormFillEnabled = false;
-            this.pdfViewer1.IgnoreCase = false;
-            this.pdfViewer1.IsToolBarVisible = false;
-            this.pdfViewer1.Location = new System.Drawing.Point(0, 24);
-            this.pdfViewer1.MultiPagesThreshold = 60;
-            this.pdfViewer1.Name = "pdfViewer1";
-            this.pdfViewer1.OnRenderPageExceptionEvent = null;
-            this.pdfViewer1.Size = new System.Drawing.Size(861, 414);
-            this.pdfViewer1.TabIndex = 0;
-            this.pdfViewer1.Text = "pdfViewer1";
-            this.pdfViewer1.Threshold = 60;
-            this.pdfViewer1.ViewerBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnBack);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(861, 24);
-            this.panel1.TabIndex = 1;
-            // 
-            // btnBack
-            // 
-            this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
-            this.btnBack.IconColor = System.Drawing.Color.Black;
-            this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBack.IconSize = 16;
-            this.btnBack.Location = new System.Drawing.Point(0, 0);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 24);
-            this.btnBack.TabIndex = 0;
-            this.btnBack.Text = "Back";
-            this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBack.UseVisualStyleBackColor = true;
-            // 
             // regist
             // 
             this.regist.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -548,7 +478,7 @@ namespace PBL.Views.Teacher.TeacherLessonView
             this.txtId.PlaceholderText = "";
             this.txtId.Size = new System.Drawing.Size(200, 37);
             this.txtId.TabIndex = 5;
-            this.txtId.Texts = "";
+            this.txtId.Texts = "0";
             this.txtId.UnderlinedStyle = false;
             // 
             // txtLessonName
@@ -559,7 +489,6 @@ namespace PBL.Views.Teacher.TeacherLessonView
             this.txtLessonName.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtLessonName.BorderRadius = 0;
             this.txtLessonName.BorderSize = 2;
-            this.txtLessonName.Enabled = false;
             this.txtLessonName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLessonName.ForeColor = System.Drawing.Color.Black;
             this.txtLessonName.Location = new System.Drawing.Point(351, 60);
@@ -574,30 +503,6 @@ namespace PBL.Views.Teacher.TeacherLessonView
             this.txtLessonName.TabIndex = 5;
             this.txtLessonName.Texts = "";
             this.txtLessonName.UnderlinedStyle = false;
-            // 
-            // txtPublish
-            // 
-            this.txtPublish.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPublish.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPublish.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtPublish.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtPublish.BorderRadius = 0;
-            this.txtPublish.BorderSize = 2;
-            this.txtPublish.Enabled = false;
-            this.txtPublish.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPublish.ForeColor = System.Drawing.Color.Black;
-            this.txtPublish.Location = new System.Drawing.Point(352, 140);
-            this.txtPublish.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPublish.Multiline = false;
-            this.txtPublish.Name = "txtPublish";
-            this.txtPublish.Padding = new System.Windows.Forms.Padding(10);
-            this.txtPublish.PasswordChar = false;
-            this.txtPublish.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtPublish.PlaceholderText = "";
-            this.txtPublish.Size = new System.Drawing.Size(406, 37);
-            this.txtPublish.TabIndex = 5;
-            this.txtPublish.Texts = "";
-            this.txtPublish.UnderlinedStyle = false;
             // 
             // txtPdf
             // 
@@ -622,6 +527,63 @@ namespace PBL.Views.Teacher.TeacherLessonView
             this.txtPdf.TabIndex = 5;
             this.txtPdf.Texts = "";
             this.txtPdf.UnderlinedStyle = false;
+            // 
+            // tabPageLessonContent
+            // 
+            this.tabPageLessonContent.Controls.Add(this.pdfViewer1);
+            this.tabPageLessonContent.Controls.Add(this.panel1);
+            this.tabPageLessonContent.Location = new System.Drawing.Point(4, 25);
+            this.tabPageLessonContent.Name = "tabPageLessonContent";
+            this.tabPageLessonContent.Size = new System.Drawing.Size(861, 438);
+            this.tabPageLessonContent.TabIndex = 2;
+            this.tabPageLessonContent.Text = "Lesson Content";
+            this.tabPageLessonContent.UseVisualStyleBackColor = true;
+            // 
+            // pdfViewer1
+            // 
+            this.pdfViewer1.BackColor = System.Drawing.Color.White;
+            this.pdfViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pdfViewer1.FindTextHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(153)))), ((int)(((byte)(193)))), ((int)(((byte)(218)))));
+            this.pdfViewer1.ForeColor = System.Drawing.Color.Black;
+            this.pdfViewer1.FormFillEnabled = false;
+            this.pdfViewer1.IgnoreCase = false;
+            this.pdfViewer1.IsToolBarVisible = false;
+            this.pdfViewer1.Location = new System.Drawing.Point(0, 24);
+            this.pdfViewer1.MultiPagesThreshold = 60;
+            this.pdfViewer1.Name = "pdfViewer1";
+            this.pdfViewer1.OnRenderPageExceptionEvent = null;
+            this.pdfViewer1.Size = new System.Drawing.Size(861, 414);
+            this.pdfViewer1.TabIndex = 0;
+            this.pdfViewer1.Text = "pdfViewer1";
+            this.pdfViewer1.Threshold = 60;
+            this.pdfViewer1.ViewerBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnBack);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(861, 24);
+            this.panel1.TabIndex = 1;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
+            this.btnBack.IconColor = System.Drawing.Color.Black;
+            this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBack.IconSize = 16;
+            this.btnBack.Location = new System.Drawing.Point(0, 0);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 24);
+            this.btnBack.TabIndex = 0;
+            this.btnBack.Text = "Back";
+            this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // TeacherLessonView
             // 
@@ -662,7 +624,6 @@ namespace PBL.Views.Teacher.TeacherLessonView
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnCancel;
         private System.Windows.Forms.Label lbView;
-        private System.Windows.Forms.Label lbTeacherName;
         private FontAwesome.Sharp.IconButton btnAddPdf;
         private Controller.RoundTextBox txtPdf;
         private Controller.RoundTextBox txtView;
@@ -672,7 +633,6 @@ namespace PBL.Views.Teacher.TeacherLessonView
         private Spire.PdfViewer.Forms.PdfViewer pdfViewer1;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnBack;
-        private Controller.RoundTextBox txtPublish;
         private Controller.RoundTextBox txtId;
         private Controller.RoundTextBox txtLessonName;
     }

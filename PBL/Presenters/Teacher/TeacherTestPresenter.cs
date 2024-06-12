@@ -25,7 +25,7 @@ namespace PBL.Presenters.Teacher
         private BindingSource testsBindingSource;
         private IEnumerable<TestModel> testList;
         //Constructor
-        public TeacherTestPresenter(ITeacherTestView view, ITestRepository testRepository, IQuestionRepository questionRepository, IAnswerRepository answerRepository,int id,string name)
+        public TeacherTestPresenter(ITeacherTestView view, ITestRepository testRepository, IQuestionRepository questionRepository, IAnswerRepository answerRepository,int id)
         {
             this.testsBindingSource = new BindingSource();
             this.view = view;
@@ -34,7 +34,6 @@ namespace PBL.Presenters.Teacher
             this.answerRepository = answerRepository;
             //Load Teachers to CBB
             view.TeacherID = id;
-            view.TeacherName = name;
             //Subscribe event handler methods to view events
             this.view.SearchEvent += SearchTest;
             this.view.AddNewEvent += AddNewTest;

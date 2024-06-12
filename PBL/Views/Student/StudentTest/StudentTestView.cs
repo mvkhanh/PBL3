@@ -250,7 +250,7 @@ namespace PBL
                 });
                 foreach(var answer in AnswerList[i])
                 {
-                    panelAnswers.Controls.Add(new QuestionResult
+                    panelAnswers.Controls.Add(new TestResult
                     {
                         numQues = answer.QuestionNum,
                         StudentAnswer = answer.QuestionChooseAnswer,

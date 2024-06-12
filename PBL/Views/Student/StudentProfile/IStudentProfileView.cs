@@ -15,7 +15,8 @@ namespace PBL.Views.Student.StudentProfile
         string StudentPhone { get; set; }
         string StudentCurrentPassword { get; set; }
         string StudentNewPassword {  get; set; }
-
+        int StudentTests {  get; set; }
+        int StudentAverageScores {  get; set; }
         bool IsSuccessful {  get; set; }
         string Message {  get; set; }
         //Events

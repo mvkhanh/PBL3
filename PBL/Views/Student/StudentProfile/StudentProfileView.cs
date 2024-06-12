@@ -109,7 +109,8 @@ namespace PBL
         }
         public string StudentCurrentPassword { get => txtCurrentPass.Texts; set => txtCurrentPass.Texts = value; }
         public string StudentNewPassword { get => txtNewPass.Texts; set => txtNewPass.Texts = value; }
-
+        public int StudentTests { get => Convert.ToInt32(lbStudentTests.Text); set => lbStudentTests.Text = value.ToString(); }
+        public int StudentAverageScores { get => Convert.ToInt32(lbStudentScores.Text); set => lbStudentScores.Text = value.ToString(); }
         public bool IsSuccessful
         { get => _IsSuccessful; set => _IsSuccessful = value; }
         public string Message

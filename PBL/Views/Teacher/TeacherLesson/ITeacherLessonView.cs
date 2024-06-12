@@ -18,7 +18,6 @@ namespace PBL.Views.Teacher.TeacherLessonView
         byte[] LessonContent { get; set; }
         int LessonViews { get; set; }
         int TeacherID { get; set; }
-        string TeacherName { get; set; }
         string SearchValue { get; set; }
         bool IsEdit { get; set; }
         bool IsSuccessful { get; set; }

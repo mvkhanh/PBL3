@@ -267,6 +267,7 @@ namespace PBL.Views.Teacher.TeacherMain
 
         private void btnTests_Click(object sender, EventArgs e)
         {
+            if(currentBtn == sender) return;
             ActivateButton(sender, RGBColors.color3);
             ShowTestView(sender, EventArgs.Empty);
             OpenChildForm(TeacherTestView.TeacherTestView.GetInstance());

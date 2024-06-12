@@ -26,11 +26,16 @@ namespace PBL.Presenters.Student
                 this.mainView.ShowProfileView += ShowProfileView;
                 this.mainView.ShowLessonView += ShowLessonsView;
                 this.mainView.ShowTestView += ShowTestsView;
-                //Show lich su test
+                this.mainView.ShowPracticeHistoryView += ShowPracticeHistoryView;
                 this.mainView.LogOutEvent += LogOutAction;
                 check = true;
             }
             this.mainView.Show();
+        }
+
+        private void ShowPracticeHistoryView(object sender, EventArgs e)
+        {
+            new StudentPracticeHistoryPresenter(StudentPracticeHistoryView.GetInstance(), new StudentTestRepository(), this.mainView.StudentId);
         }
 
         private void ShowTestsView(object sender, EventArgs e)
@@ -50,7 +55,7 @@ namespace PBL.Presenters.Student
 
         private void ShowProfileView(object sender, EventArgs e)
         {
-            new StudentProfilePresenter(StudentProfileView.GetInstance(), new StudentRepository(), this.mainView.StudentId);
+            new StudentProfilePresenter(StudentProfileView.GetInstance(), new StudentRepository(), new StudentTestRepository(), this.mainView.StudentId);
         }
     }
 }

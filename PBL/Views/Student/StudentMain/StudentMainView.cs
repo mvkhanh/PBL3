@@ -275,6 +275,7 @@ namespace PBL
             if (currentBtn == sender) return;
             ActivateButton(sender, RGBColors.color5);
             ShowPracticeHistoryView(sender, EventArgs.Empty);
+            OpenChildForm(StudentPracticeHistoryView.GetInstance());
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
