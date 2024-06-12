@@ -11,6 +11,7 @@ using PBL._Repositories;
 using System.Configuration;
 using PBL.Views.Common;
 using PBL.Presenters.Shared;
+using PBL.Resources.Components.Test;
 
 namespace PBL
 {
@@ -28,7 +29,6 @@ namespace PBL
             new LoginPresenter(LoginView.GetInstance(), new TeacherRepository(), new StudentRepository());
 
             Application.Run(LoginView.GetInstance());
-            //Application.Run(new StudentMainView());
         }
     }
 }

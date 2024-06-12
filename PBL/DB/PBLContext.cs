@@ -1,4 +1,5 @@
 using PBL.Models;
+using PBL.Models.StudentTest;
 using System;
 using System.Data.Entity;
 using System.Linq;
@@ -20,6 +21,7 @@ namespace PBL
         public virtual DbSet<QuestionModel> Questions { get; set; }
         public virtual DbSet<AnswerModel> Answers { get; set; }
         public virtual DbSet<StudentLessonModel> StudentLessons { get; set; }
+        public virtual DbSet<StudentTestModel> StudentTests { get; set; }
         
     }
 

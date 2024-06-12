@@ -25,12 +25,17 @@ namespace PBL.Presenters.Student
             {
                 this.mainView.ShowProfileView += ShowProfileView;
                 this.mainView.ShowLessonView += ShowLessonsView;
-                //this.mainView.ShowTestView += ShowTestsView;
+                this.mainView.ShowTestView += ShowTestsView;
                 //Show lich su test
                 this.mainView.LogOutEvent += LogOutAction;
                 check = true;
             }
             this.mainView.Show();
+        }
+
+        private void ShowTestsView(object sender, EventArgs e)
+        {
+            new StudentTestPresenter(StudentTestView.GetInstance(), new TestRepository(), new StudentTestRepository(), this.mainView.StudentId);
         }
 
         private void ShowLessonsView(object sender, EventArgs e)

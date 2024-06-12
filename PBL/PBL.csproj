@@ -155,21 +155,19 @@
     <Compile Include="Models\Shared\ILoginRepository.cs" />
     <Compile Include="Models\StudentLesson\IStudentLessonRepository.cs" />
     <Compile Include="Models\StudentLesson\StudentLessonModel.cs" />
+    <Compile Include="Models\StudentTest\IStudentTestRepository.cs" />
+    <Compile Include="Models\StudentTest\StudentTestModel.cs" />
     <Compile Include="Presenters\Shared\LoginPresenter.cs" />
     <Compile Include="Presenters\Shared\RegisterPresenter.cs" />
+    <Compile Include="Presenters\Student\StudentDoTestPrersenter.cs" />
     <Compile Include="Presenters\Student\StudentLessonPresenter.cs" />
     <Compile Include="Presenters\Student\StudentMainPresenter.cs" />
     <Compile Include="Presenters\Student\StudentProfilePresenter.cs" />
+    <Compile Include="Presenters\Student\StudentTestPresenter.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Resources\Components\AddPartLabel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Resources\Components\AddPartLabel.Designer.cs">
-      <DependentUpon>AddPartLabel.cs</DependentUpon>
     </Compile>
     <Compile Include="Resources\Components\CBBItem.cs" />
     <Compile Include="DB\CreateDB.cs" />
@@ -178,6 +176,10 @@
     <Compile Include="Models\Test\ITestRepository.cs" />
     <Compile Include="Presenters\Admin\LessonPresenter.cs" />
     <Compile Include="Presenters\Admin\TestPresenter.cs" />
+    <Compile Include="Resources\Components\ColorSlider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\Components\ColorSlider.Designer.cs" />
     <Compile Include="Resources\Components\Lesson\LessonBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -214,11 +216,11 @@
     <Compile Include="Resources\Components\Question\QuestionBox.Designer.cs">
       <DependentUpon>QuestionBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Components\AddQuestionResult.cs">
+    <Compile Include="Resources\Components\Test\QuestionResult.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Resources\Components\AddQuestionResult.Designer.cs">
-      <DependentUpon>AddQuestionResult.cs</DependentUpon>
+    <Compile Include="Resources\Components\Test\QuestionResult.Designer.cs">
+      <DependentUpon>QuestionResult.cs</DependentUpon>
     </Compile>
     <Compile Include="Resources\Components\CommentsBox.cs">
       <SubType>UserControl</SubType>
@@ -232,13 +234,44 @@
     <Compile Include="Resources\Components\RJDatePicker.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Resources\Components\Test\TestQuestion\TestQuestionBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\Components\Test\TestQuestion\TestQuestionBox.Designer.cs">
+      <DependentUpon>TestQuestionBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Components\Test\TestQuestion\Test1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\Components\Test\TestQuestion\Test1.Designer.cs">
+      <DependentUpon>Test1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Components\Test\TestQuestion\Test2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\Components\Test\TestQuestion\Test2.Designer.cs">
+      <DependentUpon>Test2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Components\Test\TestQuestion\Test34567.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\Components\Test\TestQuestion\Test34567.Designer.cs">
+      <DependentUpon>Test34567.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Components\Test\TestBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\Components\Test\TestBox.Designer.cs">
+      <DependentUpon>TestBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Shared\Register\IRegisterView.cs" />
-    <Compile Include="Views\Student\StudentLessonView\IStudentLessonView.cs" />
+    <Compile Include="Views\Student\StudentDoTest\IStudentDoTestView.cs" />
+    <Compile Include="Views\Student\StudentLesson\IStudentLessonView.cs" />
     <Compile Include="Views\Student\StudentMain\IStudentMainView.cs" />
-    <Compile Include="Views\Student\StudentLessonView\StudentLessonView.cs">
+    <Compile Include="Views\Student\StudentLesson\StudentLessonView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Student\StudentLessonView\StudentLessonView.Designer.cs">
+    <Compile Include="Views\Student\StudentLesson\StudentLessonView.Designer.cs">
       <DependentUpon>StudentLessonView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Student\StudentMain\StudentMainView.cs">
@@ -254,10 +287,17 @@
     <Compile Include="Views\Student\StudentProfile\StudentProfileView.Designer.cs">
       <DependentUpon>StudentProfileView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Student\StudentTestView.cs">
+    <Compile Include="Views\Student\StudentTest\IStudentTestView.cs" />
+    <Compile Include="Views\Student\StudentDoTest\StudentDoTestView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Student\StudentTestView.Designer.cs">
+    <Compile Include="Views\Student\StudentDoTest\StudentDoTestView.Designer.cs">
+      <DependentUpon>StudentDoTestView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student\StudentTest\StudentTestView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Student\StudentTest\StudentTestView.Designer.cs">
       <DependentUpon>StudentTestView.cs</DependentUpon>
     </Compile>
     <Compile Include="TeacherLessonView.cs">
@@ -375,11 +415,9 @@
     <Compile Include="_Repositories\QuestionRepository.cs" />
     <Compile Include="_Repositories\StudentLessonRepository.cs" />
     <Compile Include="_Repositories\StudentRepository.cs" />
+    <Compile Include="_Repositories\StudentTestRepository.cs" />
     <Compile Include="_Repositories\TeacherRepository.cs" />
     <Compile Include="_Repositories\TestRepository.cs" />
-    <EmbeddedResource Include="Resources\Components\AddPartLabel.resx">
-      <DependentUpon>AddPartLabel.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Components\Lesson\LessonBox.resx">
       <DependentUpon>LessonBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -398,13 +436,28 @@
     <EmbeddedResource Include="Resources\Components\Question\QuestionBox.resx">
       <DependentUpon>QuestionBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Components\AddQuestionResult.resx">
-      <DependentUpon>AddQuestionResult.cs</DependentUpon>
+    <EmbeddedResource Include="Resources\Components\Test\QuestionResult.resx">
+      <DependentUpon>QuestionResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Components\CommentsBox.resx">
       <DependentUpon>CommentsBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Student\StudentLessonView\StudentLessonView.resx">
+    <EmbeddedResource Include="Resources\Components\Test\TestBox.resx">
+      <DependentUpon>TestBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Components\Test\TestQuestion\Test1.resx">
+      <DependentUpon>Test1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Components\Test\TestQuestion\Test2.resx">
+      <DependentUpon>Test2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Components\Test\TestQuestion\Test34567.resx">
+      <DependentUpon>Test34567.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\StudentDoTest\StudentDoTestView.resx">
+      <DependentUpon>StudentDoTestView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\StudentLesson\StudentLessonView.resx">
       <DependentUpon>StudentLessonView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Student\StudentMain\StudentMainView.resx">
@@ -413,7 +466,7 @@
     <EmbeddedResource Include="Views\Student\StudentProfile\StudentProfileView.resx">
       <DependentUpon>StudentProfileView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Student\StudentTestView.resx">
+    <EmbeddedResource Include="Views\Student\StudentTest\StudentTestView.resx">
       <DependentUpon>StudentTestView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherLessonView.resx">
@@ -478,39 +531,36 @@
     <Folder Include="Views\Teacher\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Profile.png" />
+    <None Include="Resources\Images\Profile.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Eye.png" />
+    <None Include="Resources\Images\Eye.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Hide.png" />
+    <None Include="Resources\Images\Hide.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\background.jpg" />
+    <None Include="Resources\Images\background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Close.png" />
+    <None Include="Resources\Images\Close.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\User%282%29.png" />
+    <None Include="Resources\Images\User%282%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\studentProfile.png" />
-    <None Include="Resources\TOEIC Master.png" />
-    <None Include="Resources\calendarDark.png" />
-    <None Include="Resources\calendarWhite.png" />
-    <None Include="Resources\background profile student.jpg" />
-    <None Include="Resources\backgroudlessson1.png" />
-    <None Include="Resources\backgroundlessson2.png" />
-    <None Include="Resources\backgroundLesson3.png" />
-    <Content Include="Resources\BTN_Thumb.bmp" />
-    <Content Include="Resources\BTN_ThumbBlue.bmp" />
-    <Content Include="Resources\copy %281%29.png" />
-    <Content Include="Resources\editing.png" />
-    <Content Include="Resources\email.png" />
-    <Content Include="Resources\envelope.png" />
-    <Content Include="Resources\Password%282%29.png" />
+    <None Include="Resources\Images\TOEIC Master.png" />
+    <None Include="Resources\Images\calendarDark.png" />
+    <None Include="Resources\Images\calendarWhite.png" />
+    <None Include="Resources\Images\backgroudlessson1.png" />
+    <Content Include="Resources\Images\BTN_Thumb.bmp" />
+    <Content Include="Resources\Images\BTN_ThumbBlue.bmp" />
+    <Content Include="Resources\Images\copy %281%29.png" />
+    <Content Include="Resources\Images\editing.png" />
+    <Content Include="Resources\Images\email.png" />
+    <Content Include="Resources\Images\envelope.png" />
+    <None Include="Resources\Images\images-removebg-preview.png" />
+    <Content Include="Resources\Images\Password%282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

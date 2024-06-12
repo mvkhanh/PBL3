@@ -47,9 +47,9 @@ namespace PBL.Views.Shared
 
         #region Properties
         public string Account
-         { get => txtAccount.Texts; set => txtAccount.Texts = value; }
+         { get => txtAccount.Texts; set => txtAccount.Texts = value.Trim(); }
         public string Password
-            { get => txtPassword.Texts; set => txtPassword.Texts = value; }
+            { get => txtPassword.Texts; set => txtPassword.Texts = value.Trim(); }
 
         public bool isSuccessful 
             { get => _IsSuccessful; set => _IsSuccessful = value; }

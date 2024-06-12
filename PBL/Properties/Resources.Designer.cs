@@ -83,36 +83,6 @@ namespace PBL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap background_profile_student {
-            get {
-                object obj = ResourceManager.GetObject("background profile student", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap backgroundLesson3 {
-            get {
-                object obj = ResourceManager.GetObject("backgroundLesson3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap backgroundlessson2 {
-            get {
-                object obj = ResourceManager.GetObject("backgroundlessson2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap calendarDark {
             get {
                 object obj = ResourceManager.GetObject("calendarDark", resourceCulture);
@@ -203,6 +173,16 @@ namespace PBL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap images_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("images-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Password_2_ {
             get {
                 object obj = ResourceManager.GetObject("Password(2)", resourceCulture);
@@ -216,16 +196,6 @@ namespace PBL.Properties {
         internal static System.Drawing.Bitmap Profile {
             get {
                 object obj = ResourceManager.GetObject("Profile", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap studentProfile {
-            get {
-                object obj = ResourceManager.GetObject("studentProfile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

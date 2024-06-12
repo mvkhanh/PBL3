@@ -287,7 +287,6 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::PBL.Properties.Resources.background_profile_student;
             this.pictureBox2.Location = new System.Drawing.Point(64, 23);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(762, 154);

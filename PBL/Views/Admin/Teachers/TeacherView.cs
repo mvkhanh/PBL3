@@ -85,22 +85,22 @@ namespace PBL.Views
         public int TeacherId 
             { get => Convert.ToInt32(txtId.Texts); set => txtId.Texts = value.ToString(); }
         public string TeacherName 
-            { get => txtName.Texts; set => txtName.Texts = value; }
+            { get => txtName.Texts; set => txtName.Texts = value.Trim(); }
         public DateTime TeacherBith 
             { get => birth.Value.Date; set => birth.Value = value.Date; }
         public string TeacherEmail
-            { get => txtEmail.Texts; set => txtEmail.Texts = value; }
+            { get => txtEmail.Texts; set => txtEmail.Texts = value.Trim(); }
         public string TeacherPhone 
-            { get => txtPhone.Texts; set => txtPhone.Texts = value; }
+            { get => txtPhone.Texts; set => txtPhone.Texts = value.Trim(); }
         public DateTime TeacherRegistDay 
             { get => regist.Value.Date; set => regist.Value = value.Date; }
         public string TeacherAccount 
-            { get => txtAccount.Texts; set => txtAccount.Texts = value; }
+            { get => txtAccount.Texts; set => txtAccount.Texts = value.Trim(); }
         public string TeacherPassword 
-            { get => txtPassword.Texts; set => txtPassword.Texts = value; }
+            { get => txtPassword.Texts; set => txtPassword.Texts = value.Trim(); }
 
         public string SearchValue
-            { get => txtSearch.Text; set => txtSearch.Text = value; }
+            { get => txtSearch.Text; set => txtSearch.Text = value.Trim(); }
         public bool IsEdit
             { get => _IsEdit; set => _IsEdit = value; }
         public bool IsSuccessful 
