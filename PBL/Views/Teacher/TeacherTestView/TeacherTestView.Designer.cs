@@ -1,4 +1,4 @@
-﻿namespace PBL
+﻿namespace PBL.Views.Teacher.TeacherTestView
 {
     partial class TeacherTestView
     {
@@ -30,23 +30,34 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panelbtn = new System.Windows.Forms.Panel();
-            this.btnBack = new FontAwesome.Sharp.IconButton();
-            this.BtnSave1 = new FontAwesome.Sharp.IconButton();
+            this.tabPageQuestionList = new System.Windows.Forms.TabPage();
+            this.panelMain = new System.Windows.Forms.FlowLayoutPanel();
+            this.lbPart = new System.Windows.Forms.Label();
+            this.panelBtn = new System.Windows.Forms.Panel();
             this.btnNext = new FontAwesome.Sharp.IconButton();
-            this.btnCanCel1 = new FontAwesome.Sharp.IconButton();
+            this.btnPrevious = new FontAwesome.Sharp.IconButton();
+            this.panelLeft = new System.Windows.Forms.Panel();
+            this.btnPart7 = new PBL.Controller.RoundButton();
+            this.btnPart6 = new PBL.Controller.RoundButton();
+            this.btnFinish = new FontAwesome.Sharp.IconButton();
+            this.btnPart5 = new PBL.Controller.RoundButton();
+            this.btnBack = new FontAwesome.Sharp.IconButton();
+            this.btnPart4 = new PBL.Controller.RoundButton();
+            this.btnPart3 = new PBL.Controller.RoundButton();
+            this.btnPart2 = new PBL.Controller.RoundButton();
+            this.btnPart1 = new PBL.Controller.RoundButton();
             this.tabPageTestDetail = new System.Windows.Forms.TabPage();
+            this.btnPlay = new FontAwesome.Sharp.IconButton();
+            this.btnAddAudio = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.lbTeacherName = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.lbBirth = new System.Windows.Forms.Label();
             this.lbRegist = new System.Windows.Forms.Label();
             this.lbIntroduction = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.lbParticipant = new System.Windows.Forms.Label();
             this.lbId = new System.Windows.Forms.Label();
-            this.btnAddQuestion = new FontAwesome.Sharp.IconButton();
+            this.btnQuestions = new FontAwesome.Sharp.IconButton();
             this.btnCancel = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.txtDescription = new PBL.Controller.RoundTextBox();
@@ -63,156 +74,318 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lbSearch = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.roundTextBox1 = new PBL.Controller.RoundTextBox();
-            this.tabPage3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panelbtn.SuspendLayout();
+            this.txtTeacherName = new PBL.Controller.RoundTextBox();
+            this.tabPageQuestionList.SuspendLayout();
+            this.panelMain.SuspendLayout();
+            this.panelBtn.SuspendLayout();
+            this.panelLeft.SuspendLayout();
             this.tabPageTestDetail.SuspendLayout();
             this.tabPageTestList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabPage3
+            // tabPageQuestionList
             // 
-            this.tabPage3.Controls.Add(this.panel1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(961, 448);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Add Question";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPageQuestionList.Controls.Add(this.panelMain);
+            this.tabPageQuestionList.Controls.Add(this.panelLeft);
+            this.tabPageQuestionList.Location = new System.Drawing.Point(4, 25);
+            this.tabPageQuestionList.Name = "tabPageQuestionList";
+            this.tabPageQuestionList.Size = new System.Drawing.Size(961, 448);
+            this.tabPageQuestionList.TabIndex = 2;
+            this.tabPageQuestionList.Text = "Question List";
+            this.tabPageQuestionList.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // panelMain
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.AutoSize = true;
-            this.panel1.Controls.Add(this.panelbtn);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(961, 448);
-            this.panel1.TabIndex = 3;
+            this.panelMain.AutoScroll = true;
+            this.panelMain.AutoSize = true;
+            this.panelMain.Controls.Add(this.lbPart);
+            this.panelMain.Controls.Add(this.panelBtn);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(83, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(878, 448);
+            this.panelMain.TabIndex = 1;
             // 
-            // panelbtn
+            // lbPart
             // 
-            this.panelbtn.Controls.Add(this.btnBack);
-            this.panelbtn.Controls.Add(this.BtnSave1);
-            this.panelbtn.Controls.Add(this.btnNext);
-            this.panelbtn.Controls.Add(this.btnCanCel1);
-            this.panelbtn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelbtn.Location = new System.Drawing.Point(0, 408);
-            this.panelbtn.Margin = new System.Windows.Forms.Padding(4);
-            this.panelbtn.Name = "panelbtn";
-            this.panelbtn.Size = new System.Drawing.Size(961, 40);
-            this.panelbtn.TabIndex = 65;
+            this.lbPart.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbPart.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPart.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.lbPart.Location = new System.Drawing.Point(3, 0);
+            this.lbPart.Name = "lbPart";
+            this.lbPart.Size = new System.Drawing.Size(1300, 43);
+            this.lbPart.TabIndex = 4;
+            this.lbPart.Text = "Part";
+            this.lbPart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panelBtn
+            // 
+            this.panelBtn.Controls.Add(this.btnNext);
+            this.panelBtn.Controls.Add(this.btnPrevious);
+            this.panelBtn.Location = new System.Drawing.Point(3, 46);
+            this.panelBtn.Name = "panelBtn";
+            this.panelBtn.Size = new System.Drawing.Size(877, 46);
+            this.panelBtn.TabIndex = 5;
+            // 
+            // btnNext
+            // 
+            this.btnNext.AutoSize = true;
+            this.btnNext.FlatAppearance.BorderSize = 0;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
+            this.btnNext.IconColor = System.Drawing.Color.Black;
+            this.btnNext.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNext.IconSize = 24;
+            this.btnNext.Location = new System.Drawing.Point(720, 3);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 30);
+            this.btnNext.TabIndex = 0;
+            this.btnNext.Text = "Next";
+            this.btnNext.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.AutoSize = true;
+            this.btnPrevious.FlatAppearance.BorderSize = 0;
+            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrevious.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
+            this.btnPrevious.IconColor = System.Drawing.Color.Black;
+            this.btnPrevious.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPrevious.IconSize = 24;
+            this.btnPrevious.Location = new System.Drawing.Point(73, 3);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(102, 30);
+            this.btnPrevious.TabIndex = 0;
+            this.btnPrevious.Text = "Previous";
+            this.btnPrevious.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            // 
+            // panelLeft
+            // 
+            this.panelLeft.Controls.Add(this.btnPart7);
+            this.panelLeft.Controls.Add(this.btnPart6);
+            this.panelLeft.Controls.Add(this.btnFinish);
+            this.panelLeft.Controls.Add(this.btnPart5);
+            this.panelLeft.Controls.Add(this.btnBack);
+            this.panelLeft.Controls.Add(this.btnPart4);
+            this.panelLeft.Controls.Add(this.btnPart3);
+            this.panelLeft.Controls.Add(this.btnPart2);
+            this.panelLeft.Controls.Add(this.btnPart1);
+            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLeft.Location = new System.Drawing.Point(0, 0);
+            this.panelLeft.Name = "panelLeft";
+            this.panelLeft.Size = new System.Drawing.Size(83, 448);
+            this.panelLeft.TabIndex = 2;
+            // 
+            // btnPart7
+            // 
+            this.btnPart7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPart7.BackColor = System.Drawing.Color.Transparent;
+            this.btnPart7.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnPart7.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart7.BorderRadius = 8;
+            this.btnPart7.BorderSize = 2;
+            this.btnPart7.FlatAppearance.BorderSize = 0;
+            this.btnPart7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPart7.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart7.Location = new System.Drawing.Point(3, 362);
+            this.btnPart7.Name = "btnPart7";
+            this.btnPart7.Size = new System.Drawing.Size(77, 30);
+            this.btnPart7.TabIndex = 6;
+            this.btnPart7.Text = "Part 7";
+            this.btnPart7.TextColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart7.UseVisualStyleBackColor = false;
+            this.btnPart7.Click += new System.EventHandler(this.btnPart_Click);
+            // 
+            // btnPart6
+            // 
+            this.btnPart6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPart6.BackColor = System.Drawing.Color.Transparent;
+            this.btnPart6.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnPart6.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart6.BorderRadius = 8;
+            this.btnPart6.BorderSize = 2;
+            this.btnPart6.FlatAppearance.BorderSize = 0;
+            this.btnPart6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPart6.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart6.Location = new System.Drawing.Point(3, 312);
+            this.btnPart6.Name = "btnPart6";
+            this.btnPart6.Size = new System.Drawing.Size(77, 30);
+            this.btnPart6.TabIndex = 5;
+            this.btnPart6.Text = "Part 6";
+            this.btnPart6.TextColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart6.UseVisualStyleBackColor = false;
+            this.btnPart6.Click += new System.EventHandler(this.btnPart_Click);
+            // 
+            // btnFinish
+            // 
+            this.btnFinish.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnFinish.AutoSize = true;
+            this.btnFinish.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
+            this.btnFinish.FlatAppearance.BorderSize = 0;
+            this.btnFinish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinish.ForeColor = System.Drawing.Color.White;
+            this.btnFinish.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.btnFinish.IconColor = System.Drawing.Color.White;
+            this.btnFinish.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFinish.IconSize = 24;
+            this.btnFinish.Location = new System.Drawing.Point(3, 412);
+            this.btnFinish.Name = "btnFinish";
+            this.btnFinish.Size = new System.Drawing.Size(77, 30);
+            this.btnFinish.TabIndex = 7;
+            this.btnFinish.Text = "Finish";
+            this.btnFinish.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFinish.UseVisualStyleBackColor = false;
+            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
+            // 
+            // btnPart5
+            // 
+            this.btnPart5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPart5.BackColor = System.Drawing.Color.Transparent;
+            this.btnPart5.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnPart5.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart5.BorderRadius = 8;
+            this.btnPart5.BorderSize = 2;
+            this.btnPart5.FlatAppearance.BorderSize = 0;
+            this.btnPart5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPart5.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart5.Location = new System.Drawing.Point(3, 262);
+            this.btnPart5.Name = "btnPart5";
+            this.btnPart5.Size = new System.Drawing.Size(77, 30);
+            this.btnPart5.TabIndex = 4;
+            this.btnPart5.Text = "Part 5";
+            this.btnPart5.TextColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart5.UseVisualStyleBackColor = false;
+            this.btnPart5.Click += new System.EventHandler(this.btnPart_Click);
             // 
             // btnBack
             // 
-            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBack.AutoSize = true;
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
             this.btnBack.IconColor = System.Drawing.Color.White;
             this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBack.IconSize = 32;
-            this.btnBack.Location = new System.Drawing.Point(281, 0);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBack.IconSize = 24;
+            this.btnBack.Location = new System.Drawing.Point(3, 12);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(154, 40);
-            this.btnBack.TabIndex = 51;
+            this.btnBack.Size = new System.Drawing.Size(77, 30);
+            this.btnBack.TabIndex = 6;
             this.btnBack.Text = "Back";
             this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // BtnSave1
+            // btnPart4
             // 
-            this.BtnSave1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.BtnSave1.AutoSize = true;
-            this.BtnSave1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
-            this.BtnSave1.FlatAppearance.BorderSize = 0;
-            this.BtnSave1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSave1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSave1.ForeColor = System.Drawing.Color.White;
-            this.BtnSave1.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
-            this.BtnSave1.IconColor = System.Drawing.Color.White;
-            this.BtnSave1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnSave1.IconSize = 32;
-            this.BtnSave1.Location = new System.Drawing.Point(41, 0);
-            this.BtnSave1.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnSave1.Name = "BtnSave1";
-            this.BtnSave1.Size = new System.Drawing.Size(154, 40);
-            this.BtnSave1.TabIndex = 51;
-            this.BtnSave1.Text = "Save";
-            this.BtnSave1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnSave1.UseVisualStyleBackColor = false;
+            this.btnPart4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPart4.BackColor = System.Drawing.Color.Transparent;
+            this.btnPart4.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnPart4.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart4.BorderRadius = 8;
+            this.btnPart4.BorderSize = 2;
+            this.btnPart4.FlatAppearance.BorderSize = 0;
+            this.btnPart4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPart4.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart4.Location = new System.Drawing.Point(3, 212);
+            this.btnPart4.Name = "btnPart4";
+            this.btnPart4.Size = new System.Drawing.Size(77, 30);
+            this.btnPart4.TabIndex = 3;
+            this.btnPart4.Text = "Part 4";
+            this.btnPart4.TextColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart4.UseVisualStyleBackColor = false;
+            this.btnPart4.Click += new System.EventHandler(this.btnPart_Click);
             // 
-            // btnNext
+            // btnPart3
             // 
-            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnNext.AutoSize = true;
-            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.btnNext.FlatAppearance.BorderSize = 0;
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
-            this.btnNext.IconColor = System.Drawing.Color.White;
-            this.btnNext.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNext.IconSize = 32;
-            this.btnNext.Location = new System.Drawing.Point(544, 0);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(154, 40);
-            this.btnNext.TabIndex = 49;
-            this.btnNext.Text = "Next";
-            this.btnNext.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnPart3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPart3.BackColor = System.Drawing.Color.Transparent;
+            this.btnPart3.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnPart3.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart3.BorderRadius = 8;
+            this.btnPart3.BorderSize = 2;
+            this.btnPart3.FlatAppearance.BorderSize = 0;
+            this.btnPart3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPart3.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart3.Location = new System.Drawing.Point(3, 162);
+            this.btnPart3.Name = "btnPart3";
+            this.btnPart3.Size = new System.Drawing.Size(77, 30);
+            this.btnPart3.TabIndex = 2;
+            this.btnPart3.Text = "Part 3";
+            this.btnPart3.TextColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart3.UseVisualStyleBackColor = false;
+            this.btnPart3.Click += new System.EventHandler(this.btnPart_Click);
             // 
-            // btnCanCel1
+            // btnPart2
             // 
-            this.btnCanCel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnCanCel1.AutoSize = true;
-            this.btnCanCel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.btnCanCel1.FlatAppearance.BorderSize = 0;
-            this.btnCanCel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCanCel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCanCel1.ForeColor = System.Drawing.Color.White;
-            this.btnCanCel1.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
-            this.btnCanCel1.IconColor = System.Drawing.Color.White;
-            this.btnCanCel1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCanCel1.IconSize = 32;
-            this.btnCanCel1.Location = new System.Drawing.Point(770, 0);
-            this.btnCanCel1.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCanCel1.Name = "btnCanCel1";
-            this.btnCanCel1.Size = new System.Drawing.Size(154, 40);
-            this.btnCanCel1.TabIndex = 49;
-            this.btnCanCel1.Text = "Cancel";
-            this.btnCanCel1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCanCel1.UseVisualStyleBackColor = false;
+            this.btnPart2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPart2.BackColor = System.Drawing.Color.Transparent;
+            this.btnPart2.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnPart2.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart2.BorderRadius = 8;
+            this.btnPart2.BorderSize = 2;
+            this.btnPart2.FlatAppearance.BorderSize = 0;
+            this.btnPart2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPart2.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart2.Location = new System.Drawing.Point(3, 112);
+            this.btnPart2.Name = "btnPart2";
+            this.btnPart2.Size = new System.Drawing.Size(77, 30);
+            this.btnPart2.TabIndex = 1;
+            this.btnPart2.Text = "Part 2";
+            this.btnPart2.TextColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart2.UseVisualStyleBackColor = false;
+            this.btnPart2.Click += new System.EventHandler(this.btnPart_Click);
+            // 
+            // btnPart1
+            // 
+            this.btnPart1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPart1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPart1.BorderRadius = 8;
+            this.btnPart1.BorderSize = 0;
+            this.btnPart1.FlatAppearance.BorderSize = 0;
+            this.btnPart1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPart1.ForeColor = System.Drawing.Color.White;
+            this.btnPart1.Location = new System.Drawing.Point(3, 62);
+            this.btnPart1.Name = "btnPart1";
+            this.btnPart1.Size = new System.Drawing.Size(77, 30);
+            this.btnPart1.TabIndex = 0;
+            this.btnPart1.Text = "Part 1";
+            this.btnPart1.TextColor = System.Drawing.Color.White;
+            this.btnPart1.UseVisualStyleBackColor = false;
+            this.btnPart1.Click += new System.EventHandler(this.btnPart_Click);
             // 
             // tabPageTestDetail
             // 
+            this.tabPageTestDetail.Controls.Add(this.btnPlay);
+            this.tabPageTestDetail.Controls.Add(this.btnAddAudio);
+            this.tabPageTestDetail.Controls.Add(this.label1);
             this.tabPageTestDetail.Controls.Add(this.lbTeacherName);
-            this.tabPageTestDetail.Controls.Add(this.checkedListBox1);
             this.tabPageTestDetail.Controls.Add(this.lbBirth);
             this.tabPageTestDetail.Controls.Add(this.lbRegist);
             this.tabPageTestDetail.Controls.Add(this.lbIntroduction);
             this.tabPageTestDetail.Controls.Add(this.lbName);
             this.tabPageTestDetail.Controls.Add(this.lbParticipant);
             this.tabPageTestDetail.Controls.Add(this.lbId);
-            this.tabPageTestDetail.Controls.Add(this.btnAddQuestion);
+            this.tabPageTestDetail.Controls.Add(this.btnQuestions);
             this.tabPageTestDetail.Controls.Add(this.btnCancel);
             this.tabPageTestDetail.Controls.Add(this.btnSave);
             this.tabPageTestDetail.Controls.Add(this.txtDescription);
             this.tabPageTestDetail.Controls.Add(this.regist);
             this.tabPageTestDetail.Controls.Add(this.txtName);
-            this.tabPageTestDetail.Controls.Add(this.roundTextBox1);
             this.tabPageTestDetail.Controls.Add(this.txtPaticipant);
+            this.tabPageTestDetail.Controls.Add(this.txtTeacherName);
             this.tabPageTestDetail.Controls.Add(this.txtId);
             this.tabPageTestDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageTestDetail.Location = new System.Drawing.Point(4, 25);
@@ -222,6 +395,61 @@
             this.tabPageTestDetail.TabIndex = 1;
             this.tabPageTestDetail.Text = "Test detail";
             this.tabPageTestDetail.UseVisualStyleBackColor = true;
+            // 
+            // btnPlay
+            // 
+            this.btnPlay.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPlay.AutoSize = true;
+            this.btnPlay.FlatAppearance.BorderSize = 0;
+            this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlay.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPlay.IconChar = FontAwesome.Sharp.IconChar.Play;
+            this.btnPlay.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPlay.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPlay.IconSize = 20;
+            this.btnPlay.Location = new System.Drawing.Point(761, 160);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(68, 30);
+            this.btnPlay.TabIndex = 31;
+            this.btnPlay.Text = "Play";
+            this.btnPlay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.Visible = false;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
+            // btnAddAudio
+            // 
+            this.btnAddAudio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddAudio.AutoSize = true;
+            this.btnAddAudio.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnAddAudio.FlatAppearance.BorderSize = 0;
+            this.btnAddAudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAudio.ForeColor = System.Drawing.Color.White;
+            this.btnAddAudio.IconChar = FontAwesome.Sharp.IconChar.Headphones;
+            this.btnAddAudio.IconColor = System.Drawing.Color.White;
+            this.btnAddAudio.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddAudio.IconSize = 32;
+            this.btnAddAudio.Location = new System.Drawing.Point(761, 106);
+            this.btnAddAudio.Name = "btnAddAudio";
+            this.btnAddAudio.Size = new System.Drawing.Size(151, 38);
+            this.btnAddAudio.TabIndex = 29;
+            this.btnAddAudio.Text = "Add MP3 File";
+            this.btnAddAudio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddAudio.UseVisualStyleBackColor = false;
+            this.btnAddAudio.Click += new System.EventHandler(this.btnAddAudio_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.label1.Location = new System.Drawing.Point(758, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Audio:";
             // 
             // lbTeacherName
             // 
@@ -235,25 +463,6 @@
             this.lbTeacherName.TabIndex = 27;
             this.lbTeacherName.Text = "Publish by:";
             // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Part 1",
-            "Part 2",
-            "Part 3",
-            "Part 4",
-            "Part 5",
-            "Part 6",
-            "Part 7"});
-            this.checkedListBox1.Location = new System.Drawing.Point(764, 45);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(91, 148);
-            this.checkedListBox1.TabIndex = 26;
-            // 
             // lbBirth
             // 
             this.lbBirth.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -262,9 +471,9 @@
             this.lbBirth.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbBirth.Location = new System.Drawing.Point(760, 263);
             this.lbBirth.Name = "lbBirth";
-            this.lbBirth.Size = new System.Drawing.Size(109, 18);
+            this.lbBirth.Size = new System.Drawing.Size(80, 18);
             this.lbBirth.TabIndex = 21;
-            this.lbBirth.Text = "Add Questions:";
+            this.lbBirth.Text = "Questions:";
             // 
             // lbRegist
             // 
@@ -274,9 +483,9 @@
             this.lbRegist.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbRegist.Location = new System.Drawing.Point(43, 102);
             this.lbRegist.Name = "lbRegist";
-            this.lbRegist.Size = new System.Drawing.Size(84, 18);
+            this.lbRegist.Size = new System.Drawing.Size(90, 18);
             this.lbRegist.TabIndex = 12;
-            this.lbRegist.Text = "Regist Day:";
+            this.lbRegist.Text = "Publish Day:";
             // 
             // lbIntroduction
             // 
@@ -326,26 +535,27 @@
             this.lbId.TabIndex = 0;
             this.lbId.Text = "Test ID:";
             // 
-            // btnAddQuestion
+            // btnQuestions
             // 
-            this.btnAddQuestion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddQuestion.AutoSize = true;
-            this.btnAddQuestion.BackColor = System.Drawing.Color.Orange;
-            this.btnAddQuestion.FlatAppearance.BorderSize = 0;
-            this.btnAddQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddQuestion.ForeColor = System.Drawing.Color.White;
-            this.btnAddQuestion.IconChar = FontAwesome.Sharp.IconChar.Add;
-            this.btnAddQuestion.IconColor = System.Drawing.Color.White;
-            this.btnAddQuestion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddQuestion.IconSize = 32;
-            this.btnAddQuestion.Location = new System.Drawing.Point(761, 284);
-            this.btnAddQuestion.Name = "btnAddQuestion";
-            this.btnAddQuestion.Size = new System.Drawing.Size(168, 50);
-            this.btnAddQuestion.TabIndex = 22;
-            this.btnAddQuestion.Text = "Add Questions";
-            this.btnAddQuestion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddQuestion.UseVisualStyleBackColor = false;
+            this.btnQuestions.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnQuestions.AutoSize = true;
+            this.btnQuestions.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.btnQuestions.FlatAppearance.BorderSize = 0;
+            this.btnQuestions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuestions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuestions.ForeColor = System.Drawing.Color.White;
+            this.btnQuestions.IconChar = FontAwesome.Sharp.IconChar.ListCheck;
+            this.btnQuestions.IconColor = System.Drawing.Color.White;
+            this.btnQuestions.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnQuestions.IconSize = 32;
+            this.btnQuestions.Location = new System.Drawing.Point(761, 284);
+            this.btnQuestions.Name = "btnQuestions";
+            this.btnQuestions.Size = new System.Drawing.Size(123, 45);
+            this.btnQuestions.TabIndex = 22;
+            this.btnQuestions.Text = "Add/Edit";
+            this.btnQuestions.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQuestions.UseVisualStyleBackColor = false;
+            this.btnQuestions.Click += new System.EventHandler(this.btnAddQuestion_Click);
             // 
             // btnCancel
             // 
@@ -360,9 +570,9 @@
             this.btnCancel.IconColor = System.Drawing.Color.White;
             this.btnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancel.IconSize = 32;
-            this.btnCancel.Location = new System.Drawing.Point(495, 363);
+            this.btnCancel.Location = new System.Drawing.Point(495, 372);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(103, 50);
+            this.btnCancel.Size = new System.Drawing.Size(103, 45);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -381,9 +591,9 @@
             this.btnSave.IconColor = System.Drawing.Color.White;
             this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSave.IconSize = 32;
-            this.btnSave.Location = new System.Drawing.Point(312, 363);
+            this.btnSave.Location = new System.Drawing.Point(312, 372);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(103, 50);
+            this.btnSave.Size = new System.Drawing.Size(103, 45);
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -399,7 +609,7 @@
             this.txtDescription.BorderSize = 2;
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDescription.Location = new System.Drawing.Point(312, 123);
+            this.txtDescription.Location = new System.Drawing.Point(312, 121);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
@@ -407,7 +617,7 @@
             this.txtDescription.PasswordChar = false;
             this.txtDescription.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtDescription.PlaceholderText = "";
-            this.txtDescription.Size = new System.Drawing.Size(429, 211);
+            this.txtDescription.Size = new System.Drawing.Size(429, 210);
             this.txtDescription.TabIndex = 25;
             this.txtDescription.Texts = "";
             this.txtDescription.UnderlinedStyle = false;
@@ -417,8 +627,9 @@
             this.regist.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.regist.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.regist.BorderSize = 0;
+            this.regist.Enabled = false;
             this.regist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.regist.Location = new System.Drawing.Point(48, 123);
+            this.regist.Location = new System.Drawing.Point(48, 121);
             this.regist.MinimumSize = new System.Drawing.Size(0, 35);
             this.regist.Name = "regist";
             this.regist.Size = new System.Drawing.Size(221, 35);
@@ -436,7 +647,7 @@
             this.txtName.BorderSize = 2;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtName.Location = new System.Drawing.Point(312, 45);
+            this.txtName.Location = new System.Drawing.Point(312, 43);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Multiline = false;
             this.txtName.Name = "txtName";
@@ -460,7 +671,7 @@
             this.txtPaticipant.Enabled = false;
             this.txtPaticipant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPaticipant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPaticipant.Location = new System.Drawing.Point(46, 217);
+            this.txtPaticipant.Location = new System.Drawing.Point(46, 215);
             this.txtPaticipant.Margin = new System.Windows.Forms.Padding(4);
             this.txtPaticipant.Multiline = false;
             this.txtPaticipant.Name = "txtPaticipant";
@@ -484,7 +695,7 @@
             this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtId.Location = new System.Drawing.Point(46, 45);
+            this.txtId.Location = new System.Drawing.Point(46, 43);
             this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Multiline = false;
             this.txtId.Name = "txtId";
@@ -649,6 +860,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(790, 383);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.ColumnAdded += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dataGridView1_ColumnAdded);
             // 
             // lbSearch
             // 
@@ -659,7 +871,7 @@
             this.lbSearch.ForeColor = System.Drawing.Color.Black;
             this.lbSearch.Location = new System.Drawing.Point(21, 3);
             this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(96, 16);
+            this.lbSearch.Size = new System.Drawing.Size(95, 16);
             this.lbSearch.TabIndex = 1;
             this.lbSearch.Text = "Search Test:";
             // 
@@ -667,7 +879,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPageTestList);
             this.tabControl1.Controls.Add(this.tabPageTestDetail);
-            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPageQuestionList);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -676,29 +888,29 @@
             this.tabControl1.Size = new System.Drawing.Size(969, 477);
             this.tabControl1.TabIndex = 2;
             // 
-            // roundTextBox1
+            // txtTeacherName
             // 
-            this.roundTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.roundTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.roundTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.roundTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.roundTextBox1.BorderRadius = 0;
-            this.roundTextBox1.BorderSize = 2;
-            this.roundTextBox1.Enabled = false;
-            this.roundTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.roundTextBox1.Location = new System.Drawing.Point(48, 302);
-            this.roundTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.roundTextBox1.Multiline = false;
-            this.roundTextBox1.Name = "roundTextBox1";
-            this.roundTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.roundTextBox1.PasswordChar = false;
-            this.roundTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.roundTextBox1.PlaceholderText = "";
-            this.roundTextBox1.Size = new System.Drawing.Size(221, 31);
-            this.roundTextBox1.TabIndex = 23;
-            this.roundTextBox1.Texts = "";
-            this.roundTextBox1.UnderlinedStyle = false;
+            this.txtTeacherName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTeacherName.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTeacherName.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtTeacherName.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTeacherName.BorderRadius = 0;
+            this.txtTeacherName.BorderSize = 2;
+            this.txtTeacherName.Enabled = false;
+            this.txtTeacherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTeacherName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTeacherName.Location = new System.Drawing.Point(48, 302);
+            this.txtTeacherName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTeacherName.Multiline = false;
+            this.txtTeacherName.Name = "txtTeacherName";
+            this.txtTeacherName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtTeacherName.PasswordChar = false;
+            this.txtTeacherName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTeacherName.PlaceholderText = "";
+            this.txtTeacherName.Size = new System.Drawing.Size(221, 31);
+            this.txtTeacherName.TabIndex = 23;
+            this.txtTeacherName.Texts = "0";
+            this.txtTeacherName.UnderlinedStyle = false;
             // 
             // TeacherTestView
             // 
@@ -708,12 +920,14 @@
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TeacherTestView";
-            this.Text = "Teachers";
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panelbtn.ResumeLayout(false);
-            this.panelbtn.PerformLayout();
+            this.Text = "Tests";
+            this.tabPageQuestionList.ResumeLayout(false);
+            this.tabPageQuestionList.PerformLayout();
+            this.panelMain.ResumeLayout(false);
+            this.panelBtn.ResumeLayout(false);
+            this.panelBtn.PerformLayout();
+            this.panelLeft.ResumeLayout(false);
+            this.panelLeft.PerformLayout();
             this.tabPageTestDetail.ResumeLayout(false);
             this.tabPageTestDetail.PerformLayout();
             this.tabPageTestList.ResumeLayout(false);
@@ -726,23 +940,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panelbtn;
-        private FontAwesome.Sharp.IconButton btnBack;
-        private FontAwesome.Sharp.IconButton BtnSave1;
-        private FontAwesome.Sharp.IconButton btnNext;
-        private FontAwesome.Sharp.IconButton btnCanCel1;
+        private System.Windows.Forms.TabPage tabPageQuestionList;
         private System.Windows.Forms.TabPage tabPageTestDetail;
         private System.Windows.Forms.Label lbTeacherName;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Label lbBirth;
         private System.Windows.Forms.Label lbRegist;
         private System.Windows.Forms.Label lbIntroduction;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label lbParticipant;
         private System.Windows.Forms.Label lbId;
-        private FontAwesome.Sharp.IconButton btnAddQuestion;
+        private FontAwesome.Sharp.IconButton btnQuestions;
         private FontAwesome.Sharp.IconButton btnCancel;
         private FontAwesome.Sharp.IconButton btnSave;
         private Controller.RoundTextBox txtDescription;
@@ -759,6 +966,24 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lbSearch;
         private System.Windows.Forms.TabControl tabControl1;
-        private Controller.RoundTextBox roundTextBox1;
+        private System.Windows.Forms.FlowLayoutPanel panelMain;
+        private System.Windows.Forms.Panel panelLeft;
+        private Controller.RoundButton btnPart7;
+        private Controller.RoundButton btnPart6;
+        private Controller.RoundButton btnPart5;
+        private Controller.RoundButton btnPart4;
+        private Controller.RoundButton btnPart3;
+        private Controller.RoundButton btnPart2;
+        private Controller.RoundButton btnPart1;
+        private System.Windows.Forms.Panel panelBtn;
+        private FontAwesome.Sharp.IconButton btnNext;
+        private FontAwesome.Sharp.IconButton btnPrevious;
+        private FontAwesome.Sharp.IconButton btnFinish;
+        private FontAwesome.Sharp.IconButton btnBack;
+        private System.Windows.Forms.Label lbPart;
+        private FontAwesome.Sharp.IconButton btnAddAudio;
+        private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton btnPlay;
+        private Controller.RoundTextBox txtTeacherName;
     }
 }
