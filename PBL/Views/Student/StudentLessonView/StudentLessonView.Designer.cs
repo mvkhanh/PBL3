@@ -34,6 +34,7 @@ namespace PBL
             this.tabPageLessonList = new System.Windows.Forms.TabPage();
             this.panelContent = new System.Windows.Forms.FlowLayoutPanel();
             this.panelTop = new RoundPanel();
+            this.cbSavedLessons = new System.Windows.Forms.CheckBox();
             this.label28 = new System.Windows.Forms.Label();
             this.txtSearch = new PBL.Controller.RoundTextBox();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
@@ -42,7 +43,6 @@ namespace PBL
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.btnBack = new FontAwesome.Sharp.IconButton();
-            this.cbSavedLessons = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPageLessonList.SuspendLayout();
             this.panelTop.SuspendLayout();
@@ -97,6 +97,19 @@ namespace PBL
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(855, 138);
             this.panelTop.TabIndex = 64;
+            // 
+            // cbSavedLessons
+            // 
+            this.cbSavedLessons.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbSavedLessons.AutoSize = true;
+            this.cbSavedLessons.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSavedLessons.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbSavedLessons.Location = new System.Drawing.Point(632, 75);
+            this.cbSavedLessons.Name = "cbSavedLessons";
+            this.cbSavedLessons.Size = new System.Drawing.Size(218, 22);
+            this.cbSavedLessons.TabIndex = 64;
+            this.cbSavedLessons.Text = "Show only saved lessons";
+            this.cbSavedLessons.UseVisualStyleBackColor = true;
             // 
             // label28
             // 
@@ -232,18 +245,6 @@ namespace PBL
             this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // cbSavedLessons
-            // 
-            this.cbSavedLessons.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbSavedLessons.AutoSize = true;
-            this.cbSavedLessons.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSavedLessons.Location = new System.Drawing.Point(582, 58);
-            this.cbSavedLessons.Name = "cbSavedLessons";
-            this.cbSavedLessons.Size = new System.Drawing.Size(218, 22);
-            this.cbSavedLessons.TabIndex = 64;
-            this.cbSavedLessons.Text = "Show only saved lessons";
-            this.cbSavedLessons.UseVisualStyleBackColor = true;
             // 
             // StudentLessonView
             // 

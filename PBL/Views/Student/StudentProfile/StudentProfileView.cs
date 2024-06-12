@@ -146,5 +146,7 @@ namespace PBL
             tabControl1.TabPages.Remove(tabPageEditProfile);
             tabControl1.TabPages.Add(tabPageChangePassword);
         }
+
+        
     }
 }

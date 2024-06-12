@@ -496,6 +496,7 @@
     <None Include="Resources\User%282%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\UserAvatar.png" />
     <None Include="Resources\studentProfile.png" />
     <None Include="Resources\TOEIC Master.png" />
     <None Include="Resources\calendarDark.png" />
