@@ -160,6 +160,10 @@
     <Compile Include="Presenters\Student\StudentLessonPresenter.cs" />
     <Compile Include="Presenters\Student\StudentMainPresenter.cs" />
     <Compile Include="Presenters\Student\StudentProfilePresenter.cs" />
+    <Compile Include="Presenters\Teacher\TeacherLessonPresenter.cs" />
+    <Compile Include="Presenters\Teacher\TeacherMainPresenter.cs" />
+    <Compile Include="Presenters\Teacher\TeacherProfilePresenter.cs" />
+    <Compile Include="Presenters\Teacher\TeacherTestPresenter.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -260,28 +264,32 @@
     <Compile Include="Views\Student\StudentTestView.Designer.cs">
       <DependentUpon>StudentTestView.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherLessonView.cs">
+    <Compile Include="Views\Teacher\TeacherLessonView\ITeacherLessonView.cs" />
+    <Compile Include="Views\Teacher\TeacherLessonView\TeacherLessonView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeacherLessonView.Designer.cs">
+    <Compile Include="Views\Teacher\TeacherLessonView\TeacherLessonView.Designer.cs">
       <DependentUpon>TeacherLessonView.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherMainView.cs">
+    <Compile Include="Views\Teacher\TeacherMain\ITeacherMainView.cs" />
+    <Compile Include="Views\Teacher\TeacherMain\TeacherMainView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeacherMainView.Designer.cs">
+    <Compile Include="Views\Teacher\TeacherMain\TeacherMainView.Designer.cs">
       <DependentUpon>TeacherMainView.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherProfileView.cs">
+    <Compile Include="Views\Teacher\TeacherProfile\ITeacherProfileView.cs" />
+    <Compile Include="Views\Teacher\TeacherProfile\TeacherProfileView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeacherProfileView.Designer.cs">
+    <Compile Include="Views\Teacher\TeacherProfile\TeacherProfileView.Designer.cs">
       <DependentUpon>TeacherProfileView.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherTestView.cs">
+    <Compile Include="Views\Teacher\TeacherTestView\ITeacherTestView.cs" />
+    <Compile Include="Views\Teacher\TeacherTestView\TeacherTestView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeacherTestView.Designer.cs">
+    <Compile Include="Views\Teacher\TeacherTestView\TeacherTestView.Designer.cs">
       <DependentUpon>TeacherTestView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\Lessons\LessonView.cs">
@@ -416,16 +424,16 @@
     <EmbeddedResource Include="Views\Student\StudentTestView.resx">
       <DependentUpon>StudentTestView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeacherLessonView.resx">
+    <EmbeddedResource Include="Views\Teacher\TeacherLessonView\TeacherLessonView.resx">
       <DependentUpon>TeacherLessonView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeacherMainView.resx">
+    <EmbeddedResource Include="Views\Teacher\TeacherMain\TeacherMainView.resx">
       <DependentUpon>TeacherMainView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeacherProfileView.resx">
+    <EmbeddedResource Include="Views\Teacher\TeacherProfile\TeacherProfileView.resx">
       <DependentUpon>TeacherProfileView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeacherTestView.resx">
+    <EmbeddedResource Include="Views\Teacher\TeacherTestView\TeacherTestView.resx">
       <DependentUpon>TeacherTestView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\Lessons\LessonView.resx">
@@ -474,9 +482,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Teacher\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Profile.png" />
   </ItemGroup>

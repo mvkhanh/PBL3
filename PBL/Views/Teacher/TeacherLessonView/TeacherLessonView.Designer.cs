@@ -1,6 +1,5 @@
 ﻿using System.Drawing;
-
-namespace PBL
+namespace PBL.Views.Teacher.TeacherLessonView
 {
     partial class TeacherLessonView
     {
@@ -30,8 +29,8 @@ namespace PBL
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageLessonList = new System.Windows.Forms.TabPage();
             this.btnView = new FontAwesome.Sharp.IconButton();
@@ -52,16 +51,16 @@ namespace PBL
             this.lbId = new System.Windows.Forms.Label();
             this.btnCancel = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
-            this.regist = new PBL.Resources.Components.RJDatePicker();
-            this.txtView = new PBL.Controller.RoundTextBox();
-            this.txtPublish = new PBL.Controller.RoundTextBox();
-            this.txtPdf = new PBL.Controller.RoundTextBox();
             this.tabPageLessonContent = new System.Windows.Forms.TabPage();
             this.pdfViewer1 = new Spire.PdfViewer.Forms.PdfViewer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBack = new FontAwesome.Sharp.IconButton();
+            this.regist = new PBL.Resources.Components.RJDatePicker();
+            this.txtView = new PBL.Controller.RoundTextBox();
             this.txtId = new PBL.Controller.RoundTextBox();
-            this.roundTextBox1 = new PBL.Controller.RoundTextBox();
+            this.txtLessonName = new PBL.Controller.RoundTextBox();
+            this.txtPublish = new PBL.Controller.RoundTextBox();
+            this.txtPdf = new PBL.Controller.RoundTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPageLessonList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -224,7 +223,7 @@ namespace PBL
             this.lbSearch.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbSearch.Location = new System.Drawing.Point(21, 3);
             this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(115, 16);
+            this.lbSearch.Size = new System.Drawing.Size(114, 16);
             this.lbSearch.TabIndex = 1;
             this.lbSearch.Text = "Search Lesson:";
             // 
@@ -241,23 +240,23 @@ namespace PBL
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(86)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeight = 32;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.LightGray;
             this.dataGridView1.Location = new System.Drawing.Point(24, 65);
@@ -285,7 +284,7 @@ namespace PBL
             this.tabPageLessonDetail.Controls.Add(this.regist);
             this.tabPageLessonDetail.Controls.Add(this.txtView);
             this.tabPageLessonDetail.Controls.Add(this.txtId);
-            this.tabPageLessonDetail.Controls.Add(this.roundTextBox1);
+            this.tabPageLessonDetail.Controls.Add(this.txtLessonName);
             this.tabPageLessonDetail.Controls.Add(this.txtPublish);
             this.tabPageLessonDetail.Controls.Add(this.txtPdf);
             this.tabPageLessonDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -433,93 +432,6 @@ namespace PBL
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
             // 
-            // regist
-            // 
-            this.regist.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.regist.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.regist.BorderSize = 0;
-            this.regist.Enabled = false;
-            this.regist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.regist.Location = new System.Drawing.Point(114, 142);
-            this.regist.MinimumSize = new System.Drawing.Size(0, 35);
-            this.regist.Name = "regist";
-            this.regist.Size = new System.Drawing.Size(200, 35);
-            this.regist.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.regist.TabIndex = 2;
-            this.regist.TextColor = System.Drawing.Color.White;
-            // 
-            // txtView
-            // 
-            this.txtView.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtView.BackColor = System.Drawing.SystemColors.Window;
-            this.txtView.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtView.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtView.BorderRadius = 0;
-            this.txtView.BorderSize = 2;
-            this.txtView.Enabled = false;
-            this.txtView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtView.Location = new System.Drawing.Point(116, 236);
-            this.txtView.Margin = new System.Windows.Forms.Padding(4);
-            this.txtView.Multiline = false;
-            this.txtView.Name = "txtView";
-            this.txtView.Padding = new System.Windows.Forms.Padding(10);
-            this.txtView.PasswordChar = false;
-            this.txtView.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtView.PlaceholderText = "";
-            this.txtView.Size = new System.Drawing.Size(198, 37);
-            this.txtView.TabIndex = 4;
-            this.txtView.Texts = "0";
-            this.txtView.UnderlinedStyle = false;
-            // 
-            // txtPublish
-            // 
-            this.txtPublish.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPublish.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPublish.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtPublish.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtPublish.BorderRadius = 0;
-            this.txtPublish.BorderSize = 2;
-            this.txtPublish.Enabled = false;
-            this.txtPublish.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPublish.ForeColor = System.Drawing.Color.Black;
-            this.txtPublish.Location = new System.Drawing.Point(352, 140);
-            this.txtPublish.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPublish.Multiline = false;
-            this.txtPublish.Name = "txtPublish";
-            this.txtPublish.Padding = new System.Windows.Forms.Padding(10);
-            this.txtPublish.PasswordChar = false;
-            this.txtPublish.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtPublish.PlaceholderText = "";
-            this.txtPublish.Size = new System.Drawing.Size(406, 37);
-            this.txtPublish.TabIndex = 5;
-            this.txtPublish.Texts = "";
-            this.txtPublish.UnderlinedStyle = false;
-            // 
-            // txtPdf
-            // 
-            this.txtPdf.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPdf.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPdf.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtPdf.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtPdf.BorderRadius = 0;
-            this.txtPdf.BorderSize = 2;
-            this.txtPdf.Enabled = false;
-            this.txtPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPdf.ForeColor = System.Drawing.Color.Black;
-            this.txtPdf.Location = new System.Drawing.Point(352, 236);
-            this.txtPdf.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPdf.Multiline = false;
-            this.txtPdf.Name = "txtPdf";
-            this.txtPdf.Padding = new System.Windows.Forms.Padding(10);
-            this.txtPdf.PasswordChar = false;
-            this.txtPdf.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtPdf.PlaceholderText = "";
-            this.txtPdf.Size = new System.Drawing.Size(406, 37);
-            this.txtPdf.TabIndex = 5;
-            this.txtPdf.Texts = "";
-            this.txtPdf.UnderlinedStyle = false;
-            // 
             // tabPageLessonContent
             // 
             this.tabPageLessonContent.Controls.Add(this.pdfViewer1);
@@ -576,6 +488,45 @@ namespace PBL
             this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBack.UseVisualStyleBackColor = true;
             // 
+            // regist
+            // 
+            this.regist.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.regist.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.regist.BorderSize = 0;
+            this.regist.Enabled = false;
+            this.regist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.regist.Location = new System.Drawing.Point(114, 142);
+            this.regist.MinimumSize = new System.Drawing.Size(0, 35);
+            this.regist.Name = "regist";
+            this.regist.Size = new System.Drawing.Size(200, 35);
+            this.regist.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.regist.TabIndex = 2;
+            this.regist.TextColor = System.Drawing.Color.White;
+            // 
+            // txtView
+            // 
+            this.txtView.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtView.BackColor = System.Drawing.SystemColors.Window;
+            this.txtView.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtView.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtView.BorderRadius = 0;
+            this.txtView.BorderSize = 2;
+            this.txtView.Enabled = false;
+            this.txtView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtView.Location = new System.Drawing.Point(116, 236);
+            this.txtView.Margin = new System.Windows.Forms.Padding(4);
+            this.txtView.Multiline = false;
+            this.txtView.Name = "txtView";
+            this.txtView.Padding = new System.Windows.Forms.Padding(10);
+            this.txtView.PasswordChar = false;
+            this.txtView.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtView.PlaceholderText = "";
+            this.txtView.Size = new System.Drawing.Size(198, 37);
+            this.txtView.TabIndex = 4;
+            this.txtView.Texts = "0";
+            this.txtView.UnderlinedStyle = false;
+            // 
             // txtId
             // 
             this.txtId.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -600,29 +551,77 @@ namespace PBL
             this.txtId.Texts = "";
             this.txtId.UnderlinedStyle = false;
             // 
-            // roundTextBox1
+            // txtLessonName
             // 
-            this.roundTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.roundTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.roundTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.roundTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.roundTextBox1.BorderRadius = 0;
-            this.roundTextBox1.BorderSize = 2;
-            this.roundTextBox1.Enabled = false;
-            this.roundTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.roundTextBox1.Location = new System.Drawing.Point(351, 60);
-            this.roundTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.roundTextBox1.Multiline = false;
-            this.roundTextBox1.Name = "roundTextBox1";
-            this.roundTextBox1.Padding = new System.Windows.Forms.Padding(10);
-            this.roundTextBox1.PasswordChar = false;
-            this.roundTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.roundTextBox1.PlaceholderText = "";
-            this.roundTextBox1.Size = new System.Drawing.Size(407, 37);
-            this.roundTextBox1.TabIndex = 5;
-            this.roundTextBox1.Texts = "";
-            this.roundTextBox1.UnderlinedStyle = false;
+            this.txtLessonName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtLessonName.BackColor = System.Drawing.SystemColors.Window;
+            this.txtLessonName.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtLessonName.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtLessonName.BorderRadius = 0;
+            this.txtLessonName.BorderSize = 2;
+            this.txtLessonName.Enabled = false;
+            this.txtLessonName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLessonName.ForeColor = System.Drawing.Color.Black;
+            this.txtLessonName.Location = new System.Drawing.Point(351, 60);
+            this.txtLessonName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLessonName.Multiline = false;
+            this.txtLessonName.Name = "txtLessonName";
+            this.txtLessonName.Padding = new System.Windows.Forms.Padding(10);
+            this.txtLessonName.PasswordChar = false;
+            this.txtLessonName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtLessonName.PlaceholderText = "";
+            this.txtLessonName.Size = new System.Drawing.Size(407, 37);
+            this.txtLessonName.TabIndex = 5;
+            this.txtLessonName.Texts = "";
+            this.txtLessonName.UnderlinedStyle = false;
+            // 
+            // txtPublish
+            // 
+            this.txtPublish.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPublish.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPublish.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtPublish.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtPublish.BorderRadius = 0;
+            this.txtPublish.BorderSize = 2;
+            this.txtPublish.Enabled = false;
+            this.txtPublish.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPublish.ForeColor = System.Drawing.Color.Black;
+            this.txtPublish.Location = new System.Drawing.Point(352, 140);
+            this.txtPublish.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPublish.Multiline = false;
+            this.txtPublish.Name = "txtPublish";
+            this.txtPublish.Padding = new System.Windows.Forms.Padding(10);
+            this.txtPublish.PasswordChar = false;
+            this.txtPublish.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtPublish.PlaceholderText = "";
+            this.txtPublish.Size = new System.Drawing.Size(406, 37);
+            this.txtPublish.TabIndex = 5;
+            this.txtPublish.Texts = "";
+            this.txtPublish.UnderlinedStyle = false;
+            // 
+            // txtPdf
+            // 
+            this.txtPdf.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPdf.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPdf.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtPdf.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtPdf.BorderRadius = 0;
+            this.txtPdf.BorderSize = 2;
+            this.txtPdf.Enabled = false;
+            this.txtPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPdf.ForeColor = System.Drawing.Color.Black;
+            this.txtPdf.Location = new System.Drawing.Point(352, 236);
+            this.txtPdf.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPdf.Multiline = false;
+            this.txtPdf.Name = "txtPdf";
+            this.txtPdf.Padding = new System.Windows.Forms.Padding(10);
+            this.txtPdf.PasswordChar = false;
+            this.txtPdf.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtPdf.PlaceholderText = "";
+            this.txtPdf.Size = new System.Drawing.Size(406, 37);
+            this.txtPdf.TabIndex = 5;
+            this.txtPdf.Texts = "";
+            this.txtPdf.UnderlinedStyle = false;
             // 
             // TeacherLessonView
             // 
@@ -675,6 +674,6 @@ namespace PBL
         private FontAwesome.Sharp.IconButton btnBack;
         private Controller.RoundTextBox txtPublish;
         private Controller.RoundTextBox txtId;
-        private Controller.RoundTextBox roundTextBox1;
+        private Controller.RoundTextBox txtLessonName;
     }
 }

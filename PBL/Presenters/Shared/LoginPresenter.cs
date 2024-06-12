@@ -1,10 +1,12 @@
 ﻿using PBL._Repositories;
 using PBL.Models;
 using PBL.Presenters.Student;
+using PBL.Presenters.Teacher;
 using PBL.Views;
 using PBL.Views.Common;
 using PBL.Views.Shared;
 using PBL.Views.Student;
+using PBL.Views.Teacher.TeacherMain;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.Eventing.Reader;
@@ -54,7 +56,8 @@ namespace PBL.Presenters.Shared
                 }
                 else
                 {
-                    //Start teacher with their id
+                    string name = teacherRepository.GetByValue(id.ToString()).First().Name;
+                    new TeacherMainPresenter(TeacherMainView.GetInstance(), id,name);
                 }
                 view.isSuccessful = true;
                 view.Message = "Login successfully";
