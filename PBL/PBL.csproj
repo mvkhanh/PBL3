@@ -107,6 +107,9 @@
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.7.0.2\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
@@ -136,6 +139,7 @@
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -157,6 +161,7 @@
     <Compile Include="Models\StudentLesson\StudentLessonModel.cs" />
     <Compile Include="Models\StudentTest\IStudentTestRepository.cs" />
     <Compile Include="Models\StudentTest\StudentTestModel.cs" />
+    <Compile Include="Presenters\Admin\DashBoardPresenter.cs" />
     <Compile Include="Presenters\Shared\LoginPresenter.cs" />
     <Compile Include="Presenters\Shared\RegisterPresenter.cs" />
     <Compile Include="Presenters\Student\StudentDoTestPrersenter.cs" />
@@ -185,6 +190,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Resources\Components\ColorSlider.Designer.cs" />
+    <Compile Include="Resources\Components\GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Resources\Components\Lesson\LessonBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -275,6 +283,13 @@
     <Compile Include="Resources\Components\Test\TestBox.Designer.cs">
       <DependentUpon>TestBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Admin\DashBoard\DashBoardView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\DashBoard\DashBoardView.Designer.cs">
+      <DependentUpon>DashBoardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\DashBoard\IDashBoardView.cs" />
     <Compile Include="Views\Shared\Register\IRegisterView.cs" />
     <Compile Include="Views\Student\StudentDoTest\IStudentDoTestView.cs" />
     <Compile Include="Views\Student\StudentLesson\IStudentLessonView.cs" />
@@ -479,6 +494,9 @@
     <EmbeddedResource Include="Resources\Components\Test\TestQuestion\Test34567.resx">
       <DependentUpon>Test34567.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\DashBoard\DashBoardView.resx">
+      <DependentUpon>DashBoardView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Student\StudentDoTest\StudentDoTestView.resx">
       <DependentUpon>StudentDoTestView.cs</DependentUpon>
     </EmbeddedResource>
@@ -575,10 +593,15 @@
     <None Include="Resources\Images\User%282%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\teachers-day.png" />
+    <None Include="Resources\score.png" />
+    <None Include="Resources\stack-of-books.png" />
     <None Include="Resources\Images\TOEIC Master.png" />
     <None Include="Resources\Images\calendarDark.png" />
     <None Include="Resources\Images\calendarWhite.png" />
     <None Include="Resources\Images\backgroudlessson1.png" />
+    <None Include="Resources\exam.png" />
+    <None Include="Resources\graduation-cap.png" />
     <Content Include="Resources\Images\BTN_Thumb.bmp" />
     <Content Include="Resources\Images\BTN_ThumbBlue.bmp" />
     <Content Include="Resources\Images\copy %281%29.png" />

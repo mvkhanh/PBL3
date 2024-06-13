@@ -1,4 +1,5 @@
 ﻿using FontAwesome.Sharp;
+using PBL.Views.Admin.DashBoard;
 using PBL.Views.Admin.Students;
 using System;
 using System.Collections.Generic;
@@ -281,6 +282,8 @@ namespace PBL.Views
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
+            ShowDashBoardView(sender, EventArgs.Empty);
+            OpenChildForm(DashBoardView.GetInstance());
         }
 
         private void btnHome_Click(object sender, EventArgs e)
