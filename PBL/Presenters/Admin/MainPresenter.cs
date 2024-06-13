@@ -17,6 +17,8 @@ using PBL.Models.Question;
 using PBL.Models.Answer;
 using PBL.Presenters.Shared;
 using PBL.Views.Shared;
+using PBL.Views.Admin.DashBoard;
+using PBL.Presenters.Admin;
 
 namespace PBL.Presenters
 {
@@ -34,6 +36,7 @@ namespace PBL.Presenters
                 this.mainView.ShowLessonView += ShowLessonsView;
                 this.mainView.ShowTestView += ShowTestsView;
                 this.mainView.LogOutEvent += LogOutAction;
+                this.mainView.ShowDashBoardView += ShowDashBoardView;
                 check = true;
             }
             this.mainView.Show();
@@ -62,6 +65,11 @@ namespace PBL.Presenters
         private void ShowTestsView(object sender, EventArgs e)
         {
             new TestPresenter(TestView.GetInstance(), new TestRepository(), new QuestionRepository(), new AnswerRepository());
+        }
+        private void ShowDashBoardView(object sender, EventArgs e)
+        {
+
+            new DashBoardPresenter(DashBoardView.GetInstance(), new TeacherRepository(), new StudentRepository(), new TestRepository(), new LessonRepository(), new StudentTestRepository());
         }
     }
 }
