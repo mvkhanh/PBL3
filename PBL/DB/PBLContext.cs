@@ -1,4 +1,5 @@
 using PBL.Models;
+using PBL.Models.Comment;
 using PBL.Models.StudentTest;
 using System;
 using System.Data.Entity;
@@ -22,6 +23,8 @@ namespace PBL
         public virtual DbSet<AnswerModel> Answers { get; set; }
         public virtual DbSet<StudentLessonModel> StudentLessons { get; set; }
         public virtual DbSet<StudentTestModel> StudentTests { get; set; }
+        public virtual DbSet<LessonCommentModel> LessonComments { get; set; }
+        public virtual DbSet<TestCommentModel> TestComments { get; set; }
         
     }
 

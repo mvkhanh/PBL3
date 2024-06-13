@@ -41,7 +41,7 @@ namespace PBL.Presenters.Student
             view.StudentBirth = studentModel.Birth;
             view.StudentEmail = studentModel.Email;
             view.StudentTests = studentTestRepository.GetByStudent(studentId).Count();
-            var list =  studentTestRepository.GetByStudent(studentId).Select(p => p.Scores);
+            var list = studentTestRepository.GetByStudent(studentId).Select(p => p.Scores);
             if (list != null && list.Count() > 0) view.StudentAverageScores = Convert.ToInt32(list.Average());
             else view.StudentAverageScores = 0;
         }

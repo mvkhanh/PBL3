@@ -1,8 +1,10 @@
 ﻿using PBL._Repositories;
 using PBL.Models;
+using PBL.Models.Comment;
 using PBL.Models.StudentTest;
 using PBL.Models.Test;
-using PBL.Resources.Components.Lesson;
+using PBL.Resources.Components;
+using PBL.Resources.Components.Test;
 using PBL.Resources.Components.Test;
 using PBL.Resources.Components.Test.TestQuestion;
 using PBL.Views.Student.StudentTest;
@@ -32,9 +34,40 @@ namespace PBL.Presenters.Student
             this.view.SearchEvent += SearchAction;
             this.view.OpenEvent += OpenAction;
             this.view.DoTestEvent += DoTestAction;
+            this.view.LoadCommentsEvent += LoadComments;
+            this.view.SendCommentEvent += SendComment;
             LoadAllTests();
         }
+        private void SendComment(object sender, EventArgs e)
+        {
+            new TestCommentRepository().Add(new TestCommentModel
+            {
+                CreateDay = DateTime.Now,
+                Content = view.CommentContent,
+                TestId = ((TestBox)sender).TestId,
+                StudentId = StudentId
+            });
+            LoadAllComments(((TestBox)sender).TestId);
+        }
 
+        private void LoadAllComments(int TestId)
+        {
+            view.Comments = new List<CommentsBox>();
+            var comments = new TestCommentRepository().GetByTest(TestId).OrderByDescending(p => p.CreateDay).ToList();
+            foreach (var cmt in comments)
+            {
+                view.Comments.Add(new CommentsBox
+                {
+                    CommentContent = cmt.Content,
+                    CommentDate = cmt.CreateDay,
+                    CommentName = cmt.Student.Name
+                });
+            }
+        }
+        private void LoadComments(object sender, EventArgs e)
+        {
+            LoadAllComments(((TestBox)sender).TestId);
+        }
         private void DoTestAction(object sender, EventArgs e)
         {
             new StudentDoTestPrersenter(this, StudentDoTestView.GetInstance(), new QuestionRepository(), view.CurrentTestId, view.part, view.Minutes);
