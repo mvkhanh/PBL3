@@ -158,7 +158,7 @@
             this.btnPrevious.IconSize = 24;
             this.btnPrevious.Location = new System.Drawing.Point(73, 3);
             this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(102, 30);
+            this.btnPrevious.Size = new System.Drawing.Size(103, 30);
             this.btnPrevious.TabIndex = 0;
             this.btnPrevious.Text = "Previous";
             this.btnPrevious.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -409,7 +409,7 @@
             this.btnPlay.IconSize = 20;
             this.btnPlay.Location = new System.Drawing.Point(761, 160);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(68, 30);
+            this.btnPlay.Size = new System.Drawing.Size(69, 30);
             this.btnPlay.TabIndex = 31;
             this.btnPlay.Text = "Play";
             this.btnPlay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -880,7 +880,7 @@
             this.lbSearch.ForeColor = System.Drawing.Color.Black;
             this.lbSearch.Location = new System.Drawing.Point(21, 3);
             this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(95, 16);
+            this.lbSearch.Size = new System.Drawing.Size(96, 16);
             this.lbSearch.TabIndex = 1;
             this.lbSearch.Text = "Search Test:";
             // 

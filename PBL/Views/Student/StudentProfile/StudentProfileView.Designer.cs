@@ -477,7 +477,7 @@
             this.btnSaveChangePass.IconColor = System.Drawing.Color.White;
             this.btnSaveChangePass.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSaveChangePass.IconSize = 30;
-            this.btnSaveChangePass.Location = new System.Drawing.Point(334, 493);
+            this.btnSaveChangePass.Location = new System.Drawing.Point(447, 493);
             this.btnSaveChangePass.Name = "btnSaveChangePass";
             this.btnSaveChangePass.Size = new System.Drawing.Size(111, 46);
             this.btnSaveChangePass.TabIndex = 8;
@@ -534,7 +534,7 @@
             this.btnCancelChangePass.IconColor = System.Drawing.Color.White;
             this.btnCancelChangePass.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelChangePass.IconSize = 30;
-            this.btnCancelChangePass.Location = new System.Drawing.Point(730, 493);
+            this.btnCancelChangePass.Location = new System.Drawing.Point(634, 493);
             this.btnCancelChangePass.Name = "btnCancelChangePass";
             this.btnCancelChangePass.Size = new System.Drawing.Size(111, 46);
             this.btnCancelChangePass.TabIndex = 9;
@@ -560,7 +560,7 @@
             this.txtNewPassAgain.PasswordChar = true;
             this.txtNewPassAgain.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtNewPassAgain.PlaceholderText = "";
-            this.txtNewPassAgain.Size = new System.Drawing.Size(405, 39);
+            this.txtNewPassAgain.Size = new System.Drawing.Size(392, 39);
             this.txtNewPassAgain.TabIndex = 5;
             this.txtNewPassAgain.Texts = "";
             this.txtNewPassAgain.UnderlinedStyle = false;
@@ -583,7 +583,7 @@
             this.txtCurrentPass.PasswordChar = true;
             this.txtCurrentPass.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCurrentPass.PlaceholderText = "";
-            this.txtCurrentPass.Size = new System.Drawing.Size(405, 39);
+            this.txtCurrentPass.Size = new System.Drawing.Size(394, 39);
             this.txtCurrentPass.TabIndex = 3;
             this.txtCurrentPass.Texts = "";
             this.txtCurrentPass.UnderlinedStyle = false;
@@ -606,7 +606,7 @@
             this.txtNewPass.PasswordChar = true;
             this.txtNewPass.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtNewPass.PlaceholderText = "";
-            this.txtNewPass.Size = new System.Drawing.Size(405, 39);
+            this.txtNewPass.Size = new System.Drawing.Size(392, 39);
             this.txtNewPass.TabIndex = 3;
             this.txtNewPass.Texts = "";
             this.txtNewPass.UnderlinedStyle = false;
@@ -627,7 +627,7 @@
             this.tabPageEditProfile.Location = new System.Drawing.Point(4, 25);
             this.tabPageEditProfile.Name = "tabPageEditProfile";
             this.tabPageEditProfile.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageEditProfile.Size = new System.Drawing.Size(1227, 657);
+            this.tabPageEditProfile.Size = new System.Drawing.Size(1227, 677);
             this.tabPageEditProfile.TabIndex = 2;
             this.tabPageEditProfile.Text = "Edit profile";
             this.tabPageEditProfile.UseVisualStyleBackColor = true;

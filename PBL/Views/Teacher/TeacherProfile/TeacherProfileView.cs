@@ -94,10 +94,10 @@ namespace PBL.Views.Teacher.TeacherProfile
         }
         public string TeacherEmail
         {
-            get => lbTeacherEmail.Text = txtTeacherEmail.Texts;
+            get => lbTeacherEmail1.Text = txtTeacherEmail.Texts;
             set
             {
-                lbTeacherEmail.Text = txtTeacherEmail.Texts = value;
+                lbTeacherEmail1.Text = txtTeacherEmail.Texts = value;
             }
         }
         public string TeacherPhone

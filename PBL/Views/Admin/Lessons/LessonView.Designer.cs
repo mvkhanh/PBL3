@@ -224,7 +224,7 @@ namespace PBL
             this.lbSearch.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.lbSearch.Location = new System.Drawing.Point(21, 3);
             this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(114, 16);
+            this.lbSearch.Size = new System.Drawing.Size(115, 16);
             this.lbSearch.TabIndex = 1;
             this.lbSearch.Text = "Search Lesson:";
             // 
@@ -264,7 +264,7 @@ namespace PBL
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 25;
+            this.dataGridView1.RowHeadersWidth = 50;
             this.dataGridView1.RowTemplate.DividerHeight = 1;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
