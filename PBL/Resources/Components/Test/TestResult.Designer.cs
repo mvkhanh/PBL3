@@ -98,7 +98,7 @@ namespace PBL.Resources.Components
             this.NumQuestion.TabIndex = 124;
             this.NumQuestion.Text = "3";
             // 
-            // QuestionResult
+            // TestResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -107,7 +107,7 @@ namespace PBL.Resources.Components
             this.Controls.Add(this.CorrectAnswer);
             this.Controls.Add(this.btnDetail);
             this.Controls.Add(this.NumQuestion);
-            this.Name = "QuestionResult";
+            this.Name = "TestResult";
             this.Size = new System.Drawing.Size(182, 42);
             this.ResumeLayout(false);
             this.PerformLayout();

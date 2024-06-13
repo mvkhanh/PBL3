@@ -41,7 +41,7 @@
             this.lbSearch.Name = "lbSearch";
             this.lbSearch.Size = new System.Drawing.Size(906, 98);
             this.lbSearch.TabIndex = 3;
-            this.lbSearch.Text = "Test Results:";
+            this.lbSearch.Text = "Test Results";
             this.lbSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelMain

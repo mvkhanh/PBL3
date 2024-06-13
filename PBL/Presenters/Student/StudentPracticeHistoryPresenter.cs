@@ -30,7 +30,7 @@ namespace PBL.Presenters.Student
         private void LoadAllTests()
         {
             view.testList = new List<HistoryBox>();
-            var studentTestList = studentTestRepository.GetByStudent(studentId);
+            var studentTestList = studentTestRepository.GetByStudent(studentId).OrderByDescending(p => p.TestDate);
             foreach(var studentTest in  studentTestList)
             {
                 view.testList.Add(new HistoryBox

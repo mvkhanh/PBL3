@@ -66,7 +66,6 @@ namespace PBL.Presenters.Teacher
 
         private void ChangeTeacherPass(object sender, EventArgs e)
         {
-            MessageBox.Show(view.TeacherCurrentPassword+" "+ TeacherModel.Password);
             if (view.TeacherCurrentPassword != TeacherModel.Password)
             {
                 view.Message = "Wrong password";

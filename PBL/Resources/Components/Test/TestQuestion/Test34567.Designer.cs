@@ -96,6 +96,7 @@
             this.rbuttonA.Size = new System.Drawing.Size(43, 22);
             this.rbuttonA.TabIndex = 5;
             this.rbuttonA.TabStop = true;
+            this.rbuttonA.Tag = "0";
             this.rbuttonA.Text = "A. ";
             this.rbuttonA.UseVisualStyleBackColor = true;
             this.rbuttonA.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
@@ -111,6 +112,7 @@
             this.rbuttonB.Size = new System.Drawing.Size(44, 22);
             this.rbuttonB.TabIndex = 7;
             this.rbuttonB.TabStop = true;
+            this.rbuttonB.Tag = "1";
             this.rbuttonB.Text = "B. ";
             this.rbuttonB.UseVisualStyleBackColor = true;
             this.rbuttonB.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
@@ -138,6 +140,7 @@
             this.rbuttonC.Size = new System.Drawing.Size(45, 22);
             this.rbuttonC.TabIndex = 4;
             this.rbuttonC.TabStop = true;
+            this.rbuttonC.Tag = "2";
             this.rbuttonC.Text = "C. ";
             this.rbuttonC.UseVisualStyleBackColor = true;
             this.rbuttonC.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
@@ -165,6 +168,7 @@
             this.rbuttonD.Size = new System.Drawing.Size(45, 22);
             this.rbuttonD.TabIndex = 6;
             this.rbuttonD.TabStop = true;
+            this.rbuttonD.Tag = "3";
             this.rbuttonD.Text = "D. ";
             this.rbuttonD.UseVisualStyleBackColor = true;
             this.rbuttonD.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);

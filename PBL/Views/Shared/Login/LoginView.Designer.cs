@@ -44,7 +44,6 @@
             this.txtAccount = new PBL.Controller.RoundTextBox();
             this.btnLogin = new PBL.Controller.RoundButton();
             this.picturePass = new System.Windows.Forms.PictureBox();
-            this.lbForgot = new System.Windows.Forms.LinkLabel();
             this.pictureUser = new System.Windows.Forms.PictureBox();
             this.btnSignUp = new System.Windows.Forms.LinkLabel();
             this.lbUserName = new System.Windows.Forms.Label();
@@ -162,7 +161,6 @@
             this.panelLogin.Controls.Add(this.txtAccount);
             this.panelLogin.Controls.Add(this.btnLogin);
             this.panelLogin.Controls.Add(this.picturePass);
-            this.panelLogin.Controls.Add(this.lbForgot);
             this.panelLogin.Controls.Add(this.pictureUser);
             this.panelLogin.Controls.Add(this.btnSignUp);
             this.panelLogin.Controls.Add(this.lbUserName);
@@ -289,18 +287,6 @@
             this.picturePass.TabIndex = 6;
             this.picturePass.TabStop = false;
             // 
-            // lbForgot
-            // 
-            this.lbForgot.AutoSize = true;
-            this.lbForgot.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbForgot.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(61)))), ((int)(((byte)(159)))));
-            this.lbForgot.Location = new System.Drawing.Point(219, 199);
-            this.lbForgot.Name = "lbForgot";
-            this.lbForgot.Size = new System.Drawing.Size(112, 19);
-            this.lbForgot.TabIndex = 2;
-            this.lbForgot.TabStop = true;
-            this.lbForgot.Text = "Forgot Password";
-            // 
             // pictureUser
             // 
             this.pictureUser.BackColor = System.Drawing.Color.White;
@@ -383,7 +369,6 @@
         private System.Windows.Forms.Label lbPass;
         private System.Windows.Forms.Label lbUserName;
         private System.Windows.Forms.LinkLabel btnSignUp;
-        private System.Windows.Forms.LinkLabel lbForgot;
         private Controller.RoundButton btnLogin;
         private RoundPanel panelLogin;
         private System.Windows.Forms.Label lbTitle;

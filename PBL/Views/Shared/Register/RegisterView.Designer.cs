@@ -36,6 +36,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelLogin = new RoundPanel();
+            this.txtEmail = new PBL.Controller.RoundTextBox();
+            this.txtUserName = new PBL.Controller.RoundTextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnReturn = new PBL.Controller.RoundButton();
             this.btOpenEye2 = new System.Windows.Forms.Button();
             this.btOpenEye1 = new System.Windows.Forms.Button();
@@ -52,20 +58,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbUserName = new System.Windows.Forms.Label();
             this.lbPass = new System.Windows.Forms.Label();
-            this.txtEmail = new PBL.Controller.RoundTextBox();
-            this.txtUserName = new PBL.Controller.RoundTextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panelTitle.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panelLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitle
@@ -181,6 +181,94 @@
             this.panelLogin.Size = new System.Drawing.Size(379, 517);
             this.panelLogin.TabIndex = 0;
             // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.txtEmail.BorderColor = System.Drawing.Color.Silver;
+            this.txtEmail.BorderFocusColor = System.Drawing.Color.Silver;
+            this.txtEmail.BorderRadius = 5;
+            this.txtEmail.BorderSize = 2;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtEmail.Location = new System.Drawing.Point(84, 368);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Multiline = false;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtEmail.PasswordChar = false;
+            this.txtEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtEmail.PlaceholderText = "Enter email";
+            this.txtEmail.Size = new System.Drawing.Size(251, 35);
+            this.txtEmail.TabIndex = 4;
+            this.txtEmail.Texts = "";
+            this.txtEmail.UnderlinedStyle = false;
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.BackColor = System.Drawing.SystemColors.Window;
+            this.txtUserName.BorderColor = System.Drawing.Color.Silver;
+            this.txtUserName.BorderFocusColor = System.Drawing.Color.Silver;
+            this.txtUserName.BorderRadius = 5;
+            this.txtUserName.BorderSize = 2;
+            this.txtUserName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtUserName.Location = new System.Drawing.Point(83, 297);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUserName.Multiline = false;
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtUserName.PasswordChar = false;
+            this.txtUserName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtUserName.PlaceholderText = "Enter user name";
+            this.txtUserName.Size = new System.Drawing.Size(251, 35);
+            this.txtUserName.TabIndex = 3;
+            this.txtUserName.Texts = "";
+            this.txtUserName.UnderlinedStyle = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Image = global::PBL.Properties.Resources.User_2_;
+            this.pictureBox3.Location = new System.Drawing.Point(40, 294);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(36, 41);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(39, 366);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 41);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label3.Location = new System.Drawing.Point(81, 349);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 20);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "E-mail";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label4.Location = new System.Drawing.Point(80, 278);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 20);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "User Name";
+            // 
             // btnReturn
             // 
             this.btnReturn.BackColor = System.Drawing.Color.White;
@@ -277,7 +365,7 @@
             this.txtPass2.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPass2.PlaceholderText = "Enter password";
             this.txtPass2.Size = new System.Drawing.Size(251, 35);
-            this.txtPass2.TabIndex = 4;
+            this.txtPass2.TabIndex = 2;
             this.txtPass2.Texts = "";
             this.txtPass2.UnderlinedStyle = false;
             this.txtPass2._TextChanged += new System.EventHandler(this.txtPass__TextChanged);
@@ -300,7 +388,7 @@
             this.txtPass1.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPass1.PlaceholderText = "Enter password";
             this.txtPass1.Size = new System.Drawing.Size(251, 35);
-            this.txtPass1.TabIndex = 3;
+            this.txtPass1.TabIndex = 1;
             this.txtPass1.Texts = "";
             this.txtPass1.UnderlinedStyle = false;
             this.txtPass1._TextChanged += new System.EventHandler(this.txtPass__TextChanged);
@@ -424,94 +512,6 @@
             this.lbPass.TabIndex = 5;
             this.lbPass.Text = "Password";
             // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Window;
-            this.txtEmail.BorderColor = System.Drawing.Color.Silver;
-            this.txtEmail.BorderFocusColor = System.Drawing.Color.Silver;
-            this.txtEmail.BorderRadius = 5;
-            this.txtEmail.BorderSize = 2;
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtEmail.Location = new System.Drawing.Point(84, 368);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.Multiline = false;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtEmail.PasswordChar = false;
-            this.txtEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtEmail.PlaceholderText = "Enter email";
-            this.txtEmail.Size = new System.Drawing.Size(251, 35);
-            this.txtEmail.TabIndex = 9;
-            this.txtEmail.Texts = "";
-            this.txtEmail.UnderlinedStyle = false;
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.BackColor = System.Drawing.SystemColors.Window;
-            this.txtUserName.BorderColor = System.Drawing.Color.Silver;
-            this.txtUserName.BorderFocusColor = System.Drawing.Color.Silver;
-            this.txtUserName.BorderRadius = 5;
-            this.txtUserName.BorderSize = 2;
-            this.txtUserName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtUserName.Location = new System.Drawing.Point(83, 297);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUserName.Multiline = false;
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtUserName.PasswordChar = false;
-            this.txtUserName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtUserName.PlaceholderText = "Enter user name";
-            this.txtUserName.Size = new System.Drawing.Size(251, 35);
-            this.txtUserName.TabIndex = 8;
-            this.txtUserName.Texts = "";
-            this.txtUserName.UnderlinedStyle = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Image = global::PBL.Properties.Resources.User_2_;
-            this.pictureBox3.Location = new System.Drawing.Point(40, 294);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 41);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(39, 366);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 41);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label3.Location = new System.Drawing.Point(81, 349);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 20);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "E-mail";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label4.Location = new System.Drawing.Point(80, 278);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 20);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "User Name";
-            // 
             // RegisterView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -532,11 +532,11 @@
             this.panelMain.ResumeLayout(false);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

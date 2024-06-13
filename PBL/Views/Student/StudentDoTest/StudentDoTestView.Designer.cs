@@ -280,7 +280,6 @@ namespace PBL.Views.Student.StudentTest
             this.Controls.Add(this.panelQuestionNum);
             this.Controls.Add(this.roundPanel3);
             this.Name = "StudentDoTestView";
-            this.Text = "Form5";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentDoTestView_FormClosing);
             this.Load += new System.EventHandler(this.StudentDoTestView_Load);
             this.panelBtn.ResumeLayout(false);
