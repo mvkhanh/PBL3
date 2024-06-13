@@ -38,6 +38,7 @@ namespace PBL._Repositories
                 test.Description = testModel.Description;
                 test.Id_Teacher = testModel.Id_Teacher;
                 if(testModel.Audio != null) test.Audio = testModel.Audio;
+                test.Count = testModel.Count;
                 ctx.SaveChanges();
             }
         }

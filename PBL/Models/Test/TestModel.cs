@@ -32,6 +32,7 @@ namespace PBL.Models
         public virtual TeacherModel Teacher { get; set; }
 
         [DisplayName("Gioi thieu")]
+        [MaxLength(100, ErrorMessage = "Gioi thieu khong duoc qua 100 ki tu")]
         public string Description { get; set; }
 
         public byte[] Audio {  get; set; }
