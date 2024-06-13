@@ -75,7 +75,7 @@
             this.panel1.Controls.Add(this.lbTestDay);
             this.panel1.Location = new System.Drawing.Point(25, 40);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(454, 100);
+            this.panel1.Size = new System.Drawing.Size(586, 108);
             this.panel1.TabIndex = 1;
             // 
             // button7
@@ -86,7 +86,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(358, 63);
+            this.button7.Location = new System.Drawing.Point(358, 70);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(53, 23);
             this.button7.TabIndex = 1;
@@ -101,7 +101,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(299, 63);
+            this.button6.Location = new System.Drawing.Point(299, 70);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(53, 23);
             this.button6.TabIndex = 1;
@@ -116,7 +116,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(240, 63);
+            this.button5.Location = new System.Drawing.Point(240, 70);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(53, 23);
             this.button5.TabIndex = 1;
@@ -131,7 +131,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(181, 63);
+            this.button4.Location = new System.Drawing.Point(181, 70);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(53, 23);
             this.button4.TabIndex = 1;
@@ -146,7 +146,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(122, 63);
+            this.button3.Location = new System.Drawing.Point(122, 70);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(53, 23);
             this.button3.TabIndex = 1;
@@ -161,7 +161,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(63, 63);
+            this.button2.Location = new System.Drawing.Point(63, 70);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(53, 23);
             this.button2.TabIndex = 1;
@@ -176,7 +176,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(4, 63);
+            this.button1.Location = new System.Drawing.Point(4, 70);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(53, 23);
             this.button1.TabIndex = 1;
@@ -191,7 +191,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(452, 27);
+            this.panel2.Size = new System.Drawing.Size(584, 27);
             this.panel2.TabIndex = 0;
             // 
             // label2
@@ -259,7 +259,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.MediumSlateBlue;
-            this.linkLabel1.Location = new System.Drawing.Point(435, 7);
+            this.linkLabel1.Location = new System.Drawing.Point(566, 7);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(44, 17);
             this.linkLabel1.TabIndex = 2;
@@ -273,7 +273,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbTestName);
             this.Name = "HistoryBox";
-            this.Size = new System.Drawing.Size(500, 164);
+            this.Size = new System.Drawing.Size(636, 177);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

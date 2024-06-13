@@ -39,6 +39,7 @@ namespace PBL
             this.txtSearch = new PBL.Controller.RoundTextBox();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.tabPageLessonContent = new System.Windows.Forms.TabPage();
+            this.panelComments = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSend = new FontAwesome.Sharp.IconButton();
             this.label18 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@ namespace PBL
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.btnBack = new FontAwesome.Sharp.IconButton();
             this.pdfViewer1 = new Spire.PdfViewer.Forms.PdfViewer();
-            this.panelComments = new System.Windows.Forms.FlowLayoutPanel();
             this.tabControl1.SuspendLayout();
             this.tabPageLessonList.SuspendLayout();
             this.panelTop.SuspendLayout();
@@ -173,8 +173,9 @@ namespace PBL
             // 
             // tabPageLessonContent
             // 
-            this.tabPageLessonContent.Controls.Add(this.panelComments);
             this.tabPageLessonContent.Controls.Add(this.panel3);
+            this.tabPageLessonContent.Controls.Add(this.panelComments);
+            
             this.tabPageLessonContent.Controls.Add(this.panel1);
             this.tabPageLessonContent.Controls.Add(this.pdfViewer1);
             this.tabPageLessonContent.Location = new System.Drawing.Point(4, 25);
@@ -184,14 +185,24 @@ namespace PBL
             this.tabPageLessonContent.Text = "Lesson Content";
             this.tabPageLessonContent.UseVisualStyleBackColor = true;
             // 
+            // panelComments
+            // 
+            this.panelComments.AutoScroll = true;
+            this.panelComments.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelComments.Location = new System.Drawing.Point(0, 261);
+            this.panelComments.Name = "panelComments";
+            this.panelComments.Size = new System.Drawing.Size(861, 100);
+            this.panelComments.TabIndex = 101;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.btnSend);
             this.panel3.Controls.Add(this.label18);
             this.panel3.Controls.Add(this.txtComment);
-            this.panel3.Location = new System.Drawing.Point(10, 167);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 361);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(855, 77);
+            this.panel3.Size = new System.Drawing.Size(861, 77);
             this.panel3.TabIndex = 98;
             // 
             // btnSend
@@ -302,28 +313,21 @@ namespace PBL
             // pdfViewer1
             // 
             this.pdfViewer1.BackColor = System.Drawing.Color.White;
+            this.pdfViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pdfViewer1.FindTextHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(153)))), ((int)(((byte)(193)))), ((int)(((byte)(218)))));
             this.pdfViewer1.ForeColor = System.Drawing.Color.Black;
             this.pdfViewer1.FormFillEnabled = true;
             this.pdfViewer1.IgnoreCase = false;
             this.pdfViewer1.IsToolBarVisible = false;
-            this.pdfViewer1.Location = new System.Drawing.Point(0, 74);
+            this.pdfViewer1.Location = new System.Drawing.Point(0, 0);
             this.pdfViewer1.MultiPagesThreshold = 60;
             this.pdfViewer1.Name = "pdfViewer1";
             this.pdfViewer1.OnRenderPageExceptionEvent = null;
-            this.pdfViewer1.Size = new System.Drawing.Size(861, 364);
+            this.pdfViewer1.Size = new System.Drawing.Size(861, 438);
             this.pdfViewer1.TabIndex = 100;
             this.pdfViewer1.Text = "pdfViewer1";
             this.pdfViewer1.Threshold = 60;
             this.pdfViewer1.ViewerBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            // 
-            // panelComments
-            // 
-            this.panelComments.AutoScroll = true;
-            this.panelComments.Location = new System.Drawing.Point(181, 304);
-            this.panelComments.Name = "panelComments";
-            this.panelComments.Size = new System.Drawing.Size(200, 100);
-            this.panelComments.TabIndex = 101;
             // 
             // StudentLessonView
             // 

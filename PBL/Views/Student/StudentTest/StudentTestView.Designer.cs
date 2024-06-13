@@ -60,12 +60,6 @@ namespace PBL
             this.btnFullTest = new FontAwesome.Sharp.IconButton();
             this.btnPractice = new FontAwesome.Sharp.IconButton();
             this.label17 = new System.Windows.Forms.Label();
-            this.roundPanel3 = new RoundPanel();
-            this.panelComments = new System.Windows.Forms.FlowLayoutPanel();
-            this.roundPanel4 = new RoundPanel();
-            this.btnSend = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtComment = new PBL.Controller.RoundTextBox();
             this.btnBack = new FontAwesome.Sharp.IconButton();
             this.lbTestName = new System.Windows.Forms.Label();
             this.tabPageTestResult = new System.Windows.Forms.TabPage();
@@ -99,6 +93,11 @@ namespace PBL
             this.clock = new FontAwesome.Sharp.IconButton();
             this.btnBack2 = new FontAwesome.Sharp.IconButton();
             this.label18 = new System.Windows.Forms.Label();
+            this.roundPanel4 = new RoundPanel();
+            this.btnSend = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtComment = new PBL.Controller.RoundTextBox();
+            this.panelComments = new System.Windows.Forms.FlowLayoutPanel();
             this.tabControl1.SuspendLayout();
             this.tabPageTestList.SuspendLayout();
             this.panelTop.SuspendLayout();
@@ -109,14 +108,13 @@ namespace PBL
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLimitTime)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.roundPanel3.SuspendLayout();
-            this.roundPanel4.SuspendLayout();
             this.tabPageTestResult.SuspendLayout();
             this.roundPanel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.roundPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -129,7 +127,7 @@ namespace PBL
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(906, 598);
+            this.tabControl1.Size = new System.Drawing.Size(906, 711);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPageTestList
@@ -226,19 +224,21 @@ namespace PBL
             // 
             this.tabPageTestDetail.AutoScroll = true;
             this.tabPageTestDetail.Controls.Add(this.roundPanel2);
-            this.tabPageTestDetail.Controls.Add(this.roundPanel3);
             this.tabPageTestDetail.Controls.Add(this.btnBack);
             this.tabPageTestDetail.Controls.Add(this.lbTestName);
             this.tabPageTestDetail.Location = new System.Drawing.Point(4, 25);
             this.tabPageTestDetail.Name = "tabPageTestDetail";
-            this.tabPageTestDetail.Size = new System.Drawing.Size(898, 569);
+            this.tabPageTestDetail.Size = new System.Drawing.Size(898, 682);
             this.tabPageTestDetail.TabIndex = 2;
             this.tabPageTestDetail.Text = "Test Detail";
             this.tabPageTestDetail.UseVisualStyleBackColor = true;
             // 
             // roundPanel2
             // 
+            this.roundPanel2.AutoScroll = true;
             this.roundPanel2.AutoSize = true;
+            this.roundPanel2.Controls.Add(this.panelComments);
+            this.roundPanel2.Controls.Add(this.roundPanel4);
             this.roundPanel2.Controls.Add(this.groupBox2);
             this.roundPanel2.Controls.Add(this.iconCheck);
             this.roundPanel2.Controls.Add(this.iconPictureBox1);
@@ -254,7 +254,7 @@ namespace PBL
             this.roundPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.roundPanel2.Location = new System.Drawing.Point(0, 60);
             this.roundPanel2.Name = "roundPanel2";
-            this.roundPanel2.Size = new System.Drawing.Size(898, 409);
+            this.roundPanel2.Size = new System.Drawing.Size(898, 622);
             this.roundPanel2.TabIndex = 82;
             // 
             // groupBox2
@@ -514,97 +514,6 @@ namespace PBL
             this.label17.Size = new System.Drawing.Size(148, 18);
             this.label17.TabIndex = 83;
             this.label17.Text = "Limit time to practice:";
-            // 
-            // roundPanel3
-            // 
-            this.roundPanel3.Controls.Add(this.panelComments);
-            this.roundPanel3.Controls.Add(this.roundPanel4);
-            this.roundPanel3.CornerRadius = 10;
-            this.roundPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.roundPanel3.Location = new System.Drawing.Point(0, 469);
-            this.roundPanel3.Name = "roundPanel3";
-            this.roundPanel3.Size = new System.Drawing.Size(898, 100);
-            this.roundPanel3.TabIndex = 83;
-            // 
-            // panelComments
-            // 
-            this.panelComments.AutoScroll = true;
-            this.panelComments.AutoSize = true;
-            this.panelComments.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelComments.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.panelComments.Location = new System.Drawing.Point(0, 63);
-            this.panelComments.Name = "panelComments";
-            this.panelComments.Size = new System.Drawing.Size(898, 37);
-            this.panelComments.TabIndex = 1;
-            this.panelComments.WrapContents = false;
-            // 
-            // roundPanel4
-            // 
-            this.roundPanel4.AutoSize = true;
-            this.roundPanel4.Controls.Add(this.btnSend);
-            this.roundPanel4.Controls.Add(this.label1);
-            this.roundPanel4.Controls.Add(this.txtComment);
-            this.roundPanel4.CornerRadius = 10;
-            this.roundPanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.roundPanel4.Location = new System.Drawing.Point(0, 0);
-            this.roundPanel4.Name = "roundPanel4";
-            this.roundPanel4.Size = new System.Drawing.Size(898, 63);
-            this.roundPanel4.TabIndex = 0;
-            // 
-            // btnSend
-            // 
-            this.btnSend.AutoSize = true;
-            this.btnSend.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnSend.FlatAppearance.BorderSize = 0;
-            this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSend.ForeColor = System.Drawing.Color.White;
-            this.btnSend.IconChar = FontAwesome.Sharp.IconChar.PaperPlane;
-            this.btnSend.IconColor = System.Drawing.Color.White;
-            this.btnSend.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSend.IconSize = 24;
-            this.btnSend.Location = new System.Drawing.Point(662, 28);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(83, 31);
-            this.btnSend.TabIndex = 90;
-            this.btnSend.Text = "Send";
-            this.btnSend.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSend.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.label1.Location = new System.Drawing.Point(29, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 24);
-            this.label1.TabIndex = 89;
-            this.label1.Text = "Comments";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtComment
-            // 
-            this.txtComment.BackColor = System.Drawing.SystemColors.Window;
-            this.txtComment.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtComment.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtComment.BorderRadius = 0;
-            this.txtComment.BorderSize = 2;
-            this.txtComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtComment.Location = new System.Drawing.Point(33, 28);
-            this.txtComment.Margin = new System.Windows.Forms.Padding(4);
-            this.txtComment.Multiline = true;
-            this.txtComment.Name = "txtComment";
-            this.txtComment.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtComment.PasswordChar = false;
-            this.txtComment.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtComment.PlaceholderText = "Share your thoughts";
-            this.txtComment.Size = new System.Drawing.Size(622, 31);
-            this.txtComment.TabIndex = 91;
-            this.txtComment.Texts = "";
-            this.txtComment.UnderlinedStyle = false;
             // 
             // btnBack
             // 
@@ -1070,10 +979,88 @@ namespace PBL
             this.label18.Text = "Practice Results: Practice Set TOEIC 2024 Test 1";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // roundPanel4
+            // 
+            this.roundPanel4.AutoSize = true;
+            this.roundPanel4.Controls.Add(this.btnSend);
+            this.roundPanel4.Controls.Add(this.label1);
+            this.roundPanel4.Controls.Add(this.txtComment);
+            this.roundPanel4.CornerRadius = 10;
+            this.roundPanel4.Location = new System.Drawing.Point(3, 407);
+            this.roundPanel4.Name = "roundPanel4";
+            this.roundPanel4.Size = new System.Drawing.Size(898, 63);
+            this.roundPanel4.TabIndex = 93;
+            // 
+            // btnSend
+            // 
+            this.btnSend.AutoSize = true;
+            this.btnSend.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSend.FlatAppearance.BorderSize = 0;
+            this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSend.ForeColor = System.Drawing.Color.White;
+            this.btnSend.IconChar = FontAwesome.Sharp.IconChar.PaperPlane;
+            this.btnSend.IconColor = System.Drawing.Color.White;
+            this.btnSend.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSend.IconSize = 24;
+            this.btnSend.Location = new System.Drawing.Point(662, 28);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(83, 31);
+            this.btnSend.TabIndex = 90;
+            this.btnSend.Text = "Send";
+            this.btnSend.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSend.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.label1.Location = new System.Drawing.Point(29, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 24);
+            this.label1.TabIndex = 89;
+            this.label1.Text = "Comments";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtComment
+            // 
+            this.txtComment.BackColor = System.Drawing.SystemColors.Window;
+            this.txtComment.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtComment.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtComment.BorderRadius = 0;
+            this.txtComment.BorderSize = 2;
+            this.txtComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtComment.Location = new System.Drawing.Point(33, 28);
+            this.txtComment.Margin = new System.Windows.Forms.Padding(4);
+            this.txtComment.Multiline = true;
+            this.txtComment.Name = "txtComment";
+            this.txtComment.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtComment.PasswordChar = false;
+            this.txtComment.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtComment.PlaceholderText = "Share your thoughts";
+            this.txtComment.Size = new System.Drawing.Size(622, 31);
+            this.txtComment.TabIndex = 91;
+            this.txtComment.Texts = "";
+            this.txtComment.UnderlinedStyle = false;
+            // 
+            // panelComments
+            // 
+            this.panelComments.AutoScroll = true;
+            this.panelComments.AutoSize = true;
+            this.panelComments.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.panelComments.Location = new System.Drawing.Point(17, 476);
+            this.panelComments.Name = "panelComments";
+            this.panelComments.Size = new System.Drawing.Size(885, 69);
+            this.panelComments.TabIndex = 94;
+            this.panelComments.WrapContents = false;
+            // 
             // StudentTestView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(906, 598);
+            this.ClientSize = new System.Drawing.Size(906, 711);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1096,10 +1083,6 @@ namespace PBL
             ((System.ComponentModel.ISupportInitialize)(this.numLimitTime)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.roundPanel3.ResumeLayout(false);
-            this.roundPanel3.PerformLayout();
-            this.roundPanel4.ResumeLayout(false);
-            this.roundPanel4.PerformLayout();
             this.tabPageTestResult.ResumeLayout(false);
             this.tabPageTestResult.PerformLayout();
             this.roundPanel1.ResumeLayout(false);
@@ -1112,6 +1095,8 @@ namespace PBL
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.roundPanel4.ResumeLayout(false);
+            this.roundPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1180,7 +1165,6 @@ namespace PBL
         private FontAwesome.Sharp.IconButton btnFullTest;
         private FontAwesome.Sharp.IconButton btnPractice;
         private System.Windows.Forms.Label label17;
-        private RoundPanel roundPanel3;
         private System.Windows.Forms.FlowLayoutPanel panelComments;
         private RoundPanel roundPanel4;
         private FontAwesome.Sharp.IconButton btnSend;
