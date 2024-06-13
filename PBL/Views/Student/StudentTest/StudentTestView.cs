@@ -3,6 +3,7 @@ using NAudio.CoreAudioApi;
 using Org.BouncyCastle.Utilities;
 using PBL.Controller;
 using PBL.Resources.Components;
+using PBL.Resources.Components.Lesson;
 using PBL.Resources.Components.Test;
 using PBL.Resources.Components.Test.TestQuestion;
 using PBL.Views;
@@ -16,6 +17,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace PBL
 {
@@ -67,6 +69,8 @@ namespace PBL
                         currentTestBox = TestBox;
                         CurrentTestId = currentTestBox.TestId;
                         OpenEvent?.Invoke(TestBox, EventArgs.Empty);
+                        LoadCommentsEvent?.Invoke(currentTestBox, EventArgs.Empty);
+                        InitComments();
                         tabControl1.TabPages.Remove(tabPageTestList);
                         tabControl1.TabPages.Add(tabPageTestDetail);
                         lbTestName.Text = currentTestBox.TestName;
@@ -88,6 +92,22 @@ namespace PBL
             {
                 DoTestEvent?.Invoke(this, EventArgs.Empty);
             };
+            btnSend.Click += delegate
+            {
+                if (string.IsNullOrEmpty(txtComment.Texts))
+                {
+                    MessageBox.Show("Comment box is empty");
+                    return;
+                }
+                SendCommentEvent?.Invoke(currentTestBox, EventArgs.Empty);
+                txtComment.Texts = "";
+                InitComments();
+            };
+        }
+        private void InitComments()
+        {
+            panelComments.Controls.Clear();
+            foreach (var comment in Comments) panelComments.Controls.Add(comment);
         }
 
         private void CleanViews()
@@ -169,6 +189,8 @@ namespace PBL
         public event EventHandler SearchEvent;
         public event EventHandler OpenEvent;
         public event EventHandler DoTestEvent;
+        public event EventHandler SendCommentEvent;
+        public event EventHandler LoadCommentsEvent;
 
         #region Properties
         public List<TestBox> Tests { get; set; }
@@ -182,6 +204,8 @@ namespace PBL
                 iconCheck.Visible = value;
             } 
         }
+        public List<CommentsBox> Comments { get; set; }
+        public string CommentContent { get => txtComment.Texts; }
         public string SearchValue { get => txtSearch.Texts; set => txtSearch.Texts = value; }
 
         #endregion

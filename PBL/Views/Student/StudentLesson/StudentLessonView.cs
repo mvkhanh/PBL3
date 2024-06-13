@@ -1,4 +1,5 @@
 ﻿using PBL.Controller;
+using PBL.Resources.Components;
 using PBL.Resources.Components.Lesson;
 using PBL.Views;
 using PBL.Views.Student.StudentLessonView;
@@ -68,6 +69,8 @@ namespace PBL
                 control.Click += delegate
                 {
                     OpenEvent?.Invoke(lessonBox, EventArgs.Empty);
+                    LoadCommentsEvent?.Invoke(lessonBox, EventArgs.Empty);
+                    InitComments();
                     tabControl1.TabPages.Remove(tabPageLessonList);
                     tabControl1.TabPages.Add(tabPageLessonContent);
                     DisplayContent();
@@ -92,6 +95,23 @@ namespace PBL
                     SaveButton();
                 }
             };
+            btnSend.Click += delegate
+            {
+                if (string.IsNullOrEmpty(txtComment.Texts))
+                {
+                    MessageBox.Show("Comment box is empty");
+                    return;
+                }
+                SendCommentEvent?.Invoke(currentLessonBox, EventArgs.Empty);
+                txtComment.Texts = "";
+                InitComments();
+            };
+        }
+
+        private void InitComments()
+        {
+            panelComments.Controls.Clear();
+            foreach(var comment in Comments) panelComments.Controls.Add(comment);
         }
 
         private void UnSaveButton()
@@ -180,11 +200,14 @@ namespace PBL
         public event EventHandler OpenEvent;
         public event EventHandler SaveEvent;
         public event EventHandler UnSaveEvent;
-
+        public event EventHandler SendCommentEvent;
+        public event EventHandler LoadCommentsEvent;
         public bool GetSaved { get => cbSavedLessons.Checked; set => cbSavedLessons.Checked = value; }
         public byte[] LessonContent { get; set; }
         public List<LessonBox> Lessons { get; set; }
         public List<LessonBox> CurrentLessons { get; set; }
+        public List<CommentsBox> Comments { get; set; }
+        public string CommentContent { get => txtComment.Texts; }
         public string SearchValue { get => txtSearch.Texts; set => txtSearch.Texts = value; }
 
         #region Singleton pattern 

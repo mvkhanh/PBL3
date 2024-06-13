@@ -33,7 +33,21 @@ namespace PBL
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageTestList = new System.Windows.Forms.TabPage();
             this.panelContent = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelTop = new RoundPanel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txtSearch = new PBL.Controller.RoundTextBox();
+            this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.tabPageTestDetail = new System.Windows.Forms.TabPage();
+            this.roundPanel2 = new RoundPanel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.cbPart1 = new System.Windows.Forms.CheckBox();
+            this.cbPart2 = new System.Windows.Forms.CheckBox();
+            this.cbPart3 = new System.Windows.Forms.CheckBox();
+            this.cbPart4 = new System.Windows.Forms.CheckBox();
+            this.cbPart5 = new System.Windows.Forms.CheckBox();
+            this.cbPart6 = new System.Windows.Forms.CheckBox();
+            this.cbPart7 = new System.Windows.Forms.CheckBox();
             this.iconCheck = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.lbTestCount = new System.Windows.Forms.Label();
@@ -43,25 +57,19 @@ namespace PBL
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.cbYes = new System.Windows.Forms.RadioButton();
-            this.btnBack = new FontAwesome.Sharp.IconButton();
             this.btnFullTest = new FontAwesome.Sharp.IconButton();
             this.btnPractice = new FontAwesome.Sharp.IconButton();
-            this.cbPart7 = new System.Windows.Forms.CheckBox();
-            this.cbPart6 = new System.Windows.Forms.CheckBox();
-            this.cbPart5 = new System.Windows.Forms.CheckBox();
-            this.cbPart4 = new System.Windows.Forms.CheckBox();
-            this.cbPart3 = new System.Windows.Forms.CheckBox();
-            this.cbPart2 = new System.Windows.Forms.CheckBox();
-            this.cbPart1 = new System.Windows.Forms.CheckBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.roundPanel3 = new RoundPanel();
+            this.panelComments = new System.Windows.Forms.FlowLayoutPanel();
+            this.roundPanel4 = new RoundPanel();
+            this.btnSend = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtComment = new PBL.Controller.RoundTextBox();
+            this.btnBack = new FontAwesome.Sharp.IconButton();
             this.lbTestName = new System.Windows.Forms.Label();
             this.tabPageTestResult = new System.Windows.Forms.TabPage();
             this.panelAnswers = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelTop = new RoundPanel();
-            this.label28 = new System.Windows.Forms.Label();
-            this.txtSearch = new PBL.Controller.RoundTextBox();
-            this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.roundPanel1 = new RoundPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.skip = new FontAwesome.Sharp.IconButton();
@@ -91,22 +99,24 @@ namespace PBL
             this.clock = new FontAwesome.Sharp.IconButton();
             this.btnBack2 = new FontAwesome.Sharp.IconButton();
             this.label18 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabPageTestList.SuspendLayout();
+            this.panelTop.SuspendLayout();
             this.tabPageTestDetail.SuspendLayout();
+            this.roundPanel2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCheck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLimitTime)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.roundPanel3.SuspendLayout();
+            this.roundPanel4.SuspendLayout();
             this.tabPageTestResult.SuspendLayout();
-            this.panelTop.SuspendLayout();
             this.roundPanel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -119,7 +129,7 @@ namespace PBL
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(906, 467);
+            this.tabControl1.Size = new System.Drawing.Size(906, 598);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPageTestList
@@ -131,7 +141,7 @@ namespace PBL
             this.tabPageTestList.Location = new System.Drawing.Point(4, 25);
             this.tabPageTestList.Name = "tabPageTestList";
             this.tabPageTestList.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTestList.Size = new System.Drawing.Size(898, 438);
+            this.tabPageTestList.Size = new System.Drawing.Size(898, 569);
             this.tabPageTestList.TabIndex = 0;
             this.tabPageTestList.Text = "Test List";
             // 
@@ -142,328 +152,8 @@ namespace PBL
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(3, 141);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(892, 294);
+            this.panelContent.Size = new System.Drawing.Size(892, 425);
             this.panelContent.TabIndex = 66;
-            // 
-            // tabPageTestDetail
-            // 
-            this.tabPageTestDetail.AutoScroll = true;
-            this.tabPageTestDetail.Controls.Add(this.groupBox2);
-            this.tabPageTestDetail.Controls.Add(this.iconCheck);
-            this.tabPageTestDetail.Controls.Add(this.iconPictureBox1);
-            this.tabPageTestDetail.Controls.Add(this.lbTestCount);
-            this.tabPageTestDetail.Controls.Add(this.label2);
-            this.tabPageTestDetail.Controls.Add(this.lbMinutes);
-            this.tabPageTestDetail.Controls.Add(this.numLimitTime);
-            this.tabPageTestDetail.Controls.Add(this.groupBox1);
-            this.tabPageTestDetail.Controls.Add(this.btnBack);
-            this.tabPageTestDetail.Controls.Add(this.btnFullTest);
-            this.tabPageTestDetail.Controls.Add(this.btnPractice);
-            this.tabPageTestDetail.Controls.Add(this.label17);
-            this.tabPageTestDetail.Controls.Add(this.lbTestName);
-            this.tabPageTestDetail.Location = new System.Drawing.Point(4, 25);
-            this.tabPageTestDetail.Name = "tabPageTestDetail";
-            this.tabPageTestDetail.Size = new System.Drawing.Size(898, 438);
-            this.tabPageTestDetail.TabIndex = 2;
-            this.tabPageTestDetail.Text = "Test Detail";
-            this.tabPageTestDetail.UseVisualStyleBackColor = true;
-            // 
-            // iconCheck
-            // 
-            this.iconCheck.BackColor = System.Drawing.Color.Transparent;
-            this.iconCheck.ForeColor = System.Drawing.Color.Green;
-            this.iconCheck.IconChar = FontAwesome.Sharp.IconChar.Check;
-            this.iconCheck.IconColor = System.Drawing.Color.Green;
-            this.iconCheck.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCheck.Location = new System.Drawing.Point(477, 478);
-            this.iconCheck.Name = "iconCheck";
-            this.iconCheck.Size = new System.Drawing.Size(32, 32);
-            this.iconCheck.TabIndex = 80;
-            this.iconCheck.TabStop = false;
-            this.iconCheck.Visible = false;
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(89, 143);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox1.TabIndex = 79;
-            this.iconPictureBox1.TabStop = false;
-            // 
-            // lbTestCount
-            // 
-            this.lbTestCount.AutoSize = true;
-            this.lbTestCount.Location = new System.Drawing.Point(124, 151);
-            this.lbTestCount.Name = "lbTestCount";
-            this.lbTestCount.Size = new System.Drawing.Size(50, 16);
-            this.lbTestCount.TabIndex = 78;
-            this.lbTestCount.Text = "label3";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(265, 486);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 16);
-            this.label2.TabIndex = 77;
-            this.label2.Text = "OR";
-            // 
-            // lbMinutes
-            // 
-            this.lbMinutes.AutoSize = true;
-            this.lbMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMinutes.Location = new System.Drawing.Point(148, 440);
-            this.lbMinutes.Name = "lbMinutes";
-            this.lbMinutes.Size = new System.Drawing.Size(67, 18);
-            this.lbMinutes.TabIndex = 76;
-            this.lbMinutes.Text = "minutes";
-            this.lbMinutes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // numLimitTime
-            // 
-            this.numLimitTime.Location = new System.Drawing.Point(89, 438);
-            this.numLimitTime.Maximum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            this.numLimitTime.Name = "numLimitTime";
-            this.numLimitTime.Size = new System.Drawing.Size(56, 22);
-            this.numLimitTime.TabIndex = 10;
-            this.numLimitTime.Value = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.cbYes);
-            this.groupBox1.Location = new System.Drawing.Point(240, 380);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(133, 46);
-            this.groupBox1.TabIndex = 74;
-            this.groupBox1.TabStop = false;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(77, 20);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(45, 20);
-            this.radioButton2.TabIndex = 9;
-            this.radioButton2.Text = "No";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // cbYes
-            // 
-            this.cbYes.AutoSize = true;
-            this.cbYes.Checked = true;
-            this.cbYes.Location = new System.Drawing.Point(6, 20);
-            this.cbYes.Name = "cbYes";
-            this.cbYes.Size = new System.Drawing.Size(52, 20);
-            this.cbYes.TabIndex = 8;
-            this.cbYes.TabStop = true;
-            this.cbYes.Text = "Yes";
-            this.cbYes.UseVisualStyleBackColor = true;
-            this.cbYes.CheckedChanged += new System.EventHandler(this.cbYes_CheckedChanged);
-            // 
-            // btnBack
-            // 
-            this.btnBack.AutoSize = true;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
-            this.btnBack.IconColor = System.Drawing.Color.Black;
-            this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBack.IconSize = 20;
-            this.btnBack.Location = new System.Drawing.Point(8, 57);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(76, 34);
-            this.btnBack.TabIndex = 72;
-            this.btnBack.Text = "Back";
-            this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // btnFullTest
-            // 
-            this.btnFullTest.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.btnFullTest.FlatAppearance.BorderSize = 0;
-            this.btnFullTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFullTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFullTest.ForeColor = System.Drawing.Color.White;
-            this.btnFullTest.IconChar = FontAwesome.Sharp.IconChar.CaretRight;
-            this.btnFullTest.IconColor = System.Drawing.Color.White;
-            this.btnFullTest.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFullTest.IconSize = 24;
-            this.btnFullTest.Location = new System.Drawing.Point(314, 478);
-            this.btnFullTest.Name = "btnFullTest";
-            this.btnFullTest.Size = new System.Drawing.Size(156, 32);
-            this.btnFullTest.TabIndex = 71;
-            this.btnFullTest.Text = "Do full test!";
-            this.btnFullTest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFullTest.UseVisualStyleBackColor = false;
-            // 
-            // btnPractice
-            // 
-            this.btnPractice.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPractice.FlatAppearance.BorderSize = 0;
-            this.btnPractice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPractice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPractice.ForeColor = System.Drawing.Color.White;
-            this.btnPractice.IconChar = FontAwesome.Sharp.IconChar.CaretRight;
-            this.btnPractice.IconColor = System.Drawing.Color.White;
-            this.btnPractice.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPractice.IconSize = 24;
-            this.btnPractice.Location = new System.Drawing.Point(89, 478);
-            this.btnPractice.Name = "btnPractice";
-            this.btnPractice.Size = new System.Drawing.Size(156, 32);
-            this.btnPractice.TabIndex = 71;
-            this.btnPractice.Text = "Start practice";
-            this.btnPractice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPractice.UseVisualStyleBackColor = false;
-            // 
-            // cbPart7
-            // 
-            this.cbPart7.AutoSize = true;
-            this.cbPart7.Location = new System.Drawing.Point(9, 175);
-            this.cbPart7.Name = "cbPart7";
-            this.cbPart7.Size = new System.Drawing.Size(66, 20);
-            this.cbPart7.TabIndex = 7;
-            this.cbPart7.Tag = "7";
-            this.cbPart7.Text = "Part 7";
-            this.cbPart7.UseVisualStyleBackColor = true;
-            // 
-            // cbPart6
-            // 
-            this.cbPart6.AutoSize = true;
-            this.cbPart6.Location = new System.Drawing.Point(9, 149);
-            this.cbPart6.Name = "cbPart6";
-            this.cbPart6.Size = new System.Drawing.Size(66, 20);
-            this.cbPart6.TabIndex = 6;
-            this.cbPart6.Tag = "6";
-            this.cbPart6.Text = "Part 6";
-            this.cbPart6.UseVisualStyleBackColor = true;
-            // 
-            // cbPart5
-            // 
-            this.cbPart5.AutoSize = true;
-            this.cbPart5.Location = new System.Drawing.Point(9, 123);
-            this.cbPart5.Name = "cbPart5";
-            this.cbPart5.Size = new System.Drawing.Size(66, 20);
-            this.cbPart5.TabIndex = 5;
-            this.cbPart5.Tag = "5";
-            this.cbPart5.Text = "Part 5";
-            this.cbPart5.UseVisualStyleBackColor = true;
-            // 
-            // cbPart4
-            // 
-            this.cbPart4.AutoSize = true;
-            this.cbPart4.Location = new System.Drawing.Point(9, 97);
-            this.cbPart4.Name = "cbPart4";
-            this.cbPart4.Size = new System.Drawing.Size(66, 20);
-            this.cbPart4.TabIndex = 4;
-            this.cbPart4.Tag = "4";
-            this.cbPart4.Text = "Part 4";
-            this.cbPart4.UseVisualStyleBackColor = true;
-            // 
-            // cbPart3
-            // 
-            this.cbPart3.AutoSize = true;
-            this.cbPart3.Location = new System.Drawing.Point(9, 71);
-            this.cbPart3.Name = "cbPart3";
-            this.cbPart3.Size = new System.Drawing.Size(66, 20);
-            this.cbPart3.TabIndex = 3;
-            this.cbPart3.Tag = "3";
-            this.cbPart3.Text = "Part 3";
-            this.cbPart3.UseVisualStyleBackColor = true;
-            // 
-            // cbPart2
-            // 
-            this.cbPart2.AutoSize = true;
-            this.cbPart2.Location = new System.Drawing.Point(9, 45);
-            this.cbPart2.Name = "cbPart2";
-            this.cbPart2.Size = new System.Drawing.Size(66, 20);
-            this.cbPart2.TabIndex = 2;
-            this.cbPart2.Tag = "2";
-            this.cbPart2.Text = "Part 2";
-            this.cbPart2.UseVisualStyleBackColor = true;
-            // 
-            // cbPart1
-            // 
-            this.cbPart1.AutoSize = true;
-            this.cbPart1.Location = new System.Drawing.Point(9, 19);
-            this.cbPart1.Name = "cbPart1";
-            this.cbPart1.Size = new System.Drawing.Size(66, 20);
-            this.cbPart1.TabIndex = 1;
-            this.cbPart1.Tag = "1";
-            this.cbPart1.Text = "Part 1";
-            this.cbPart1.UseVisualStyleBackColor = true;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(6, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(267, 18);
-            this.label16.TabIndex = 68;
-            this.label16.Text = "Choose parts you want to practice";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(86, 403);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(148, 18);
-            this.label17.TabIndex = 68;
-            this.label17.Text = "Limit time to practice:";
-            // 
-            // lbTestName
-            // 
-            this.lbTestName.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbTestName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbTestName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTestName.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.lbTestName.Location = new System.Drawing.Point(0, 0);
-            this.lbTestName.Name = "lbTestName";
-            this.lbTestName.Size = new System.Drawing.Size(881, 60);
-            this.lbTestName.TabIndex = 51;
-            this.lbTestName.Text = "Practice Set TOEIC 2024 Test 1";
-            this.lbTestName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tabPageTestResult
-            // 
-            this.tabPageTestResult.AutoScroll = true;
-            this.tabPageTestResult.Controls.Add(this.panelAnswers);
-            this.tabPageTestResult.Controls.Add(this.roundPanel1);
-            this.tabPageTestResult.Location = new System.Drawing.Point(4, 25);
-            this.tabPageTestResult.Name = "tabPageTestResult";
-            this.tabPageTestResult.Size = new System.Drawing.Size(898, 438);
-            this.tabPageTestResult.TabIndex = 3;
-            this.tabPageTestResult.Text = "Test Result";
-            this.tabPageTestResult.UseVisualStyleBackColor = true;
-            // 
-            // panelAnswers
-            // 
-            this.panelAnswers.AutoScroll = true;
-            this.panelAnswers.AutoSize = true;
-            this.panelAnswers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAnswers.Location = new System.Drawing.Point(0, 292);
-            this.panelAnswers.Name = "panelAnswers";
-            this.panelAnswers.Size = new System.Drawing.Size(898, 146);
-            this.panelAnswers.TabIndex = 87;
             // 
             // panelTop
             // 
@@ -531,6 +221,444 @@ namespace PBL
             this.btnSearch.Text = "Search";
             this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // tabPageTestDetail
+            // 
+            this.tabPageTestDetail.AutoScroll = true;
+            this.tabPageTestDetail.Controls.Add(this.roundPanel2);
+            this.tabPageTestDetail.Controls.Add(this.roundPanel3);
+            this.tabPageTestDetail.Controls.Add(this.btnBack);
+            this.tabPageTestDetail.Controls.Add(this.lbTestName);
+            this.tabPageTestDetail.Location = new System.Drawing.Point(4, 25);
+            this.tabPageTestDetail.Name = "tabPageTestDetail";
+            this.tabPageTestDetail.Size = new System.Drawing.Size(898, 569);
+            this.tabPageTestDetail.TabIndex = 2;
+            this.tabPageTestDetail.Text = "Test Detail";
+            this.tabPageTestDetail.UseVisualStyleBackColor = true;
+            // 
+            // roundPanel2
+            // 
+            this.roundPanel2.AutoSize = true;
+            this.roundPanel2.Controls.Add(this.groupBox2);
+            this.roundPanel2.Controls.Add(this.iconCheck);
+            this.roundPanel2.Controls.Add(this.iconPictureBox1);
+            this.roundPanel2.Controls.Add(this.lbTestCount);
+            this.roundPanel2.Controls.Add(this.label2);
+            this.roundPanel2.Controls.Add(this.lbMinutes);
+            this.roundPanel2.Controls.Add(this.numLimitTime);
+            this.roundPanel2.Controls.Add(this.groupBox1);
+            this.roundPanel2.Controls.Add(this.btnFullTest);
+            this.roundPanel2.Controls.Add(this.btnPractice);
+            this.roundPanel2.Controls.Add(this.label17);
+            this.roundPanel2.CornerRadius = 10;
+            this.roundPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.roundPanel2.Location = new System.Drawing.Point(0, 60);
+            this.roundPanel2.Name = "roundPanel2";
+            this.roundPanel2.Size = new System.Drawing.Size(898, 409);
+            this.roundPanel2.TabIndex = 82;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.cbPart1);
+            this.groupBox2.Controls.Add(this.cbPart2);
+            this.groupBox2.Controls.Add(this.cbPart3);
+            this.groupBox2.Controls.Add(this.cbPart4);
+            this.groupBox2.Controls.Add(this.cbPart5);
+            this.groupBox2.Controls.Add(this.cbPart6);
+            this.groupBox2.Controls.Add(this.cbPart7);
+            this.groupBox2.Location = new System.Drawing.Point(82, 68);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(285, 202);
+            this.groupBox2.TabIndex = 92;
+            this.groupBox2.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(6, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(267, 18);
+            this.label16.TabIndex = 68;
+            this.label16.Text = "Choose parts you want to practice";
+            // 
+            // cbPart1
+            // 
+            this.cbPart1.AutoSize = true;
+            this.cbPart1.Location = new System.Drawing.Point(9, 19);
+            this.cbPart1.Name = "cbPart1";
+            this.cbPart1.Size = new System.Drawing.Size(66, 20);
+            this.cbPart1.TabIndex = 1;
+            this.cbPart1.Tag = "1";
+            this.cbPart1.Text = "Part 1";
+            this.cbPart1.UseVisualStyleBackColor = true;
+            // 
+            // cbPart2
+            // 
+            this.cbPart2.AutoSize = true;
+            this.cbPart2.Location = new System.Drawing.Point(9, 45);
+            this.cbPart2.Name = "cbPart2";
+            this.cbPart2.Size = new System.Drawing.Size(66, 20);
+            this.cbPart2.TabIndex = 2;
+            this.cbPart2.Tag = "2";
+            this.cbPart2.Text = "Part 2";
+            this.cbPart2.UseVisualStyleBackColor = true;
+            // 
+            // cbPart3
+            // 
+            this.cbPart3.AutoSize = true;
+            this.cbPart3.Location = new System.Drawing.Point(9, 71);
+            this.cbPart3.Name = "cbPart3";
+            this.cbPart3.Size = new System.Drawing.Size(66, 20);
+            this.cbPart3.TabIndex = 3;
+            this.cbPart3.Tag = "3";
+            this.cbPart3.Text = "Part 3";
+            this.cbPart3.UseVisualStyleBackColor = true;
+            // 
+            // cbPart4
+            // 
+            this.cbPart4.AutoSize = true;
+            this.cbPart4.Location = new System.Drawing.Point(9, 97);
+            this.cbPart4.Name = "cbPart4";
+            this.cbPart4.Size = new System.Drawing.Size(66, 20);
+            this.cbPart4.TabIndex = 4;
+            this.cbPart4.Tag = "4";
+            this.cbPart4.Text = "Part 4";
+            this.cbPart4.UseVisualStyleBackColor = true;
+            // 
+            // cbPart5
+            // 
+            this.cbPart5.AutoSize = true;
+            this.cbPart5.Location = new System.Drawing.Point(9, 123);
+            this.cbPart5.Name = "cbPart5";
+            this.cbPart5.Size = new System.Drawing.Size(66, 20);
+            this.cbPart5.TabIndex = 5;
+            this.cbPart5.Tag = "5";
+            this.cbPart5.Text = "Part 5";
+            this.cbPart5.UseVisualStyleBackColor = true;
+            // 
+            // cbPart6
+            // 
+            this.cbPart6.AutoSize = true;
+            this.cbPart6.Location = new System.Drawing.Point(9, 149);
+            this.cbPart6.Name = "cbPart6";
+            this.cbPart6.Size = new System.Drawing.Size(66, 20);
+            this.cbPart6.TabIndex = 6;
+            this.cbPart6.Tag = "6";
+            this.cbPart6.Text = "Part 6";
+            this.cbPart6.UseVisualStyleBackColor = true;
+            // 
+            // cbPart7
+            // 
+            this.cbPart7.AutoSize = true;
+            this.cbPart7.Location = new System.Drawing.Point(9, 175);
+            this.cbPart7.Name = "cbPart7";
+            this.cbPart7.Size = new System.Drawing.Size(66, 20);
+            this.cbPart7.TabIndex = 7;
+            this.cbPart7.Tag = "7";
+            this.cbPart7.Text = "Part 7";
+            this.cbPart7.UseVisualStyleBackColor = true;
+            // 
+            // iconCheck
+            // 
+            this.iconCheck.BackColor = System.Drawing.Color.Transparent;
+            this.iconCheck.ForeColor = System.Drawing.Color.Green;
+            this.iconCheck.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.iconCheck.IconColor = System.Drawing.Color.Green;
+            this.iconCheck.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCheck.Location = new System.Drawing.Point(470, 354);
+            this.iconCheck.Name = "iconCheck";
+            this.iconCheck.Size = new System.Drawing.Size(32, 32);
+            this.iconCheck.TabIndex = 91;
+            this.iconCheck.TabStop = false;
+            this.iconCheck.Visible = false;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.Location = new System.Drawing.Point(82, 19);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox1.TabIndex = 90;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // lbTestCount
+            // 
+            this.lbTestCount.AutoSize = true;
+            this.lbTestCount.Location = new System.Drawing.Point(117, 27);
+            this.lbTestCount.Name = "lbTestCount";
+            this.lbTestCount.Size = new System.Drawing.Size(50, 16);
+            this.lbTestCount.TabIndex = 89;
+            this.lbTestCount.Text = "label3";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(258, 362);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 16);
+            this.label2.TabIndex = 88;
+            this.label2.Text = "OR";
+            // 
+            // lbMinutes
+            // 
+            this.lbMinutes.AutoSize = true;
+            this.lbMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMinutes.Location = new System.Drawing.Point(141, 316);
+            this.lbMinutes.Name = "lbMinutes";
+            this.lbMinutes.Size = new System.Drawing.Size(67, 18);
+            this.lbMinutes.TabIndex = 87;
+            this.lbMinutes.Text = "minutes";
+            this.lbMinutes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // numLimitTime
+            // 
+            this.numLimitTime.Location = new System.Drawing.Point(82, 314);
+            this.numLimitTime.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.numLimitTime.Name = "numLimitTime";
+            this.numLimitTime.Size = new System.Drawing.Size(56, 22);
+            this.numLimitTime.TabIndex = 82;
+            this.numLimitTime.Value = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.cbYes);
+            this.groupBox1.Location = new System.Drawing.Point(233, 256);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(133, 46);
+            this.groupBox1.TabIndex = 86;
+            this.groupBox1.TabStop = false;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(77, 20);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(45, 20);
+            this.radioButton2.TabIndex = 9;
+            this.radioButton2.Text = "No";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // cbYes
+            // 
+            this.cbYes.AutoSize = true;
+            this.cbYes.Checked = true;
+            this.cbYes.Location = new System.Drawing.Point(6, 20);
+            this.cbYes.Name = "cbYes";
+            this.cbYes.Size = new System.Drawing.Size(52, 20);
+            this.cbYes.TabIndex = 8;
+            this.cbYes.TabStop = true;
+            this.cbYes.Text = "Yes";
+            this.cbYes.UseVisualStyleBackColor = true;
+            // 
+            // btnFullTest
+            // 
+            this.btnFullTest.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.btnFullTest.FlatAppearance.BorderSize = 0;
+            this.btnFullTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFullTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFullTest.ForeColor = System.Drawing.Color.White;
+            this.btnFullTest.IconChar = FontAwesome.Sharp.IconChar.CaretRight;
+            this.btnFullTest.IconColor = System.Drawing.Color.White;
+            this.btnFullTest.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFullTest.IconSize = 24;
+            this.btnFullTest.Location = new System.Drawing.Point(307, 354);
+            this.btnFullTest.Name = "btnFullTest";
+            this.btnFullTest.Size = new System.Drawing.Size(156, 32);
+            this.btnFullTest.TabIndex = 84;
+            this.btnFullTest.Text = "Do full test!";
+            this.btnFullTest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFullTest.UseVisualStyleBackColor = false;
+            // 
+            // btnPractice
+            // 
+            this.btnPractice.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPractice.FlatAppearance.BorderSize = 0;
+            this.btnPractice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPractice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPractice.ForeColor = System.Drawing.Color.White;
+            this.btnPractice.IconChar = FontAwesome.Sharp.IconChar.CaretRight;
+            this.btnPractice.IconColor = System.Drawing.Color.White;
+            this.btnPractice.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPractice.IconSize = 24;
+            this.btnPractice.Location = new System.Drawing.Point(82, 354);
+            this.btnPractice.Name = "btnPractice";
+            this.btnPractice.Size = new System.Drawing.Size(156, 32);
+            this.btnPractice.TabIndex = 85;
+            this.btnPractice.Text = "Start practice";
+            this.btnPractice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPractice.UseVisualStyleBackColor = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(79, 279);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(148, 18);
+            this.label17.TabIndex = 83;
+            this.label17.Text = "Limit time to practice:";
+            // 
+            // roundPanel3
+            // 
+            this.roundPanel3.Controls.Add(this.panelComments);
+            this.roundPanel3.Controls.Add(this.roundPanel4);
+            this.roundPanel3.CornerRadius = 10;
+            this.roundPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.roundPanel3.Location = new System.Drawing.Point(0, 469);
+            this.roundPanel3.Name = "roundPanel3";
+            this.roundPanel3.Size = new System.Drawing.Size(898, 100);
+            this.roundPanel3.TabIndex = 83;
+            // 
+            // panelComments
+            // 
+            this.panelComments.AutoScroll = true;
+            this.panelComments.AutoSize = true;
+            this.panelComments.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelComments.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.panelComments.Location = new System.Drawing.Point(0, 63);
+            this.panelComments.Name = "panelComments";
+            this.panelComments.Size = new System.Drawing.Size(898, 37);
+            this.panelComments.TabIndex = 1;
+            this.panelComments.WrapContents = false;
+            // 
+            // roundPanel4
+            // 
+            this.roundPanel4.AutoSize = true;
+            this.roundPanel4.Controls.Add(this.btnSend);
+            this.roundPanel4.Controls.Add(this.label1);
+            this.roundPanel4.Controls.Add(this.txtComment);
+            this.roundPanel4.CornerRadius = 10;
+            this.roundPanel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.roundPanel4.Location = new System.Drawing.Point(0, 0);
+            this.roundPanel4.Name = "roundPanel4";
+            this.roundPanel4.Size = new System.Drawing.Size(898, 63);
+            this.roundPanel4.TabIndex = 0;
+            // 
+            // btnSend
+            // 
+            this.btnSend.AutoSize = true;
+            this.btnSend.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSend.FlatAppearance.BorderSize = 0;
+            this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSend.ForeColor = System.Drawing.Color.White;
+            this.btnSend.IconChar = FontAwesome.Sharp.IconChar.PaperPlane;
+            this.btnSend.IconColor = System.Drawing.Color.White;
+            this.btnSend.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSend.IconSize = 24;
+            this.btnSend.Location = new System.Drawing.Point(662, 28);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(83, 31);
+            this.btnSend.TabIndex = 90;
+            this.btnSend.Text = "Send";
+            this.btnSend.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSend.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.label1.Location = new System.Drawing.Point(29, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 24);
+            this.label1.TabIndex = 89;
+            this.label1.Text = "Comments";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtComment
+            // 
+            this.txtComment.BackColor = System.Drawing.SystemColors.Window;
+            this.txtComment.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtComment.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtComment.BorderRadius = 0;
+            this.txtComment.BorderSize = 2;
+            this.txtComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtComment.Location = new System.Drawing.Point(33, 28);
+            this.txtComment.Margin = new System.Windows.Forms.Padding(4);
+            this.txtComment.Multiline = true;
+            this.txtComment.Name = "txtComment";
+            this.txtComment.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtComment.PasswordChar = false;
+            this.txtComment.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtComment.PlaceholderText = "Share your thoughts";
+            this.txtComment.Size = new System.Drawing.Size(622, 31);
+            this.txtComment.TabIndex = 91;
+            this.txtComment.Texts = "";
+            this.txtComment.UnderlinedStyle = false;
+            // 
+            // btnBack
+            // 
+            this.btnBack.AutoSize = true;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
+            this.btnBack.IconColor = System.Drawing.Color.Black;
+            this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBack.IconSize = 20;
+            this.btnBack.Location = new System.Drawing.Point(0, 0);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(76, 34);
+            this.btnBack.TabIndex = 72;
+            this.btnBack.Text = "Back";
+            this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // lbTestName
+            // 
+            this.lbTestName.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbTestName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbTestName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTestName.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.lbTestName.Location = new System.Drawing.Point(0, 0);
+            this.lbTestName.Name = "lbTestName";
+            this.lbTestName.Size = new System.Drawing.Size(898, 60);
+            this.lbTestName.TabIndex = 51;
+            this.lbTestName.Text = "Practice Set TOEIC 2024 Test 1";
+            this.lbTestName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tabPageTestResult
+            // 
+            this.tabPageTestResult.AutoScroll = true;
+            this.tabPageTestResult.Controls.Add(this.panelAnswers);
+            this.tabPageTestResult.Controls.Add(this.roundPanel1);
+            this.tabPageTestResult.Location = new System.Drawing.Point(4, 25);
+            this.tabPageTestResult.Name = "tabPageTestResult";
+            this.tabPageTestResult.Size = new System.Drawing.Size(898, 569);
+            this.tabPageTestResult.TabIndex = 3;
+            this.tabPageTestResult.Text = "Test Result";
+            this.tabPageTestResult.UseVisualStyleBackColor = true;
+            // 
+            // panelAnswers
+            // 
+            this.panelAnswers.AutoScroll = true;
+            this.panelAnswers.AutoSize = true;
+            this.panelAnswers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelAnswers.Location = new System.Drawing.Point(0, 292);
+            this.panelAnswers.Name = "panelAnswers";
+            this.panelAnswers.Size = new System.Drawing.Size(898, 277);
+            this.panelAnswers.TabIndex = 87;
             // 
             // roundPanel1
             // 
@@ -942,26 +1070,10 @@ namespace PBL
             this.label18.Text = "Practice Results: Practice Set TOEIC 2024 Test 1";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.cbPart1);
-            this.groupBox2.Controls.Add(this.cbPart2);
-            this.groupBox2.Controls.Add(this.cbPart3);
-            this.groupBox2.Controls.Add(this.cbPart4);
-            this.groupBox2.Controls.Add(this.cbPart5);
-            this.groupBox2.Controls.Add(this.cbPart6);
-            this.groupBox2.Controls.Add(this.cbPart7);
-            this.groupBox2.Location = new System.Drawing.Point(89, 192);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(285, 202);
-            this.groupBox2.TabIndex = 81;
-            this.groupBox2.TabStop = false;
-            // 
             // StudentTestView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(906, 467);
+            this.ClientSize = new System.Drawing.Size(906, 598);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -971,17 +1083,25 @@ namespace PBL
             this.tabControl1.ResumeLayout(false);
             this.tabPageTestList.ResumeLayout(false);
             this.tabPageTestList.PerformLayout();
+            this.panelTop.ResumeLayout(false);
+            this.panelTop.PerformLayout();
             this.tabPageTestDetail.ResumeLayout(false);
             this.tabPageTestDetail.PerformLayout();
+            this.roundPanel2.ResumeLayout(false);
+            this.roundPanel2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCheck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLimitTime)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.roundPanel3.ResumeLayout(false);
+            this.roundPanel3.PerformLayout();
+            this.roundPanel4.ResumeLayout(false);
+            this.roundPanel4.PerformLayout();
             this.tabPageTestResult.ResumeLayout(false);
             this.tabPageTestResult.PerformLayout();
-            this.panelTop.ResumeLayout(false);
-            this.panelTop.PerformLayout();
             this.roundPanel1.ResumeLayout(false);
             this.roundPanel1.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -992,8 +1112,6 @@ namespace PBL
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1003,16 +1121,6 @@ namespace PBL
         private System.Windows.Forms.TabPage tabPageTestList;
         private System.Windows.Forms.TabPage tabPageTestDetail;
         private System.Windows.Forms.Label lbTestName;
-        private System.Windows.Forms.CheckBox cbPart7;
-        private System.Windows.Forms.CheckBox cbPart6;
-        private System.Windows.Forms.CheckBox cbPart5;
-        private System.Windows.Forms.CheckBox cbPart4;
-        private System.Windows.Forms.CheckBox cbPart3;
-        private System.Windows.Forms.CheckBox cbPart2;
-        private System.Windows.Forms.CheckBox cbPart1;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private FontAwesome.Sharp.IconButton btnPractice;
         private System.Windows.Forms.TabPage tabPageTestResult;
         private System.Windows.Forms.Label label18;
         private RoundPanel panelTop;
@@ -1021,15 +1129,6 @@ namespace PBL
         private FontAwesome.Sharp.IconButton btnSearch;
         private System.Windows.Forms.FlowLayoutPanel panelContent;
         private FontAwesome.Sharp.IconButton btnBack;
-        private System.Windows.Forms.Label lbMinutes;
-        private System.Windows.Forms.NumericUpDown numLimitTime;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton cbYes;
-        private System.Windows.Forms.Label label2;
-        private FontAwesome.Sharp.IconButton btnFullTest;
-        private System.Windows.Forms.Label lbTestCount;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconButton btnBack2;
         private System.Windows.Forms.FlowLayoutPanel panelAnswers;
         private RoundPanel roundPanel1;
@@ -1059,7 +1158,33 @@ namespace PBL
         private System.Windows.Forms.Label lbScores;
         private System.Windows.Forms.Label label27;
         private FontAwesome.Sharp.IconButton clock;
-        private FontAwesome.Sharp.IconPictureBox iconCheck;
+        private RoundPanel roundPanel2;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.CheckBox cbPart1;
+        private System.Windows.Forms.CheckBox cbPart2;
+        private System.Windows.Forms.CheckBox cbPart3;
+        private System.Windows.Forms.CheckBox cbPart4;
+        private System.Windows.Forms.CheckBox cbPart5;
+        private System.Windows.Forms.CheckBox cbPart6;
+        private System.Windows.Forms.CheckBox cbPart7;
+        private FontAwesome.Sharp.IconPictureBox iconCheck;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.Label lbTestCount;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbMinutes;
+        private System.Windows.Forms.NumericUpDown numLimitTime;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton cbYes;
+        private FontAwesome.Sharp.IconButton btnFullTest;
+        private FontAwesome.Sharp.IconButton btnPractice;
+        private System.Windows.Forms.Label label17;
+        private RoundPanel roundPanel3;
+        private System.Windows.Forms.FlowLayoutPanel panelComments;
+        private RoundPanel roundPanel4;
+        private FontAwesome.Sharp.IconButton btnSend;
+        private System.Windows.Forms.Label label1;
+        private Controller.RoundTextBox txtComment;
     }
 }

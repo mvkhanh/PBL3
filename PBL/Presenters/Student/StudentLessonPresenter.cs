@@ -1,6 +1,9 @@
-﻿using PBL.Models;
+﻿using PBL._Repositories;
+using PBL.Models;
+using PBL.Models.Comment;
 using PBL.Models.Lesson;
 using PBL.Models.StudentLesson;
+using PBL.Resources.Components;
 using PBL.Resources.Components.Lesson;
 using PBL.Views.Student.StudentLessonView;
 using System;
@@ -9,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media.Animation;
 
 namespace PBL.Presenters.Student
 {
@@ -29,7 +33,40 @@ namespace PBL.Presenters.Student
             this.view.SearchEvent += SearchAction;
             this.view.SaveEvent += SaveAction;
             this.view.UnSaveEvent += UnSaveAction;
+            this.view.LoadCommentsEvent += LoadComments;
+            this.view.SendCommentEvent += SendComment;
             LoadAllLessons();
+        }
+
+        private void SendComment(object sender, EventArgs e)
+        {
+            new LessonCommentRepository().Add(new LessonCommentModel
+            {
+                CreateDay = DateTime.Now,
+                Content = view.CommentContent,
+                LessonId = ((LessonBox)sender).LessonId,
+                StudentId = StudentId
+            });
+            LoadAllComments(((LessonBox)sender).LessonId);
+        }
+
+        private void LoadAllComments(int lessonId)
+        {
+            view.Comments = new List<CommentsBox>();
+            var comments = new LessonCommentRepository().GetByLesson(lessonId).OrderByDescending(p => p.CreateDay).ToList();
+            foreach(var cmt in comments)
+            {
+                view.Comments.Add(new CommentsBox
+                {
+                    CommentContent = cmt.Content,
+                    CommentDate = cmt.CreateDay,
+                    CommentName = cmt.Student.Name
+                });
+            }
+        }
+        private void LoadComments(object sender, EventArgs e)
+        {
+            LoadAllComments(((LessonBox)sender).LessonId);
         }
 
         private void SaveAction(object sender, EventArgs e)

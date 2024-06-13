@@ -1,4 +1,5 @@
-﻿using PBL.Resources.Components.Test;
+﻿using PBL.Resources.Components;
+using PBL.Resources.Components.Test;
 using PBL.Resources.Components.Test.TestQuestion;
 using System;
 using System.Collections.Generic;
@@ -15,11 +16,15 @@ namespace PBL.Views.Student.StudentTest
         int Minutes { get; set; }
         int CurrentTestId { get; set; }
         bool Done {  get; set; }
+        string CommentContent { get; }
+        List<CommentsBox> Comments { get; set; }
 
         //Events
         event EventHandler SearchEvent;
         event EventHandler OpenEvent;
         event EventHandler DoTestEvent;
+        event EventHandler SendCommentEvent;
+        event EventHandler LoadCommentsEvent;
 
         //Methods
         void Show();

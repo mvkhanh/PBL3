@@ -214,7 +214,6 @@ namespace PBL.Views.Student.StudentTest
                     audioFile = new AudioFileReader(fileName);
                     outputDevice = new WaveOutEvent();
                     outputDevice.Init(audioFile);
-                    File.Delete(fileName);
                     outputDevice.Play();
                     isPlaying = true;
                     btnPlay.IconChar = FontAwesome.Sharp.IconChar.Pause;
@@ -254,6 +253,7 @@ namespace PBL.Views.Student.StudentTest
         private void StudentDoTestView_FormClosing(object sender, FormClosingEventArgs e)
         {
             if(outputDevice != null && outputDevice.PlaybackState == PlaybackState.Playing) { outputDevice.Stop(); }
+            File.Delete(fileName);
         }
 
         private void StudentDoTestView_Load(object sender, EventArgs e)

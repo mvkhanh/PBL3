@@ -152,6 +152,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Comment\CommentModel.cs" />
+    <Compile Include="Models\Comment\ILessonCommentRepository.cs" />
+    <Compile Include="Models\Comment\ITestCommentRepository.cs" />
+    <Compile Include="Models\Comment\LessonCommentModel.cs" />
+    <Compile Include="Models\Comment\TestCommentModel.cs" />
     <Compile Include="Models\Shared\ILoginRepository.cs" />
     <Compile Include="Models\StudentLesson\IStudentLessonRepository.cs" />
     <Compile Include="Models\StudentLesson\StudentLessonModel.cs" />
@@ -433,12 +438,14 @@
     </Compile>
     <Compile Include="_Repositories\AccountRepository.cs" />
     <Compile Include="_Repositories\AnswerRepository.cs" />
+    <Compile Include="_Repositories\LessonCommentRepository.cs" />
     <Compile Include="_Repositories\LessonRepository.cs" />
     <Compile Include="_Repositories\QuestionRepository.cs" />
     <Compile Include="_Repositories\StudentLessonRepository.cs" />
     <Compile Include="_Repositories\StudentRepository.cs" />
     <Compile Include="_Repositories\StudentTestRepository.cs" />
     <Compile Include="_Repositories\TeacherRepository.cs" />
+    <Compile Include="_Repositories\TestCommentRepository.cs" />
     <Compile Include="_Repositories\TestRepository.cs" />
     <EmbeddedResource Include="Resources\Components\Lesson\LessonBox.resx">
       <DependentUpon>LessonBox.cs</DependentUpon>
