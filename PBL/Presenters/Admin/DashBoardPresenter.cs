@@ -65,9 +65,9 @@ namespace PBL.Presenters.Admin
                 .Take(10)
                 .Select(t => new KeyValuePair<string, int>(teacherRepository.GetByValue(t.TeacherID.ToString()).First().Name, t.LessonCount))
                 .ToList();
-            var topLessons = lessonRepository.GetAll().Where(x => (x.PublishDay.Date >= view.startDate.Date && x.PublishDay.Date <= view.endDate.Date)).OrderByDescending(x => x.Views).Take(10).Select(t => new KeyValuePair<string, int>(t.Name, t.Views)).ToList();
+            var topLessons = lessonRepository.GetAll().Where(x => (x.PublishDay.Date >= view.startDate.Date && x.PublishDay.Date <= view.endDate.Date )).OrderByDescending(x => x.Views).Take(10).Select(t => new KeyValuePair<string, int>(t.Name, t.Views)).ToList();
             view.TopLessonList.AddRange(topLessons);
-            var topTest = testRepository.GetAll().Where(x => (x.PublishDay.Date >= view.startDate.Date && x.PublishDay.Date <= view.endDate.Date)).OrderByDescending(x => x.Count).Take(10).Select(t => new KeyValuePair<string, int>(t.Name, t.Count)).ToList();
+            var topTest = testRepository.GetAll().Where(x => (x.PublishDay.Date >= view.startDate.Date && x.PublishDay.Date <= view.endDate.Date && x.Count!=0)).OrderByDescending(x => x.Count).Take(10).Select(t => new KeyValuePair<string, int>(t.Name, t.Count)).ToList();
             view.TopTestList.AddRange(topTest);
             this.view.TopTeacherList.AddRange(topTeachers);
             view.Show();

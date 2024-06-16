@@ -120,7 +120,7 @@ namespace PBL.Views.Student.StudentTest
                 {
                     var panel = new Panel
                     {
-                        Size = new Size(1000, 600),
+                        Size = new Size(700, 400),
                         AutoScroll = true,
                         AutoSize = false,
                     };

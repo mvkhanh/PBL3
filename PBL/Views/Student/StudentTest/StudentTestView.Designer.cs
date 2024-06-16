@@ -39,6 +39,11 @@ namespace PBL
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.tabPageTestDetail = new System.Windows.Forms.TabPage();
             this.roundPanel2 = new RoundPanel();
+            this.panelComments = new System.Windows.Forms.FlowLayoutPanel();
+            this.roundPanel4 = new RoundPanel();
+            this.btnSend = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtComment = new PBL.Controller.RoundTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.cbPart1 = new System.Windows.Forms.CheckBox();
@@ -93,16 +98,12 @@ namespace PBL
             this.clock = new FontAwesome.Sharp.IconButton();
             this.btnBack2 = new FontAwesome.Sharp.IconButton();
             this.label18 = new System.Windows.Forms.Label();
-            this.roundPanel4 = new RoundPanel();
-            this.btnSend = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtComment = new PBL.Controller.RoundTextBox();
-            this.panelComments = new System.Windows.Forms.FlowLayoutPanel();
             this.tabControl1.SuspendLayout();
             this.tabPageTestList.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.tabPageTestDetail.SuspendLayout();
             this.roundPanel2.SuspendLayout();
+            this.roundPanel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCheck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -114,7 +115,6 @@ namespace PBL
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.roundPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -139,7 +139,7 @@ namespace PBL
             this.tabPageTestList.Location = new System.Drawing.Point(4, 25);
             this.tabPageTestList.Name = "tabPageTestList";
             this.tabPageTestList.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTestList.Size = new System.Drawing.Size(898, 569);
+            this.tabPageTestList.Size = new System.Drawing.Size(898, 682);
             this.tabPageTestList.TabIndex = 0;
             this.tabPageTestList.Text = "Test List";
             // 
@@ -150,7 +150,7 @@ namespace PBL
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(3, 141);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(892, 425);
+            this.panelContent.Size = new System.Drawing.Size(892, 538);
             this.panelContent.TabIndex = 66;
             // 
             // panelTop
@@ -257,6 +257,84 @@ namespace PBL
             this.roundPanel2.Size = new System.Drawing.Size(898, 622);
             this.roundPanel2.TabIndex = 82;
             // 
+            // panelComments
+            // 
+            this.panelComments.AutoScroll = true;
+            this.panelComments.AutoSize = true;
+            this.panelComments.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.panelComments.Location = new System.Drawing.Point(17, 476);
+            this.panelComments.Name = "panelComments";
+            this.panelComments.Size = new System.Drawing.Size(885, 69);
+            this.panelComments.TabIndex = 94;
+            this.panelComments.WrapContents = false;
+            // 
+            // roundPanel4
+            // 
+            this.roundPanel4.AutoSize = true;
+            this.roundPanel4.Controls.Add(this.btnSend);
+            this.roundPanel4.Controls.Add(this.label1);
+            this.roundPanel4.Controls.Add(this.txtComment);
+            this.roundPanel4.CornerRadius = 10;
+            this.roundPanel4.Location = new System.Drawing.Point(3, 407);
+            this.roundPanel4.Name = "roundPanel4";
+            this.roundPanel4.Size = new System.Drawing.Size(898, 63);
+            this.roundPanel4.TabIndex = 93;
+            // 
+            // btnSend
+            // 
+            this.btnSend.AutoSize = true;
+            this.btnSend.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSend.FlatAppearance.BorderSize = 0;
+            this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSend.ForeColor = System.Drawing.Color.White;
+            this.btnSend.IconChar = FontAwesome.Sharp.IconChar.PaperPlane;
+            this.btnSend.IconColor = System.Drawing.Color.White;
+            this.btnSend.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSend.IconSize = 24;
+            this.btnSend.Location = new System.Drawing.Point(662, 28);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(83, 31);
+            this.btnSend.TabIndex = 90;
+            this.btnSend.Text = "Send";
+            this.btnSend.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSend.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.label1.Location = new System.Drawing.Point(29, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 24);
+            this.label1.TabIndex = 89;
+            this.label1.Text = "Comments";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtComment
+            // 
+            this.txtComment.BackColor = System.Drawing.SystemColors.Window;
+            this.txtComment.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtComment.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtComment.BorderRadius = 0;
+            this.txtComment.BorderSize = 2;
+            this.txtComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtComment.Location = new System.Drawing.Point(33, 28);
+            this.txtComment.Margin = new System.Windows.Forms.Padding(4);
+            this.txtComment.Multiline = true;
+            this.txtComment.Name = "txtComment";
+            this.txtComment.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtComment.PasswordChar = false;
+            this.txtComment.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtComment.PlaceholderText = "Share your thoughts";
+            this.txtComment.Size = new System.Drawing.Size(622, 31);
+            this.txtComment.TabIndex = 91;
+            this.txtComment.Texts = "";
+            this.txtComment.UnderlinedStyle = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label16);
@@ -289,7 +367,7 @@ namespace PBL
             this.cbPart1.AutoSize = true;
             this.cbPart1.Location = new System.Drawing.Point(9, 19);
             this.cbPart1.Name = "cbPart1";
-            this.cbPart1.Size = new System.Drawing.Size(66, 20);
+            this.cbPart1.Size = new System.Drawing.Size(67, 20);
             this.cbPart1.TabIndex = 1;
             this.cbPart1.Tag = "1";
             this.cbPart1.Text = "Part 1";
@@ -300,7 +378,7 @@ namespace PBL
             this.cbPart2.AutoSize = true;
             this.cbPart2.Location = new System.Drawing.Point(9, 45);
             this.cbPart2.Name = "cbPart2";
-            this.cbPart2.Size = new System.Drawing.Size(66, 20);
+            this.cbPart2.Size = new System.Drawing.Size(67, 20);
             this.cbPart2.TabIndex = 2;
             this.cbPart2.Tag = "2";
             this.cbPart2.Text = "Part 2";
@@ -311,7 +389,7 @@ namespace PBL
             this.cbPart3.AutoSize = true;
             this.cbPart3.Location = new System.Drawing.Point(9, 71);
             this.cbPart3.Name = "cbPart3";
-            this.cbPart3.Size = new System.Drawing.Size(66, 20);
+            this.cbPart3.Size = new System.Drawing.Size(67, 20);
             this.cbPart3.TabIndex = 3;
             this.cbPart3.Tag = "3";
             this.cbPart3.Text = "Part 3";
@@ -322,7 +400,7 @@ namespace PBL
             this.cbPart4.AutoSize = true;
             this.cbPart4.Location = new System.Drawing.Point(9, 97);
             this.cbPart4.Name = "cbPart4";
-            this.cbPart4.Size = new System.Drawing.Size(66, 20);
+            this.cbPart4.Size = new System.Drawing.Size(67, 20);
             this.cbPart4.TabIndex = 4;
             this.cbPart4.Tag = "4";
             this.cbPart4.Text = "Part 4";
@@ -333,7 +411,7 @@ namespace PBL
             this.cbPart5.AutoSize = true;
             this.cbPart5.Location = new System.Drawing.Point(9, 123);
             this.cbPart5.Name = "cbPart5";
-            this.cbPart5.Size = new System.Drawing.Size(66, 20);
+            this.cbPart5.Size = new System.Drawing.Size(67, 20);
             this.cbPart5.TabIndex = 5;
             this.cbPart5.Tag = "5";
             this.cbPart5.Text = "Part 5";
@@ -344,7 +422,7 @@ namespace PBL
             this.cbPart6.AutoSize = true;
             this.cbPart6.Location = new System.Drawing.Point(9, 149);
             this.cbPart6.Name = "cbPart6";
-            this.cbPart6.Size = new System.Drawing.Size(66, 20);
+            this.cbPart6.Size = new System.Drawing.Size(67, 20);
             this.cbPart6.TabIndex = 6;
             this.cbPart6.Tag = "6";
             this.cbPart6.Text = "Part 6";
@@ -355,7 +433,7 @@ namespace PBL
             this.cbPart7.AutoSize = true;
             this.cbPart7.Location = new System.Drawing.Point(9, 175);
             this.cbPart7.Name = "cbPart7";
-            this.cbPart7.Size = new System.Drawing.Size(66, 20);
+            this.cbPart7.Size = new System.Drawing.Size(67, 20);
             this.cbPart7.TabIndex = 7;
             this.cbPart7.Tag = "7";
             this.cbPart7.Text = "Part 7";
@@ -393,7 +471,7 @@ namespace PBL
             this.lbTestCount.AutoSize = true;
             this.lbTestCount.Location = new System.Drawing.Point(117, 27);
             this.lbTestCount.Name = "lbTestCount";
-            this.lbTestCount.Size = new System.Drawing.Size(50, 16);
+            this.lbTestCount.Size = new System.Drawing.Size(51, 16);
             this.lbTestCount.TabIndex = 89;
             this.lbTestCount.Text = "label3";
             // 
@@ -402,7 +480,7 @@ namespace PBL
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(258, 362);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 16);
+            this.label2.Size = new System.Drawing.Size(30, 16);
             this.label2.TabIndex = 88;
             this.label2.Text = "OR";
             // 
@@ -449,7 +527,7 @@ namespace PBL
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(77, 20);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(45, 20);
+            this.radioButton2.Size = new System.Drawing.Size(46, 20);
             this.radioButton2.TabIndex = 9;
             this.radioButton2.Text = "No";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -460,11 +538,12 @@ namespace PBL
             this.cbYes.Checked = true;
             this.cbYes.Location = new System.Drawing.Point(6, 20);
             this.cbYes.Name = "cbYes";
-            this.cbYes.Size = new System.Drawing.Size(52, 20);
+            this.cbYes.Size = new System.Drawing.Size(53, 20);
             this.cbYes.TabIndex = 8;
             this.cbYes.TabStop = true;
             this.cbYes.Text = "Yes";
             this.cbYes.UseVisualStyleBackColor = true;
+            this.cbYes.CheckedChanged += new System.EventHandler(this.cbYes_CheckedChanged);
             // 
             // btnFullTest
             // 
@@ -554,7 +633,7 @@ namespace PBL
             this.tabPageTestResult.Controls.Add(this.roundPanel1);
             this.tabPageTestResult.Location = new System.Drawing.Point(4, 25);
             this.tabPageTestResult.Name = "tabPageTestResult";
-            this.tabPageTestResult.Size = new System.Drawing.Size(898, 569);
+            this.tabPageTestResult.Size = new System.Drawing.Size(898, 682);
             this.tabPageTestResult.TabIndex = 3;
             this.tabPageTestResult.Text = "Test Result";
             this.tabPageTestResult.UseVisualStyleBackColor = true;
@@ -566,7 +645,7 @@ namespace PBL
             this.panelAnswers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAnswers.Location = new System.Drawing.Point(0, 292);
             this.panelAnswers.Name = "panelAnswers";
-            this.panelAnswers.Size = new System.Drawing.Size(898, 277);
+            this.panelAnswers.Size = new System.Drawing.Size(898, 390);
             this.panelAnswers.TabIndex = 87;
             // 
             // roundPanel1
@@ -625,7 +704,7 @@ namespace PBL
             this.lbSkip.ForeColor = System.Drawing.Color.Black;
             this.lbSkip.Location = new System.Drawing.Point(67, 78);
             this.lbSkip.Name = "lbSkip";
-            this.lbSkip.Size = new System.Drawing.Size(15, 16);
+            this.lbSkip.Size = new System.Drawing.Size(16, 16);
             this.lbSkip.TabIndex = 70;
             this.lbSkip.Text = "0";
             // 
@@ -637,7 +716,7 @@ namespace PBL
             this.label39.ForeColor = System.Drawing.Color.Black;
             this.label39.Location = new System.Drawing.Point(43, 100);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(67, 16);
+            this.label39.Size = new System.Drawing.Size(68, 16);
             this.label39.TabIndex = 70;
             this.label39.Text = "Questions";
             // 
@@ -649,7 +728,7 @@ namespace PBL
             this.label40.ForeColor = System.Drawing.Color.Gray;
             this.label40.Location = new System.Drawing.Point(60, 59);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(34, 16);
+            this.label40.Size = new System.Drawing.Size(35, 16);
             this.label40.TabIndex = 70;
             this.label40.Text = "Skip";
             // 
@@ -694,7 +773,7 @@ namespace PBL
             this.lbWrongAnswer.ForeColor = System.Drawing.Color.Black;
             this.lbWrongAnswer.Location = new System.Drawing.Point(61, 78);
             this.lbWrongAnswer.Name = "lbWrongAnswer";
-            this.lbWrongAnswer.Size = new System.Drawing.Size(23, 16);
+            this.lbWrongAnswer.Size = new System.Drawing.Size(24, 16);
             this.lbWrongAnswer.TabIndex = 70;
             this.lbWrongAnswer.Text = "77";
             // 
@@ -706,7 +785,7 @@ namespace PBL
             this.label36.ForeColor = System.Drawing.Color.Black;
             this.label36.Location = new System.Drawing.Point(43, 100);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(67, 16);
+            this.label36.Size = new System.Drawing.Size(68, 16);
             this.label36.TabIndex = 70;
             this.label36.Text = "Questions";
             // 
@@ -718,7 +797,7 @@ namespace PBL
             this.label37.ForeColor = System.Drawing.Color.Crimson;
             this.label37.Location = new System.Drawing.Point(31, 59);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(93, 16);
+            this.label37.Size = new System.Drawing.Size(94, 16);
             this.label37.TabIndex = 70;
             this.label37.Text = "Wrong answer";
             // 
@@ -763,7 +842,7 @@ namespace PBL
             this.lbRightAnswer.ForeColor = System.Drawing.Color.Black;
             this.lbRightAnswer.Location = new System.Drawing.Point(61, 78);
             this.lbRightAnswer.Name = "lbRightAnswer";
-            this.lbRightAnswer.Size = new System.Drawing.Size(31, 16);
+            this.lbRightAnswer.Size = new System.Drawing.Size(32, 16);
             this.lbRightAnswer.TabIndex = 70;
             this.lbRightAnswer.Text = "123";
             // 
@@ -775,7 +854,7 @@ namespace PBL
             this.label34.ForeColor = System.Drawing.Color.Black;
             this.label34.Location = new System.Drawing.Point(45, 100);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(67, 16);
+            this.label34.Size = new System.Drawing.Size(68, 16);
             this.label34.TabIndex = 70;
             this.label34.Text = "Questions";
             // 
@@ -787,7 +866,7 @@ namespace PBL
             this.label32.ForeColor = System.Drawing.Color.LimeGreen;
             this.label32.Location = new System.Drawing.Point(37, 57);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(84, 16);
+            this.label32.Size = new System.Drawing.Size(85, 16);
             this.label32.TabIndex = 70;
             this.label32.Text = "Right answer";
             // 
@@ -817,7 +896,7 @@ namespace PBL
             this.label25.ForeColor = System.Drawing.Color.Black;
             this.label25.Location = new System.Drawing.Point(72, 37);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(76, 16);
+            this.label25.Size = new System.Drawing.Size(77, 16);
             this.label25.TabIndex = 70;
             this.label25.Text = "Test results";
             // 
@@ -828,7 +907,7 @@ namespace PBL
             this.lbTestTime.ForeColor = System.Drawing.Color.Black;
             this.lbTestTime.Location = new System.Drawing.Point(179, 110);
             this.lbTestTime.Name = "lbTestTime";
-            this.lbTestTime.Size = new System.Drawing.Size(63, 16);
+            this.lbTestTime.Size = new System.Drawing.Size(64, 16);
             this.lbTestTime.TabIndex = 70;
             this.lbTestTime.Text = "01:11:23";
             // 
@@ -859,7 +938,7 @@ namespace PBL
             this.label30.ForeColor = System.Drawing.Color.Black;
             this.label30.Location = new System.Drawing.Point(72, 110);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(103, 16);
+            this.label30.Size = new System.Drawing.Size(104, 16);
             this.label30.TabIndex = 70;
             this.label30.Text = "Completion time";
             // 
@@ -890,7 +969,7 @@ namespace PBL
             this.lbAccuracy.ForeColor = System.Drawing.Color.Black;
             this.lbAccuracy.Location = new System.Drawing.Point(179, 73);
             this.lbAccuracy.Name = "lbAccuracy";
-            this.lbAccuracy.Size = new System.Drawing.Size(52, 16);
+            this.lbAccuracy.Size = new System.Drawing.Size(53, 16);
             this.lbAccuracy.TabIndex = 70;
             this.lbAccuracy.Text = "61.5 %";
             // 
@@ -901,7 +980,7 @@ namespace PBL
             this.lbTotal.ForeColor = System.Drawing.Color.Black;
             this.lbTotal.Location = new System.Drawing.Point(216, 37);
             this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(31, 16);
+            this.lbTotal.Size = new System.Drawing.Size(32, 16);
             this.lbTotal.TabIndex = 70;
             this.lbTotal.Text = "123";
             // 
@@ -912,7 +991,7 @@ namespace PBL
             this.lbScores.ForeColor = System.Drawing.Color.Black;
             this.lbScores.Location = new System.Drawing.Point(179, 37);
             this.lbScores.Name = "lbScores";
-            this.lbScores.Size = new System.Drawing.Size(31, 16);
+            this.lbScores.Size = new System.Drawing.Size(32, 16);
             this.lbScores.TabIndex = 70;
             this.lbScores.Text = "123";
             // 
@@ -923,7 +1002,7 @@ namespace PBL
             this.label27.ForeColor = System.Drawing.Color.Black;
             this.label27.Location = new System.Drawing.Point(72, 73);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(63, 16);
+            this.label27.Size = new System.Drawing.Size(64, 16);
             this.label27.TabIndex = 70;
             this.label27.Text = "Accuracy";
             // 
@@ -979,84 +1058,6 @@ namespace PBL
             this.label18.Text = "Practice Results: Practice Set TOEIC 2024 Test 1";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // roundPanel4
-            // 
-            this.roundPanel4.AutoSize = true;
-            this.roundPanel4.Controls.Add(this.btnSend);
-            this.roundPanel4.Controls.Add(this.label1);
-            this.roundPanel4.Controls.Add(this.txtComment);
-            this.roundPanel4.CornerRadius = 10;
-            this.roundPanel4.Location = new System.Drawing.Point(3, 407);
-            this.roundPanel4.Name = "roundPanel4";
-            this.roundPanel4.Size = new System.Drawing.Size(898, 63);
-            this.roundPanel4.TabIndex = 93;
-            // 
-            // btnSend
-            // 
-            this.btnSend.AutoSize = true;
-            this.btnSend.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnSend.FlatAppearance.BorderSize = 0;
-            this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSend.ForeColor = System.Drawing.Color.White;
-            this.btnSend.IconChar = FontAwesome.Sharp.IconChar.PaperPlane;
-            this.btnSend.IconColor = System.Drawing.Color.White;
-            this.btnSend.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSend.IconSize = 24;
-            this.btnSend.Location = new System.Drawing.Point(662, 28);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(83, 31);
-            this.btnSend.TabIndex = 90;
-            this.btnSend.Text = "Send";
-            this.btnSend.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSend.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.label1.Location = new System.Drawing.Point(29, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 24);
-            this.label1.TabIndex = 89;
-            this.label1.Text = "Comments";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtComment
-            // 
-            this.txtComment.BackColor = System.Drawing.SystemColors.Window;
-            this.txtComment.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtComment.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtComment.BorderRadius = 0;
-            this.txtComment.BorderSize = 2;
-            this.txtComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtComment.Location = new System.Drawing.Point(33, 28);
-            this.txtComment.Margin = new System.Windows.Forms.Padding(4);
-            this.txtComment.Multiline = true;
-            this.txtComment.Name = "txtComment";
-            this.txtComment.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtComment.PasswordChar = false;
-            this.txtComment.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtComment.PlaceholderText = "Share your thoughts";
-            this.txtComment.Size = new System.Drawing.Size(622, 31);
-            this.txtComment.TabIndex = 91;
-            this.txtComment.Texts = "";
-            this.txtComment.UnderlinedStyle = false;
-            // 
-            // panelComments
-            // 
-            this.panelComments.AutoScroll = true;
-            this.panelComments.AutoSize = true;
-            this.panelComments.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.panelComments.Location = new System.Drawing.Point(17, 476);
-            this.panelComments.Name = "panelComments";
-            this.panelComments.Size = new System.Drawing.Size(885, 69);
-            this.panelComments.TabIndex = 94;
-            this.panelComments.WrapContents = false;
-            // 
             // StudentTestView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1076,6 +1077,8 @@ namespace PBL
             this.tabPageTestDetail.PerformLayout();
             this.roundPanel2.ResumeLayout(false);
             this.roundPanel2.PerformLayout();
+            this.roundPanel4.ResumeLayout(false);
+            this.roundPanel4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCheck)).EndInit();
@@ -1095,8 +1098,6 @@ namespace PBL
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.roundPanel4.ResumeLayout(false);
-            this.roundPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
